@@ -1,0 +1,124 @@
+<div class="cancelOrderBox orderLayer">
+</div>
+<div class="cancelOrderBox" id="showCancerReason">
+    <div class="cj_sjccont1 cancle">
+        <div class="cj_sjctop1 pos">
+            订单取消申请
+            <div id="close_cancel_layer" class="quxiao_close">
+            </div>
+        </div>
+        <div class="cj_sjcmidsh">
+            <div class="Main_c">
+                <div class="cancle-box">
+                    <div class="form">
+                        <div class="item clearfix">
+                            <div class="clearfix">
+                                <div class="fl">
+                                    请选择取消原因
+                                </div>
+                                <div class="qux_in fl" id="showReason"></div>
+                            </div>
+                            <div class="content_qx hide" id="reasonList">
+                                <div class="dd2 clearfix">
+                                    <span>
+									<input type="radio" id="radio_other1" value="现在不想购买" name="radio_reason" class="radio"/>
+									<label for="radio_other1">
+                        现在不想购买
+									</label>
+									</span>
+                                    <span>
+									<input type="radio" id="radio_other2" value="商品价格较贵" name="radio_reason" class="radio"/>
+									<label for="radio_other2">
+                        商品价格较贵
+									</label>
+									</span>
+                                    <span>
+									<input type="radio" id="radio_other3" value="价格波动" name="radio_reason" class="radio"/>
+									<label for="radio_other3">
+                        价格波动
+									</label>
+									</span>
+                                    <span>
+									<input type="radio" id="radio_other4" value="商品缺货" name="radio_reason" class="radio"/>
+									<label for="radio_other4">
+                        商品缺货
+									</label>
+									</span>
+                                    <span>
+									<input type="radio" id="radio_other5" value="重复下单" name="radio_reason" class="radio"/>
+									<label for="radio_other5">
+                        重复下单
+									</label>
+									</span>
+                                    <span>
+									<input type="radio" id="radio_other6" value="添加或删除商品" name="radio_reason" class="radio"/>
+									<label for="radio_other6">
+                        添加或删除商品
+									</label>
+									</span>
+                                    <span>
+									<input type="radio" id="radio_other7" value="收货人信息有误" name="radio_reason" class="radio"/>
+									<label for="radio_other7">
+                        收货人信息有误
+									</label>
+									</span>
+                                    <span>
+									<input type="radio" id="radio_other8" value="发票信息有误/发票未" name="radio_reason" class="radio"/>
+									<label for="radio_other8">
+                        发票信息有误/发票未
+									</label>
+									</span>
+                                    <span>
+									<input type="radio" id="radio_other9" value="送货时间过长" name="radio_reason" class="radio"/>
+									<label for="radio_other9">
+                        送货时间过长
+									</label>
+									</span>
+                                    <span>
+									<input type="radio" id="radio_other10" value="无法支付订单" name="radio_reason" class="radio"/>
+									<label for="radio_other10">
+                        无法支付订单
+									</label>
+									</span>
+                                    <span>
+									<input type="radio" id="radio_other999" value="其他原因" name="radio_reason" class="radio"/>
+									<label for="radio_other999">
+                        其他原因
+									</label>
+									</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hide item-area clearfix" id="reasonArea">
+                            <textarea class="area" style="width: 327px; height: 67px;" id="optionArea" name="" maxlength="30"></textarea>
+                        </div>
+                    </div>
+                    <div id="cancelText0" class="tip-msg ftx-04">
+                        <dl>
+                            <dt>
+                                温馨提示：
+                            </dt>
+                            <dd>
+                                <div id="cancelTextDiv0">
+                                    &middot; 订单取消后将无法恢复
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div id="odo_cancel_step" class="op-btns">
+                        <a class="btn btn-11" id="toCancelReason" href="javascript:void(0);">
+                            <s>
+                            </s>
+                            确定取消
+                        </a>
+                        <a class="btn btn-11" id="to_close_layer_btn" href="javascript:void(0);">
+                            <s>
+                            </s>
+                            暂不取消
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

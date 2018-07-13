@@ -1,0 +1,92 @@
+<script id="goods-one-template" type="text/x-handlebars-template">
+    <div class="user">
+        <div class="u-icon"><img src="{{imgConf levelImg goodsId}}" width="50px" height="50px"></div>
+        <div class="u-name">{{account}}</div>
+        <span class="u-level red">{{levelName}}
+            <span class="u-address"></span>
+        </span>
+    </div>
+    <div class="i-item">
+        <div id="goodsComment"> </div>
+        <div class="o-topic">
+            {{{topic setEssence}}}
+            <span class="star sa{{averagePoints}}"></span>
+            <strong class="red marl10">{{title}}</strong>
+            <span class="date-comment">{{dateSub addTime}}</span>
+        </div>
+        <div class="comment-content">
+            <div class="dl-extra">
+                <dl>
+                    <dt>型　　号：</dt>
+                    <dd>{{baseModel}}</dd>
+                </dl>
+                <dl>
+                    <dt>购买日期：</dt>
+                    <dd>{{dateSub accessDate}}</dd>
+                </dl>
+                <p class="c"></p>
+            </div>
+            <dl>
+                <dt>我的印象：</dt>
+                <dd>
+                    {{#each impressionValues}}
+                    <span class="yxiang">{{impressValue}}</span> {{/each}}
+                </dd>
+            </dl>
+            <dl class="xinde">
+                <dt>心　　得：</dt>
+                <dd>{{content}}</dd>
+            </dl>
+            <dl class="xinde">
+                <dt>评价来源：</dt>
+                <dd>{{commentSource}}</dd>
+            </dl>
+            <dl>
+                <dt>用户晒单：</dt>
+                <dd>
+                    <div class="comment-show-pic">
+                        <table cellspacing="10">
+                            <tbody>
+                                <tr>
+                                    {{#each commentImageDetail}}
+                                    <td class="{{showPic @index}}"><img class="changeImg" src="{{imgConf commentImageSrc commentImageId}}" style="width: 75px;height: 75px;"></a>
+                                    </td>
+                                    {{/each}}
+                                </tr>
+                            </tbody>
+                        </table>
+                        <span class="showCheck {{showMore commentImageCount}}">
+                            <b style="margin-right:5px;" class="fl">共{{commentImageCount}}张图片</b>
+                            <a href="javascript:void(0);" class="checkImg red" style="color:#007fff;">查看晒单&gt;</a>
+                        </span>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+        <div class="btns">
+            <a title="回复" href="javascript:void(0);" class="btn-reply">回复(<span>{{replyCount}}</span>)</a>
+            <div class="useful">
+                <a href="javascript:void(0);" class="btn-agree" name="agree">赞(<font>{{praiseCount}}</font>)</a>
+            </div>
+        </div>
+        <div class="item-reply reply-lz reply_only" style="display: none;">
+            <div class="reply-list">
+                <!-- 弹出回复层 -->
+                <div class="replay-form">
+                    <div class="arrow"> <em>◆</em><span>◆</span> </div>
+                    <div class="reply-wrap">
+                        <p><em>回复</em> <span class="u-name">{{account}}</span></p>
+                        <div class="reply-input">
+                            <div class="fl">
+                                <input type="text" name="firstLevelReply" class="firstLevelReply" maxlength="100">
+                            </div>
+                            <a href="javascript:void(0);" class="reply-btn btn-gray" data-account="{{account}}">回复</a>
+                            <div class="c"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 弹出回复层 -->
+            </div>
+        </div>
+    </div>
+</script>

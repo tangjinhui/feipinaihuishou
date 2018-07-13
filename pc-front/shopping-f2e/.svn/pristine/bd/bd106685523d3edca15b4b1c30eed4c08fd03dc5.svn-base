@@ -1,0 +1,255 @@
+require(['jquery', 'handlebars', 'limitPage', 'dialog', 'getUrlParam', 'modules/changeInvoice', 'modules/changeAddress', 'modules/cancleOrder', 'header', 'modules/menu'], function($, Handlebars, limitPage, dialog, getUrlParam) {
+    var orderStatus = getUrlParam('orderStatus');
+    var orderType = getUrlParam('orderType');
+    if (orderStatus) {
+        $('[name=orderStatus]').val(orderStatus);
+    }
+    if (orderType) {
+        $('[name=orderType]').val(orderType);
+    }
+
+    Handlebars.registerHelper("imgConf", function(imgUrl, id) {
+        return img_domain_data[id % img_domain_data.length] + '/' + imgUrl;
+    });
+
+    Handlebars.registerHelper("view", function(can, orderId) {
+        var str = '';
+        if (can) {
+            str = '<a href="/member/order/detail.html?orderId=' + orderId + '">' + orderId + '</a>';
+        } else {
+            str = orderId;
+        }
+        return str;
+    });
+
+    Handlebars.registerHelper("power", function(pay, can, modifyAddress, modifyInvoice, confirmGoods, returnGoods, cancel, afterService, comment, orderId) {
+        var str = '';
+        if (pay) {
+            str += '<div class="go_pay"><a href="/member/order/pay_type.html?orderId=' + orderId + '">支付</a></div>';
+        }
+        if (can) {
+            str += '<div><a class="checkOrderDetail" href="/member/order/detail.html?orderId=' + orderId + '" >查看</a></div>';
+        }
+        if (modifyAddress || modifyInvoice) {
+            str += '<div style="width: 50px;" class="hy_xg" data-orderId="' + orderId + '" >修改';
+        }
+        if (modifyAddress && modifyInvoice) {
+            str += '<div style="background-color:#E0E0E0;" class="hy_xgxq" id="hy_xgxq_' + orderId + '"><a class="changeAddress" data-orderId="' + orderId + '" href="javascript:void(0)">修改地址</a><br/><a class="changeInvoice" data-orderId="' + orderId + '" href="#">修改发票</a></div></div>';
+        } else {
+            if (modifyAddress) {
+                str += '<div style="background-color:#E0E0E0;"  class="hy_xgxq" id="hy_xgxq_' + orderId + '"><a class="changeAddress" data-orderId="' + orderId + '" href="javascript:void(0)">修改地址</a></div></div>';
+            }
+            if (modifyInvoice) {
+                str += '<div style="background-color:#E0E0E0;" class="hy_xgxq" id="hy_xgxq_' + orderId + '"><a class="changeInvoice" data-orderId="' + orderId + '" href="javascript:void(0)">修改发票</a></div></div>';
+            }
+        }
+
+        if (confirmGoods) {
+            str += '<div oncontextmenu="return false"><a class="confirmOrder" data-orderId="' + orderId + '" href="javascript:void(0)">确认收货</a></div>';
+        }
+        if (returnGoods) {
+            str += '<div><a class="applyReturnGoods" data-orderId="' + orderId + '" href="javascript:void(0)">申请退货</a></div>';
+        }
+        if (cancel) {
+            str += '<div><a class="cancel_order" data-id="' + orderId + '" href="javascript:void(0)">取消</a></div>';
+        }
+        if (afterService) {
+
+            str += '<div><a class="checkAfterSaleService" data-orderId="' + orderId + '" href="javascript:void(0)">查看售后服务</a></div>';
+        }
+        if (parseInt(comment) == 1) {
+            str += '<div><a href="/member/assess.html">已晒单</a></div>';
+        } else if (parseInt(comment) == 0) {
+            str += '<div><a href="/member/assess.html">评价/晒单</a></div>';
+        }
+        if (str == '') {
+            str = '--';
+        }
+        return str;
+    });
+
+    Handlebars.registerHelper("dataLen", function(list, options) {
+        if (list.length) {
+            return options.fn(this);
+        } else {
+            return options.inverse(this);
+        }
+    });
+
+    Handlebars.registerHelper("deliveryInfo", function(deliveryType, deliveryNo) {
+        if(!deliveryType || !deliveryNo){
+            return '';
+        }
+        if ('1'==deliveryType){
+             return deliveryNo + '<br/>(民航快递)';
+        }else if ('2'==deliveryType){
+             return deliveryNo + '<br/>(顺丰)';
+        }else if ('3'==deliveryType){
+             return '电子券号：' + deliveryNo + '<br/>(上门自提)';
+        }else if ('4'==deliveryType){
+             return deliveryNo + '<br/>(EMS)';
+        }else if ('5'==deliveryType){
+             return deliveryNo + '<br/>(挂号信)';
+        }else if ('-1'==deliveryType){
+             return deliveryNo + '<br/>(其他)';
+        }else {
+            return '';
+        }
+    });
+
+    Handlebars.registerHelper("formatPrice", function(price) {
+        if (!price) {
+            return '';
+        }
+        return parseFloat(price).toFixed(2);
+    });
+
+    function initData(pageNum) {
+        var data = {
+            pageNum: pageNum || 1,
+            goodsName: $('[name=goodsName]').val(),
+            orderId: $('[name=orderId]').val(),
+            orderType: $('[name=orderType]').val(),
+            orderStatus: $('[name=orderStatus]').val(),
+            flag: $('[name=flag]').val()
+        }
+        $.ajax({
+            url: '/front/member/order/myorderList',
+            type: 'get',
+            dataType: 'json',
+            data: data,
+            success: function(res) {
+                if ('99' == res.code) {
+                    window.location.href = 'https://passportdev.ecgci.com/login.html';
+                } else if (res.code == '00') {
+                    var listTemp = Handlebars.compile($("#list-template").html());
+                    $('#list_box').html(listTemp(res.data.page));
+                    if (res.data.page.pages > 1) {
+                        initLimitPage(res.data.page.pages, res.data.page.pageNum);
+                    } else {
+                        $('.pageLimit').hide();
+                    }
+                } else {
+                    dialog({ title: '系统提示', content: '网络繁忙，请稍后重试' });
+                }
+            },
+            error: function() {
+                dialog({ title: '系统提示', content: '网络繁忙，请稍后重试' });
+            }
+        });
+    }
+
+    function initLimitPage(pages, currentPage) {
+        $('.pageLimit').show();
+        $('#light-pagination').pagination({
+            pages: pages,
+            cssStyle: 'light-theme',
+            displayedPages: 3,
+            edges: 3,
+            currentPage: currentPage,
+            prevText: '上一页',
+            nextText: '下一页',
+            onPageClick: function(page) {
+                initData(page);
+                var top = $('#navi').height();
+                $('html,body').animate({
+                    scrollTop: top
+                }, 300);
+                return false;
+            }
+        });
+    }
+
+    $('select').on('change', function() {
+        initData();
+    });
+
+    $('#orderSearch').on('click', function() {
+        initData();
+    });
+
+    $.ajax({
+        url: '/front/member/order/myorder',
+        type: 'get',
+        dataType: 'json',
+        success: function(res) {
+            if ('99' == res.code) {
+                window.location.href = 'https://passportdev.ecgci.com/login.html';
+            } else if (res.code == '00') {
+                $('#dai_zf').text(res.data.noPayOrderCount);
+                $('#dai_qs').text(res.data.noReceivingOrderCount);
+                initData();
+            } else {
+                dialog({ title: '系统提示', content: '网络繁忙，请稍后重试' });
+            }
+        },
+        error: function() {
+            dialog({ title: '系统提示', content: '网络繁忙，请稍后重试' });
+        }
+    });
+
+    $('#dai_zf').parents('a').on('click', function() {
+        initArgs(0);
+        return false;
+    });
+
+    $('#dai_qs').parents('a').on('click', function() {
+        initArgs(7);
+        return false;
+    });
+
+    $('body').on('click', '.confirmOrder', function() {
+        var orderId = $(this).attr('data-orderId');
+        dialog({
+            content: '您确定收到了所购商品？请您确保签收包裹后，再做确认收货操作',
+            type: 'confirm',
+            callback: function() {
+                $.ajax({
+                    url: '/front/member/order/confirmReceiving',
+                    type: 'get',
+                    dataType: 'json',
+                    data: { orderId: orderId },
+                    success: function(res) {
+                        if ('99' == res.code) {
+                            window.location.href = 'https://passportdev.ecgci.com/login.html';
+                        } else if (res.code == '00') {
+                            window.location.href = '/member/assess.html';
+                        } else {
+                            dialog({ title: '系统提示', content: '确认收货失败，请确认订单是否是待收货状态' });
+                        }
+                    },
+                    error: function() {
+                        dialog({ title: '系统提示', content: '网络繁忙，请稍后重试' });
+                    }
+                });
+            }
+        });
+        return false;
+    });
+
+    function initArgs(num) {
+        $('[name=goodsName]').val("");
+        $('[name=orderId]').val("");
+        $('[name=orderType]').val("");
+        $('[name=orderStatus]').val(num);
+        $('[name=flag]').val(0);
+        initData();
+    }
+    $('body').on('click', '.checkAfterSaleService', function() {
+        var orderId = $(this).attr('data-orderId');
+        document.location.href = "/member/after_sale.html?orderId=" + orderId;
+    })
+
+    $('body').on('click', '.applyReturnGoods', function() {
+        var orderId = $(this).attr('data-orderId');
+        document.location.href = "/member/after_sale/apply_return_goods.html?orderId=" + orderId;
+    })
+    $('body').on('mouseover', '.hy_xg', function() {
+        var orderId = $(this).attr('data-orderId');
+        $('#hy_xgxq_' + orderId).show();
+    });
+    $('body').on('mouseout', '.hy_xg', function() {
+        var orderId = $(this).attr('data-orderId');
+        $('#hy_xgxq_' + orderId).hide();
+    });
+});

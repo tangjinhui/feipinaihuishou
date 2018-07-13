@@ -1,0 +1,144 @@
+require(['jquery', 'handlebars', 'swiper', 'lazyLoad', 'header'], function($, Handlebars, Swiper) {
+
+    if (typeof page_data !== 'object') return;
+
+    var icon = 0;
+
+    Handlebars.registerHelper("imgConf", function(imgUrl, id) {
+        return img_domain_data[id % img_domain_data.length] + '/' + imgUrl;
+    });
+
+    Handlebars.registerHelper("formatPrice", function(price) {
+        price = '' + price;
+        return price.indexOf('.') != -1 ? price : price + '.00';
+    });
+
+     Handlebars.registerHelper("stockStatus", function(stock) {
+        var static = 'static';
+        if(stock=='1') {
+            static += '_1'       //即将开售
+        } else if(stock=='2') {
+            static += '_2';      //无货
+        }else if(stock=='3') {
+            static += '_3'   //库存紧张
+        }else {
+            static = ''
+        }
+        return static;
+    });
+
+     Handlebars.registerHelper("stockStatusMsg", function(stock) {
+        var staticMsg = '';
+        if(stock=='1') {
+            staticMsg = '即将开售';
+        } else if(stock=='2') {
+            staticMsg = '无货';
+        }else if(stock=='3') {
+            staticMsg = '库存紧张';
+        }else {
+            staticMsg = ''
+        }
+        return staticMsg;
+    });
+
+    //渲染实时金价商品
+    var goldTemp = Handlebars.compile($("#gold-template").html());
+    $('#gold_loc').html(goldTemp(page_data));
+
+    //渲染实时金价
+    $('#gold_au').html('<p>基础金价<span>Au</span>' + page_data.realGoldPrice + '元/克</p>');
+
+    //渲染分类列表
+    var itemTemp = Handlebars.compile($("#item-template").html());
+
+    //熊猫币
+    if (page_data.pandaFloorOtherGoods.length) {
+        icon++;
+        var data = createData(page_data.pandaFloorBigImg, page_data.pandaFloorOtherGoods);
+        $('.panda_coin .icon').addClass('fot' + icon);
+        $('.panda_coin').show().find('.fot_pro').html(itemTemp(data));
+        $('.panda_coin').attr('id',icon+'F');
+    } else {
+        $('.panda_coin').hide();
+    }
+
+    //纪念币
+    if (page_data.commemorativeFloorOtherGoods.length) {
+        icon++;
+        var data = createData(page_data.commemorativeFloorBigImg, page_data.commemorativeFloorOtherGoods);
+        $('.keepsake_coin .icon').addClass('fot' + icon);
+        $('.keepsake_coin').show().find('.fot_pro').html(itemTemp(data));
+        $('.keepsake_coin').attr('id',icon+'F');
+    } else {
+        $('.keepsake_coin').hide();
+    }
+
+    //外国币
+    if (page_data.abroadFloorOtherGoods.length) {
+        icon++;
+        var data = createData(page_data.abroadFloorBigImg, page_data.abroadFloorOtherGoods);
+        $('.foreign_coin .icon').addClass('fot' + icon);
+        $('.foreign_coin').show().find('.fot_pro').html(itemTemp(data));
+        $('.foreign_coin').attr('id',icon+'F');
+    } else {
+        $('.foreign_coin').hide();
+    }
+
+    //其他币
+    if (page_data.otherFloorOtherGoods.length) {
+        icon++;
+        var data = createData(page_data.otherFloorBigImg, page_data.otherFloorOtherGoods);
+        $('.other_coin .icon').addClass('fot' + icon);
+        $('.other_coin').show().find('.fot_pro').html(itemTemp(data));
+        $('.other_coin').attr('id',icon+'F');
+    } else {
+        $('.other_coin').hide();
+    }
+
+    function createData(bigImg, goods) {
+        var data = {};
+        data.bigImg = bigImg[0];
+        data.goods = goods;
+        return data;
+    }
+
+    $("[data-original]").lazyload({
+        effect: "fadeIn",
+        load: function() {
+
+            $(this).removeClass('img_loading').parent().prev().css('height', '41px');;
+
+        },
+        threshold: 200
+    });
+
+    //焦点图
+    if (page_data.focusImg.length) {
+        var focusTemp = Handlebars.compile($("#focus-template").html());
+        $('#banner').html(focusTemp(page_data));
+    } else {
+        //未有数据处理
+    }
+
+    if (page_data.focusImg.length > 1) {
+        var mySwiper = new Swiper('.swiper-container', {
+            pagination: '.pagination',
+            paginationClickable: false,
+            paginationMouseoverControl: true,
+            autoplay: 3000,
+            loop: true,
+            autoplayDisableOnInteraction: false,
+            speed: 600
+        });
+    }
+
+    //渲染商城公告和知识堂
+    var articleTemp = Handlebars.compile($('#article-template').html());
+
+    var articleData = createData([], page_data.articleList);
+    $('#article').html(articleTemp(articleData));
+
+    var kownledgeData = createData([], page_data.kownledgeList);
+    $('#kownledge').html(articleTemp(kownledgeData));
+
+});

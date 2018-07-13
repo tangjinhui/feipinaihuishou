@@ -1,0 +1,27 @@
+<script id="list-template" type="text/x-handlebars-template">
+    {{#each list}}
+    <tr>
+        <td>
+            {{addIndex @index}}
+        </td>
+        <td>
+            {{reserveNumber}}
+        </td>
+        <td>
+            <a href="http://ydingdev.ecgci.com/detail/{{reserveId}}.html">
+                    {{reserveName}}
+                </a>
+        </td>
+        <td>
+            {{reserveDate}}
+        </td>
+        <td>
+            {{status}}
+        </td>
+        <td>
+            {{{power can status}}}
+            <br>
+        </td>
+    </tr>
+    {{/each}}
+</script>

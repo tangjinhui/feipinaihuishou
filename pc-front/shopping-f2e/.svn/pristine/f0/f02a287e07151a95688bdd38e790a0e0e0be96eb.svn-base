@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>会员注册 - 中国金币云商平台</title>
+    <meta name="Keywords" content="中国金币云商平台" />
+    <meta name="description" content="中国金币云商平台" />
+    <meta content=IE=edge http-equiv=X-UA-Compatible />
+    <link rel="icon" href="http://static.ecgci.com/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/regist.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content bgs">
+            <div class="top">
+                <h1 class="logo_ico">
+                    <a href="http://pfdev.ecgci.com/index.html">
+                        <img src="http://static.ecgci.com/images/logo.png" alt="中国金币网上商城"
+                        title="中国金币网上商城">
+                    </a>
+                    <img src="http://static.ecgci.com/images/regist_img.png">
+                </h1>
+            </div>
+            <div class="w">
+                <div class="new_r pos" id="outline">
+                    <div class="register">
+                        <span>
+                            我已经注册，现在就
+                            <a href="/login.html">
+                                登录
+                            </a>
+                        </span>
+                    </div>
+                    <div class="tabqhs">
+                        <div class="tab_2 tabss">
+                            <a href="javascript:void(0);" class="a1 cur">
+                                会员注册
+                            </a>
+                        </div>
+                        <div class="ui-tabs-panel">
+                            <form id="reg_form">
+                                <div class="new_rh new_from" id="new_user">
+                                    <div>
+                                        <font color="red">
+                                        </font>
+                                    </div>
+                                    <div id="registerAccount" class="new_rhd clearfix">
+                                        <dl>
+                                            <dt>
+                                                <span>*</span> 注册手机号:
+                                            </dt>
+                                            <dd>
+                                                <input type="text" class="ipt_txt" name="mobile" id="mobile" autocomplete="off" placeholder="完成验证后您可以用该号码登录或者找回密码" maxlength="11">
+                                                <span class="errorTip tips3" id="accountError">
+                                            </span>
+                                            </dd>
+                                        </dl>
+                                        <p class="clear">
+                                        </p>
+                                    </div>
+                                    <div class="new_rhd clearfix">
+                                        <dl>
+                                            <dt>
+                                                <span>
+                                                *
+                                            </span> 设置密码:
+                                            </dt>
+                                            <dd>
+                                                <input class="ipt_txt pwd" id="password" style="font-size:12px;" name="password" type="password" maxlength="20" placeholder="6-20位字符，建议使用字母、数字和特殊字符组合" autocomplete="off">
+                                                <span id="pwdError" class="tips2 errorTip">
+                                                
+                                                </span>
+                                            </dd>
+                                        </dl>
+                                        <p class="clear">
+                                        </p>
+                                    </div>
+                                    <div style="margin-left:142px;" id="strength_pwd" class="new_rhd clearfix">
+                                        <div class="acco-safe" style="padding:5px 0 0;">
+                                        </div>
+                                        <div class="red dn">
+                                            密码太弱，有被盗风险，请设置由多种字符组成的复杂密码
+                                        </div>
+                                    </div>
+                                    <div class="new_rhd clearfix">
+                                        <dl>
+                                            <dt>
+                                                <span>
+                                                *
+                                            </span> 密码确认:
+                                            </dt>
+                                            <dd>
+                                                <input type="password" autocomplete="off" value="" name="repassword" id="repassword" placeholder="请再次输入密码" maxlength="20" style="font-size:12px;" class="ipt_txt pwd">
+                                                <span id="repwdError" class="tips3 errorTip">
+                                                </span>
+                                            </dd>
+                                        </dl>
+                                        <p class="clear">
+                                        </p>
+                                    </div>
+                                    <div class="new_rhd new_rhdab clearfix" id="mobileCodeDiv">
+                                        <dl>
+                                            <dt>
+                                                <span>
+                                                *
+                                            </span> 短信验证码:
+                                            </dt>
+                                            <dd>
+                                                <input type="text" name="mobileCode" id="mobileCode" autocomplete="off" tabindex="6" maxlength="6">
+                                                <a href="javascript:void(0);" id="sendMobileCode" class="anniu">
+                                                    <span id="dyMobileButton">
+                                                        获取短信验证码
+                                                    </span>
+                                                </a>
+                                                <span id="mobileCode_error" class="tips3">
+                                                    短信验证码输入错误，请重新获取短信验证码
+                                                </span>
+                                            </dd>
+                                        </dl>
+                                        <p class="clear">
+                                        </p>
+                                    </div>
+                                    <div class="new_rhd new_rhdv">
+                                        <dl>
+                                            <dt>
+                                                &nbsp;
+                                            </dt>
+                                            <dd>
+                                                <input checked type="checkbox" id="protocol" class="cheK" style="padding:0;border:0;">
+                                                <span>
+                                                    我已阅读并同意
+                                                    <a class="ec_clause" href="http://pfdev.ecgci.com/doing/hel/registProtocol.html" target="_blank">
+                                                        《中国金币网上商城用户注册协议》
+                                                    </a>
+                                                </span>
+                                                <span id="checTemp" class="tips3 xy dn">抱歉，您必须同意商城交易条款后，才能注册
+                                                </span>
+                                            </dd>
+                                        </dl>
+                                        <p class="clear">
+                                        </p>
+                                    </div>
+                                    <div class="new_rhd">
+                                        <dl>
+                                            <dt>
+                                                &nbsp;
+                                            </dt>
+                                            <dd>
+                                                <input type="button" value="立即注册" id="btnRegister" class="btn_zc">
+                                                <span class="red font16 marl45"></span>
+                                            </dd>
+                                        </dl>
+                                        <p class="clear">
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="r fr">
+                        <p class="txt">
+                            提示：
+                        </p>
+                        <p class="txt">
+                            1、按要求输入必要的注册信息
+                        </p>
+                        <p class="txt mar_b">
+                            （请填写真实手机号，我们保证您的信息安全）
+                        </p>
+                        <p class="txt">
+                            2、获取手机验证码通过验证
+                        </p>
+                        <p class="txt">
+                            3、注册成功
+                        </p>
+                        <div class="pic">
+                        </div>
+                        <div class="des_box">
+                            <p class="line">
+                                扫描关注“金币云商”
+                            </p>
+                            <p class="line">
+                                进入金币微信商城快捷注册
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <p class="clear">
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="code_layer" class="code_dialog"></div>
+    <div class="code_content code_dialog">
+        <span class="close" id="close_code">X</span>
+        <div class="content_top" id="tip"><span>*</span>请输入图形验证码！</div>
+        <div class="content_center">
+            <input class="txt_inp" id="js_txt" autocomplete="off" type="text" placeholder="请输入验证码" maxlength="4">
+            <div class="img_wrap">
+                <img id="img_rand" src="" alt="">
+            </div>
+            <span class="reload">
+                看不清楚<a href="javascript:void(0);" id="change_rand">换一张</a>
+            </span>
+        </div>
+        <button class="enter" id="js_senMes">确定</button>
+    </div>
+    <!--#include file="/inc/bottom_weblink.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/regist.js"></script>
+</body>
+
+</html>

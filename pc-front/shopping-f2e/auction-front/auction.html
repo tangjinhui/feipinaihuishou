@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>竞价 - 中国金币云商平台</title>
+    <meta name="Keywords" content="中国金币云商平台,竞价" />
+    <meta name="description" content="中国金币云商平台 竞价" />
+    <meta content=IE=edge http-equiv=X-UA-Compatible />
+    <link rel="icon" href="http://static.ecgci.com/images/favicon.ico" type="image/x-icon">
+    #set($index-css = '<!--#include file="/auction-static/inc/index-css.html"-->  ')
+    $index-css
+    <!-- 样式 -->
+</head>
+<body id="reserve_main">
+#set($bar = '<!--#include file="/auction-static/common/bar.html"-->')
+$bar
+#set($header = '<!--#include file="/auction-static/common/header.html"-->')
+$header
+<!-- 头部 -->
+<div class="crumbs wrap">
+    <a href="${result.serverUrl}/index.html">首页</a>
+    <span>-&gt;</span>
+    <span>竞价</span>
+</div>
+    
+<!-- 正在活动 -->
+<div id="jsActive" class="clearfix">
+
+    <div class="crumbs wrap el dn">
+        <span>正在竞价</span>
+    </div>
+    <div class="active_list wrap clearfix" ></div>
+
+</div>
+
+<!-- 即将开始 -->
+<div id="jsWill" class="clearfix">
+    
+    <div class="crumbs wrap el dn">
+        <span>即将开始</span>
+    </div>
+
+    <div class="will_start wrap clearfix">
+        <!-- 修正外边距 -->
+        <div class="box clearfix"></div>
+
+    </div>
+
+</div>
+    
+<!-- 历史抽签 -->
+<div id="jsHistory">
+    
+    <div class="crumbs wrap el">
+        <span>已经落槌</span>
+    </div>
+
+    <div class="history wrap clearfix">
+        #foreach($auction in ${result.esAuctionListEnd})
+        #if("$!auction.orderId" != "")
+        <div class="item isOk">
+        #else
+        <div class="item">
+        #end
+            <div class="pic">
+                <a href="/auction_detail_${auction.auctionId}.html" target="_blank">
+                    <img class="img_loading" src="http://static.ecgci.com/images/git.png" data-original="${result.imgServer}/$!{auction.imgSmall}" alt="">
+                </a>
+                <div class="ok"></div>
+            </div>
+            <div class="tit">
+                <a href="/auction_detail_${auction.auctionId}.html" title="$!{auction.name}" target="_blank">$!{auction.name}</a>
+                #if("$!auction.orderId" != "")
+                <div class="clearfix">
+                    <span class="fl">获拍价格：<span class="imp_r">￥$!{auction.maxPrice}</span></span>
+                    <span class="fr">出价次数：<span>$!{auction.counts}次</span></span>
+                </div>
+                #end
+            </div>
+        </div>
+        #end
+    </div>
+</div>
+
+<script>
+    var auctionIds = '$!{result.auctionIds}';
+    auctionIds = auctionIds.slice(0,auctionIds.length-1);
+    var imgServer = '${result.imgServer}';
+    var serverUrl = '${result.serverUrl}';
+</script>
+#set($index-tpl = '<!--#include file="/auction-static/inc/index-tpl.html"-->')
+$index-tpl
+<!-- 底部 -->
+#set($footer = '<!--#include file="/auction-static/common/footer.html"-->')
+$footer
+#set($index-script = '<!--#include file="/auction-static/inc/index-js.html"-->')
+$index-script
+</body>
+</html>

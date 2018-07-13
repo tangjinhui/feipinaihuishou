@@ -1,0 +1,786 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+
+.wrap {
+    width: 1240px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+button {
+    -webkit-appearance: none;
+}
+.wb {
+    width: 1238px;
+    margin: 0 auto;
+}
+.mart12 {
+    margin-top: 10px;
+}
+table, table td {
+    border: #e1e1e1 1px solid;
+    line-height: 24px;
+    border-collapse: collapse
+}
+table td {
+    padding: 5px 10px;
+}
+.bord {
+    border: #e1e1e1 1px solid;
+}
+h2 {
+    height: 28px;
+    line-height: 28px;
+    color: #58595b;
+    border: none;
+    padding: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+table.formtable td input[type="text"] {
+    text-align: left;
+    line-height: 22px;
+    margin: 0px;
+    vertical-align: middle;
+    border: 1px solid #e1e1e1;
+    font-size: 12px;
+    color: #666;
+    padding: 4px;
+    height: 22px;
+}
+table.formtable td input[type="text"].ipt_txt {
+    width: 75px;
+}
+
+/* table.formtable {
+    margin:20px 0;
+} */
+
+table.formtable, table.formtable td, table.formtable, th {
+    border: none;
+}
+table.formtable td {
+    line-height: 30px;
+    padding: 5px;
+}
+table.formtable td a {
+    margin: 0 5px;
+}
+table.formtable td input[type="text"] {
+    width: 302px;
+}
+table.formtable td img {
+    width: 60px;
+    height: 20px;
+    margin-right: 5px;
+}
+table.formtable td input[type="password"],
+table.formtable td input[type="text"],
+.inputTxt {
+    text-align: left;
+    line-height: 22px;
+    margin: 0px;
+    vertical-align: middle;
+    border: 1px solid #e1e1e1;
+    font-size: 12px;
+    color: #666;
+    padding: 4px;
+    height: 22px;
+}
+.msg-text {
+    line-height: 24px;
+    color: #e43a3d
+}
+#frm h2.padl, .content .wb h2.padl {
+    padding: 12px 0 12px 180px;
+    background: #f3f3f3;
+    color: #000;
+    font-family: "Microsoft YaHei";
+    font-size: 24px;
+}
+#frm table.formtable {
+    margin: 20px 0 20px 95px
+}
+.flow_chart4 {
+    height: 35px;
+    line-height: 35px;
+    color: #58595b;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    overflow: hidden;
+    margin: 20px auto 0;
+}
+.flow_chart4 .cur {
+    color: #fff;
+    font-weight: bold;
+}
+.flow_chart4 {
+    background: url(http://static.ecgci.com/images/liuc4_bg.png) 0 0 no-repeat;
+    width: 878px;
+}
+.flow_chart4 li {
+    float: left;
+    width: 192px;
+    padding: 0 0 0 24px;
+}
+.flow_chart4 .last {
+    padding: 0 0 0 33px;
+}
+#change_code_btn {
+    color: #e43a3d;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn {
+    padding: 2px 8px;
+    display: inline-block;
+    border: none;
+    font-size: 12px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    font-family: "Microsoft YaHei";
+    line-height: 22px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.msg-error {
+    color: #e43a3d;
+}
+.padl {
+    padding-left: 10px;
+}
+h6 {
+    padding: 0 10px;
+    background: #f3f3f3;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: #e1e1e1 1px solid;
+    margin: 0;
+}
+em {
+    font-style: normal;
+}
+td, td {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+*html #tool {
+    position: absolute;
+}
+a:hover {
+    text-decoration: underline
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+.btn {
+    background: #e43a3d;
+    color: #FFFFFF
+}
+a {
+    color: #666666;
+}
+a:hover {
+    color: #e43a3d;
+}
+.cur {
+    color: #666666;
+}
+.btn {
+    background: #e43a3d;
+    color: #ffffff
+}
+.re {
+    position: relative;
+}
+.codeBox {
+    position: absolute;
+    top: 5px;
+    left: 109px;
+}
+.wb {
+    width: 1238px;
+    margin: 0 auto;
+}
+.mart12 {
+    margin-top: 10px;
+}
+table, table td {
+    border: #e1e1e1 1px solid;
+    line-height: 24px;
+    border-collapse: collapse
+}
+table td {
+    padding: 5px 10px;
+}
+.bord {
+    border: #e1e1e1 1px solid;
+}
+h2 {
+    height: 28px;
+    line-height: 28px;
+    color: #58595b;
+    border: none;
+    padding: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+html {
+    background-image: url(about:blank);
+    background-attachment: fixed;
+}
+table.formtable td input[type="text"] {
+    text-align: left;
+    line-height: 22px;
+    margin: 0px;
+    vertical-align: middle;
+    border: 1px solid #e1e1e1;
+    font-size: 12px;
+    color: #666;
+    padding: 4px;
+    height: 22px;
+}
+
+/* table.formtable {
+    margin:20px 0;
+} */
+
+table.formtable, table.formtable td, table.formtable, th {
+    border: none;
+}
+table.formtable td {
+    line-height: 30px;
+    padding: 5px;
+}
+table.formtable td a {
+    margin: 0 5px;
+}
+table.formtable td input[type="text"] {
+    width: 302px;
+}
+table.formtable td img {
+    width: 60px;
+    height: 20px;
+    margin-right: 5px;
+}
+#change_code_btn {
+    color: #e43a3d;
+    text-decoration: none;
+    cursor: pointer
+}
+.content .wb h2.padl {
+    padding: 12px 0 12px 180px;
+    background: #f3f3f3;
+    color: #000;
+    font-family: "Microsoft YaHei";
+    font-size: 24px;
+}
+#form table.formtable {
+    margin: 20px 0 40px 160px
+}
+#emailDivValid {
+    margin-left: 122px
+}
+#logPasswordDivValid {
+    margin-left: 160px
+}
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+/* .flow_chart4 {
+    height:35px;
+    line-height:35px;
+    color:#58595b;
+    font-family:"Microsoft YaHei";
+    font-size:14px;
+    overflow:hidden;
+    margin:20px auto 0;
+} */
+
+.flow_chart4 .cur {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* .flow_chart4 {
+    background:url(http://static.ecgci.com/images/liuc4_bg.png) 0 0 no-repeat;
+    width:878px;
+} */
+
+.flow_chart4 li {
+    float: left;
+    width: 192px;
+    padding: 0 0 0 24px;
+}
+.flow_chart4 .last {
+    padding: 0 0 0 33px;
+}
+.step2 {
+    background-position: 0 -35px;
+}
+.btn {
+    padding: 2px 8px;
+    display: inline-block;
+    border: none;
+    font-size: 12px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    font-family: "Microsoft YaHei";
+    line-height: 22px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.msg-error {
+    display: block;
+    color: #e43a3d;
+}
+.zh_wc {
+    height: 220px;
+    font-family: "Microsoft YaHei";
+    width: 600px;
+    /* padding:40px 0; */
+    margin: 0 auto;
+}
+.wc_mm {
+    line-height: 44px;
+    color: #5fb72c;
+    font-size: 22px;
+    height: 44px;
+    padding: 5px 10px;
+}
+.padl {
+    padding-left: 10px;
+}
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+.wcpad {
+    padding-left: 86px;
+    line-height: 22px;
+    padding: 0 0 5px;
+}
+h6 {
+    padding: 0 10px;
+    background: #f3f3f3;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: #e1e1e1 1px solid;
+    margin: 0;
+}
+em {
+    font-style: normal;
+}
+td, td {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+.zh_wc {
+    font-family: "Microsoft YaHei";
+    height: auto;
+    margin: 0 auto;
+    width: 600px;
+    line-height: 30px;
+}
+.wc_mm {
+    color: #e43a3d;
+    font-size: 24px;
+    height: 56px;
+    line-height: 46px;
+    padding: 0;
+}
+.btn {
+    background: #e43a3d;
+    color: #FFFFFF
+}
+.msg-text {
+    line-height: 24px;
+    color: #e43a3d
+}
+a {
+    color: #666666;
+}
+a:hover {
+    color: #e43a3d;
+}
+.cur {
+    color: #666666;
+}
+.btn {
+    background: #e43a3d;
+    color: #ffffff
+}
+.button_anniu_w {
+    background: #e43a3d;
+    color: #ffffff;
+    border: 1px solid #e1e1e1
+}
+.button_anniu_w {
+    cursor: pointer;
+    height: 30px;
+    margin: 0 0 0 10px;
+    width: 130px;
+}
+.anniuyzm, .anniuyzm:hover {
+    cursor: default;
+    display: inline-block;
+    font-family: "Microsoft YaHei";
+    line-height: 24px;
+    padding: 1px 9px;
+    background: #f3f3f3;
+    color: #555;
+    border: #e1e1e1 1px solid;
+    margin: 0 0 0 10px;
+}
+.re {
+    position: relative;
+}
+.codeBox {
+    position: absolute;
+    top: 5px;
+    left: 109px;
+}
+button {
+    -webkit-appearance: none;
+}
+.wb {
+    width: 1238px;
+    margin: 0 auto;
+}
+.mart12 {
+    margin-top: 10px;
+}
+table, table td {
+    border: #e1e1e1 1px solid;
+    line-height: 24px;
+    border-collapse: collapse
+}
+table td {
+    padding: 5px 10px;
+}
+.bord {
+    border: #e1e1e1 1px solid;
+}
+h2 {
+    height: 28px;
+    line-height: 28px;
+    color: #58595b;
+    border: none;
+    padding: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+table.formtable td input[type="password"], table.formtable td input[type="text"] {
+    text-align: left;
+    line-height: 22px;
+    margin: 0px;
+    vertical-align: middle;
+    border: 1px solid #e1e1e1;
+    font-size: 12px;
+    color: #666;
+    padding: 4px;
+    height: 22px;
+}
+
+/* table.formtable {
+    margin:20px 0;
+} */
+
+table.formtable, table.formtable td, table.formtable, th {
+    border: none;
+}
+table.formtable td {
+    line-height: 30px;
+    padding: 5px;
+}
+table.formtable td a {
+    margin: 0 5px;
+    cursor: pointer;
+}
+table.formtable td input[type="password"], table.formtable td input[type="text"] {
+    width: 302px;
+}
+table.formtable td img {
+    width: 60px;
+    height: 20px;
+    margin-right: 5px;
+}
+.content .wb h2.padl {
+    padding: 12px 0 12px 180px;
+    background: #f3f3f3;
+    color: #000;
+    font-family: "Microsoft YaHei";
+    font-size: 24px;
+}
+h1, h2, h3 {
+    font-weight: normal;
+}
+input.required {
+    border: 1px solid #00A8E6;
+    border-color: #666 #CBCBCB #CBCBCB #666;
+    color: #666
+}
+
+/* .flow_chart4 {
+    height:35px;
+    line-height:35px;
+    color:#58595b;
+    font-family:"Microsoft YaHei";
+    font-size:14px;
+    overflow:hidden;
+    margin:20px auto 0;
+} */
+
+.flow_chart4 .cur {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* .flow_chart4 {
+    background:url(http://static.ecgci.com/images/liuc4_bg.png) 0 0 no-repeat;
+    width:878px;
+} */
+
+.flow_chart4 li {
+    float: left;
+    width: 192px;
+    padding: 0 0 0 24px;
+}
+.step3 {
+    background-position: 0 -70px;
+}
+.btn {
+    padding: 2px 8px;
+    display: inline-block;
+    border: none;
+    font-size: 12px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    font-family: "Microsoft YaHei";
+    line-height: 22px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.msg-error {
+    color: #e43a3d;
+}
+.padl {
+    padding-left: 10px;
+}
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+h6 {
+    padding: 0 10px;
+    background: #f3f3f3;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: #e1e1e1 1px solid;
+    margin: 0;
+}
+em {
+    font-style: normal;
+}
+td {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+.acco-safe {
+    line-height: 30px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding: 0 0 0 15px;
+}
+.acco-safe .rank-text1 {
+    margin-right: 8px;
+}
+.rank-text1 {
+    margin-left: 10px;
+}
+.acco-safe .rank-text1 {
+    color: #df1313;
+}
+.rank1, .rank2, .rank3 {
+    margin-right: 9px;
+    background: url(../..http://static.ecgci.com/images/icon.png) no-repeat;
+    display: inline-block;
+    font-size: 0;
+    height: 14px;
+    line-height: 0;
+    margin-right: 20px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 106px;
+}
+.rank1 {
+    background-position: -94px -204px;
+}
+.rank2 {
+    background-position: -94px -220px;
+}
+.rank3 {
+    background-position: -94px -236px;
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+.btn {
+    background: #e43a3d;
+    color: #FFFFFF
+}
+.msg-text {
+    line-height: 24px;
+    color: #e43a3d
+}
+a {
+    color: #666666;
+}
+a:hover {
+    color: #e43a3d;
+}
+.cur {
+    color: #666666;
+}
+.btn {
+    background: #e43a3d;
+    color: #ffffff
+}
+.re {
+    position: relative;
+}
+.codeBox {
+    position: absolute;
+    top: 5px;
+    left: 109px;
+}
+input {
+    vertical-align: middle;
+}
+.wb {
+    width: 1238px;
+    margin: 0 auto;
+}
+.mart12 {
+    margin-top: 10px;
+}
+.bord {
+    border: #e1e1e1 1px solid;
+}
+h2 {
+    height: 28px;
+    line-height: 28px;
+    color: #58595b;
+    border: none;
+    padding: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+#frm h2.padl, .content .wb h2.padl {
+    padding: 12px 0 12px 180px;
+    background: #f3f3f3;
+    color: #000;
+    font-family: "Microsoft YaHei";
+    font-size: 24px;
+}
+h2 {
+    font-weight: normal;
+}
+
+/* .flow_chart4 {
+    height:35px;
+    line-height:35px;
+    color:#58595b;
+    font-family:"Microsoft YaHei";
+    font-size:14px;
+    overflow:hidden;
+    margin:20px auto 0;
+} */
+
+.flow_chart4 .cur {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* .flow_chart4 {
+    background:url(http://static.ecgci.com/images/liuc4_bg.png) 0 0 no-repeat;
+    width:878px;
+} */
+
+.flow_chart4 li {
+    float: left;
+    width: 192px;
+    padding: 0 0 0 24px;
+}
+.flow_chart4 .last {
+    padding: 0 0 0 33px;
+}
+.step4 {
+    background-position: 0 -105px;
+}
+.zh_wc {
+    height: 220px;
+    font-family: "Microsoft YaHei";
+    width: 600px;
+    /* padding:40px 0; */
+    margin: 0 auto;
+}
+.wc_mm {
+    line-height: 44px;
+    color: #5fb72c;
+    font-size: 22px;
+    height: 44px;
+    padding: 5px 10px;
+}
+.laoji {
+    padding-left: 64px;
+    color: #58595b;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+}
+.laoji a {
+    margin: 0 5px;
+    color: #e43a3d;
+}
+.padl {
+    padding-left: 10px;
+}
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+.zh_wc {
+    font-family: "Microsoft YaHei";
+    height: auto;
+    margin: 0 auto;
+    width: 600px;
+    line-height: 30px;
+    padding: 20px 0;
+}
+.wc_mm {
+    color: #e43a3d;
+    font-size: 24px;
+    height: 56px;
+    line-height: 46px;
+    padding: 0;
+}
+a {
+    color: #666666;
+}
+.cur {
+    color: #666666;
+}

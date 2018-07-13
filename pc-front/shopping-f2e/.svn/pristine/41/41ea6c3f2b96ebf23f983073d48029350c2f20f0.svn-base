@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>账户中心 - 会员中心 - 中国金币官方网上商城</title>
+    <meta name="Keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="/css/member/bean.css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div class="w crumbs">当前位置：
+        <a href="/index.html">首页</a>
+        <span>&gt;</span>
+        <a href="/member/index.html">会员中心</a>
+        <span>&gt;</span>我的金豆
+    </div>
+    <div class="w clearfix">
+        <!--#include file="/inc/member/menu.html"-->
+        <div class="fr">
+            <div class="right_a m_right">
+                <div class="bord" id="bord">
+                    <h2>
+                            我的金豆
+                        </h2>
+                    <p class="marl10" style="margin-top:10px;margin-left:20px;font-size:12px">
+                        您当前的可用金豆：
+                        <span style="color:#ff3000;font-weight:bold;font-size:30px;" id="points">
+                            </span>
+                    </p>
+                    <p class="marl10" style="margin:10px 0 10px 10px;font-size:12px">
+                        <span class="marl10">
+                                支付签收之后，金豆才会赠送，且订单签收1天后金豆才能使用
+                            </span>
+                    </p>
+                </div>
+                <div id="page_list">
+                    <table width="100%" border="0" class="text_c wbord" cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr id="list_title">
+                                <td width="20%">
+                                    <select name="flag1">
+                                        <option value="0">
+                                            全部
+                                        </option>
+                                        <option value="1">
+                                            最近一周
+                                        </option>
+                                        <option value="2">
+                                            最近一月
+                                        </option>
+                                        <option value="3">
+                                            最近一年
+                                        </option>
+                                    </select>
+                                </td>
+                                <td width="20%">
+                                    类别
+                                </td>
+                                <td width="20%">
+                                    数量
+                                </td>
+                                <td width="40%">
+                                    备注
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody id="list_box">
+                            <tr>
+                                <td colspan="9" style="text-align: center;">正在加载...</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="pageLimit" style="display: none;">
+                                <td colspan="9" style="text-align: right;">
+                                    <!--#include file="/inc/plugin/limitPage.html"-->
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/inc/member/bean/list.html"-->
+    <!--#include file="/common/footer.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/member/bean.js"></script>
+</body>
+
+</html>

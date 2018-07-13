@@ -1,0 +1,629 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/common.css');
+@import url('http://static.ecgci.com/css/libs/mini_login.css');
+@import url('http://static.ecgci.com/css/libs/limitPage.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+@import url('http://static.ecgci.com/css/libs/dialog.css');
+.c {
+    clear: both;
+}
+
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+.left_a {
+    width: 218px;
+    border: #ccc 1px solid;
+    border-right: 1px solid #dedede;
+    border-bottom: #999999 3px solid;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#c9c9c9', Direction=135, Strength=5);
+    background-color: #fff;
+    -moz-box-shadow: 2px 2px 5px #c9c9c9;
+    -webkit-box-shadow: 2px 2px 5px #c9c9c9;
+    box-shadow: 2px 2px 5px #c9c9c9;
+}
+.right_a {
+    width: 1003px;
+}
+.right_b {
+    width: 1003px;
+}
+.pos {
+    position: relative;
+}
+.marb10 {
+    margin-bottom: 10px;
+}
+.marb37 {
+    margin-bottom: 37px;
+}
+.mart12 {
+    margin-top: 10px;
+}
+.ui-tabs-hide {
+    display: none;
+}
+table {
+    border: #e1e1e1 1px solid;
+    line-height: 24px;
+    border-collapse: collapse
+}
+.bord {
+    border: #e1e1e1 1px solid;
+}
+h2 {
+    height: 28px;
+    line-height: 28px;
+    color: #58595b;
+    border: none;
+    padding: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.product {
+    border: #e1e1e1 1px solid;
+    border-left: none;
+}
+.product #listBox li {
+    float: left;
+    width: 309px;
+    border-left: #e1e1e1 1px solid;
+}
+.product dl {
+    height: 359px;
+    border: #fff 8px solid;
+    padding: 18px 9px;
+    background: #fff;
+    overflow: hidden;
+}
+.product dt {
+    width: 240px;
+    height: 240px;
+    margin: 10px auto 20px;
+}
+.product dl dd.tit {
+    line-height: 22px;
+    font-size: 15px;
+    color: #333;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+}
+.product dl dd.tit a {
+    color: #333;
+}
+.product dl dd.tit a:hover {
+    color: #e43a3d;
+}
+.channel_pros {
+    width: 1003px;
+    margin-bottom: -10px;
+    border: none;
+    overflow: hidden;
+}
+.channel_pros #listBox li {
+    width: 333px;
+    margin-bottom: 40px;
+    border: #e1e1e1 1px solid;
+    margin-right: -1px;
+}
+.product dl dd.tit {
+    height: 22px;
+    overflow: hidden;
+}
+.page {
+    position: relative;
+    color: #58595b;
+    font: 14px/27px simsun;
+    height: 28px;
+    line-height: 28px;
+    margin: 10px 0;
+    text-align: right;
+    width: 100%;
+}
+/* .page a {
+    border: 1px solid #e5e5e5;
+    color: #58595b;
+    padding: 5px 10px;
+    margin: 0 2px;
+} */
+.page a:hover, .page a.selected {
+    background: #e43a3d;
+    border: 1px solid #e43a3d;
+    color: #fff;
+    text-decoration: none;
+}
+.page a b {
+    font-size: 12px;
+    font-weight: normal
+}
+/* .page span {
+    font: 12px/27px simsun;
+} */
+.page span.tiaozhi {
+    margin-left: 10px;
+    color: #959595;
+}
+.page input {
+    border: 1px solid #e5e5e5;
+    height: 22px;
+    line-height: 22px;
+    padding: 2px 5px;
+    width: 25px;
+    margin-left: 10px;
+    text-align: center;
+}
+.page input.btn {
+    width: 22px;
+    height: 22px;
+    background: url(http://static.ecgci.com/images/icon.png) -178px -468px no-repeat;
+    border: none;
+    cursor: pointer;
+}
+th {
+    border: none;
+}
+.right_a .ss_tj {
+    margin-bottom: 10px;
+}
+.product dl dd.price {
+    color: #e43a3d;
+    font-size: 12px;
+}
+h1, h2, h3 {
+    font-weight: normal;
+}
+.btn {
+    padding: 2px 8px;
+    display: inline-block;
+    border: none;
+    font-size: 12px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    font-family: "Microsoft YaHei";
+    line-height: 22px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.crumbs {
+    height: 52px;
+    line-height: 52px;
+    color: #58595b;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+}
+.crumbs span {
+    padding: 0 6px;
+}
+.m_left h2, .m_left h3 {
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    font-family: "Microsoft YaHei";
+    text-align: left;
+}
+.m_left h2 {
+    padding: 0 0 0 13px;
+}
+.m_left h2 {
+    height: 44px;
+    background: url(http://static.ecgci.com/images/hy_topbg.png) 0 0 repeat-x;
+    line-height: 44px;
+    color: #333;
+    font-size: 18px;
+    font-weight: normal;
+}
+.m_left h3 {
+    height: 35px;
+    margin: 0;
+    padding: 9px 0 0 29px;
+    background: #fff;
+    border-bottom: 1px dashed #e1e1e1;
+    line-height: 35px;
+    color: #58595b;
+    font-family: Microsoft YaHei;
+    font-size: 14px;
+}
+.m_left ul {
+    padding: 5px 0;
+}
+.m_left li {
+    padding: 0 0 0 30px;
+    font-family: Microsoft YaHei;
+    color: #58595b;
+    line-height: 24px;
+    font-size: 12px;
+}
+.red {
+    color: #e43a3d;
+}
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+.ss_left {
+    border: #e1e1e1 1px solid;
+}
+.ss_left h3 {
+    padding-left: 35px;
+    line-height: 26px;
+}
+.ss_left ul {
+    display: none;
+}
+.ss_left h3 {
+    position: relative;
+    cursor: pointer;
+}
+.ss_left h3 span {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+    background: url(http://static.ecgci.com/images/icon.png) 0 0 no-repeat;
+}
+.over h3 {
+    color: #e43a3d;
+}
+.over h3 span {
+    background-position: -21px 0;
+}
+.ss_tj {
+    font-family: 'SimSun';
+}
+.ss_right h3 {
+    background: #f3f3f3;
+    margin: 0;
+    height: 40px;
+    border-bottom: #e1e1e1 1px solid;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+}
+.ss_right h3 a {
+    font-size: 12px;
+}
+.ss_tj ul {
+    padding: 5px 0 0 10px;
+    width: 978px;
+}
+.ss_tj li {
+    width: 100%;
+    float: left;
+    line-height: 18px;
+    padding: 7px 0 5px;
+}
+.ss_tj dt {
+    width: 100px;
+    float: left;
+    padding: 0 5px 0 0;
+    text-align: right;
+    font-weight: bold;
+}
+.ss_tj dd {
+    width: 860px;
+    float: left;
+    overflow: hidden;
+}
+.ss_tj dl dd a {
+    display: block;
+    padding: 0 7px;
+    height: 18px;
+    text-decoration: none;
+    margin: 0 20px 4px 0;
+    float: left;
+}
+.ss_tj dl dd a:link, .ss_tj dl dd a:visited {
+    color: #58595b;
+    text-decoration: none;
+}
+.ss_tj dl dd a.cur {
+    color: #fff;
+    text-decoration: none;
+    background: #e43a3d;
+}
+.ss_tj dl dd a.cur:hover {
+    color: #fff;
+    text-decoration: none;
+    background: #e43a3d;
+}
+.more {
+    position: absolute;
+    bottom: -28px;
+    height: 27px;
+    line-height: 27px;
+    background: url(http://static.ecgci.com/images/icon.png) #fff no-repeat;
+    cursor: pointer;
+    padding: 0 20px 0 5px;
+    text-align: center;
+    width: auto;
+    left: 400px;
+}
+.up-icon {
+    background-position: -62px -74px;
+    border-left: 1px solid rgb(229, 229, 229);
+    border-right: 1px solid rgb(229, 229, 229);
+    border-bottom: 1px solid rgb(229, 229, 229);
+}
+.down-icon {
+    background-position: 82px -73px;
+    border-left: 1px solid rgb(229, 229, 229);
+    border-right: 1px solid rgb(229, 229, 229);
+    border-bottom: 1px solid rgb(229, 229, 229);
+}
+.marg50 {
+    margin-top: 38px;
+}
+.filter {
+    background: #f3f3f3;
+    height: 25px;
+    overflow: hidden;
+    padding: 5px 20px 5px 10px;
+}
+.filter dl, .filter dt, .filter dd {
+    float: left;
+    line-height: 26px;
+}
+.filter .total {
+    float: right;
+    height: 22px;
+    line-height: 22px;
+    padding: 2px 15px 2px 0;
+}
+.filter .pagin {
+    float: right;
+    height: 22px;
+    padding: 2px 0;
+}
+.filter .order dd {
+    height: 24px;
+    line-height: 24px;
+    margin-right: 5px;
+    overflow: hidden;
+}
+.filter .order a {
+    display: block;
+    padding: 0 10px;
+}
+.filter .order b {
+    display: none;
+    margin-left: 5px;
+    font-size: 0;
+    height: 8px;
+    overflow: hidden;
+    width: 8px;
+}
+.filter .order .down b {
+    display: inline-block;
+    background: url(http://static.ecgci.com/images/icon.png) -75px 0 no-repeat;
+}
+.filter .order .up b {
+    display: inline-block;
+    background: url(http://static.ecgci.com/images/icon.png) -57px 0 no-repeat;
+}
+.filter .order .curr {
+    background: #e43a3d;
+    font-weight: bold;
+}
+.filter .order .curr a:link, .filter .order .curr a:visited {
+    color: #fff;
+}
+.filter .order a, .filter .order a:link, .filter .order a:hover, .filter .order a:visited {
+    text-decoration: none
+}
+.pagin a, .pagin span {
+    border: 1px solid #e1e1e1;
+    float: left;
+    font-family: SimSun;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 2px;
+    overflow: hidden;
+    padding: 2px 10px;
+}
+.pagin a {
+    position: relative;
+}
+.pagin a:hover {
+    text-decoration: none;
+}
+.pagin .text {
+    border: 0 none;
+    padding: 3px 11px;
+}
+.pagin a b {
+    background-image: url(http://static.ecgci.com/images/icon.png);
+    background-repeat: no-repeat;
+    display: block;
+    height: 9px;
+    overflow: hidden;
+    position: absolute;
+    top: 8px;
+    width: 5px;
+}
+.pagin a.prev b {
+    background-position: -112px 0;
+    left: 3px;
+}
+.pagin a.next b {
+    background-position: -106px 0;
+    right: 3px;
+}
+.pagin a:hover, .pagin a:active {
+    background: #e43a3d;
+    color: #fff;
+}
+.pagin a.next.abled:hover b, .pagin a.next.abled:active b {
+    background-position: -94px 0;
+    right: 3px;
+}
+.pagin a.prev.abled:hover b, .pagin a.prev.abled:active b {
+    background-position: -100px 0;
+    right: 3px;
+}
+.pagin a.unabled, .pagin a.unabled:hover, .pagin a.unabled:active {
+    color: #999;
+    cursor: default;
+    background: #fff;
+}
+.ss_list_menu {
+    height: 28px;
+    margin-top: 12px;
+}
+.ss_list_menu a {
+    float: left;
+    margin-right: 13px;
+    border: #efefef 1px solid;
+    display: inline-block;
+    text-align: center;
+    height: 28px;
+    line-height: 28px;
+}
+.ss_list_menu a:hover {
+    text-decoration: none;
+}
+.ss_list_menu a.jrgwc {
+    background: #f7f7f7;
+    width: 115px;
+    color: #666;
+}
+.ss_list_menu a.jrgwc:hover {
+    background: #e43a3d;
+    color: #fff;
+}
+.ss_list_menu a.guanzhu {
+    background: #f7f7f7;
+    width: 75px;
+    color: #666;
+    margin-right: 0;
+}
+.ss_list_menu a.guanzhu:hover {
+    background: #e43a3d;
+    width: 75px;
+    color: #fff;
+}
+td, td {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+.fontw1 {
+    font-weight: 100;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline
+}
+.right_a .page {
+    margin-top: 20px;
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+.btn {
+    background: #e43a3d;
+    color: #FFFFFF
+}
+.right_b {
+    width: 1001px;
+}
+.crumbs a:hover {
+    color: #c42605;
+}
+.channel_pros .price {
+    color: #e43a3d;
+    padding-top: 5px;
+}
+.channel_pros .price .yj_pj {
+    color: #333;
+    float: right;
+}
+ý@charset "utf-8";
+body {
+    color: #666666;
+    background: #ffffff;
+}
+a {
+    color: #666666;
+}
+a:hover {
+    color: #e43a3d;
+}
+.cur {
+    color: #666666;
+}
+span.red {
+    color: #e43a3d
+}
+.filter .order .curr {
+    background: #e43a3d;
+}
+.over h3 {
+    color: #e43a3d;
+}
+.ss_list_menu a.jrgwc:hover {
+    border: 1px solid #e1e1e1;
+    background: #e43a3d;
+    color: #ffffff
+}
+.ss_tj dl dd a:hover {
+    color: #e43a3d;
+}
+
+.ss_tj dl dd a.cur {
+    background: #e43a3d;
+}
+.page a.selected, .page a:hover {
+    background: #e43a3d;
+    border: 1px solid #e1e1e1;
+}
+.btn {
+    background: #e43a3d;
+    color: #ffffff
+}
+.btn {
+    background: #e43a3d;
+}
+.page a.selected, .page a:hover {
+    background: #e43a3d;
+    color: #fff;
+}
+.channel_pros .price {
+    color: #e43a3d;
+    padding-top: 5px;
+}
+.channel_pros .price .yj_pj {
+    color: #333;
+    float: right;
+}
+
+/* list没有搜索结果 */
+
+#notfound {
+    font-size: 14px;
+    padding: 20px 0;
+    position: relative;
+}
+#notfound h2 {
+    font-family: 'Microsoft YaHei';
+    color: #e43a3d;
+    margin-bottom: 25px;
+    border: none;
+    margin: 0;
+    padding: 0 0 0 220px;
+}
+#notfound b {
+    background: url(http://static.ecgci.com/images/icon.png) -65px -249px no-repeat;
+    display: block;
+    left: 165px;
+    position: absolute;
+    top: 18px;
+    width: 40px;
+    height: 60px;
+    z-index: 1;
+}

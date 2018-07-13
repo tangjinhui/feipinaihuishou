@@ -1,0 +1,14 @@
+<script id="gold-template" type="text/x-handlebars-template">
+    {{#each realTimePricesGoods}}
+    <a href="http://itemdev.ecgci.com/product_detail_{{goodsId}}.html" target="_blank">
+        <dl class="goodsList" data-id="{{goodsId}}">
+            <dt>
+                {{seoDescription}}
+            </dt>
+            <dd class="price_118">
+                {{formatPrice shopPrice}}
+            </dd>
+        </dl>
+    </a>
+    {{/each}}
+</script>

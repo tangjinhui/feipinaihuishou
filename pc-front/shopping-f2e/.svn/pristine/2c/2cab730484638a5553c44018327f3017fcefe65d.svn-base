@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>会员中心-我的订单-申请退货</title>
+    <meta name="Keywords" content="会员中心-我的订单-申请退货" />
+    <meta name="description" content="" />
+    <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible" />
+    <link href="/css/member/after_sale/return_goods.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div class="wrap clearfix">
+        <div class="w crumbs">当前位置：
+            <a href="/index.html">首页</a>
+            <span>&gt;</span>
+            <a href="/member/index.html">会员中心</a>
+            <span>&gt;</span>申请退货</div>
+        <div class="w">
+            <!--#include file="/inc/member/menu.html"-->
+            <div class="fr" id="content_box">
+                <!--#include file="/inc/member/after_sale/update_return_goods.html"-->
+            </div>
+        </div>
+    </div>
+</body>
+<!--#include file="/data/channel/img_domain_data.html"-->
+<!--#include file="/common/footer.html"-->
+<script type="text/javascript" src="/script/libs/require.js"></script>
+<script type="text/javascript" src="/script/libs/require-config.js"></script>
+<script type="text/javascript" src="/script/member/after_sale/update_return_goods.js"></script>
+
+</html>

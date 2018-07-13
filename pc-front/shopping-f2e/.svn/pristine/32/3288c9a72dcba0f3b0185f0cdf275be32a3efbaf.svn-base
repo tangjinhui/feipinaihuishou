@@ -1,0 +1,458 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/limitPage.css');
+@import url('http://static.ecgci.com/css/libs/dialog.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+@import url('../plugin/menu.css');
+
+.c {
+    clear: both;
+}
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+.right_a {
+    width: 1003px;
+}
+.right_b {
+    width: 1003px;
+}
+.pos {
+    position: relative;
+}
+.mart5 {
+    margin-top: 5px;
+}
+.marl10 {
+    margin-left: 10px;
+}
+.marl5 {
+    margin: 0 auto;
+    position: relative;
+}
+.padt10 {
+    padding-top: 10px;
+}
+.padb10 {
+    padding-bottom: 10px;
+}
+.ui-tabs-hide {
+    display: none;
+}
+.text_c {
+    text-align: center;
+}
+.text_l {
+    text-align: left;
+}
+.bold, span.bold {
+    font-weight: bold;
+}
+a.anniu {
+    display: inline-block;
+    font-family: "Microsoft YaHei";
+    padding: 2px 10px;
+    line-height: 24px;
+    cursor: pointer;
+    font-weight: noraml
+}
+.mart8 {
+    margin-top: 8px;
+}
+a.anniu:hover {
+    color: #fff;
+    text-decoration: none
+}
+table, table td {
+    border: #e1e1e1 1px solid;
+    line-height: 24px;
+    border-collapse: collapse
+}
+table td {
+    padding: 5px 10px;
+}
+.bord {
+    border: #e1e1e1 1px solid;
+}
+h2 {
+    height: 28px;
+    line-height: 28px;
+    color: #58595b;
+    border: none;
+    padding: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+table a.red {
+    color: #666;
+}
+table a.red:hover {
+    color: #e43a3d;
+}
+table#yanzheng a.red {
+    color: #e43a3d;
+}
+table#yanzheng a.red:hover {
+    color: #666;
+}
+html {
+    background-image: url(about:blank);
+    background-attachment: fixed;
+}
+table.formtable td input[type="text"] {
+    text-align: left;
+    line-height: 22px;
+    margin: 0px;
+    vertical-align: middle;
+    border: 1px solid #e1e1e1;
+    font-size: 12px;
+    color: #666;
+    padding: 4px;
+    height: 22px;
+}
+table.formtable {
+    margin: 40px 0;
+}
+table.formtable, table.formtable td, table.formtable, th {
+    border: none;
+}
+table.formtable td {
+    line-height: 30px;
+    padding: 5px;
+}
+table.formtable td a {
+    margin: 0 5px;
+}
+table.formtable td input[type="text"] {
+    width: 302px;
+}
+table.formtable td img {
+    width: 60px;
+    height: 20px;
+    margin-right: 5px;
+}
+.ui-tabs-panel table.formtable {
+    margin: 0 auto
+}
+h1, h2, h3 {
+    font-weight: normal;
+}
+.bordlrt {
+    border-left: #e1e1e1 1px solid;
+    border-right: #e1e1e1 1px solid;
+    border-top: #e1e1e1 1px solid;
+}
+.bordb {
+    border-bottom: #e1e1e1 1px solid;
+}
+input[type="checkbox"] {
+    width: 14px;
+    margin-right: 5px;
+}
+input[type="radio"] {
+    width: 10px;
+    margin-right: 5px;
+}
+.btn {
+    padding: 2px 8px;
+    display: inline-block;
+    border: none;
+    font-size: 12px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    font-family: "Microsoft YaHei";
+    line-height: 22px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.toux {
+    position: absolute;
+    width: 200px;
+    background: #f3f3f3;
+    padding: 10px 20px;
+    right: -100px;
+    top: -30px;
+    line-height: 20px;
+}
+.toux div {
+    width: 200px;
+    line-height: 20px;
+    overflow: hidden;
+}
+.toux .head_show {
+    margin-bottom: 10px;
+    text-align: center
+}
+.toux .head_name {
+    height: 20px;
+    overflow: hidden;
+}
+.toux div a {
+    color: #e43a3d;
+    margin-left: 5px;
+}
+table.formtable td .toux img {
+    width: 100px;
+    height: 100px;
+    border: #e1e1e1 1px solid;
+}
+.crumbs {
+    height: 52px;
+    line-height: 52px;
+    color: #58595b;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+}
+.crumbs span {
+    padding: 0 6px;
+}
+.m_right h2 {
+    height: 30px;
+    font-weight: bold;
+    padding: 2px 10px;
+    border-bottom: #e1e1e1 0px solid;
+    font-size: 14px;
+    line-height: 30px;
+    color: #58595b;
+    font-family: "SimSun";
+    text-align: left;
+    background-color: #f7f7f7;
+}
+.m_right h3 {
+    height: 36px;
+    margin: 0;
+    padding: 2px 10px;
+    line-height: 36px;
+    font-weight: bold;
+    font-size: 14px;
+    overflow: hidden;
+}
+.m_right td h3 {
+    padding: 2px 0;
+}
+.hei36 {
+    height: 34px;
+    line-height: 34px;
+}
+.m_right h3.padl, .padl {
+    padding-left: 10px;
+}
+.recom_tab {
+    background: url(http://static.ecgci.com/images/all_bge.png) 0 -889px repeat-x;
+    height: 33px;
+}
+.recom_tab li {
+    flaot: left;
+    width: 120px;
+    height: 32px;
+    background: #f3f3f3;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+    overflow: hidden;
+    border-right: #e1e1e1 1px solid;
+    border-bottom: #e1e1e1 1px solid;
+}
+.recom_tab li.select {
+    background: #fff;
+    font-weight: bold;
+    font-family: "Microsoft YaHei";
+    color: #333;
+}
+.recom_tab li.select {
+    border-bottom: #fff 1px solid;
+}
+table#yanzheng, table#yanzheng td {
+    border-left: none;
+    border-right: none;
+}
+.order_info {
+    color: #666;
+}
+.order_info h2 {
+    height: 34px;
+    line-height: 34px;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.order_info ul {
+    padding: 10px 20px 10px;
+    height: auto;
+    clear: both;
+}
+.order_info li {
+    width: 99.9%;
+    line-height: 24px;
+    height: 24px;
+    display: block;
+}
+.order_info p {
+    line-height: 24px;
+    padding-left: 20px;
+}
+#yanzheng span.red, td span.red, .red {
+    color: #e43a3d;
+}
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+.hyjb {
+    font-weight: bold;
+    color: #e43a3d;
+}
+.tab-tit ul li {
+    float: left;
+    cursor: pointer;
+    height: 31px;
+}
+.zlpadd {
+    padding: 0 10px;
+}
+.dj_icon img {
+    width: 20px;
+    height: 20px;
+}
+#yanzheng .padd5 {
+    padding: 5px 10px;
+}
+#yanzheng .yanz {
+    line-height: 60px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+}
+#yanzheng .yanz span {
+    margin-left: 10px;
+}
+#yanzheng .yanz span.yyz, #yanzheng .yanz span.wyz {
+    background: url(http://static.ecgci.com/images/icon.png) no-repeat;
+    width: 39px;
+    height: 35px;
+    display: inline-block;
+    float: left;
+    margin: 10px 10px 0 10px;
+    padding-left: 5px;
+}
+#yanzheng .yanz span.wyz {
+    background-position: -64px -249px;
+    margin-top: 6px;
+}
+#yanzheng .yanz span.yyz {
+    background-position: -68px -308px;
+}
+.m_right td img {
+    width: 80px;
+    height: 80px;
+}
+h6 {
+    padding: 0 10px;
+    background: #f3f3f3;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: #e1e1e1 1px solid;
+    margin: 0;
+}
+em {
+    font-style: normal;
+}
+#selectbox {
+    width: 600px;
+}
+td {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+table.wbord, .wbord {
+    border: none;
+}
+table td.wbordt {
+    border-top: none;
+}
+.rank2 {
+    margin-right: 9px;
+    background: url(http://static.ecgci.com/images/icon.png) no-repeat;
+    display: inline-block;
+    font-size: 0;
+    height: 14px;
+    line-height: 0;
+    margin-right: 20px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 106px;
+}
+.rank2 {
+    background-position: -94px -220px;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline
+}
+#companyName {
+    width: 400px
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+.selectbox select {
+    margin-right: 5px;
+}
+.btn {
+    background: #e43a3d;
+    color: #FFFFFF
+}
+.right_b {
+    width: 1001px;
+}
+.crumbs a:hover {
+    color: #c42605;
+}
+.bordlrt a.anniu {
+    font-family: "Arial,Lucida,Verdana,Helvetica,sans-serif";
+}
+#js_hover {
+    position: relative;
+    cursor: default;
+}
+body {
+    /* color:#666666; */
+    background: #ffffff;
+}
+a {
+    color: #666666;
+}
+a:hover {
+    color: #e43a3d;
+}
+a.anniu {
+    color: #ffffff;
+    background: #e43a3d;
+}
+span.red {
+    color: #e43a3d
+}
+.btn {
+    background: #e43a3d;
+    color: #ffffff
+}
+a.anniu:hover {
+    color: #ffffff;
+}
+a.anniu {
+    background: #e43a3d;
+    color: #ffffff;
+}
+.None_record {
+    line-height: 20px;
+    padding: 10px;
+    border: #e1e1e1 1px solid;
+    margin-top: 10px;
+}

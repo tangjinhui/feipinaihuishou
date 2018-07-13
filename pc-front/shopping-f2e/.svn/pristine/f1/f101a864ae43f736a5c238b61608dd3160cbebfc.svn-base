@@ -1,0 +1,61 @@
+<div id="modify" style="display:none;">
+    <table border="0px" class="formtable" style="margin:35px 0 40px 115px">
+        <tbody>
+            <tr>
+                <td align="right" width="130" valign="top">
+                    新登录密码：
+                </td>
+                <td width="488" colspan="3">
+                    <input type="password" id="newPassWord" class="leng-6-20" autocomplete="off" value="" style="font-size:10px;">
+                    <div id="newPassWord_error" class="msg-error" style="display:none;">
+                        请输入登录密码，密码长度在6-20位之间
+                    </div>
+                    <div id="strength" class="acco-safe" style="padding:5px 0 0;display: none;">
+                        <span id="strength_title" class="rank-text1">较弱</span>
+                        <i id="strength_content" class="rank1"></i>
+                    </div>
+                    <div class="msg-error" id="strength_error" style="display:none;"></div>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="130" valign="top">
+                    确认新密码：
+                </td>
+                <td width="488" colspan="3">
+                    <input type="password" id="reNewPassWord" class="leng-6-20" tabindex="2" autocomplete="off" value="" style="font-size:10px;">
+                    <div id="reNewPassWord_error" class="msg-error" style="display: none;">
+                    </div>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="130" valign="top">
+                    验证码：
+                </td>
+                <td width="488" colspan="3" class="re">
+                    <input type="text" value="" class="required" name="newPassWord_rand" id="newPassWord_rand" autocomplete="off" style="width:80px" maxlength="4">
+                    <div id="newPassWord_rand_error" class="msg-error" style="display: none">
+                    </div>
+                    <div class="codeBox">
+                        <img border="0" id="newPassWord_rand_img" src="/front/authCode"> 看不清?
+                        <a href="javascript:void(0);" id="newPassWord_rand_btn">换一张</a>
+                    </div>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td colspan="2">
+                    <input name="" value="提交" type="button" class="btn" id="modify_next_btn">
+                </td>
+                <td>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

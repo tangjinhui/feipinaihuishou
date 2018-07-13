@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>商品验证-中国金币网上商城</title>
+    <meta name="Keywords" content="中国金币云商平台" />
+    <meta name="description" content="中国金币云商平台" />
+    <link rel="icon" href="http://static.ecgci.com/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/verify.css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div id="verify">
+        <div class="ver_cont">
+            <strong>防伪验证系统</strong>
+            <p>本防伪验证系统可验证所有中国金币网上商城销售的防伪封装商品。</p>
+            <form id="verifyForm">
+            <div class="code_box">
+                <input id="code_input" placeholder="请您输入封装币上的商品验证码（标签后8位数字）" type="text" maxlength="8">
+                <input type="button" class="toCheck" name="toCheck" id="toCheck" value="立即验证">
+            </div>
+            </form>
+            <div class="ver_box dn" id="ver_box">
+                <div class="ver_head_img">
+                    <img src="http://static.ecgci.com/images/ver_head.jpg">
+                </div>
+                <div class="img_title ver_title">该商品认证档案照片(点击放大)</div>
+                <div class="clearfix checkImg" id="var_info">
+                </div>
+            </div>
+            <div class="white_line">
+            </div>
+            <div class="ver_edg clearfix">
+                <div class="fl">
+                    <img src="http://static.ecgci.com/images/qcode.jpg">
+                    <p>扫码验真伪</p>
+                </div>
+                <div class="fr">
+                    <h3>防伪封装常识</h3>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);">防伪封装基础知识</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">教你认识防伪封装签</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">封装币防伪鉴定方法</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">金币网上商城所销售封装币封装签图例</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="jsPrompt">
+        <div class="prompt">
+            <div class="top">提示
+                <div id="jsPromptClose" class="close">确定</div>
+            </div>
+            <div class="content">
+                <div class="txt" id="js_err">请您输入封装币上的商品验证码</div>
+            </div>
+        </div>
+    </div>
+    <div id="codeLayer" class="codeClass dn">
+        <div id="codeBox" class="codeClass">
+            <div id="jsClose" class="minclose"></div>
+            <div class="header">
+                验证码
+            </div>
+            <div class="warp_code">
+                <div>
+                    <input id="qcode_val" placeholder="请输入验证码" type="text">
+                    <img class="changeCode" src="/front/authCode?t=" +new Date().getTime()>
+                    <span>看不清楚</span>
+                    <a class="changeCode" href="javascript:void(0);">换一张</a>
+                </div>
+                <p class="qcode_ts dn">验证码输入错误，请重新输入</p>
+                <div class="sub_code">
+                    <a id="sub_code" href="javascript:void(0);">确定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/inc/verify/list.html"-->
+    <!--#include file="/common/footer.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/verify.js"></script>
+</body>
+
+</html>

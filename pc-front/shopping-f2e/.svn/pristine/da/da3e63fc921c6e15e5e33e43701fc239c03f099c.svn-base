@@ -1,0 +1,978 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/dialog.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+
+@charset "utf-8";
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+[hidden] {
+    display: none;
+}
+html {
+    font-size: 100%;
+    /* 1 */
+    -ms-text-size-adjust: 100%;
+    /* 2 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+}
+html,
+button,
+input,
+select,
+textarea {
+    font-family: sans-serif;
+}
+body {
+    margin: 0;
+}
+a:active,
+a:hover {
+    outline: 0;
+}
+b, strong {
+    font-weight: bold;
+}
+
+blockquote {
+    margin: 1em 40px;
+}
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+p,
+pre {
+    margin: 1em 0;
+}
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+small {
+    font-size: 80%;
+}
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+dl,
+menu,
+ol,
+ul {
+    margin: 1em 0;
+}
+
+dd {
+    margin: 0 0 0 40px;
+}
+menu, ol, ul {
+    padding: 0 0 0 40px;
+}
+nav ul, nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+img {
+    border: 0;
+    /* 1 */
+    -ms-interpolation-mode: bicubic;
+    /* 2 */
+}
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+legend {
+    border: 0;
+    /* 1 */
+    padding: 0;
+    white-space: normal;
+    /* 2 */
+    *margin-left: -7px;
+    /* 3 */
+}
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    /* 1 */
+    margin: 0;
+    /* 2 */
+    vertical-align: baseline;
+    /* 3 */
+    *vertical-align: middle;
+    /* 3 */
+}
+button,
+input {
+    line-height: normal;
+}
+button,
+select {
+    text-transform: none;
+}
+button,
+html input[type="button"],
+/* 1 */
+
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: none;
+    /* 2 */
+    cursor: pointer;
+    /* 3 */
+    *overflow: visible;
+    /* 4 */
+}
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */
+    *height: 13px;
+    /* 3 */
+    *width: 13px;
+    /* 3 */
+}
+input[type="search"] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    /* 2 */
+    box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+textarea {
+    overflow: auto;
+    /* 1 */
+    vertical-align: top;
+    /* 2 */
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, input, button, textarea, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+}
+html, body {
+    font-size: 12px;
+    color: #333;
+    font-family: "\5FAE\8F6F\96C5\9ED1", Arial, Verdana;
+}
+button, input, select, textarea {
+    font: 12px/1.5 '\5B8B\4F53', '\5FAE\8F6F\96C5\9ED1', tahoma, arial;
+    outline: 0 none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    cursor: default;
+}
+ol, ul {
+    list-style: none;
+    outline: none;
+    list-style-type: none;
+}
+fieldset, img {
+    border: none;
+}
+img {
+    vertical-align: top;
+}
+.dis {
+    display: block;
+}
+.dn {
+    display: none;
+}
+.cl {
+    clear: both;
+}
+.tc {
+    text-align: center;
+}
+.tl {
+    text-align: left;
+}
+.tr {
+    text-align: right;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.posr {
+    position: relative;
+    zoom: 1;
+}
+.posa {
+    position: absolute;
+    zoom: 1;
+}
+a {
+    text-decoration: none;
+    color: #333;
+    outline: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: #e43a3d;
+}
+dl.unit a:hover {
+    text-decoration: none;
+    color: #c42605;
+}
+.highlight {
+    color: #bb9a2a;
+}
+a.fff {
+    color: #fff;
+}
+.pad30 {
+    padding: 30px 0 0;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.break-word {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.nowarp {
+    white-space: nowrap;
+}
+.wrap {
+    width: 1240px;
+    margin: 0 auto;
+}
+.bor-bot {
+    border-top: #eee 1px solid;
+    padding: 30px 0;
+    margin: 30px auto 0;
+}
+.grid .gi {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+}
+.red, a.red {
+    color: #c42605!important;
+}
+
+
+/*展示图片*/
+
+img {
+    display: block;
+}
+.act_show {
+    width: 100%;
+    min-width: 1240px;
+    margin-top: 6px;
+    overflow: hidden;
+}
+.act_show img {
+    width: 100%;
+    height: auto;
+}
+
+/*大盒子*/
+
+.box {
+    background-color: #fbf8f8;
+    min-width: 1240px;
+    width: 100%;
+}
+
+/*头部标题1*/
+
+.content_tit1 {
+    width: 940px;
+    margin: 0 auto;
+    padding-top: 73px;
+    overflow: hidden;
+}
+.content_tit1 .tit_img {
+    width: 100%;
+    height: auto;
+}
+.content_tit1 .pos_l {
+    margin-top: 80px;
+    margin-left: 15px;
+}
+
+/*头部标题2*/
+
+.content_tit2 {
+    width: 1240px;
+    margin: 107px auto 0;
+    height: auto;
+}
+.content_tit2 .center {
+    width: 940px;
+    margin: 0 auto;
+    font-family: "微软雅黑";
+}
+
+/*程序输出板块*/
+
+
+/*2017熊猫币新增*/
+
+.context2017_new {
+    height: 900px;
+    width: 1240px;
+    overflow: hidden;
+    background: url(http://static.ecgci.com/images/panda_img/2017_new_bg.png) no-repeat 62px 140px;
+    position: relative;
+}
+
+.context2017_new img {
+    width: 190px;
+    height: auto;
+}
+
+.context2017_new .p1 {
+    margin-top: 38px;
+    margin-left: 63px;
+}
+
+.context2017_new .txt {
+    position: absolute;
+}
+
+.context2017_new .pos1 {
+    left: 65px;
+    top: 370px;
+}
+
+.context2017_new .p2 {
+    margin-top: 170px;
+    margin-left: 170px;
+}
+
+.context2017_new .pos2 {
+    left: 428px;
+    top: 50px;
+}
+
+.context2017_new .p3 {
+    margin-top: 55px;
+    margin-left: 215px;
+}
+
+.context2017_new .pos3 {
+    left: 1060px;
+    top: 260px;
+}
+
+.context2017_new .pos3 a {
+    width: 110px;
+}
+
+.context2017_new .p4 {
+    clear: both;
+    margin-top: 93px;
+    margin-left: 308px;
+}
+
+.context2017_new .pos4 {
+    left: 79px;
+    top: 780px;
+}
+
+.context2017_new .p5 {
+    margin-top: 93px;
+    margin-left: 450px;
+}
+
+.context2017_new .pos5 {
+    left: 680px;
+    top: 580px;
+}
+
+
+/*2017熊猫币*/
+
+.content_tit2 .context2017 {
+    width: 1240px;
+    height: 450px;
+    margin-top: 18px;
+    background: url(http://static.ecgci.com/images/panda_img/panda_2017.png) no-repeat 275px 69px;
+    position: relative;
+}
+
+.content_tit2 .context2017 .p1 {
+    padding-left: 44px;
+    padding-top: 55px;
+}
+
+.content_tit2 .context2017 .p2 {
+    padding-left: 58px;
+    padding-top: 100px;
+}
+
+.content_tit2 .context2017 .p3 {
+    padding-left: 93px;
+    padding-top: 100px;
+}
+
+.context2017 .txt, .context2017_new .txt {
+    position: absolute;
+    font-size: 14px;
+    color: #535353;
+}
+
+.context2017 .txt a, .context2017_new .txt a {
+    color: #535353;
+    display: inline-block;
+}
+
+.context2017 .txt .price, .context2017_new .txt .price {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.context2017 .txt a:hover, .context2017_new .txt a:hover {
+    color: #535353;
+}
+
+
+.context2017 .txt.pos1 {
+    top: 330px;
+    left: 65px;
+}
+
+.context2017 .txt.pos2 a {
+    width: 142px;
+}
+
+.context2017 .txt.pos2 {
+    top: 50px;
+    left: 710px;
+}
+
+.context2017 .txt.pos3 {
+    top: 300px;
+    left: 1100px;
+}
+
+.context2017 .txt.pos3 a {
+    width: 115px;
+}
+
+.content_tit2 .context {
+    margin-bottom: 70px;
+    width: 1240px;
+    height: 872px;
+    background: url(http://static.ecgci.com/images/panda_img/line.png) no-repeat 62px 88px;
+    position: relative;
+}
+.context .title, .context .price {
+    width: 126px;
+    color: #535353;
+}
+.context a, .context span {
+    color: #535353;
+    display: block;
+}
+.context a:hover {
+    color: #535353;
+}
+.context .title {
+    line-height: 23px;
+    font-size: 14px;
+}
+.context .price {
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/*商品1*/
+
+.context .con1 {
+    width: 350px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.context img {
+    width: 100%;
+    height: auto;
+}
+.context .con1 .txt {
+    padding-left: 92px;
+    padding-top: 5px;
+}
+
+/*商品2*/
+
+.context .con2 {
+    position: absolute;
+    width: 209px;
+    left: 412px;
+    top: 100px;
+}
+.context .con2 .txt {
+    padding-left: 50px;
+    margin-bottom: 36px;
+}
+
+/*商品3*/
+
+.context .con3 {
+    position: absolute;
+    width: 453px;
+    height: 292px;
+    right: 28px;
+    top: 47px;
+}
+.context .con3 img {
+    height: 100%;
+    width: auto;
+}
+.context .con3 .txt {
+    padding-top: 165px;
+    margin-bottom: 36px;
+}
+
+/*商品4*/
+
+.context .con4 {
+    position: absolute;
+    width: 320px;
+    height: 208px;
+    left: 42px;
+    bottom: 190px;
+}
+.context .con4 img {
+    width: 188px;
+    height: 188px;
+    margin-top: 20px;
+}
+
+/*商品5*/
+
+.context .con5 {
+    position: absolute;
+    width: 273px;
+    left: 405px;
+    bottom: 40px;
+}
+.context .con5 img {
+    width: 100%;
+    height: auto;
+}
+.context .con5 .txt {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+/*商品6*/
+
+.context .con6 {
+    position: absolute;
+    width: 137px;
+    right: 344px;
+    bottom: 205px;
+}
+.context .con6 img {
+    width: 100%;
+    height: auto;
+}
+.context .con6 .txt {
+    padding-left: 2px;
+    padding-top: 40px;
+}
+
+/*商品7*/
+
+.context .con7 {
+    position: absolute;
+    width: 250px;
+    right: 0;
+    bottom: 45px;
+}
+.context .con7 img {
+    width: 100%;
+    height: auto;
+}
+.context .con7 .txt {
+    padding-left: 45px;
+    padding-bottom: 30px;
+}
+
+
+
+
+/*程序输出板块*/
+
+
+/*头部标题3*/
+
+.content_tit3 {
+    width: 100%;
+    min-width: 1240px;
+    overflow: hidden;
+    background: url(http://static.ecgci.com/images/panda_img/start.png) no-repeat;
+    background-size: cover;
+    -webtkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -moz-background-size: cover;
+}
+.content_tit3 .center {
+    width: 1240px;
+    margin: 0 auto;
+    height: auto;
+    overflow: hidden;
+}
+.content_tit3 .tit {
+    width: 940px;
+    height: auto;
+    margin: 77px auto 30px;
+}
+.panda_special {
+    width: 1240px;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 79px;
+}
+
+/*遮罩层*/
+
+.panda_special .black {
+    width: 100%;
+    height: 100%;
+    background: url(http://static.ecgci.com/images/panda_img/opacity_bg.png) repeat;
+    color: #FFF;
+    text-align: center;
+    cursor: default;
+    display: none;
+}
+.panda_special .black .title {
+    font-size: 30px;
+    padding-top: 35px;
+    padding-bottom: 32px;
+    font-weight: bold;
+}
+.panda_special .black .txt {
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 20px;
+    line-height: 2;
+}
+
+
+
+/*各个栏目*/
+
+.show_1, .show_2, .show_3, .show_4, .show_5 {
+    width: 1240px;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.show_1 .l {
+    width: 820px;
+    height: 446px;
+    overflow: hidden;
+    background: url(http://static.ecgci.com/images/panda_img/show_bg_01.jpg) no-repeat;
+}
+.show_1 .r {
+    width: 403px;
+    height: 446px;
+    overflow: hidden;
+    background: url(http://static.ecgci.com/images/panda_img/show_bg_02.jpg) no-repeat;
+}
+.show_2 .c {
+    width: 1240px;
+    height: 454px;
+    overflow: hidden;
+    background: url(http://static.ecgci.com/images/panda_img/show_bg_03.jpg) no-repeat;
+}
+.show_3 .l {
+    width: 403px;
+    height: 445px;
+    overflow: hidden;
+    background: url(http://static.ecgci.com/images/panda_img/show_bg_04.jpg) no-repeat;
+    margin-right: 14px;
+    _display: inline;
+}
+.show_3 .c {
+    width: 403px;
+    height: 445px;
+    overflow: hidden;
+    background: url(http://static.ecgci.com/images/panda_img/show_bg_05.jpg) no-repeat;
+    margin-right: 15px;
+    _display: inline;
+    clear: none;
+}
+.show_3 .r {
+    width: 405px;
+    height: 445px;
+    overflow: hidden;
+    background: url(http://static.ecgci.com/images/panda_img/show_bg_06.jpg) no-repeat;
+}
+.show_4 .l {
+    width: 820px;
+    height: 446px;
+    overflow: hidden;
+    background: url(http://static.ecgci.com/images/panda_img/show_bg_07.jpg) no-repeat;
+}
+.show_4 .r {
+    width: 404px;
+    height: 445px;
+    overflow: hidden;
+    background: url(http://static.ecgci.com/images/panda_img/show_bg_8.jpg) no-repeat;
+}
+.show_5 .c {
+    width: 1240px;
+    height: 448px;
+    overflow: hidden;
+    background: url(http://static.ecgci.com/images/panda_img/show_bg_9.jpg) no-repeat;
+}
+
+
+
+/*熊猫历史*/
+
+.content_tit4 {
+    width: 1240px;
+    padding-top: 78px;
+    padding-bottom: 90px;
+    margin: 0 auto;
+}
+.content_tit4 .tit {
+    width: 940px;
+    height: auto;
+    margin: 0 auto;
+}
+.content_tit4 .coin_year {
+    margin-top: 78px;
+    width: 100%;
+    height: auto;
+}
+
+
+
+/*底部手机端宽度*/
+
+.footer {
+    margin: 0 auto;
+}
+.footer_bar {
+    min-width: 1240px;
+}
+
+#nav {
+    margin-bottom: 0;
+}
+
+/*  */
+
+a:hover {
+    text-decoration: none;
+}
+.panda_2018_center {
+    position: relative;
+}
+.panda_2018_center>a {
+    /* filter: alpha(opacity=0); */
+    opacity: 0;
+}
+.panda_2018_1 {
+    position: absolute;
+    width: 503px;
+    height: 300px;
+    top: 45px;
+    z-index: 100;
+}
+.panda_2018_3 {
+    position: absolute;
+    width: 303px;
+    height: 300px;
+    top: 250px;
+    z-index: 101;
+    left: 492px;
+}
+.panda_2018_8 {
+    position: absolute;
+    width: 393px;
+    height: 400px;
+    top: 44px;
+    z-index: 101;
+    right: 0;
+}
+.panda_2018_15 {
+    position: absolute;
+    width: 355px;
+    height: 378px;
+    top: 488px;
+    z-index: 101;
+    left: 36px;
+}
+.panda_2018_30 {
+    position: absolute;
+    width: 491px;
+    height: 355px;
+    top: 500px;
+    z-index: 102;
+    right: 0;
+}
+.panda_2018_30_silver {
+    position: absolute;
+    width: 447px;
+    height: 300px;
+    top: 680px;
+    z-index: 101;
+    left: 450px;
+}
+.panda_2018_gold_five_1 {
+    position: absolute;
+    width: 600px;
+    height: 524px;
+    bottom: 0;
+    z-index: 102;
+    left: 0;
+}
+.panda_2018_gold_five_2 {
+    position: absolute;
+    width: 600px;
+    height: 524px;
+    bottom: 0;
+    z-index: 102;
+    right: 0;
+}
+.panda_2018_center span {
+    font-size: 14px;
+    color: #535353;
+    font-weight: bold;
+    position: absolute;
+    z-index: 199;
+    width: 100px;
+}
+.panda_2018_1_price {
+    top: 110px;
+    left: 310px;
+}
+.panda_2018_3_price {
+    top: 300px;
+    left: 350px;
+}
+.panda_2018_8_price {
+    top: 396px;
+    right: 292px;
+}
+.panda_2018_15_price {
+    top: 526px;
+    left: 194px;
+}
+.panda_2018_30_price {
+    top: 613px;
+    right: 390px;
+}
+.panda_2018_30_silver_price {
+    top: 940px;
+    right: 456px;
+}
+.panda_2018_gold_five_1_price {
+    bottom: 475px;
+    left: 84px;
+}
+.panda_2018_gold_five_2_price {
+    bottom: 68px;
+    right: 140px;
+}
+#st_2018_line {
+    padding-top: 10px;
+}

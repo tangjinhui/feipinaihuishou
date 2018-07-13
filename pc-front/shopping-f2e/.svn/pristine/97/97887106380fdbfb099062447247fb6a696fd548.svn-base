@@ -1,0 +1,727 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/dialog.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+@import url('../../plugin/menu.css');
+@import url('../../plugin/cancel_order.css');
+.c, .clearfix {
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.right_a {
+    width: 1003px;
+}
+
+.pos {
+    position: relative;
+}
+
+.mart12 {
+    margin-top: 10px;
+}
+
+.marl10 {
+    margin-left: 10px;
+}
+
+.padb10 {
+    padding-bottom: 10px;
+}
+
+.ui-tabs-hide {
+    display: none;
+}
+
+.text_c {
+    text-align: center;
+}
+
+.text_l {
+    text-align: left;
+}
+
+a.anniu {
+    display: inline-block;
+    font-family: "Microsoft YaHei";
+    padding: 2px 10px;
+    line-height: 24px;
+    cursor: pointer;
+    font-weight: noraml
+}
+
+a.anniu:hover {
+    color: #fff;
+    text-decoration: none
+}
+
+table, table th, table td {
+    border: #e1e1e1 1px solid;
+    line-height: 24px;
+    border-collapse: collapse
+}
+
+table th {
+    background: #f3f3f3;
+    text-align: center;
+}
+
+table th, table td {
+    padding: 5px 10px;
+}
+
+.bord {
+    border: #e1e1e1 1px solid;
+}
+
+h2 {
+    height: 28px;
+    line-height: 28px;
+    color: #58595b;
+    border: none;
+    padding: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearfix {}
+
+.bgf7 {
+    background-color: #f3f3f3;
+}
+
+*html {
+    background-image: url(about:blank);
+    background-attachment: fixed;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+th {
+    border: none;
+}
+
+
+/*block ui*/
+
+.ui-dialog {
+    position: relative;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    padding: 0.5em 0.3em 0.3em 1em;
+    position: relative;
+    font-family: 'Microsoft YaHei';
+    font-size: 14px;
+}
+
+.ui-dialog .ui-dialog-title {
+    float: left;
+    margin: 0.1em 0 0.2em;
+}
+
+.ui-dialog a.ui-dialog-titlebar-close {
+    background: url("..http://static.ecgci.com/images/all_bg.png") -207px -628px no-repeat;
+}
+
+.ui-dialog .ui-dialog-titlebar-close span {
+    display: block;
+    margin: 1px;
+    font-size: 0;
+}
+
+.ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus {
+    padding: 0;
+}
+
+.ui-dialog .ui-dialog-content {
+    background: none;
+    overflow: auto;
+    padding: 0.5em 1em;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+    background-image: none;
+    border-width: 1px 0 0;
+    margin: 0.5em 0 0;
+    padding: 0.3em 1em 0.5em 0.4em;
+    text-align: right;
+}
+
+.ui-widget-header {
+    background: #e43a3d;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.ui-widget-header a {
+    color: #fff;
+}
+
+.ui-state-default {
+    background: #F6F6F6;
+    border: 1px solid #e5e5e5;
+    margin: 5px;
+    padding: 0 7px;
+    color: #58595b;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.ui-draggable .ui-dialog-titlebar {
+    cursor: move;
+}
+
+.ui-helper-clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.ui-helper-clearfix {
+    display: inline-block;
+}
+
+* html .ui-helper-clearfix {
+    height: 1%;
+}
+
+.ui-helper-clearfix {
+    display: block;
+}
+
+.ui-widget-content {
+    background: #EEE;
+    color: #58595B;
+}
+
+.ui-widget-content a {
+    color: #58595b;
+}
+
+div.msg {
+    line-height: 18px;
+    padding: 20px 0 20px 20px;
+}
+
+.ui-widget {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+.bordlrb {
+    border-left: #e1e1e1 1px solid;
+    border-right: #e1e1e1 1px solid;
+    border-bottom: #e1e1e1 1px solid;
+}
+
+input[type="checkbox"] {
+    width: 14px;
+    margin-right: 5px;
+}
+
+input[type="radio"] {
+    width: 10px;
+    margin-right: 5px;
+}
+
+.dd_lc {
+    height: 59px;
+    width: 697px;
+    margin: 10px auto 5px;
+    background: url(http://static.ecgci.com/images/pay_status.png) no-repeat;
+}
+
+.dd_step1 {
+    background-position: 0 0px;
+}
+
+.btn {
+    padding: 2px 8px;
+    display: inline-block;
+    border: none;
+    font-size: 12px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    font-family: "Microsoft YaHei";
+    line-height: 22px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.crumbs {
+    height: 52px;
+    line-height: 52px;
+    color: #58595b;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+}
+
+.crumbs span {
+    padding: 0 6px;
+}
+
+.crumbs .tit {
+    padding: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.bd_lr {
+    border-left: #e1e1e1 1px solid;
+}
+
+.m_right h2 {
+    height: 30px;
+    font-weight: bold;
+    padding: 2px 10px;
+    border-bottom: #e1e1e1 0px solid;
+    font-size: 14px;
+    line-height: 30px;
+    color: #58595b;
+    font-family: "SimSun";
+    text-align: left;
+    background-color: #f7f7f7;
+}
+
+.m_right h2 span {
+    padding: 0 5px;
+    color: #e43a3d;
+}
+
+#ckts table, #ckts table td {
+    border-left: none;
+    border-right: none;
+}
+
+#ckts table td {
+    height: 28px;
+    line-height: 28px;
+    padding: 2px 10px;
+}
+
+#ckts table td span {
+    font-weight: bold;
+}
+
+.order_info {
+    color: #666;
+}
+
+.order_info table th, .order_info table td, .order_info table {
+    border: none;
+}
+
+.order_info table th, .order_info table td {
+    padding: 5px 20px;
+}
+
+.order_info table th {
+    background: none;
+    border-bottom: #e1e1e1 1px solid;
+}
+
+.order_info h2 {
+    height: 34px;
+    line-height: 34px;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.order_info ul {
+    padding: 10px 20px 10px;
+    height: auto;
+    clear: both;
+}
+
+.order_info li {
+    width: 99.9%;
+    line-height: 24px;
+    height: 24px;
+    display: block;
+}
+
+.order_info h2.wdbord, .m_right h2.wdbord, h2.wdbord {
+    border-bottom: none;
+}
+
+.order_info p {
+    line-height: 24px;
+    padding-left: 20px;
+}
+
+.order_info p span {
+    font-weight: bold;
+}
+
+.order_info p span.red, td span.red, .red {
+    color: #e43a3d;
+}
+
+/*11.13*/
+
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+
+.tishi {
+    line-height: 20px;
+    padding: 9px 0;
+}
+
+.m_right td img {
+    width: 80px;
+    height: 80px;
+}
+
+h6 {
+    padding: 0 10px;
+    background: #f3f3f3;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: #e1e1e1 1px solid;
+    margin: 0;
+}
+
+em {
+    font-style: normal;
+}
+
+.cj_sjccont1 {
+    background: #fff;
+    margin: 0 auto;
+    text-align: left
+}
+
+.cj_sjctop1 {
+    background: #e43a3d;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 0 0 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Microsoft YaHei';
+}
+
+.cj_sjcmidsh {
+    padding: 0 0 2px 13px;
+}
+
+td, td {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+.m_right .crumbs {
+    margin: 10px 0;
+}
+
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+
+#esFavorForm td a.anniu {
+    background: none;
+    color: #e43a3d
+}
+
+.btn {
+    background: #e43a3d;
+    color: #FFFFFF
+}
+
+.crumbs a:hover {
+    color: #c42605;
+}
+
+body {
+    color: #666666;
+    background: #ffffff;
+}
+
+a {
+    color: #666666;
+}
+
+a:hover {
+    color: #e43a3d;
+}
+
+a.anniu {
+    color: #ffffff;
+    background: #e43a3d;
+}
+
+span.red {
+    color: #e43a3d
+}
+
+.ui-widget-header {
+    background: #e43a3d;
+    border: 1px solid #e1e1e1;
+}
+
+.ui-widget-header {
+    border: none;
+}
+
+.btn {
+    background: #e43a3d;
+    color: #ffffff
+}
+
+.cj_sjctop1 {
+    background: #e43a3d;
+    color: #ffffff
+}
+
+a.anniu:hover {
+    color: #ffffff;
+}
+
+a.anniu {
+    background: #e43a3d;
+    color: #ffffff;
+}
+
+.ui-widget-header {
+    background: #e43a3d
+}
+
+.cj_sjctop1, .btn {
+    background: #e43a3d;
+}
+
+.ui-widget-header {
+    background: #e43a3d;
+    color: #fff;
+}
+
+.m_right td img {
+    width: 50px;
+    height: 50px;
+}
+
+.m_right .crumbs {
+    margin-bottom: 0px;
+    height: 34px;
+    line-height: 34px;
+    background-color: #f7f7f7;
+    border: 1px solid #e1e1e1;
+    border-bottom: 0px;
+    border-left: 0px;
+}
+
+.order_info table.sh_detail {
+    border: #f3f3f3 1px solid;
+    border - left: none;
+    margin - top: 10px;
+}
+
+.order_info table.sh_detail th {
+    border - left: #f3f3f3 1px solid;
+    margin: 10px 0 0 0;
+    background: #f7f7f7;
+}
+
+.order_info table.sh_detail td {
+    border - left: #f3f3f3 1px solid;
+    padding: 0 0 0 10px;
+}
+
+.order_info>table {
+    margin-top: 10px;
+}
+
+.dd_zf_btn_1 {
+    /*border: 1px solid #e43a3d;*/
+}
+
+.dd_zf_btn_1 a {
+    color: #e43a3d;
+}
+
+#cartTable .pro_name a, #cartTable th {
+    color: #222;
+}
+#cartTable tr, #cartTable th, .dd_contdetail tr, .dd_contdetail td {
+    border: none;
+    border-bottom: #e1e1e1 1px solid;
+    font-weight: normal;
+    padding: 4px 0;
+}
+
+
+#cartTable {
+    border-collapse: collapse;
+}
+
+#cartTable, .dd_contdetail {
+    border: #e1e1e1 1px solid;
+    border-top: #afafaf 2px solid;
+}
+
+.detail_cont {
+    width: 92%;
+    margin: 0 auto;
+    border: #e1e1e1 1px dashed;
+    background: #fff;
+}
+
+.detail_cont .top_tz {
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    left: -1px;
+    top: -1px;
+    background: url(http://static.ecgci.com/images/gwc_bg.png) -335px 0 no-repeat;
+}
+
+#cartTable .sm_close, .sms_close {
+    background: url(http://static.ecgci.com/images/gwc_bg.png) -9px -29px no-repeat;
+    cursor: pointer;
+}
+
+#cartTable .sm_detail, .sms_detail {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: -20px;
+    top: 19px;
+}
+
+#cartTable .sm_open, .sms_open {
+    background: url(http://static.ecgci.com/images/gwc_bg.png) -9px -9px no-repeat;
+}
+
+.dd_step1 {
+    background-position: 0 0px;
+}
+.dd_step2 {
+    background-position: 0 -64px;
+}
+.dd_step3 {
+    background-position: 0 -127px;
+}
+.dd_step4 {
+    background-position: 0 -195px;
+}
+.dd_step5 {
+    background-position: 0 -266px;
+}
+.dd_step6 {
+    background-position: 0 -337px;
+}
+.dd_step7 {
+    background-position: 0 -406px;
+}
+.dd_step8 {
+    background-position: 0 -475px;
+}
+.code_pos{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.code1{
+    margin-right: 50px;
+}
+.barcode2 {   
+  float:left;  
+  clear:both;  
+  padding: 0 10px; /*quiet zone*/  
+  overflow:auto;  
+  height:1in; /*size*/   
+}  
+.code2 img{
+    width: 100px;
+    height: auto;
+}
+.code_box{
+    position: relative;
+}
+.barcode2 {   
+  float:left;  
+  clear:both;  
+  padding: 0 10px; /*quiet zone*/  
+  overflow:auto;  
+  height:1in; /*size*/   
+}  
+.barcode2 + * {}  
+.barcode2 div {   
+  float:left;  
+  height: 0.7in; /*size*/  
+}  
+.barcode2 .bar1 { border-left:2px solid black; }  
+.barcode2 .bar2 { border-left:4px solid black; }  
+.barcode2 .bar3 { border-left:6px solid black; }  
+.barcode2 .bar4 { border-left:8px solid black; }  
+.barcode2 .space0 { margin-right:0 }  
+.barcode2 .space1 { margin-right:2px }  
+.barcode2 .space2 { margin-right:4px }  
+.barcode2 .space3 { margin-right:6px }  
+.barcode2 .space4 { margin-right:8px }  
+.barcode2 label {   
+  clear:both;   
+  display:block;   
+  text-align:center;    
+  font: 0.250in/100% helvetica; /*size*/  
+}  

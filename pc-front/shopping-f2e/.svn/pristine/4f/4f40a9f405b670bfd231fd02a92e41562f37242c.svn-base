@@ -1,0 +1,247 @@
+.TB1 .input_w200, .TB2 .input_w200, .TB3 .input_w200 {
+    width: 200px;
+}
+
+.TB1 .tit {
+    background: #fff9f3;
+    font: bold 16px/20px simsun;
+    color: #333;
+}
+
+.TB2 input.input_w400 {
+    width: 400px;
+}
+
+.TB2, .TB3 {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.TB3 {
+    padding: 5px 15px;
+}
+
+.TB3 ul {
+    float: left;
+    width: 620px;
+}
+
+.TB3 li {
+    float: left;
+    width: 28%;
+    line-height: 30px;
+}
+
+.TB3 li span {
+    display: inline-block;
+    padding: 5px 2px;
+    vertical-align: middle;
+}
+
+.TB3 li input {
+    vertical-align: middle;
+}
+
+.TB3 strong {
+    float: left;
+    width: 100px;
+    padding: 10px 0 0 12px;
+}
+
+.TB3 .ht_240 {
+    height: 240px;
+}
+
+.TB3 input, .TB3 span img {
+    vertical-align: middle;
+}
+
+.TB3 span img {
+    margin: 0 0 0 5PX
+}
+
+.Tb4 td {
+    border: 0;
+}
+
+.Tb_No td, .Tb_No th {
+    border: 0;
+    padding: 5px 20px;
+    color: #000000
+}
+
+.title_lt {
+    width: 100px;
+    text-align: left;
+}
+
+.Tb4 p {
+    line-height: 24px;
+}
+
+h5 {
+    background: #FFF9F3;
+    border-bottom: 1px solid #e5e5e5;
+    color: #57585B;
+    font: bold 12px/20px simsun;
+    margin: 0;
+    padding: 4px 10px;
+}
+
+.Main_c {
+    border: 0px;
+    margin: 15px;
+    line-height: 24px;
+    width: 500px;
+}
+
+.Main_c .cancle-box .form{
+    width: 100%;
+}
+
+.clear {
+    clear: both
+}
+
+h2.back {
+    background: #F7F7F7;
+}
+
+a.bdr_04, a.bdr_04:hover {
+    display: block;
+    width: 100px;
+    text-decoration: none;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    background: #EF6041;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.anniu_yz {
+    text-decoration: underline;
+    color: #c4a668;
+    font-weight: bold;
+}
+
+table.formtable_yz {
+    margin: 10px 0 20px;
+}
+
+table.formtable_yz td {
+    padding: 5px 5px 5px 0;
+}
+
+.invo_table2 {
+    width: 650px;
+    border: 0px;
+}
+
+.content_qx {
+    width: 380px;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #e1e1e1;
+    margin-left: 0px;
+}
+
+.dd2 span {
+    display: block;
+    width: 50%;
+    height: 24px;
+    line-height: 24px;
+    float: left;
+    overflow: hidden;
+}
+
+
+/*.cj_sjccont1 {
+     width: auto;
+}*/
+
+.cj_sjccont1 .quxiao_close {
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: url("http://static.ecgci.com/images/icon.png") -107px -270px no-repeat;
+    right: 13px;
+    top: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.qux_in {
+    width: 150px;
+    height: 24px;
+    line-height: 24px;
+    margin-left: 10px;
+    border: 1px solid #e1e1e1;
+    padding: 0px 8px;
+    background: url(http://static.ecgci.com/images/select.png) no-repeat 165px 10px;
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+.item-area {
+    margin: 5px 0px;
+}
+
+.hide {
+    display: none;
+}
+
+.op-btns {
+    margin-top: 5px;
+}
+
+.area {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+#odo_cancel_step a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+#cancelText0 {
+    color: #666;
+}
+
+
+/*.cj_sjccont1 {
+     width: 100%;
+}*/
+
+#showCancerReason {
+    margin: 0 auto;
+    cursor: default;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 461px;
+    height: 746px;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    margin-left: -230px;
+    z-index: 101;
+}
+
+.orderLayer {
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    top: 0;
+    left: 0;
+}
+
+.cancelOrderBox {
+    display: none;
+}

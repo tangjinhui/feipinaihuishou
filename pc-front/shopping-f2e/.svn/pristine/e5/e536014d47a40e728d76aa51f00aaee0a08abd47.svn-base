@@ -1,0 +1,44 @@
+<script id="reserveNumbers-template" type="text/x-handlebars-template">
+    <!--获取起始中签号-->
+    <div class="w675">
+        <div class="tb_top"></div>
+        <div class="tb_m">
+            <h4 class="cq_h4"><span style="float:left;padding-left:10px;">种子号：{{baseNo}}</span>获取种子号计算公式如下</h4>
+            <div class="cq_cont">
+                <dl>
+                    <dt>基准数：<span>{{total}}</span></dt>
+                    <dd>注：（深证成指<span style="color:red;">X</span>100）<span style="color:red;">X</span>（中小板指<span style="color:red;">X</span>100）<span style="color:red;">X</span>10000</dd>
+                </dl>
+                <dl>
+                    <dt>基准数反转数：<span>{{reverseTotal}}</span></dt>
+                    <dd>注：基准数取反，去除首位零(如：基准数23456700，反转数765432)</dd>
+                </dl>
+                <dl>
+                    <dt>种子号/起始中签号：<span>{{baseNo}}</span></dt>
+                    <dd>注：反转数<span style="color:red;">/</span>报名人数取余数并加1 （如：765432<span style="color:red;">/</span>1000=765余数加1为433，种子号为433）</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="tb_bt"></div>
+    </div>
+    <!--获取起始中签号结束-->
+    <!--全部中签号开始-->
+    <div class="w675">
+        <div class="tb_top"></div>
+        <div class="tb_m">
+            <h4 class="cq_h4">全部中签号详情</h4>
+            <div class="cq_cont2">
+                <div class="cq_in">
+                    <table>
+                        <tbody>
+                            {{#showList list}}
+                            {{/showList}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="tb_bt"></div>
+    </div>
+    <!--全部中签号结束-->
+</script>

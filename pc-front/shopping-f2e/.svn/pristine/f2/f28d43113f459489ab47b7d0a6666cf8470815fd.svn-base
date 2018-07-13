@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>账户中心 - 会员中心 - 中国金币官方网上商城</title>
+    <meta name="Keywords" content="">
+    <meta name="description" content="">
+    <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" type="text/css" href="/css/member/security/security.css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div class="w crumbs">当前位置：
+        <a href="/index.html">首页</a>
+        <span>&gt;</span>
+        <a href="/member/index.html">会员中心</a>
+        <span>&gt;</span>账户安全
+    </div>
+    <div class="w clearfix">
+        <!--#include file="/inc/member/menu.html"-->
+        <div class="fr">
+            <div class="fr right_b m_right bd_lr">
+                <table width="100%" border="0" id="yanzheng" cellspacing="0" cellpadding="0" style="border-right:1px solid #f3f3f3;">
+                    <script id="security-template" type="text/x-handlebars-template">
+                        <tbody>
+                            <tr>
+                                <td style="padding:0px 10px; background-color:#f7f7f7;" colspan="3">
+                                    <h3>安全中心</h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="23%" class="padd5" colspan="2">安全级别：
+                                    <span class="red bold">
+                                        <span id="strength_title" class="rank-text2">
+                                            {{grade data.memberSafeLevelInfo}}
+                                        </span>
+                                    <i id="strength_content" class="rank rank{{data.memberSafeLevelInfo}}">
+                                        </i>
+                                    <span class="red">
+                                            {{gradetxt data.memberSafeLevelInfo}}
+                                        </span>
+                                    </span>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="yanz">
+                                    <span class="yyz yyz{{data.statusMap.memberSecurityInfo}}">
+                                    </span>实名认证
+                                </td>
+                                <td width="64%">
+                                    <span class="red">用于提升账号的安全性和信任级别。</span>
+                                </td>
+                                <td id="js_hover" width="21%" class="text_c">
+                                    {{#status data.statusMap.memberSecurityInfo}} {{body}} {{/status}} {{#isShow data.statusMap.memberSecurityInfo}}
+                                    <span class="wrap_txt dn">
+                                        经系统检查您的实名会员属性存在可疑要素，请您按要求再次动态实名认证。任何问题，请您联系中国金币网上商城客服，4008188666。
+                                        <i class="border_san">
+                                            <img src="http://static.ecgci.com/images/san.png" alt="">
+                                        </i>
+                                    </span> {{/isShow}} {{#isLock data.statusMap.memberSecurityInfo}}
+                                    <div id='tooltip'>
+                                        <li>您的实名会员属性，因如下原因导致锁定</li>
+                                        <li>【 {{data.statusMap.lockCause}} 】
+                                        </li>
+                                        <li>锁定结束时间到【 {{data.statusMap.finishTime}} 】
+                                        </li>
+                                        <li>锁定期间您无法享受实名会员权益</li>
+                                    </div>
+                                    {{/isLock}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="yanz">
+                                    <span class="yyz yyz7"></span>修改密码
+                                </td>
+                                <td width="64%">
+                                    <span class="red">
+                                        互联网账号存在被盗风险，建议您定期更改密码以保护账户安全。
+                                    </span>
+                                </td>
+                                <td width="13%" class="text_c">
+                                    <a href="/member/security/modify_password.html" class="red">修改密码</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="yanz">
+                                    <span class="{{isMobileValid data.mobileValid}}"></span>手机验证
+                                </td>
+                                <td width="64%">您验证的手机： {{data.mobile}}
+                                </td>
+                                <td width="13%" class="text_c">
+                                    <a href="./security/modify_mobile.html" class="red">修改</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </script>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/common/footer.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/member/security/security.js"></script>
+</body>
+
+</html>

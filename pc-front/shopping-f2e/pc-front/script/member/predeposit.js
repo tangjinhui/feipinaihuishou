@@ -1,0 +1,210 @@
+require(['jquery', 'handlebars', 'limitPage', 'dialog', 'header', 'modules/menu'], function($, Handlebars, limitPage, dialog) {
+
+    Handlebars.registerHelper("formatPrice", function(price) {
+        if (!price) {
+            return '';
+        }
+        return parseFloat(price).toFixed(2);
+    });
+
+    Handlebars.registerHelper("predepositStyle", function(detailType) {
+        var str = '';
+        if (detailType == 'predeposit.bizType.frozen') {
+            str = 'frozen';
+        } else if (detailType == 'predeposit.bizType.unfrozen') {
+            str = 'unfrozen';
+        } else if (detailType == 'predeposit.bizType.deduct') {
+            str = 'deduct';
+        } else if (detailType == 'predeposit.bizType.recharge') {
+            str = 'recharge';
+        } else if (detailType == 'predeposit.bizType.pay') {
+            str = 'pay';
+        }
+        return str;
+    });
+
+    //我的预存款基本信息
+    $.ajax({
+        url: '/front/member/predeposit/myPredeposit',
+        type: 'get',
+        dataType: 'json',
+        success: function(res) {
+            if ('99' == res.code) {
+                window.location.href = 'https://passportdev.ecgci.com/login.html';
+            } else if (res.code == '00') {
+                if (parseInt(res.data.predepositSum) == 0) {
+                    $("#sumPredeposit").text('￥' + '0.00');
+                } else {
+                    $("#sumPredeposit").text('￥' + res.data.predepositSum);
+                }
+                if (parseInt(res.data.validPredeposit) == 0) {
+                    $("#usePredeposit").text('￥' + '0.00');
+                } else {
+                    $("#usePredeposit").text('￥' + res.data.validPredeposit);
+                }
+                if (parseInt(res.data.frozenPredeposit) == 0) {
+                    $("#lockPredeposit").text('￥' + '0.00');
+                } else {
+                    $("#lockPredeposit").text('￥' + res.data.frozenPredeposit);
+                }
+
+
+            } else {
+                dialog({ title: '系统提示', content: '网络繁忙，请您稍后重试' });
+            }
+        },
+        error: function() {
+            dialog({ title: '系统提示', content: '网络繁忙，请稍后重试' });
+        }
+
+    });
+    //预存款变更明细
+    function changePedepositDetail(pageNum) {
+        var flag = $('[name=operationDate]').val();
+        var data = {
+            pageNum: pageNum || 1,
+            flag: flag
+        }
+        $.ajax({
+            url: '/front/member/predeposit/getPredepositDetailList',
+            type: 'get',
+            dataType: 'json',
+            data: data,
+            success: function(res) {
+                if ('99' == res.code) {
+                    window.location.href = 'https://passportdev.ecgci.com/login.html';
+                } else if (res.code == '00') {
+                    var listTemp = Handlebars.compile($("#detail-list-template").html());
+                    $('.R_box').html(listTemp(res.data.page));
+                    $('[name=operationDate]').val(flag);
+                    if (res.data.page.list.length) {
+                        $('.none').hide();
+                        initLimitPage(res.data.page.pages, res.data.page.pageNum, changePedepositDetail);
+                    } else {
+                        $('.none').show();
+                    }
+                } else {
+                    dialog({ title: '系统提示', content: '网络繁忙，请您稍后重试' });
+                }
+            },
+            error: function() {
+                dialog({ title: '系统提示', content: '网络繁忙，请稍后重试' });
+            }
+        });
+    }
+
+    function lockPedepositDetail(pageNum) {
+        var data = {
+            pageNum: pageNum || 1
+        }
+        $.ajax({
+            url: '/front/member/predeposit/getPredepositFrozenList',
+            type: 'get',
+            dataType: 'json',
+            data: data,
+            success: function(res) {
+                if ('99' == res.code) {
+                    window.location.href = 'https://passportdev.ecgci.com/login.html';
+                } else if (res.code == '00') {
+                    var listTemp = Handlebars.compile($("#lock-template").html());
+                    $('.R_box').html(listTemp(res.data.page));
+                    if (res.data.page.list.length) {
+                        $('.none').hide();
+                        initLimitPage(res.data.page.pages, res.data.page.pageNum, lockPedepositDetail);
+                    } else {
+                        $('.none').show();
+                    }
+                } else {
+                    dialog({ title: '系统提示', content: '网络繁忙，请您稍后重试' });
+                }
+            },
+            error: function() {
+                dialog({ title: '系统提示', content: '网络繁忙，请稍后重试' });
+            }
+        });
+    }
+
+    function addPedepositDetail(pageNum) {
+        var flag = $('[name=operationDate]').val();
+        var status = $('[name=status]').val();
+        var data = {
+            pageNum: pageNum || 1,
+            flag: flag,
+            status: status
+        }
+        $.ajax({
+
+            url: '/front/member/predeposit/getOnlineCardList',
+            type: 'get',
+            dataType: 'json',
+            data: data,
+            success: function(res) {
+                if ('99' == res.code) {
+                    window.location.href = 'https://passportdev.ecgci.com/login.html';
+                } else if (res.code == '00') {
+                    var listTemp = Handlebars.compile($("#add-template").html());
+                    $('.R_box').html(listTemp(res.data.page));
+                    $('[name=operationDate]').val(flag);
+                    $('[name=status]').val(status);
+                    if (res.data.page.list.length) {
+                        $('.none').hide();
+                        initLimitPage(res.data.page.pages, res.data.page.pageNum, addPedepositDetail);
+                    } else {
+                        $('.none').show();
+                    }
+                } else {
+                    dialog({ title: '系统提示', content: '网络繁忙，请您稍后重试' });
+                }
+            },
+            error: function() {
+                dialog({ title: '系统提示', content: '网络繁忙，请您稍后重试' });
+            }
+        });
+    }
+
+    function initLimitPage(pages, currentPage, init) {
+        $('.pageLimit').show();
+        $('#light-pagination').pagination({
+            pages: pages,
+            cssStyle: 'light-theme',
+            displayedPages: 3,
+            edges: 3,
+            currentPage: currentPage,
+            prevText: '上一页',
+            nextText: '下一页',
+            onPageClick: function(page) {
+                init(page);
+                var top = $('#navi').height();
+                $('html,body').animate({
+                    scrollTop: top
+                }, 300);
+                return false;
+            }
+        });
+    }
+
+    function initData() {
+        var status = parseInt($('.tabs').find('.select').attr('data-status'));
+        if (0 == status) {
+            changePedepositDetail();
+        } else if (1 == status) {
+            lockPedepositDetail();
+        } else if (2 == status) {
+            addPedepositDetail();
+        }
+    }
+    $('.tabs').find('li').on('click', function() {
+        $(this).siblings().removeClass("select");
+        $(this).addClass("select");
+        initData();
+    });
+
+    $('body').on('change', '#operationDate', function() {
+        initData();
+    })
+    $('body').on('change', '#status', function() {
+        initData();
+    })
+
+    $('.tabs').find('li').first().trigger("click");
+});

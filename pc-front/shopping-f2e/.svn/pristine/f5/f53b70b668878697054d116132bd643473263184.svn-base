@@ -1,0 +1,162 @@
+<div class="addAddress_box dn">
+    <div class="blockUI blockMsg blockPage">
+        <div id="xg_adr" class="ui-tabs-hide" style="display: block;">
+            <div class="ui-dialog">
+                <div class="ui-dialog-titlebar ui-widget-header">
+                    <p class="ui-dialog-title" style="float: none;">
+                        <a class="ui-dialog-close" href="javascript:void(0);">
+                        </a>
+                        <span style="float: left;">
+                            编辑收货地址
+                        </span>
+                    </p>
+                    <p class="c">
+                    </p>
+                </div>
+                <div class="ui-dialog-content ui-widget-content">
+                    <table border="0" cellspacing="0" cellpadding="0" class="formtable" id="content-box">
+                        <script id="content-template" type="text/x-handlebars-template">
+                            <tbody>
+                                <tr id="viewNewAddress" style="">
+                                    <td>
+                                        <table class="wbord text_l" width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="12%" class="text_r" style="text-align: left;">
+                                                        <span class="red">*</span>收&nbsp;&nbsp;货&nbsp;&nbsp;人：
+                                                    </td>
+                                                    <td class="re">
+                                                        <input id="consignee" name="consignee" maxlength="8" type="text" autocomplete="off" value="{{consignee}}">
+                                                        <div class="msg-error">
+                                                            <div class="msg-img">该选项必填</div>
+                                                        </div>
+                                                         <div class="name-error">
+                                                            <div class="msg-img">收货人不能超过8个字</div>
+                                                        </div>
+                                                        <div class="msg-info">
+                                                            <div class="msg-img"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text_r" style="vertical-align: top;text-align: left;">
+                                                        <span class="red">*</span>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区：
+                                                    </td>
+                                                    <td>
+                                                        <div id="selectbox" class="selectbox">
+                                                            <select id="city0" name="city0"></select>
+                                                            <select id="city1" name="city1" class="dn"></select>
+                                                            <select id="city2" name="city2" class="dn"></select>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text_r" style="text-align: left;white-space:nowrap" width="12%">
+                                                        <span class="red">
+                                                        *
+                                                    </span> 详细地址：
+                                                    </td>
+                                                    <td class="re">
+                                                        <span id="citySpan" class="dn">
+                                                        <strong class="red">请选择地区</strong>
+                                                    </span>
+                                                        <input id="detailsAddress" name="detailsAddress" maxlength="60" type="text" autocomplete="off" style="width: 240px" value="{{address}}">
+                                                        <div class="msg-error">
+                                                            <div class="msg-img">该选项必填</div>
+                                                        </div>
+                                                        <div class="msg-info">
+                                                            <div class="msg-img"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text_r" style="text-align: left; white-space:nowrap">
+                                                        <span class="red">
+                                                        *
+                                                    </span> 手机号码：
+                                                    </td>
+                                                    <td class="re">
+                                                        <input id="mobile" name="mobile" type="text" maxlength="11" autocomplete="off" value="{{mobile}}">
+                                                        <div class="msg-error">
+                                                            <div class="msg-img">该选项必填</div>
+                                                        </div>
+                                                        <div class="msg-info">
+                                                            <div class="msg-img"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text_r">
+                                                        固定电话：
+                                                    </td>
+                                                    <td class="re">
+                                                        <input id="tel" name="tel" type="text" maxlength="20" autocomplete="off" value="{{tel}}">
+                                                        <div class="msg-error">
+                                                            <div class="msg-img">该选项必填</div>
+                                                        </div>
+                                                        <div class="msg-info">
+                                                            <div class="msg-img"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text_r">
+                                                        电子邮件：
+                                                    </td>
+                                                    <td class="re">
+                                                        <input id="email" name="email" type="text" maxlength="40" autocomplete="off" value="{{email}}">
+                                                        <div class="msg-error">
+                                                            <div class="msg-img">该选项必填</div>
+                                                        </div>
+                                                        <div class="msg-info">
+                                                            <div class="msg-img"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text_r">
+                                                        邮政编码：
+                                                    </td>
+                                                    <td class="re">
+                                                        <input id="zipcode" name="zipcode" maxlength="6" type="text" value="{{zipCode}}">
+                                                        <div class="msg-error">
+                                                            <div class="msg-img">该选项必填</div>
+                                                        </div>
+                                                        <div class="msg-info">
+                                                            <div class="msg-img"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text_r">
+                                                        地址简称：
+                                                    </td>
+                                                    <td class="re">
+                                                        <input id="addressTag" name="addressTag" type="text" maxlength="8" autocomplete="off" value="{{addressTag}}">
+                                                        <div class="msg-error">
+                                                            <div class="msg-img">该选项必填</div>
+                                                        </div>
+                                                        <div class="msg-info">
+                                                            <div class="msg-img"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <input type="button" class="in_btn" value="提交" id="saveNewAddressBtn">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </script>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

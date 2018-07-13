@@ -1,0 +1,9 @@
+<script id="featuredItems-template" type="text/x-handlebars-template">
+    {{#each featuredItems}}
+    <div>
+        <a href="{{asLink}}" target="{{target}}">
+                <img class="img_loading" data-original="{{imgConf adImg adId}}" src="http://static.ecgci.com/images/git.png" title="{{adName}}" alt="{{adName}}">
+            </a>
+    </div>
+    {{/each}}
+</script>

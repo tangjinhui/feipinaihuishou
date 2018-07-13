@@ -1,0 +1,46 @@
+<script id="list-template" type="text/x-handlebars-template">
+    {{#dataLen list}} {{#each list}}
+    <tr>
+        <td align="center">
+            {{Id}}
+        </td>
+        <td align="center" rowspan="1">
+            {{mId}}
+        </td>
+        <td align="center" rowspan="1">
+            {{orderId}}
+        </td>
+        <td class="text_l" rowspan="1">
+            <div class="cg_titp">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border: 0 none;" class="fz_12">
+                    <tbody>
+                        <tr>
+                            <td valign="middle" style="padding:0;border:none; text-align:left;">
+                                {{#each goods}} {{{isBr @index}}}{{goodsName}}*{{quantity}} {{/each}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </td>
+        <td align="center">
+            {{formatPrice refundPayPrice}}
+        </td>
+        <td align="center">
+            {{refundWayStatus}}
+        </td>
+        <td align="center">
+            {{createTime}}
+        </td>
+        <td align="center">
+            {{refundStatus}}
+        </td>
+    </tr>
+    {{/each}} {{else}}
+    <tr>
+        <td colspan="8">
+            暂无退款信息
+        </td>
+    </tr>
+    {{/dataLen}}
+</script>

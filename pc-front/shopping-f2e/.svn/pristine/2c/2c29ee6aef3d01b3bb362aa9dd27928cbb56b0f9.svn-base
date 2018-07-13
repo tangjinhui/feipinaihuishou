@@ -1,0 +1,20 @@
+<script id="list-template" type="text/x-handlebars-template">
+    {{#dataLen list}} {{#each list}}
+    <tr>
+        <td>
+            {{createTime}}
+        </td>
+        <td>
+            {{setType changeNum}}
+        </td>
+        <td style="color:{{setFontColor changeNum}}">
+            {{changeNum}}
+        </td>
+        <td>
+            {{note}}
+        </td>
+    </tr>
+    {{/each}} {{else}}
+    <div class="p_l" id="p_l">未查到任何信息</div>
+    {{/dataLen}}
+</script>

@@ -1,0 +1,92 @@
+<script id="ingTempalte" type="text/x-handlebars-template">
+    {{#each this}}
+    <dl class="clearfix">
+        <a class="clearfix" href="javascript:void(0);" onclick="window.open('/auction_detail_{{auction_id}}.html')">
+            <dt class="fl">
+                <img class="img_loading" src="http://img2.ecgci.com/upload/topic/reserve_images/git.png" data-original="{{#if img_big}} {{imgServer img_big}} {{/if}}" alt="">
+            </dt>
+            <dd class="fl">
+                <h2>{{#if auction_name}} {{auction_name}} {{/if}}</h2>
+                <!-- 出价 -->
+                <div class="now clearfix">
+                    <!-- 小图标 -->
+                    <div class="ico_ing fl">
+                        <div class="n1">正</div>
+                        <div class="n2">在</div>
+                        <div class="n3">竞</div>
+                        <div class="n4">价</div>
+                    </div>
+                    <div class="text fl">
+                        <div class="t1">
+                            <span>当前价：￥</span><strong>{{formatnumber auction_price}}</strong>
+                        </div>
+                        <div class="t2">
+                            <span>出价次数：{{auction_counts}}</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 剩余时间 -->
+                <div class="time clearfix">
+                    <span class="fl">剩余时间：</span>
+                    <span data-timer="{start: {{start_time}}, end: {{end_time}} }" class="fl left">
+                        <span class="fl bg"></span>
+                        <span class="fl">小时</span>
+                        <span class="fl bg"></span>
+                        <span class="fl">分</span>
+                        <span class="fl bg"></span>
+                        <span class="fl">秒</span>
+                        <span class="fl bg"></span>
+                    </span>
+                </div>
+                <div class="go">去竞价</div>
+            </dd>
+        </a>
+    </dl>
+    {{/each}}
+</script>
+<script id="willTempalte" type="text/x-handlebars-template">
+    {{#each this}}
+    <div class="item">
+        <a href="/auction_detail_{{auction_id}}.html" target="_blank">
+            <img class="img_loading" src="http://img2.ecgci.com/upload/topic/reserve_images/git.png" data-original="{{#if img_inside}} {{imgServer img_inside}} {{/if}}" alt="">
+        </a>
+        <div class="dialog dn">
+            <a href="/auction_detail_{{auction_id}}.html" target="_blank">
+                <div class="black"></div>
+                <div class="small_black">
+                    <div class="black"></div>
+                    <div class="content">
+                        <div class="padding">
+                            <p class="p1">{{#if auction_name}} {{auction_name}} {{/if}}</p>
+                            <p><span class="f14">起始价:￥</span><b class="f18">{{formatnumber auction_price}}</b></p>
+                            <p class="timer"><span>距开始: </span><span data-timer="{start: {{start_time}}, end: {{end_time}} }"></span></p>
+                            <div class="go bg_g">去围观</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    {{/each}}
+</script>
+<script id="hisTempalte" type="text/x-handlebars-template">
+    {{#each this}}
+    <div class="item {{#if isDeal}}isOk{{/if}}">
+        <div class="pic">
+            <a href="/auction_detail_{{auction_id}}.html" target="_blank">
+                <img class="img_loading" src="http://img2.ecgci.com/upload/topic/reserve_images/git.png" data-original="{{#if img_small}} {{imgServer img_small}} {{/if}}" alt="">
+            </a>
+            <div class="ok"></div>
+        </div>
+        <div class="tit">
+            <a href="/auction_detail_{{auction_id}}.html" title="{{#if auction_name}} {{auction_name}} {{/if}}" target="_blank">{{#if auction_name}} {{auction_name}} {{/if}}</a>
+            <div class="clearfix">
+                {{#if isDeal}}
+                <span class="fl">获拍价格：<span class="imp_r">￥{{formatnumber auction_price}}</span></span>
+                <span class="fr">出价次数：<span>{{auction_counts}}次</span></span>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</script>

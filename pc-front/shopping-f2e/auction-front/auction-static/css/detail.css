@@ -1,0 +1,915 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/dialog.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+@import url('http://static.ecgci.com/css/libs/mini_login.css');
+/*  主要内容  */
+.ms-controller{
+   visibility: hidden
+}
+.dis {
+    display: block
+}
+
+.dn {
+    display: none!important
+}
+
+.fl,.fr {
+    display: inline
+}
+
+.cl {
+    clear: both
+}
+
+.tc {
+    text-align: center
+}
+
+.tl {
+    text-align: left
+}
+
+.tr {
+    text-align: right
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.posr {
+    position: relative;
+    zoom: 1
+}
+
+.posa {
+    position: absolute;
+    zoom: 1
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    outline: 0
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+#logo a:hover,#nav ul.cate_left li a,#nav ul.cate_left li h2 a,.nav_mune li a,dl.unit a:hover {
+    text-decoration: none
+}
+
+dl.unit a:hover {
+    color: #c42605
+}
+button {
+    margin: 0;
+    vertical-align: baseline;
+    font: 12px/1.5 '\5B8B\4F53','\5FAE\8F6F\96C5\9ED1',tahoma,arial;
+    outline: 0;
+        -webkit-appearance: none;
+        text-transform: none;
+            text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+}
+.highlight {
+    color: #bb9a2a
+}
+
+.ui_btn,a.fff {
+    color: #fff
+}
+
+.pad30 {
+    padding: 30px 0 0
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0
+}
+
+.clearfix {
+    zoom: 1;
+    clear: inherit;
+}
+
+.break-word {
+    word-wrap: break-word;
+    word-break: break-all
+}
+
+.nowarp {
+    white-space: nowrap
+}
+
+.wrap {
+    width: 1240px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1
+}
+
+
+.img_loading {
+    background: url(data:image/png;
+    base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QjI0RTUwMzM3RDUxMTFFNThERTVBQUI1MzZGODRDMDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QjI0RTUwMzQ3RDUxMTFFNThERTVBQUI1MzZGODRDMDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCMjRFNTAzMTdENTExMUU1OERFNUFBQjUzNkY4NEMwOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCMjRFNTAzMjdENTExMUU1OERFNUFBQjUzNkY4NEMwOCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Po9mG+MAAAZ8SURBVFjDzZkLUFRV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) center center no-repeat;width: 100%!important;
+    height: 100%!important;
+    min-height: 60px!important
+}
+
+.f12 {
+    font-size: 12px
+}
+
+.f14 {
+    font-size: 14px
+}
+
+.f16 {
+    font-size: 16px
+}
+
+.f18 {
+    font-size: 18px
+}
+
+.f20 {
+    font-size: 20px
+}
+
+.imp_p,.imp_r {
+    color: #e54346
+}
+
+.disable,.disable:hover {
+    background-color: #ccc!important
+}
+
+.go,.time .bg {
+    text-align: center
+}
+.crumbs {
+    margin-top: 16px;
+    font-size: 12px;
+    font-family: "宋体";
+    overflow: hidden;
+}
+.crumbs.el {
+    margin-top: 10px;
+    border-left: 12px solid #353535;
+    padding-left: 10px;
+    height: 19px;
+    margin-bottom: 12px;
+    width: 1218px;
+    border-bottom: 1px solid #353535;
+    font-size: 16px;
+    color: #353535;
+    font-family: "宋体";
+    font-weight: 700
+}
+.crumbs a, .crumbs span {
+    float: left;
+    color: #666;
+    margin-right: 6px; 
+}
+.go {
+    font-size: 22px;
+    width: 150px;
+    line-height: 45px;
+    height: 45px;
+    background-color: #b61d1d;
+    color: #fff
+}
+
+.bg_g {
+    background-color: #008d4c
+}
+
+.crumbs.el a {
+    color: #353535
+}
+
+.reserve_goods {
+    width: 1238px;
+    /*height: 407px;*/
+    margin-top: 8px;
+    padding-top: 30px;
+    padding-left: 0;
+    margin-bottom: 20px;
+    border: 1px solid #d8d7dc;
+    border-top: 3px solid #e54346;
+    box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+.reserve_goods .no_use{
+    width: 114px;
+    height: 114px;
+    background: url(http://img2.ecgci.com/upload/topic/jingpai_images/no_use.png) no-repeat;
+    position: absolute;
+    top: -22px;
+    right: 175px;
+}
+
+.reserve_goods .bor_b{
+}
+
+
+/*  大图显示  */
+
+.reserve_goods .good_pics {
+    padding-left: 30px;
+    width: 376px;
+    height: 376px;
+    overflow: hidden;
+    margin-right: 37px;
+}
+
+.reserve_goods .good_pics img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+}
+
+
+/*  小图列表  */
+
+.reserve_goods .small_goods {
+    width: 64px;
+    height: 380px;
+    overflow: hidden;
+    margin-right: 38px;
+}
+
+.reserve_goods .list_item {
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #f5f5f5;
+    width: 62px;
+    height: 62px;
+    margin-bottom: 14px;
+}
+
+.reserve_goods .list_item.act {
+    border-color: #e54346;
+}
+
+.reserve_goods .list_item img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+}
+
+.reserve_goods .right{
+    
+}
+
+.reserve_goods .right .tit{
+    width: 475px;
+    font-size: 20px;
+    margin-bottom: 11px;
+    font-weight: normal;
+}
+
+.reserve_goods .right .detail{
+    width: 478px;
+}
+
+.detail .time_box{
+    height: 50px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+
+}
+
+.detail .time_box .type{
+    font-size: 18px;
+    color: #fff;
+    padding-left: 7px;
+    padding-top: 3px;
+    width: 43px;
+    height: 47px;
+    line-height: 22px;
+    background-color: #e54346;
+}
+
+
+.detail .time_box .time{
+    line-height: 50px;
+    padding-left: 28px;
+    font-size: 14px;
+}
+
+.detail .time_box .time .r{
+    color: #b61d1d;
+}
+
+.detail .time_box .time .r strong{
+    color: #e54346;
+}
+
+.detail .time_box .time .r strong,
+.detail .time_box .time .r b{
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.detail .time_box .time .r strong.bg{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -3px;
+    margin-top: -7px\0;
+    margin-top: -2px\9;
+    *margin-top: 0px;
+    width: 22px;
+    height: 20px;
+    background: url(http://img2.ecgci.com/upload/topic/jingpai_images/jif-1.gif) no-repeat center center;
+}
+
+.detail .time_box .time b{
+    color: #333;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.detail .record,
+.detail .record2{
+    font-size: 12px;
+    color: #666;
+}
+
+.detail .record div{
+    padding-bottom: 12px;
+    width: 100%;
+}
+
+.detail .record div.last{
+    border-bottom: 1px dashed #b7b7b7;
+    padding-bottom: 20px;
+}
+
+.detail .record .w{
+    width: 215px;
+}
+
+.detail .record2{
+    margin-bottom: 20px;
+}
+
+.detail .record2 div{
+    padding: 8px 0;
+    color: #333;
+    font-family: '宋体';
+}
+
+.detail .record2 .w1{
+    width: 165px;
+    overflow: hidden;
+}
+
+.detail .record2 .w2{
+    width: 186px;
+    overflow: hidden;
+}
+
+.detail .record2 .last{
+    width: 100%;
+    border-bottom: 1px dashed #b7b7b7;
+}
+
+.detail .record2 .last span{
+    color: #666;
+}
+
+.detail .btn{
+    height: 50px;
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.btn .up .inp_box{
+}
+
+.btn .up .inp_box input{
+    color: #ec3f45;
+    padding: 0 10px;
+    width: 90px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #ff5744;
+}
+
+.btn .up .inp_box .math{
+    width: 24px;
+    height: 50px;
+    padding-left: 2px;
+    margin-right: 9px;
+}
+
+.btn .up .inp_box .math .add,
+.btn .up .inp_box .math .reduce{
+    width: 22px;
+    height: 22px;
+    border: 1px solid #ff5744;
+    background: url(http://img2.ecgci.com/upload/topic/jingpai_images/top.png) no-repeat center center;
+    cursor: pointer;
+}
+
+.btn .up .inp_box .math .reduce{
+    margin-top: 2px;
+    background-image: url(http://img2.ecgci.com/upload/topic/jingpai_images/bottom.png);
+}
+
+.show_btn{
+    width: 82px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #e54243;
+    color: #fff;
+    font-size: 28px;
+    border: 0;
+    cursor: pointer;
+}
+
+.go_pay .show_btn.disable{
+    background-color: #ccc !important;
+}
+
+.go_pay .show_btn.disable:hover{
+    background-color: #ccc !important;
+}
+
+.go_pay .show_btn{
+    width: auto;
+    font-size: 20px;
+    padding: 0 32px 0 108px;
+    background-image: url(http://img2.ecgci.com/upload/topic/jingpai_images/hammer.png);
+    background-position: 25px center;
+    background-repeat: no-repeat;
+}
+
+.go_pay.over .show_btn{
+    background-color: #ff7e00;
+}
+
+.go_pay.ok .show_btn{
+    padding: 0;
+    background: none;
+    width: 125px;
+    background-color: #00a756;
+}
+
+.go_pay span, .go_pay a{
+    margin-left: 8px;
+    margin-top: 34px;
+    color: #666;
+}
+
+.go_pay a{
+    cursor: pointer;
+}
+
+.show_btn:hover{
+    background-color: #ef2d31;
+}
+
+/*底部边框*/
+.bor_b{
+    border-bottom: 1px solid #d8d7dc;
+}
+
+.process{
+    color: #666;
+    height: 73px;
+}
+
+.process dl{
+    overflow: hidden;
+    height: 100%;
+}
+
+.process dt, .process dd{
+    float: left;
+    line-height: 73px;
+    font-size: 16px;
+}
+
+.process dt{
+    padding-left: 40px;
+    padding-right: 40px;
+    border-right: 1px solid #d8d7dc;
+}
+
+.process dd{
+    padding-left: 40px;
+    padding-right: 70px;
+}
+
+.process dd.last{
+    padding-right: 0;
+}
+
+.process dd span.fox{
+    margin-right: 4px;
+    padding: 2px 8px;
+    border: 1px solid #d2d2d2;
+}
+
+.show_panel{
+    margin-left: 5px;
+    width: 210px;
+    overflow: hidden;
+    margin-top: 34px;
+    text-align: center;
+    color: #666;
+}
+
+.show_panel .tit{
+    height: 29px;
+    line-height: 29px;
+    background-color: #f5f5f5;
+}
+
+.show_panel .title{
+    margin-top: 1px;
+    background-color: #f5f5f5;
+    height: 20px;
+    line-height: 20px;
+}
+
+.show_panel .f1{
+    width: 50px;
+    padding-left: 10px;
+    padding-right: 15px;
+}
+
+.show_panel .f2{
+    width: 60px;
+    padding-right: 10px;
+}
+
+.show_panel .f3{
+    width: 50px;
+}
+
+.show_panel .list{
+    padding-top: 7px;
+    border: 1px solid #f5f5f5;
+    border-top: 0 none;
+    font-family: '宋体';
+    height: 318px;
+}
+
+.show_panel .list.no_list{
+    line-height: 285px;
+    height: 340px;
+}
+
+.show_panel .list .more{
+    width: 118px;
+    height: 28px;
+    border: 1px solid #898989;
+    color: #666;
+    margin-top: 20px;
+}
+
+.show_panel .line{
+    height: 29px;
+    line-height: 29px;
+}
+
+.left_m{
+    width: 906px;
+    margin-top: 16px;
+    border-left: 1px solid #d8d7dc;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+.left_m .tab{
+    border-top: 1px solid #d8d7dc;
+    overflow: hidden;
+}
+
+.left_m .tab div{
+    float: left;
+    height: 34px;
+    line-height: 34px;
+    font-size: 16px;
+    font-family: '宋体';
+    text-align: center;
+    width: 116px;
+    border-right: 1px solid #d8d7dc;
+    border-bottom: 1px solid #d8d7dc;
+    color: #666;
+    cursor: pointer;
+}
+
+.left_m .tab div.act{
+    background-color: #fff;
+    border-bottom-color: #fff;
+}
+
+.left_m .content{
+    background-color: #fff;
+    clear: both;
+    width: 905px;
+    min-height: 868px;
+    line-height: 30px;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+    border-right: 1px solid #d8d7dc;
+    border-bottom: 1px solid #d8d7dc;
+}
+
+.left_m .content .product, .left_m .content .rule{
+    padding: 20px 30px;
+}
+
+.left_m .content img{
+    max-width: 800px;
+    vertical-align: top;
+}
+
+.show_big_panel{
+    padding: 18px 50px 20px;
+    font-family: '宋体';
+    color: #666;
+}
+
+.show_big_panel .tit{
+    overflow: hidden;
+    border-bottom: 1px dashed #a0a0a0;
+}
+
+.show_big_panel .f1,
+.show_big_panel .f2,
+.show_big_panel .f3,
+.show_big_panel .f4{
+    float: left;
+    padding-right: 160px;
+    text-align: center;
+}
+
+.show_big_panel .f1{
+    width: 70px;
+    padding-right: 0;
+}
+
+.show_big_panel .f2{
+    padding-right: 0;
+    white-space: nowrap;
+    width: 400px;
+}
+
+.show_big_panel .f3{
+    width: 68px;
+    padding-right: 110px;
+}
+
+.show_big_panel .f4{
+    width: 146px;
+    padding-right: 0;
+}
+
+
+/*右侧*/
+
+.left_r{
+    width: 320px;
+    color: #666;
+}
+
+.left_r .tit{
+    margin-top: 16px;
+    line-height: 36px;
+    background-color: #f1f1f1;
+    color: #666;
+    padding-left: 16px;
+    font-size: 16px;
+}
+
+.left_r .show{
+    padding: 8px 12px 20px;
+    border: 1px solid #d8d8da;
+    border-top: 0;
+    line-height: 30px;
+}
+
+.left_r .show span{
+    /* width: 1em; */
+    display: inline-block;
+}
+
+#layer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100000;
+    background: #fff;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);    
+}
+
+#yes_start, #no_start, .go_pay{
+    position: relative;
+}
+
+#deposit{
+    position: absolute;
+    left: 0;
+    background-color: #e54243;
+    color: #fff;
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    width: 170px;
+    text-align: center;    
+}
+
+#deposit:hover{
+    text-decoration: none;
+}
+
+#dep_layer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border: 0;
+    filter: alpha(opacity=15);
+    opacity: .15;
+
+}
+#dep_box{
+    width: 639px;
+    height: 352px;
+    text-align: left;
+    overflow: hidden;
+    background: #fff;
+    position: fixed;
+    left: 50%;
+    margin-left: -320px;
+    top: 40%;
+    margin-top: -176px;
+    z-index: 300;
+    border-radius: 5px;
+}
+#dep_box .tit_close1{
+    position: relative;
+    height: 35px;
+    background: #e43a3d;
+    line-height: 35px;
+    padding: 0 0 0 20px;
+    color: #fff;
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+}
+#depClose{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 10px;
+    top: 6px;
+    background: url(http://img2.ecgci.com/upload/topic/reserve_images/icon.png) -107px -270px no-repeat;
+    cursor: pointer;   
+}
+#dep_box{
+    font-size: 16px;
+}
+#dep_box .dep_msg{
+    margin-left: 40px;
+    padding-top: 30px;
+}
+#dep_box .dep_msg p{
+    margin-bottom: 14px;
+}
+#dep_box .dep_msg strong span{
+    color: #e43a3d;
+    margin-left: 4px;
+}
+#dep_box .dep_msg .dep_a_href{
+    margin-top: 20px;
+    font-size: 14px;
+} 
+#dep_box .dep_msg .dep_a_href input{
+    vertical-align: middle;
+}
+#dep_box .dep_msg .dep_a_href a{
+    color: blue;
+}
+#dep_box .sub_dep{
+    text-align: center;
+    margin-top: 38px;
+    position: relative;
+}
+#dep_box .sub_dep .sub_dep_what{
+    position: absolute;
+    background: none;
+    color: #2828ff;
+    top: -7px;
+    right: 78px;
+}
+#dep_box .sub_dep span{
+    font-size: 12px;
+}
+#dep_box .sub_dep a{
+    color: #fff;
+    background: #e43a3d;
+    padding: 8px 20px;
+    border-radius: 4px;
+    margin-left: 4px;    
+}
+.dep_class{
+    display: none;
+}
+#go_open_account{
+    display: none;
+}
+#go_give_money{
+    display: none;
+}
+#go_give_money .dep_msg p{
+    margin-bottom: 30px;       
+}
+#go_give_money .sub_dep{
+    margin-top: 65px;
+}
+#go_recharge{
+    display: none;
+}
+#go_recharge .dep_msg p{
+    margin-bottom: 25px;      
+}
+#mobile_text{
+    float: left;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 10px 18px 0 0px;    
+}
+#mobile_local{
+    font-size: 14px;
+    margin: 10px 0 0 28px;
+    float: left;
+    color: #666;
+}
+
+#min_setInter{
+    font-style: inherit;
+}
+
+#jsSmsLink{
+    color: blue;
+}
+
+#jsSmsLink:hover{
+    color: #e54346;
+    text-decoration: underline;
+}
+
+#reserve_loading{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    filter:alpha(opacity=50);  
+    opacity: 0.6;  
+    z-index: 1000000;
+   display: none;
+}
+
+#reserve_loading img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -71px;
+    margin-top: -69px;
+    width: 142px;
+    height: 138px;
+}

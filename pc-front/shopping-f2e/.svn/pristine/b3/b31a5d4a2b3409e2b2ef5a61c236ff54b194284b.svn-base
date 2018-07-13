@@ -1,0 +1,285 @@
+.re {
+    position: relative;
+}
+.addAddress_box {
+    z-index: 199;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, .6);
+    cursor: default;
+    position: fixed;
+}
+.blockUI {
+    z-index: 1001;
+    position: fixed;
+    padding: 0px;
+    margin: 0px;
+    width: 700px;
+    top: 4%;
+    left: 30%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    border: 0px;
+    background-color: rgb(255, 255, 255);
+    cursor: default;
+}
+span.red {
+    color: #e43a3d
+}
+.ui-widget-header {
+    background: #e43a3d;
+    border: 1px solid #e1e1e1;
+}
+.ui-widget-header {
+    border: none;
+}
+.in_btn {
+    background: #e43a3d;
+    color: #ffffff
+}
+.ui-widget-header {
+    background: #e43a3d
+}
+.in_btn {
+    background: #e43a3d;
+}
+.ui-widget-header {
+    background: #e43a3d;
+    color: #fff;
+}
+.in_btn {
+    width: 100px;
+    margin-left: 10px;
+    height: 24px;
+    padding: 0;
+    font-weight: bold;
+    color: #fff;
+    line-height: 18px;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    font-size: 12px;
+}
+td span.red, .red {
+    color: #e43a3d;
+}
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+td {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+table.wbord, .wbord {
+    border: none;
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+.nor {
+    color: #999;
+    position: absolute;
+    left: 423px;
+    top: 51.2px;
+    width: 86px;
+    display: none;
+    overflow: hidden;
+    background: url('http://static.ecgci.com/images/icon.png') no-repeat scroll -180px -145px;
+    border: 1px solid #ff3000;
+    color: #ff3000;
+    font-size: 12px;
+    height: 29px;
+    line-height: 29px;
+    padding: 0 10px 0 25px;
+}
+table.wbord td input.in_btn {
+    font-weight: normal;
+    height: 30px;
+    line-height: 27px;
+    font-family: "Microsoft YaHei";
+}
+.selectbox select {
+    margin-right: 5px;
+}
+body {
+    margin: 0;
+    padding: 0px;
+    font-size: 12px;
+    text-align: left;
+    font-family: Arial, Lucida, Verdana, Helvetica, sans-serif;
+}
+div, span, input, p, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+a {
+    text-decoration: none;
+}
+input, img, select {
+    vertical-align: middle;
+}
+.c {
+    clear: both;
+}
+.ui-tabs-hide {
+    display: none;
+}
+.text_r {
+    text-align: right;
+}
+.text_l {
+    text-align: left;
+}
+table, table td {
+    border: #e1e1e1 1px solid;
+    line-height: 24px;
+    border-collapse: collapse
+}
+table td {
+    padding: 5px 10px;
+}
+
+/*  */
+
+table td.re span, table td.re input, table td.re div {
+    float: left;
+}
+.msg-error, .name-error {
+    display: none;
+    /* position: absolute;
+    top: 5px;
+    left: 320px; */
+    z-index: 900;
+    cursor: pointer;
+    margin-left: 4px;
+}
+.msg-info {
+    display: none;
+    /* position: absolute;
+    top: 10px;
+    left: 320px; */
+    z-index: 900;
+    cursor: pointer;
+    margin-left: 4px;
+}
+
+/*  */
+
+.msg-error .msg-img {
+    position: relative;
+    z-index: 901;
+    height: 29px;
+    line-height: 29px;
+    width: auto;
+    color: #e43a3d;
+    font-family: 'SimSun';
+    font-size: 12px;
+    border: 1px solid #e43a3d;
+    padding: 0 10px 0 25px;
+    background: url(http://static.ecgci.com/images/icon.png) -180px -145px no-repeat;
+}
+
+.name-error .msg-img {
+    position: relative;
+    z-index: 901;
+    height: 29px;
+    line-height: 29px;
+    width: auto;
+    color: #e43a3d;
+    font-family: 'SimSun';
+    font-size: 12px;
+    border: 1px solid #e43a3d;
+    padding: 0 10px 0 25px;
+    background: url(http://static.ecgci.com/images/icon.png) -180px -145px no-repeat;
+}
+.msg-info .msg-img {
+    border: none;
+    padding: 5px 10px 5px 25px;
+    height: auto;
+    background-position: -180px -173px;
+    font-size: 0;
+    height: 12px;
+    background: url(http://static.ecgci.com/images/icon.png) -180px -176px no-repeat;
+}
+table.formtable td input[type="text"] {
+    text-align: left;
+    line-height: 22px;
+    margin: 0px;
+    vertical-align: middle;
+    border: 1px solid #e1e1e1;
+    font-size: 12px;
+    color: #666;
+    padding: 4px;
+    height: 22px;
+}
+table.formtable {
+    margin: 40px 0;
+}
+table.formtable, table.formtable td, table.formtable {
+    border: none;
+}
+table.formtable td {
+    line-height: 30px;
+    padding: 5px;
+}
+table.formtable td input[type="text"] {
+    width: 302px;
+}
+table.formtable td img {
+    width: 60px;
+    height: 20px;
+    margin-right: 5px;
+}
+#xg_adr table.formtable {
+    margin: 0 auto;
+    width: 660px;
+}
+.ui-dialog {
+    position: relative;
+}
+.ui-dialog .ui-dialog-titlebar {
+    padding: 0.5em 0.3em 0.3em 1em;
+    position: relative;
+    font-family: 'Microsoft YaHei';
+    font-size: 14px;
+}
+.ui-dialog .ui-dialog-title {
+    float: left;
+    margin: 0.1em 0 0.2em;
+}
+.ui-dialog a.ui-dialog-close {
+    display: block;
+    float: right;
+    width: 20px;
+    height: 20px;
+    background: url("http://static.ecgci.com/images/all_bg.png") -207px -628px no-repeat;
+}
+.ui-dialog .ui-dialog-content {
+    background: none;
+    overflow: hidden;
+    padding: 0.5em 1em;
+}
+.ui-widget-header {
+    background: #e43a3d;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.ui-widget-header a {
+    color: #fff;
+}
+.ui-widget-content {
+    background: #EEE;
+    color: #58595B;
+}
+input.required {
+    border: 1px solid #00A8E6;
+    border-color: #666 #CBCBCB #CBCBCB #666;
+    color: #666
+}

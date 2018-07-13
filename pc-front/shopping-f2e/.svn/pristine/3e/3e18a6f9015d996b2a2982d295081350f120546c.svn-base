@@ -1,0 +1,533 @@
+<div class="wrap w clearfix" id="header_section">
+    <div class="bd clearfix">
+        <div role="search" id="search" class="fl search_box">
+            <div class="posr search_wrap">
+                <div class="posa popup_menu dn" id="j_search-popupmenu">
+                    <ul class="popup_list">
+                        <li class="item clearfix">
+                        </li>
+                    </ul>
+                </div>
+                <div class="posr search_from">
+                    <input type="text" name="" class="search_inputBox" id="search_inputBox" maxlength="50" style="    color: rgb(193, 193, 193);">
+                    <a id="j_searchBtn" target="_blank" class="ui_btn btn_search">
+                        搜索
+                    </a>
+                </div>
+                <div id="search_words">
+                    <div class="search_hot clearfix" id="sousou">
+                    </div>
+                    <div class="search_hot clearfix">
+                        <a href="http://pfdev.ecgci.com/search.html?keyVal=熊猫币" target="_blank">
+                            熊猫币
+                        </a>
+                        <a href="http://pfdev.ecgci.com/search.html?keyVal=2018" target="_blank">
+                            2018
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="logo_box" class="fl">
+            <h1 class="fl">
+                <a href="http://pfdev.ecgci.com/index.html" target="_blank">
+                    <img src="http://static.ecgci.com/images/logo.png"
+                    alt="中国金币网上商城" title="中国金币网上商城">
+                </a>
+            </h1>
+            <h2 class="fl" id="slogo">
+                <a href="javascript:void(0)">
+                    <img alt="slogan" width="120" height="46" src="http://static.ecgci.com/images/syx.png"
+                    style="display: inline;">
+                </a>
+            </h2>
+        </div>
+        <div id="header_r" class="fl ">
+            <div class=" header_min_cart posr" id="header_cart">
+                <div style="border-bottom:1px solid #C2C1C1">
+                    <var class="sp_js_k">0</var>
+                    <a href="http://pfdev.ecgci.com/cart.html" class="cart_link" target="_blank">
+                        我的购物车
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="nav" class="clearfix">
+    <div class="wrap clearfix">
+        <div class="categorys fl posr">
+            <h1>
+                所有商品分类
+            </h1>
+            <ul class="cate_left">
+                <li class="fly">
+                    <h2>
+                        <a href="javascript:void(0);" >
+                            发行年份
+                        </a>
+                    </h2>
+                    <a target="_blank" class="toSearch" data-attr="cta22#236" data-keyVal="2018" href="javascript:void(0);">
+                        2018年
+                    </a>
+                    <a target="_blank" class="toSearch" data-attr="cta22#220" data-keyVal="2017" href="javascript:void(0);">
+                        2017年
+                    </a>
+                    <a target="_blank" class="toSearch" data-attr="cta22#87" data-keyVal="2016" href="javascript:void(0);">
+                        2016年...
+                    </a>
+                    <div class="cate_cont fly_cont ui-tabs-hide" style="display: none;">
+                        <div class="cate_blank">
+                        </div>
+                        <dl>
+                            <dt>
+                                发行年份 &gt;
+                            </dt>
+                            <dd>
+                                <a target="_blank" class="toSearch" data-attr="cta22#236" data-keyVal="2018" href="javascript:void(0);">
+                                    2018
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta22#220" data-keyVal="2017" href="javascript:void(0);">
+                                    2017
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta22#87" data-keyVal="2016" href="javascript:void(0);">
+                                    2016
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta22#198" data-keyVal="2015" href="javascript:void(0);">
+                                    2015
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta22#113" data-keyVal="2014" href="javascript:void(0);">
+                                    2014
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta22#89" data-keyVal="2013" href="javascript:void(0);">
+                                    2013
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta22#88" data-keyVal="2012" href="javascript:void(0);">
+                                    2012
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta22#90" data-keyVal="2011" href="javascript:void(0);">
+                                    2011
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta22#91" data-keyVal="2010" href="javascript:void(0);">
+                                    2010
+                                </a>
+                            </dd>
+                        </dl>
+                    </div>
+                </li>
+                <li class="fly">
+                    <h2>
+                        <a href="javascript:void(0);" >
+                            题材
+                        </a>
+                    </h2>
+                    <a target="_blank" class="toSearch" data-attr="cta18#52" data-keyVal="熊猫" href="javascript:void(0);">
+                        熊猫
+                    </a>
+                    <a target="_blank" class="toSearch" data-attr="cta18#53" data-keyVal="生肖" href="javascript:void(0);">
+                        生肖
+                    </a>
+                    <a target="_blank" class="toSearch" data-attr="cta18#54" data-keyVal="重大事件" href="javascript:void(0);">
+                        重大事件...
+                    </a>
+                    <div class="cate_cont fly_cont ui-tabs-hide" style="display: none;">
+                        <div class="cate_blank cate_blank2">
+                        </div>
+                        <dl class="last">
+                            <dt>
+                                <a target="_blank" class="toSearch" data-attr="cta18#52" data-keyVal="大熊猫" href="javascript:void(0);">
+                                    大熊猫 &gt;
+                                </a>
+                            </dt>
+                            <dd>
+                                <a target="_blank" class="toSearch" data-attr="cta47#222" data-keyVal="2017版熊猫" href="javascript:void(0);">
+                                    2017版熊猫
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#221" data-keyVal="2016版熊猫" href="javascript:void(0);">
+                                    2016版熊猫
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#156" data-keyVal="2015版熊猫" href="javascript:void(0);">
+                                    2015版熊猫
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#167" data-keyVal="2014版熊猫" href="javascript:void(0);">
+                                    2014版熊猫
+                                </a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a target="_blank" class="toSearch" data-attr="cta18#53" data-keyVal="十二生肖" href="javascript:void(0);">
+                                    十二生肖 &gt;
+                                </a>
+                            </dt>
+                            <dd>
+                                <a target="_blank" class="toSearch" data-attr="cta47#223" data-keyVal="2017中国丁酉（鸡）年" href="javascript:void(0);">
+                                    2017中国丁酉（鸡）年
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#147" data-keyVal="2016中国丙申（猴）年" href="javascript:void(0);">
+                                    2016中国丙申（猴）年
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#157" data-keyVal="2015中国乙未（羊）年" href="javascript:void(0);">
+                                    2015中国乙未（羊）年
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#168" data-keyVal="2014中国甲午（马）年" href="javascript:void(0);">
+                                    2014中国甲午（马）年
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#172" data-keyVal="2013中国癸巳（蛇）年" href="javascript:void(0);">
+                                    2013中国癸巳（蛇）年
+                                </a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a target="_blank" class="toSearch" data-attr="cta18#54" data-keyVal="重大事件" href="javascript:void(0);">
+                                    重大事件 &gt;
+                                </a>
+                            </dt>
+                            <dd>
+                                <a target="_blank" class="toSearch" data-attr="cta47#225" data-keyVal="长征胜利80周年" href="javascript:void(0);">
+                                    长征胜利80周年
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#231" data-keyVal="2016国际钱币博览会" href="javascript:void(0);">
+                                    2016国际钱币博览会
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#162" data-keyVal="中法建交50周年" href="javascript:void(0);">
+                                    中法建交50周年
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#160" data-keyVal="新疆生产建设兵团成立60周年" href="javascript:void(0);">
+                                    新疆生产建设兵团成立60周年
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#165" data-keyVal="中国探月首次落月成功" href="javascript:void(0);">
+                                    中国探月首次落月成功
+                                </a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a target="_blank" class="toSearch" data-attr="cta18#55" data-keyVal="杰出人物" href="javascript:void(0);">
+                                    杰出人物 &gt;
+                                </a>
+                            </dt>
+                            <dd>
+                                <a target="_blank" class="toSearch" data-attr="cta47#226" data-keyVal="孙中山诞辰150周年" href="javascript:void(0);">
+                                    孙中山诞辰150周年
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#152" data-keyVal="近代国画大师（徐悲鸿）" href="javascript:void(0);">
+                                    近代国画大师（徐悲鸿）
+                                </a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a target="_blank" class="toSearch" data-attr="cta18#56" data-keyVal="文学艺术" href="javascript:void(0);">
+                                    文学艺术 &gt;
+                                </a>
+                            </dt>
+                            <dd>
+                                <a target="_blank" class="toSearch" data-attr="cta47#178" data-keyVal="石窟艺术（云冈）" href="javascript:void(0);">
+                                    石窟艺术（云冈）
+                                </a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a target="_blank" class="toSearch" data-attr="cta18#57" data-keyVal="传统文化" href="javascript:void(0);">
+                                    传统文化 &gt;
+                                </a>
+                            </dt>
+                            <dd>
+                                <a target="_blank" class="toSearch" data-attr="cta47#154" data-keyVal="2015吉祥文化" href="javascript:void(0);">
+                                    2015吉祥文化
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#155" data-keyVal="2015贺岁" href="javascript:void(0);">
+                                    2015贺岁
+                                </a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a target="_blank" class="toSearch" data-attr="cta18358" data-keyVal="宗教文化" href="javascript:void(0);">
+                                    宗教文化 &gt;
+                                </a>
+                            </dt>
+                            <dd>
+                                <a target="_blank" class="toSearch" data-attr="cta47#153" data-keyVal="佛教圣地（九华山）" href="javascript:void(0);">
+                                    佛教圣地（九华山）
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#171" data-keyVal="佛教圣地（普陀山）" href="javascript:void(0);">
+                                    佛教圣地（普陀山）
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#163" data-keyVal="佛教圣地（峨眉山）" href="javascript:void(0);">
+                                    佛教圣地（峨眉山）
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#173" data-keyVal="佛教圣地（五台山）" href="javascript:void(0);">
+                                    佛教圣地（五台山）
+                                </a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a target="_blank" class="toSearch" data-attr="cta18#65" data-keyVal="体育运动" href="javascript:void(0);">
+                                    体育运动 &gt;
+                                </a>
+                            </dt>
+                            <dd>
+                                <a target="_blank" class="toSearch" data-attr="cta47#164" data-keyVal="第二届夏青奥运动会" href="javascript:void(0);">
+                                    第二届夏青奥运动会
+                                </a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a target="_blank" class="toSearch" data-attr="cta18#60" data-keyVal="世界遗产" href="javascript:void(0);">
+                                    世界遗产 &gt;
+                                </a>
+                            </dt>
+                            <dd>
+                                <a target="_blank" class="toSearch" data-attr="cta47#161" data-keyVal="杭州西湖文化景观" href="javascript:void(0);">
+                                    杭州西湖文化景观
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#169" data-keyVal="黄山文化景观" href="javascript:void(0);">
+                                    黄山文化景观
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#175" data-keyVal="登封“天地之中”历史建筑" href="javascript:void(0);">
+                                    登封“天地之中”历史建筑
+                                </a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a target="_blank" class="toSearch" data-attr="cta18#61" data-keyVal="科技环保" href="javascript:void(0);">
+                                    科技环保 &gt;
+                                </a>
+                            </dt>
+                            <dd>
+                            </dd>
+                        </dl>
+                    </div>
+                </li>
+                <li class="fly">
+                    <h2>
+                        <a href="javascript:void(0);" >
+                            系列
+                        </a>
+                    </h2>
+                    <a target="_blank" class="toSearch" data-attr="cta48#185" data-keyVal="吉祥文化" href="javascript:void(0);">
+                        吉祥文化
+                    </a>
+                    <a target="_blank" class="toSearch" data-attr="cta48#180" data-keyVal="贺岁" href="javascript:void(0);">
+                        贺岁
+                    </a>
+                    <a target="_blank" class="toSearch" data-attr="cta48#181" data-keyVal="加字币" href="javascript:void(0);">
+                        加字币…
+                    </a>
+                    <div class="cate_cont fly_cont ui-tabs-hide" style="display: none;">
+                        <div class="cate_blank cate_blank3">
+                        </div>
+                        <dl>
+                            <dt>
+                                <a target="_blank" class="toSearch" data-attr="cta48#185" data-keyVal="吉祥文化" href="javascript:void(0);">
+                                    吉祥文化 &gt;
+                                </a>
+                            </dt>
+                            <dd>
+                                <a target="_blank" class="toSearch" data-attr="cta47#235" data-keyVal="2017吉祥文化" href="javascript:void(0);">
+                                    2017吉祥文化
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#227" data-keyVal="2016吉祥文化" href="javascript:void(0);">
+                                    2016吉祥文化
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#154" data-keyVal="2015吉祥文化" href="javascript:void(0);">
+                                    2015吉祥文化
+                                </a>
+                            </dd>
+                        </dl>
+                        <dl class="last">
+                            <dt>
+                                &nbsp;&nbsp;&nbsp;
+                                <a target="_blank" class="toSearch" data-attr="cta48#180" data-keyVal="贺岁" href="javascript:void(0);">
+                                    贺岁 &gt;
+                                </a>
+                            </dt>
+                            <dd>
+                                <a target="_blank" class="toSearch" data-attr="cta47#228" data-keyVal="2016贺岁" href="javascript:void(0);">
+                                    2016贺岁
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#155" data-keyVal="2015贺岁" href="javascript:void(0);">
+                                    2015贺岁
+                                </a>
+                            </dd>
+                        </dl>
+                        <dl class="last">
+                            <dt>
+                                <a target="_blank" class="toSearch" data-attr="cta48#181" data-keyVal="加字币" href="javascript:void(0);">
+                                    加字币 &gt;
+                                </a>
+                            </dt>
+                            <dd>
+                                <a target="_blank" class="toSearch" data-attr="cta47#230" data-keyVal="青岛银行成立20周年" href="javascript:void(0);">
+                                    青岛银行成立20周年
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#229" data-keyVal="侨联成立60周年" href="javascript:void(0);">
+                                    侨联成立60周年
+                                </a>
+                            </dd>
+                        </dl>
+                        <dl class="last">
+                            <dt>
+                                <a target="_blank" class="toSearch" data-attr="cta48#182" data-keyVal="青铜器" href="javascript:void(0);">
+                                    青铜器 &gt;
+                                </a>
+                            </dt>
+                            <dd>
+                                <a target="_blank" class="toSearch" data-attr="cta47#159" data-keyVal="青铜器第三组" href="javascript:void(0);">
+                                    青铜器第三组
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="cta47#170" data-keyVal="青铜器第二组" href="javascript:void(0);">
+                                    青铜器第二组
+                                </a>
+                            </dd>
+                        </dl>
+                    </div>
+                </li>
+                <li class="fly">
+                    <h2>
+                        <a href="javascript:void(0);" >
+                            分类
+                        </a>
+                    </h2>
+                    <a target="_blank" class="toSearch" data-category="10006" data-keyVal="熊猫币" href="javascript:void(0);">
+                        熊猫币
+                    </a>
+                    <a target="_blank" class="toSearch" data-category="10005" data-keyVal="纪念币" href="javascript:void(0);">
+                        纪念币
+                    </a>
+                    <a target="_blank" href="/derivative.html">
+                        衍生品
+                    </a>
+                    <a target="_blank" class="toSearch" data-category="10007" data-keyVal="外国币" href="javascript:void(0);">
+                        外国币
+                    </a>
+                </li>
+                <li class="fly">
+                    <h2>
+                        <a href="javascript:void(0);" >
+                            形状
+                        </a>
+                    </h2>
+                    <a target="_blank" class="toSearch" data-attr="cta16#41" data-keyVal="圆形" href="javascript:void(0);">
+                        圆形
+                    </a>
+                    <a target="_blank" class="toSearch" data-attr="cta16#45" data-keyVal="心形" href="javascript:void(0);">
+                        心形
+                    </a>
+                    <a target="_blank" class="toSearch" data-attr="cta16#44" data-keyVal="扇形" href="javascript:void(0);">
+                        扇形
+                    </a>
+                    <a target="_blank" class="toSearch" data-attr="cta16#42" data-keyVal="长方形" href="javascript:void(0);">
+                        长方形
+                    </a>
+                    <a target="_blank" class="toSearch" data-attr="cta16#46" data-keyVal="其他" href="javascript:void(0);">
+                        其他
+                    </a>
+                </li>
+                <li class="fly">
+                    <h2>
+                        <a href="javascript:void(0);" >
+                            材质
+                        </a>
+                    </h2>
+                    <a target="_blank" class="toSearch" data-attr="cta17#47" data-keyVal="金" href="javascript:void(0);">
+                        金
+                    </a>
+                    <a target="_blank" class="toSearch" data-attr="cta17#48" data-keyVal="银" href="javascript:void(0);">
+                        银
+                    </a>
+                    <a target="_blank" class="toSearch" data-attr="cta17#183" data-keyVal="金+银" href="javascript:void(0);">
+                        金+银
+                    </a>
+                    <a target="_blank" class="toSearch" data-attr="cta17#184" data-keyVal="其他" href="javascript:void(0);">
+                        其他
+                    </a>
+                </li>
+                <li class="fly lastw">
+                    <h2>
+                        <a href="javascript:void(0);">
+                            价格
+                        </a>
+                    </h2>
+                    <a target="_blank" class="toSearch" data-attr="shopprice#0-1000" data-keyVal="1000以下" href="javascript:void(0);">
+                        1000以下
+                    </a>
+                    <a target="_blank" class="toSearch" data-attr="shopprice#1000-5000" data-keyVal="1000-5000" href="javascript:void(0);">
+                        1000-5000…
+                    </a>
+                    <div class="cate_cont fly_cont ui-tabs-hide" style="display: none;">
+                        <div class="cate_blank cate_blank7">
+                        </div>
+                        <dl>
+                            <dt>
+                                <a target="_blank" class="toSearch" data-attr="cta51#178" data-keyVal="价格" href="javascript:void(0);">
+                                    价格 &gt;
+                                </a>
+                            </dt>
+                            <dd>
+                                <a target="_blank" class="toSearch" data-attr="shopprice#0-1000" data-keyVal="1000以下" href="javascript:void(0);">
+                                    1000以下
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="shopprice#1000-5000" data-keyVal="1000-5000" href="javascript:void(0);">
+                                    1000-5000
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="shopprice#5000-10000" data-keyVal="5000-10000" href="javascript:void(0);">
+                                    5000-10000
+                                </a>
+                                <a target="_blank" class="toSearch" data-attr="shopprice#10000-" data-keyVal="10000以上" href="javascript:void(0);">
+                                    10000以上
+                                </a>
+                            </dd>
+                        </dl>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <ul class="fl nav_mune">
+            <li>
+                <a href="http://pfdev.ecgci.com/index.html">
+                    首页
+                </a>
+            </li>
+            <li>
+                <a href="http://pfdev.ecgci.com/pandacoins.html">
+                    熊猫币
+                </a>
+            </li>
+            <li>
+                <a href="http://pfdev.ecgci.com/keepsake.html">
+                    纪念币
+                </a>
+            </li>
+            <li>
+                <a href="http://pfdev.ecgci.com/derivative.html">
+                    衍生品
+                </a>
+            </li>
+            <li>
+                <a href="http://pfdev.ecgci.com/abroad.html">
+                    外国币
+                </a>
+            </li>
+            <li>
+                <a href="http://pfdev.ecgci.com/hotGoods.html">
+                    热销商品
+                </a>
+            </li>
+            <li>
+                <a href="http://pfdev.ecgci.com/verify.html">
+                    商品验证
+                </a>
+            </li>
+        </ul>
+        <div id="loadRecommendedItem">
+        </div>
+    </div>
+</div>

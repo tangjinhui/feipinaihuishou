@@ -1,0 +1,346 @@
+require(['jquery', 'handlebars', 'getUrlParam', 'dialog', 'limitPage', 'header'], function($, Handlebars, getUrlParam, dialog, limitPage) {
+
+    var goodsId = getUrlParam('goodsId');
+    var commentId = getUrlParam('commentId');
+
+    if (!goodsId || !commentId) {
+        return false;
+    }
+    var len = 0;
+    Handlebars.registerHelper("imgConf", function(imgUrl, id) {
+        return img_domain_data[id % img_domain_data.length] + '/' + imgUrl;
+    });
+
+    Handlebars.registerHelper("starComment", function(star) {
+        if (star == '0') {
+            return 5;
+        } else {
+            return star;
+        }
+    })
+
+    Handlebars.registerHelper("formatPrice", function(price) {
+        if (!price) {
+            return '';
+        }
+        return parseFloat(price).toFixed(2);
+    });
+
+    Handlebars.registerHelper("addIndex", function(index) {
+        return len - index;
+    });
+
+    Handlebars.registerHelper('showMore', function(count) {
+        if (count > 3) {
+            return "showPic";
+        } else {
+            return "showMore";
+        }
+    })
+
+    Handlebars.registerHelper('showPic', function(index) {
+        if (index > 2) {
+            return 'showMore';
+        } else {
+            return '';
+        }
+    });
+
+    Handlebars.registerHelper('topic', function(essence) {
+        var str = '';
+        if (essence == '0') {
+            str = '<strong class="topic topic-best"></strong>';
+        } else {
+            str = '<strong class="topic topic-gf">评分:</strong>';
+        }
+        return str;
+    });
+
+    Handlebars.registerHelper('dateSub', function(date) {
+        return date.substring(0, 10);
+    });
+
+    initDetail();
+
+    initOneComment();
+
+    initReplyFun();
+
+    $("body").on('click', '.p-bfc', function() {
+        var reply = $(($(this).parents(".item-reply")[0])).next();
+        var dispaly = reply.css('display');
+        if (dispaly == 'none') {
+            $(this).css("color", "red");
+            reply.show();
+        } else {
+            $(this).removeAttr("style");
+            reply.hide();
+        }
+    });
+
+    //提交回复内容
+    $("body").on('click', '.btn-gray', function() {
+        var info = $(this).prev().children("input");
+        var content = info.val();
+        var account = $.trim($(this).attr("data-account"));
+        if (!account) {
+            dialog({ content: '网络繁忙，请您稍后重试' });
+            return false;
+        }
+        if (!content) {
+            dialog({ content: '请输入回复内容!' });
+            return false;
+        }
+        if (content.length > 100) {
+            dialog({ content: '回复内容不能超过100个字' });
+            return false;
+        }
+
+        $.ajax({
+            url: '/front/member/comment/saveReplyContent',
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                commentId: commentId,
+                commentAccount: account,
+                content: content
+            },
+            success: function(res) {
+                if ('99' == res.code) {
+                    window.location.href = 'https://passportdev.ecgci.com/login.html';
+                } else if (res.code == '00') {
+                    dialog({ content: '内容已提交，请耐心等待后台审核' });
+                    info.val(null);
+                    return false;
+                } else if (res.code == '01') {
+                    dialog({ content: '请填写回复内容' });
+                    return false;
+                } else if (res.code == '02') {
+                    dialog({ content: '回复内容不能超过100个字' });
+                    return false;
+                } else {
+                    dialog({ content: '网络繁忙，请您稍后重试' });
+                    return false;
+                }
+            },
+            error: function() {
+                dialog({ content: '网络繁忙，请您稍后重试' });
+            }
+        });
+    });
+
+    //点击赞
+    $("body").on('click', '.btn-agree', function() {
+        var count = $(this).children("font");
+        $.ajax({
+            url: '/front/member/comment/praise',
+            type: 'GET',
+            dataType: 'json',
+            data: {
+                commentId: commentId,
+            },
+            success: function(res) {
+                if ('99' == res.code) {
+                    window.location.href = 'https://passportdev.ecgci.com/login.html';
+                } else if (res.code == '00') {
+                    count.text(res.data);
+                } else if (res.code == '02') {
+                    dialog({ content: '同一个评价,您只能点击一次哦~' });
+                    return false;
+                } else {
+                    dialog({ content: '网络繁忙，请您稍后重试' });
+                    return false;
+                }
+            },
+            error: function() {
+                dialog({ content: '网络繁忙，请您稍后重试' });
+                return false;
+            }
+        });
+    });
+
+    //单独回复
+    $('body').on('click', '.btn-reply', function() {
+        var status = $(".reply_only").css('display');
+        if (status == 'none') {
+            $('.reply_only').show();
+        } else {
+            $('.reply_only').hide();
+        }
+    });
+
+    //点击查看更多，显示图片
+    $('body').on('click', '.checkImg', function() {
+        $('.showCheck').hide();
+        $('.showMore').show();
+        var table = $($(this).parents(".showCheck")).prev();
+        $(table).find("img").css({ "width": "60px", "height": "60px" });
+    })
+
+    //点击图片，显示大图片
+    $('body').on('click', '.changeImg', function() {
+        var table = $($('.changeImg').parents("table")[0]).next();
+        var showCheck = $($(table)[0]).css("display");
+     /*   if (showCheck == 'block') {
+            $('.showCheck').hide();
+            $('.showMore').show();
+            $($('.changeImg').parents("table")[0]).find("img").css({ "width": "60px", "height": "60px" });
+            return false;
+        } else {*/
+           
+            var imgSrc = $(this).attr('src');
+            $(this).parents("tr").children("td").removeClass("active");
+            $(this).parents('td').addClass("active"); //作为标识，是否有下一张图片
+            $('.Pro_BigImage img').attr('src', imgSrc);
+            $('.ui-tabs-hide').show();
+       // }
+    });
+
+    //点击大图片中下一张图片
+    $('body').on('click', '.downpre', function() {
+        bigImg('next', "已经是最后一张了");
+    });
+
+    //点击大图片中上一张图片
+    $('body').on('click', '.uppre', function() {
+        bigImg('pre', "已经是第一张了");
+    });
+
+    //关闭大图片
+    $('body').on('click', '.cls_dt', function() {
+        $('.ui-tabs-hide').hide();
+    })
+
+    function initDetail() {
+        $.ajax({
+            url: '/front/comment/productGoodsDetail',
+            type: 'get',
+            dataType: 'json',
+            data: {
+                goodsId: goodsId,
+            },
+            success: function(res) {
+                if ('99' == res.code) {
+                    window.location.href = 'https://passportdev.ecgci.com/login.html';
+                } else if (res.code == '00') {
+                    var listTemp = Handlebars.compile($("#goods-template").html());
+                    $('#goodsInfo').html(listTemp(res.data));
+                    $('#goodsLink').html('<a href="http://itemdev.ecgci.com/product_detail_'+res.data.goodsId+'.html">'+res.data.goodsName+'</a>');
+                } else {
+                    dialog({
+                        content: '网络连接超时，请您稍后重试',
+                    });
+                    return false;
+                }
+            },
+            error: function() {
+                dialog({
+                    content: '网络连接超时，请您稍后重试',
+                });
+                return false;
+            }
+        });
+    };
+
+    function initOneComment() {
+        $.ajax({
+            url: '/front/comment/getCommentDetailInfo',
+            type: 'get',
+            dataType: 'json',
+            data: {
+                goodsId: goodsId,
+                commentId: commentId
+            },
+            success: function(res) {
+                if ('99' == res.code) {
+                    window.location.href = 'https://passportdev.ecgci.com/login.html';
+                } else if (res.code == '00') {
+                    var contentTemp = Handlebars.compile($("#goods-one-template").html());
+                    $('#goodsOneComment').html(contentTemp(res.data));
+                } else {
+                    dialog({ content: '网络连接超时，请您稍后重试' });
+                }
+            },
+            error: function() {
+                dialog({ content: '网络连接超时，请您稍后重试' });
+            }
+        });
+    };
+
+    function initReplyFun(pageNum) {
+        $.ajax({
+            url: '/front/comment/getReplyContent',
+            type: 'get',
+            dataType: 'json',
+            data: {
+                pageNum: pageNum || 1,
+                commentId: commentId
+            },
+            success: function(res) {
+                if ('99' == res.code) {
+                    window.location.href = 'https://passportdev.ecgci.com/login.html';
+                } else if (res.code == '00') {
+                    len = res.data.page.list.length;
+                    var contentTemp = Handlebars.compile($("#reply-template").html());
+                    $('#replyContent').html(contentTemp(res.data.page));
+                    if (len) {
+                        initLimitPage(res.data.page.pages, res.data.page.pageNum);
+                    } else {
+                        $(".repley_style").hide();
+                    }
+                } else {
+                    dialog({ content: '网络连接超时，请您稍后重试' });
+                    return false;
+                }
+            },
+            error: function() {
+                dialog({
+                    content: '网络连接超时，请您稍后重试',
+                });
+                return false;
+            }
+        });
+    }
+
+    function initLimitPage(pages, currentPage) {
+        $('#light-pagination').pagination({
+            pages: pages,
+            cssStyle: 'light-theme',
+            displayedPages: 3,
+            edges: 3,
+            currentPage: currentPage,
+            prevText: '上一页',
+            nextText: '下一页',
+            onPageClick: function(page) {
+                initReplyFun(page);
+                return false;
+            }
+        });
+    }
+
+    //点击下一张/上一张公用方法
+    function bigImg(method, text) {
+        var current = $('.active');
+        var upperImg;
+        if (method == 'next') {
+            upperImg = $($(current)[0]).next();
+        } else {
+            upperImg = $($(current)[0]).prev();
+        }
+        if (upperImg.length == 0) {
+            dialog({
+                content: text,
+            });
+            return false;
+        } else {
+            var imgSrc = $(upperImg).children('img').attr('src');
+            $('.Pro_BigImage img').attr('src', imgSrc);
+            $($(current)[0]).parents("tr").children("td").removeClass("active");
+            if (method == 'next') {
+                $($($(current)[0])[0]).next().addClass('active');
+            } else {
+                $($($(current)[0])[0]).prev().addClass('active');
+            }
+        }
+    }
+});

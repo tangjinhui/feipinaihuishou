@@ -1,0 +1,393 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+@import url('http://static.ecgci.com/css/libs/mini_login.css');
+a {
+    text-decoration: none;
+    color: #333;
+    outline: none;
+}
+.wrap {
+    width: 1240px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+#verify {
+    width: 1240px;
+    margin: 0 auto;
+    background: #f5f5f5;
+}
+
+#verify .ver_cont {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+#verify .ver_cont strong {
+    font-size: 40px;
+}
+
+#verify .ver_cont p {
+    font-size: 18px;
+    color: #b3b2b2;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+#verify .ver_cont input {
+    font-size: 12px;
+    padding-left: 10px;
+    width: 490px;
+    border: 1px solid #0271c0;
+    vertical-align: middle;
+    position: absolute;
+    left: 142px;
+    top: 0;
+    height: 36px;
+    line-height: 36px;
+}
+
+#verify .ver_cont .toCheck {
+    font-size: 18px;
+    font-family: Microsoft Yahei;
+    background: #0271c0;
+    color: #fff;
+    vertical-align: middle;
+    text-decoration: none;
+    position: absolute;
+    left: 640px;
+    padding: 0;
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    width: 124px;
+    border: 1px solid #0271c0;
+    *display: inline;
+    *zoom: 1;
+}
+
+#verify .code_box {
+    padding-bottom: 82px;
+    position: relative;
+    width: 900px;
+    margin: 0 auto;
+}
+
+#verify .ver_box {
+    background: #f3dfba;
+    width: 1090px;
+    margin: 0 auto;
+    padding-bottom: 56px;
+}
+
+.ver_head_img {
+    height: 90px;
+}
+
+#verify .ver_cont .bf_color {
+    color: #8a641b;
+    font-size: 22px;
+}
+
+#verify .ver_box .ver_head_img img {
+    width: 100%;
+    height: 100%;
+}
+
+#verify .img_title {
+    margin-top: 38px;
+}
+
+#verify .ver_box .ver_title {
+    font-size: 18px;
+    color: #e40000;
+    font-weight: bold;
+}
+
+#verify .checkImg {
+    margin-top: 42px;
+}
+
+#verify .checkImg div img {
+    width: 420px;
+    height: 315px;
+}
+
+#verify .fl {
+    float: left;
+    margin-left: 72px;
+}
+
+#verify .fr {
+    float: right;
+    margin-right: 72px;
+}
+
+#verify .checkImg div.fl,
+#verify .checkImg div.fr {
+    width: 420px;
+    height: 315px;
+    padding: 14px;
+    background: #fff;
+}
+
+#verify .msg_title {
+    margin-top: 82px;
+    margin-bottom: 4px;
+}
+
+#verify table {
+    width: 946px;
+    border: none;
+    color: #8a641b;
+    text-align: left;
+    margin-left: 72px;
+}
+
+#verify table tr, #verify table td {
+    border: none;
+}
+
+#verify table td {
+    padding: 18px 0 18px 26px;
+    border-bottom: 2px solid #e4c58b;
+}
+
+#verify table .ver_name {
+    font-weight: bold;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+#verify table .ver_meg {
+    font-size: 14px;
+    width: 246px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+#verify table span {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+#verify table .big_width {
+    width: 730px;
+}
+
+#verify .ver_edg p {
+    font-size: 14px;
+    color: #5c5b5b;
+    margin: 0;
+    letter-spacing: 6px;
+}
+
+#verify .ver_edg h3 {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #5c5b5b;
+    margin-bottom: 20px;
+    position: relative;
+    left: -15px;
+}
+
+#verify .ver_edg ul {
+    text-align: left;
+}
+
+#verify .ver_edg ul li {
+    font-size: 14px;
+    margin-bottom: 16px;
+    color: #666666;
+    list-style-type: disc;
+    width: 260px;
+}
+
+#verify .ver_edg ul li a {
+    color: #666666;
+}
+
+#verify .ver_edg ul li a:hover {
+    text-decoration: none;
+    color: #5c5b5b;
+}
+
+#verify .ver_edg {
+    margin-top: 60px;
+}
+
+#verify .ver_edg .fl {
+    margin-left: 330px;
+}
+
+#verify .ver_edg .fr {
+    margin-right: 330px;
+}
+
+#verify .white_line {
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    margin-top: 86px;
+}
+#jsPrompt {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    background: url(http://static.ecgci.com/images/black.png) repeat \9;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    display: none;
+}
+.prompt {
+    width: 300px;
+    padding-bottom: 46px;
+    position: fixed;
+    left: 50%;
+    margin-left: -150px;
+    top: 50%;
+    margin-top: -75px;
+    background-color: #eee;
+}
+.prompt .top {
+    text-indent: 1em;
+    width: 100%;
+    font-weight: bold;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #0271c0;
+    cursor: pointer;
+}
+.prompt .content {
+    padding: 6px 10px;
+    line-height: 18px;
+    color: #333;
+}
+.prompt .top .close {
+    font-family: "宋体";
+    line-height: 24px;
+    font-size: 12px;
+    text-indent: 0;
+    text-align: center;
+    position: absolute;
+    padding: 0 7px;
+    bottom: 12px;
+    right: 20px;
+    cursor: default;
+    background-color: #f6f6f6;
+    border: 1px solid #e5e5e5;
+    color: #666;
+}
+.close {
+    background: #e43a3d;
+}
+.prompt .content .txt {
+    color: #58595B;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    max-height: 36px;
+    overflow: hidden;
+    padding: 20px 0 20px 20px;
+}
+
+/*  */
+
+#codeLayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .15);
+    border: 0;
+}
+#codeBox {
+    position: fixed;
+    z-index: 300;
+    top: 30%;
+    width: 648px;
+    height: 270px;
+    background: #fff;
+    left: -324px;
+    margin-left: 50%;
+}
+#codeBox #jsClose {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 10px;
+    top: 6px;
+    background: url(http://static.ecgci.com/images/icon.png) -107px -270px no-repeat;
+    cursor: pointer;
+}
+#codeBox .header {
+    height: 36px;
+    background: #e64346;
+    line-height: 36px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+#codeBox .warp_code {
+    margin-top: 50px;
+    text-align: center;
+}
+#codeBox .warp_code input {
+    font-size: 14px;
+    border-bottom: 2px solid #dcdcdc;
+    height: 42px;
+    padding-left: 10px;
+    line-height: 42px;
+}
+#codeBox .warp_code img {
+    width: 116px;
+    height: 42px;
+    margin-left: 12px;
+    vertical-align: bottom;
+}
+#codeBox .warp_code a {
+    position: relative;
+    top: 17px;
+}
+#codeBox .warp_code p {
+    text-align: left;
+    margin-left: 122px;
+    margin-top: 6px;
+    color: #e64346;
+}
+#codeBox .warp_code .sub_code {
+    margin-top: 20px;
+    text-align: left;
+}
+#codeBox .warp_code .sub_code a {
+    font-size: 20px;
+    color: #fff;
+    background: #e64346;
+    padding: 6px 44px;
+    position: relative;
+    left: 122px;
+}
+#codeBox .warp_code span {
+    position: relative;
+    top: 17px;
+    margin-left: 10px;
+}
+#codeBox .changeCode {
+    color: #e64346;
+}

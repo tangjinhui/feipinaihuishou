@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>熊猫币纪念币-中国金币总公司</title>
+    <meta name="Keywords" content="熊猫币 金币 银币 中国金币总公司" />
+    <meta name="description" content="熊猫币 金币 银币 中国金币总公司" />
+    <link rel="stylesheet" href="/css/pandacoins.css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div class="box">
+        <!-- 熊猫币 -->
+        <div class="content_tit1">
+            <img class="tit_img" src="http://static.ecgci.com/images/panda_img/tit_1.png" alt="">
+            <div class="pos_l">
+                <img src="http://static.ecgci.com/images/panda_img/panda_coin.png" alt="">
+            </div>
+        </div>
+        <!-- 熊猫币结束 -->
+        <!-- 熊猫精品 -->
+        <div class="content_tit2">
+            <div class="center">
+                <img src="http://static.ecgci.com/images/panda_img/tit_2.png" alt="">
+            </div>
+            <div id="st_2018_line" class="">
+                <img src="http://static.ecgci.com/images/panda_img/2018_panda_line2_o.jpg" alt="">
+            </div>
+            <div class="panda_2018_center">
+                <img src="http://static.ecgci.com/images/panda_img/2018_panda.jpg" alt="">
+                <a class="panda_2018_1" target="_blank" href="http://itemdev.ecgci.com/product_detail_233.html">
+                </a>
+                <a class="panda_2018_3" target="_blank" href="http://itemdev.ecgci.com/product_detail_234.html">
+                </a>
+                <a class="panda_2018_8" target="_blank" href="http://itemdev.ecgci.com/product_detail_227.html">
+                </a>
+                <a class="panda_2018_15" target="_blank" href="http://itemdev.ecgci.com/product_detail_235.html">
+                </a>
+                <a class="panda_2018_30" target="_blank" href="http://itemdev.ecgci.com/product_detail_236.html">
+                </a>
+                <a class="panda_2018_30_silver" target="_blank" href="http://itemdev.ecgci.com/product_detail_228.html">
+                </a>
+                <a class="panda_2018_gold_five_1" target="_blank" href="http://itemdev.ecgci.com/product_detail_230.html">
+                </a>
+                <a class="panda_2018_gold_five_2" target="_blank" href="http://itemdev.ecgci.com/product_detail_229.html">
+                </a>
+                <span data-id="233" class="goodsList price_233 panda_2018_1_price">￥0.00</span>
+                <span data-id="234" class="goodsList price_234 panda_2018_3_price">￥0.00</span>
+                <span data-id="227" class="goodsList price_227 panda_2018_8_price">￥0.00</span>
+                <span data-id="235" class="goodsList price_235 panda_2018_15_price">￥0.00</span>
+                <span data-id="236" class="goodsList price_236 panda_2018_30_price">￥0.00</span>
+                <span data-id="228" class="goodsList price_228 panda_2018_30_silver_price">￥0.00</span>
+                <span data-id="230" class="goodsList price_230 panda_2018_gold_five_1_price">￥0.00</span>
+                <span data-id="229" class="goodsList price_229 panda_2018_gold_five_2_price">￥0.00</span>
+            </div>
+            <div class="">
+                <img src="http://static.ecgci.com/images/panda_img/2017_panda_line2_o.jpg" alt="">
+            </div>
+            <div class="context2017_new">
+                <a class="fl p1" href="http://itemdev.ecgci.com/product_detail_123.html" target="_blank">
+                    <img src="http://static.ecgci.com/images/panda_img/panda_2017_001.png" alt="">
+                </a>
+                <div class="txt pos1">
+                    <div class="title">
+                        <a target="_blank" href="http://itemdev.ecgci.com/product_detail_123.html">
+                            2017版熊猫普制封装金币1克
+                        </a>
+                    </div>
+                    <div data-id="123" class="price price_123 goodsList">￥0.00</div>
+                </div>
+                <a class="fl p2" href="http://itemdev.ecgci.com/product_detail_124.html" target="_blank">
+                    <img src="http://static.ecgci.com/images/panda_img/panda_2017_002.png" alt="">
+                </a>
+                <div class="txt pos2">
+                    <div class="title">
+                        <a target="_blank" href="http://itemdev.ecgci.com/product_detail_124.html">
+                            2017版熊猫普制封装金币3克
+                        </a>
+                    </div>
+                    <div data-id="124" class="price price_124 goodsList">￥0.00</div>
+                </div>
+                <a class="fl p3" href="http://itemdev.ecgci.com/product_detail_125.html" target="_blank">
+                    <img src="http://static.ecgci.com/images/panda_img/panda_2017_003.png" alt="">
+                </a>
+                <div class="txt pos3">
+                    <div class="title">
+                        <a target="_blank" href="http://itemdev.ecgci.com/product_detail_125.html">
+                            2017版熊猫普制封装金币8克
+                        </a>
+                    </div>
+                    <div data-id="125" class="price price_125 goodsList">￥0.00</div>
+                </div>
+                <a class="fl p4" href="http://itemdev.ecgci.com/product_detail_126.html" target="_blank">
+                    <img src="http://static.ecgci.com/images/panda_img/panda_2017_004.png" alt="">
+                </a>
+                <div class="txt pos4">
+                    <div class="title">
+                        <a target="_blank" href="http://itemdev.ecgci.com/product_detail_126.html">
+                            2017版熊猫普制封装金币15克
+                        </a>
+                    </div>
+                    <div data-id="126" class="price price_126 goodsList">￥0.00</div>
+                </div>
+                <a class="fl p5" href="http://itemdev.ecgci.com/product_detail_127.html" target="_blank">
+                    <img src="http://static.ecgci.com/images/panda_img/panda_2017_005.png" alt="">
+                </a>
+                <div class="txt pos5">
+                    <div class="title">
+                        <a target="_blank" href="http://itemdev.ecgci.com/product_detail_127.html">
+                            2017版熊猫普制封装金币30克
+                        </a>
+                    </div>
+                    <div data-id="127" class="price price_127 goodsList">￥0.00</div>
+                </div>
+            </div>
+            <div class="context2017">
+                <!-- 119价格 -->
+                <a class="fl p1" target="_blank" href="http://itemdev.ecgci.com/product_detail_119.html">
+                    <img src="http://static.ecgci.com/images/panda_img/panda_2017_1.png" alt="">
+                </a>
+                <div class="txt pos1">
+                    <div class="title">
+                        <a target="_blank" href="http://itemdev.ecgci.com/product_detail_119.html">
+                            2017版熊猫普制封装金币5枚套装
+                        </a>
+                    </div>
+                    <div data-id="119" class="price price_119 goodsList">￥0.00</div>
+                </div>
+                <!-- 118价格 -->
+                <a class="fl p2" target="_blank" href="http://itemdev.ecgci.com/product_detail_118.html">
+                    <img src="http://static.ecgci.com/images/panda_img/panda_2017_2.png" alt="">
+                </a>
+                <div class="txt pos2">
+                    <div class="title">
+                        <a target="_blank" href="http://itemdev.ecgci.com/product_detail_118.html">
+                            2017版熊猫普制金币封装套装（5枚）
+                        </a>
+                    </div>
+                    <div data-id="118" class="price price_118 goodsList">￥0.00</div>
+                </div>
+                <!-- 121价格 -->
+                <a class="fl p3" target="_blank" href="http://itemdev.ecgci.com/product_detail_121.html">
+                    <img src="http://static.ecgci.com/images/panda_img/panda_2017_3.png" alt="">
+                </a>
+                <div class="txt pos3">
+                    <div class="title">
+                        <a target="_blank" href="http://itemdev.ecgci.com/product_detail_121.html">
+                            2017版熊猫普制封装银币30克
+                        </a>
+                    </div>
+                    <div data-id="121" class="price price_121 goodsList">￥0.00</div>
+                </div>
+            </div>
+        </div>
+        <!-- 熊猫精品结束 -->
+        <!-- 熊猫特色 -->
+        <div class="content_tit3">
+            <div class="center">
+                <img class="tit" src="http://static.ecgci.com/images/panda_img/tit_3.png" alt="">
+                <div id="js_show" class="panda_special">
+                    <div class="show_1">
+                        <div class="show_box l fl">
+                            <div class="black">
+                                <!-- 遮罩层标题 -->
+                                <div class="title">
+                                    法定货币
+                                </div>
+                                <!-- 遮罩层文字 -->
+                                <div class="txt">
+                                    熊猫金银币是中华人民共和国法定货币，由中国人民银行发行。正面图案为天坛并刊国名“中华人民共和国”及年号，背面图案为姿态各异的大熊猫并刊面额。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="show_box r fr">
+                            <div class="black">
+                                <!-- 遮罩层标题 -->
+                                <div class="title">
+                                    权威经销
+                                </div>
+                                <!-- 遮罩层文字 -->
+                                <div class="txt">
+                                    熊猫金银币由中国金币总公司总经销。中国金币总是中国人民银行直属的我国唯一经营贵金属纪念币的行业性公司，履行贵金属货币的发售职能，是中央银行货币发行职能的重要组成部分和业务延伸，是中央银行货币发行的重要支撑体系之一。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="show_2">
+                        <div class="show_box c fl">
+                            <div class="black">
+                                <!-- 遮罩层标题 -->
+                                <div class="title">
+                                    原厂原封
+                                </div>
+                                <!-- 遮罩层文字 -->
+                                <div class="txt">
+                                    熊猫金银币由上海造币有限公司、沈阳造币有限公司、深圳国宝造币有限公司等3家国家造币厂联合铸造。以上3家造币企业均为国家专业从事金银币及各类流通硬币铸造企业。中国金币网上商城销售的熊猫金银币均由深圳国宝造币有限公司进行原厂封装。封装盒采用透明度高、稳定性好的树脂材料，并经过高精密超声波焊接机一次性热合成型，能更好的为钱币提供全面的保护和防伪。每枚封装币均携带全球唯一编码及RFID芯片，可供查验和追溯。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="show_3">
+                        <div class="show_box l fl">
+                            <div class="black">
+                                <!-- 遮罩层标题 -->
+                                <div class="title">
+                                    屡获大奖
+                                </div>
+                                <!-- 遮罩层文字 -->
+                                <div class="txt">
+                                    熊猫系列纪念币屡获世界硬币大奖，其中1983版熊猫1盎司金币获得 “世界硬币大奖”最佳金币奖，1983 版熊猫27克银币获“世界硬币大奖”最佳银币奖，2001版熊猫1盎司金币获 “世界硬币大奖”最佳金币奖。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="show_box c fl">
+                            <div class="black">
+                                <!-- 遮罩层标题 -->
+                                <div class="title">
+                                    传承久远
+                                </div>
+                                <!-- 遮罩层文字 -->
+                                <div class="txt">
+                                    熊猫金银币是中国金银币最具代表性的系列产品，其中熊猫金币于1982年开始发行，熊猫银币于1983年开始发行，至今已有35年历史。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="show_box r fl">
+                            <div class="black">
+                                <!-- 遮罩层标题 -->
+                                <div class="title">
+                                    实时交易
+                                </div>
+                                <!-- 遮罩层文字 -->
+                                <div class="txt">
+                                    熊猫金币的购买模式采用实时交易模式，即熊猫金币当前价格为上海黄金交易所当前黄金价格加固定比例升水。因此熊猫金币仅在上海黄金交易所开盘期间进行交易（工作日上午9：00-下午16：00），且只换不退。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="show_4">
+                        <div class="show_box l fl">
+                            <div class="black">
+                                <!-- 遮罩层标题 -->
+                                <div class="title">
+                                    工艺精湛
+                                </div>
+                                <!-- 遮罩层文字 -->
+                                <div class="txt">
+                                    为了在仅有一种颜色的熊猫金银币上完美展现大熊猫的黑白两色，设计师可谓绞尽脑汁。最终采用了由上海造币厂陈坚先生研制的“凹刻折光法”将熊猫的黑与白进行了完美演绎。1992年，上海造币厂成功研制出反喷砂工艺来表现熊猫黑白两色，首先在当年熊猫金币正面图案中天坛部分进行使用，效果良好，在1995年至今的熊猫金银币背面图案中均使用反喷砂工艺。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="show_box r fr">
+                            <div class="black">
+                                <!-- 遮罩层标题 -->
+                                <div class="title">
+                                    精心设计
+                                </div>
+                                <!-- 遮罩层文字 -->
+                                <div class="txt">
+                                    熊猫币作为一张国家名片，每年变化的图案已经为大家所接受，并且似乎成为一种规律，抽象抑或具象、卡通抑或写实，看似每年都类似的熊猫图案，实则形态万千，或憨态可掬或大爱无疆，无不包含着设计师呕心沥血的设计灵感和精益求精的设计态度。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="show_5">
+                        <div class="show_box c fl">
+                            <div class="black">
+                                <!-- 遮罩层标题 -->
+                                <div class="title">
+                                    形态各异
+                                </div>
+                                <!-- 遮罩层文字 -->
+                                <div class="txt">
+                                    熊猫金银币以中国国宝——大熊猫为主要图案，熊猫姿态每年变换，生动活泼，在世界投资币舞台上独树一帜，深受国内外收藏、投资爱好者喜爱。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 熊猫特色结束 -->
+        <!-- 熊猫历史 -->
+        <div class="content_tit4">
+            <img class="tit" src="http://static.ecgci.com/images/panda_img/tit_4.png" alt="">
+            <img class="coin_year" src="http://static.ecgci.com/images/panda_img/coin_year.png" alt="">
+        </div>
+        <!-- 熊猫历史结束 -->
+    </div>
+    <p class="c"></p>
+    <!--#include file="/common/footer.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/pandacoins.js"></script>
+</body>
+
+</html>

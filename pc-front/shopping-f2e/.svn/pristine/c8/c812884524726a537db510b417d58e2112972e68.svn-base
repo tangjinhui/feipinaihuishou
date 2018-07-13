@@ -1,0 +1,206 @@
+<script id="content-template" type="text/x-handlebars-template">
+    <div class="right_a">
+        <div class="top">
+            <h2 class="tit">
+            申请售后服务详情
+        </h2>
+            <span class="small_tit">
+            售后服务单号：{{afterSaleId}}
+        </span>
+        </div>
+        <div class="dd_th">
+        {{#content detailStatus}}
+            <div class="p_l no_p_t">
+               您申请的售后服务单已取消
+            </div>
+       {{else}}
+            <div class="{{detailStatus}}">
+            </div>
+        {{/content}}
+        </div>
+        <!-- 处理信息跟踪 -->
+        <div class="xx_gz">
+            <div class="tit">
+                处理信息跟踪
+            </div>
+            {{#each esAfterSaleLogs}}
+            <div class="xx_gz_list">
+                <!-- 最新绿色状态 -->
+                <div class="{{showType @index}}">
+                    <div class="pos_pic">
+                        <img src="{{showImg @index}}" alt="" />
+                    </div>
+                    <div class="fl w_time">
+                        {{createTime}}
+                    </div>
+                    <div class="fl w3">
+                        {{contentDesc}}
+                    </div>
+                    <div class="fr w4">
+                        {{show operation}}
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <!-- 选择商品 -->
+        <div class="glo clearfix">
+            <b class="tit l fl">
+            申请商品
+        </b>
+            <div class="fl m_l">
+                |
+            </div>
+            <div class="fl m_l">
+                关联订单号：{{orderId}}
+            </div>
+        </div>
+        <!-- 表格 -->
+        <table class="fz_12" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+                <!-- 标题 -->
+                <tr>
+                    <th width="10%" align="center">
+                        序号
+                    </th>
+                    <th width="30%" align="center">
+                        商品名称
+                    </th>
+                    <th width="20%" align="center">
+                        退换货政策
+                    </th>
+                    <th width="20%" align="center">
+                        申请数量
+                    </th>
+                    <th width="20%" align="center">
+                        实付单价
+                    </th>
+                </tr>
+                <!-- 表格内容 -->
+                {{#each lineList}}
+                <tr>
+                    <td align="center">
+                        {{addIndex @index}}
+                    </td>
+                    <td class="text_l">
+                        <div class="cg_titp">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border: 0 none;" class="fz_12">
+                                <tbody>
+                                    <tr>
+                                        <td valign="middle" style="padding:0;border:none; text-align:left;">
+                                            {{goodsName}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                    <td align="center">
+                        {{policy isReturnAble isChangeAble}}
+                    </td>
+                    <td align="center">
+                        {{quantity}}
+                    </td>
+                    <td align="center">
+                        {{formatPrice unitPrice }}
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <!-- 提交内容 -->
+        <div class="top mar_top">
+            <h2 class="tit">
+            售后服务单信息
+        </h2>
+        </div>
+        <div class="info_wrap no_mar no_border_top">
+            <div class="line clearfix">
+                <div class="tit fl">
+                    服务类型：
+                </div>
+                <!-- 服务类型 -->
+                <span class="fl">
+                {{servType}}
+            </span>
+            </div>
+            <div class="line clearfix">
+                <div class="tit fl">
+                    申请理由：
+                </div>
+                <!-- 申请理由 -->
+                <span class="fl">
+                {{reason}}
+            </span>
+            </div>
+            <div class="line clearfix">
+                <div class="tit fl">
+                    问题描述：
+                </div>
+                <span class="describe fl">
+                {{questionDesc}}
+            </span>
+            </div>
+            <div class="line clearfix">
+                <div class="tit fl">
+                    图片信息：
+                </div>
+                <div class="fl describe">
+                    {{#each imgList}}
+                    <div class="pic fl">
+                        <img src="{{imgConf img 1}}" alt="">
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="line clearfix">
+                <div class="tit fl">
+                    返回方式：
+                </div>
+                <div class="fl">
+                    {{returnWay}}
+                </div>
+            </div>
+            <div class="line clearfix">
+                <div class="tit fl">
+                    寄回信息：
+                </div>
+                <div class="fl">
+                    <div class="fl">
+                        快递公司： {{buyerDeliveryCompany}}
+                    </div>
+                    <div class="fl clearfix">
+                        快递单号： {{buyerDeliveryBillno}}
+                    </div>
+                </div>
+            </div>
+            <div class="line clearfix">
+                <div class="tit fl">
+                    退款方式：
+                </div>
+                <div class="fl">
+                    {{returnMoney}}
+                </div>
+            </div>
+            <div class="line clearfix">
+                <div class="tit fl">
+                    退款总额：
+                </div>
+                <div class="fl">
+                    ￥{{formatPrice moneySum}}
+                </div>
+                <div class="fl detail">
+                        <l:link href="/views/pages/member/my_return_goods_refund.jsp?afterSaleId=${esAfterSale.id}">查看退款明细</l:link>
+                </div>
+            </div>
+            <div class="line clearfix">
+                <div class="tit fl">
+                    退货地址：
+                </div>
+                <div class="fl">
+                    {{consigneeAddress}}
+                </div>
+            </div>
+        </div>
+    </div>
+</script>

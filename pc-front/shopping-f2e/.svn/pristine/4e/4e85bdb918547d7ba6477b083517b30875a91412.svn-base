@@ -1,0 +1,51 @@
+<script id="praise-template" type="text/x-handlebars-template">
+    <div class="bord gm_cpbfb" id="sppj" style="margin:0px;">
+        <div id="logForm_a"></div>
+        <div class="gm_bfb"><span class="fm-yh zb">{{goodPercent}}</span>
+            <p>好评度</p>
+        </div>
+        <div class="fl cpzxt">
+            <div>
+                <div class="gm_cpzxt">
+                    <dl>
+                        <dt>好评({{goodPercent}})</dt>
+                        <dd class="dd1">
+                            <div style="width: {{goodPercent}};">
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>中评({{middlePercent}})</dt>
+                        <dd class="dd1">
+                            <div style="width: {{middlePercent}};">
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>差评({{badPercent}})</dt>
+                        <dd class="dd1">
+                            <div style="width: {{badPercent}};">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <p class="c"></p>
+            </div>
+        </div>
+        <div class="gm_cppf">
+            <p>对已购商品进行评价</p>
+            <a class="pj_w" href="/member/assess.html">我要评价</a>
+        </div>
+        <p class="c"></p>
+    </div>
+    <div class="jp_xinxtb jp_xinxtb2" id="changeContent">
+        <ul class="clearfix" id="pingjia">
+            <li class="select" data-key="all">全部评价（<span>{{allCommentCount}}</span>）</li>
+            <li data-key="good">好评（<span>{{goodCommentCount}}</span>）</li>
+            <li data-key="middle">中评（<span>{{middleCommentCount}}</span>）</li>
+            <li data-key="bad">差评（<span>{{badCommentCount}}</span>）</li>
+            <li data-key="image" class="last">有晒单（<span>{{imageCommentCount}}</span>）</li>
+        </ul>
+        <p class="c"></p>
+    </div>
+</script>

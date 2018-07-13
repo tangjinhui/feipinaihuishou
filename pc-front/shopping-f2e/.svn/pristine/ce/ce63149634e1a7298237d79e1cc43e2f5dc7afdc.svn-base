@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>账户中心 - 会员中心 - 中国金币官方网上商城</title>
+    <meta name="Keywords" content="">
+    <meta name="description" content="">
+    <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" type="text/css" href="/css/member/security/validate_cardView.css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div class="w crumbs">当前位置：
+        <a href="/index.html">首页</a>
+        <span>&gt;</span>
+        <a href="/member/index.html">会员中心</a>
+        <span>&gt;</span>账户安全
+    </div>
+    <div class="w clearfix">
+        <!--#include file="/inc/member/menu.html"-->
+        <div class="fr">
+            <div class="fr right_b bord">
+                <h2 class="padl">
+                        上传身份证资料
+                    </h2>
+                <div class="fr right_b bord" id="setCdInfo" style="position: relative;">
+                    <div id="showAddress">
+                        <p class="cj_sjcborder">
+                        </p>
+                        <div class="cj_sjcmidsh">
+                            <div class="txt_pos">
+                                <p class="font_weight">
+                                    请您按左侧示例手持身份证拍照。
+                                </p>
+                                <p class="col font_weight">
+                                    为保证您能顺利通过认证，请您务必注意如下事项：
+                                </p>
+                                <p>
+                                    1、身份证正面、背面都要手持拍照；
+                                </p>
+                                <p>
+                                    2、请务必保证身份证信息（姓名、号码、免冠照、有效期等），无遮挡且清晰可辨；
+                                </p>
+                                <p>
+                                    3、拍照时请勿遮挡您本人面部；
+                                </p>
+                                <p>
+                                    4、请勿使用手机前置摄像头自拍照片；（如此自拍会导致照片翻转，信息无法辨认）
+                                </p>
+                                <p>
+                                    5、请勿上传上下倒置的照片；
+                                </p>
+                                <p>
+                                    6、请勿选择单色背景/墙面拍照；
+                                </p>
+                                <p>
+                                    7、请勿上传视频截图，否则无效；
+                                </p>
+                                <p class="col sm">
+                                    图片要求
+                                </p>
+                                <p class="sm">
+                                    支持jpg、png格式，文件小于1M，相片宽度大于800px
+                                </p>
+                            </div>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="cj_sjcm_alisj">
+                                            身份证号：
+                                            <span class="cj_sjcred">
+                                                    *
+                                                </span>
+                                        </td>
+                                        <td class="cj_sjcm_padding">
+                                            <div>
+                                                <div class="cj_sjcm_inputleft cj_sjcm_inputleftv">
+                                                    <input readonly maxlength="18" name="cardId" id="cardId" value="" type="text" class="cj_sjcm_input cj_sjcm_inputw1">
+                                                </div>
+                                                <p class="clear">
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cj_sjcm_alisj">
+                                            真实姓名：
+                                            <span class="cj_sjcred">
+                                                    *
+                                                </span>
+                                        </td>
+                                        <td class="cj_sjcm_padding">
+                                            <div>
+                                                <div class="cj_sjcm_inputleft cj_sjcm_inputleftv">
+                                                    <input readonly maxlength="20" name="realName" id="realName" value="" type="text" class="cj_sjcm_input cj_sjcm_inputw1">
+                                                </div>
+                                                <p class="clear">
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cj_sjcm_alisj">
+                                            手持身份证头部照片：
+                                            <span class="cj_sjcred">
+                                                    *
+                                                </span>
+                                        </td>
+                                        <td class="cj_sjcm_padding">
+                                            <div class="cj_sjcm_inputleft">
+                                                <div class="showpic" id="loadImage">
+                                                    <a href="http://static.ecgci.com/images/sfzsl.jpg" target="_blank">
+                                                            <img src="http://static.ecgci.com/images/sfzsl.jpg" style="width: 198px; height: 150px;">
+                                                        </a>
+                                                </div>
+                                                <!--  <div class="sc_menu" id="container" style="position: relative;">
+                                                        <div id="html5_1c7d66hge1nb41hfg1kha18a2b0t3_container" class="moxie-shim moxie-shim-html5"
+                                                        style="position: absolute; top: 0px; left: 0px; width: 150px; height: 40px; overflow: hidden; z-index: 0;">
+                                                            <input id="html5_1c7d66hge1nb41hfg1kha18a2b0t3" type="file" style="font-size: 999px; opacity: 0; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"
+                                                            accept="image/jpeg,image/gif,image/png">
+                                                        </div>
+                                                    </div> -->
+                                                <div class="cj_sjcm_inputright cj_sjcm_inputright2 msg-error" id="picFrontError" style="display:none;">
+                                                    你还没有上传照片
+                                                </div>
+                                                <!-- <div class="cj_sjcm_inputright cj_sjcm_inputright2" id="uploadProgress"
+                                                    style="display:none;">
+                                                    </div> -->
+                                                <p class="clear">
+                                                </p>
+                                                <!-- <div id="YyzzUploadProgress" class="fieldset flash">
+                                                    </div> -->
+                                            </div>
+                                            <div class="cj_sjcm_sl" style="height:200px;">
+                                                <p class="sfzsl">
+                                                    <img style="width:240px;height:150px;" src="http://static.ecgci.com/images/sfz1.jpg">
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cj_sjcm_alisj">
+                                            身份证反面照片：
+                                            <span class="cj_sjcred">
+                                                    *
+                                                </span>
+                                        </td>
+                                        <td class="cj_sjcm_padding">
+                                            <input name="picBack" id="picBack" value="" type="hidden" class="cj_sjcm_input cj_sjcm_inputw1">
+                                            <div class="cj_sjcm_inputleft">
+                                                <div class="showpic" id="loadImageBack">
+                                                    <a href="http://static.ecgci.com/images/sfzsl.jpg" target="_blank">
+                                                            <img src="http://static.ecgci.com/images/sfzsl.jpg" style="width: 198px; height: 150px;">
+                                                        </a>
+                                                </div>
+                                                <!--   <div class="sc_menu" id="containerBack" style="position: relative;">
+                                                        <div id="html5_1c7d66hgj10je7ri1q101h0e1goj6_container" class="moxie-shim moxie-shim-html5"
+                                                        style="position: absolute; top: 0px; left: 0px; width: 150px; height: 40px; overflow: hidden; z-index: 0;">
+                                                            <input id="html5_1c7d66hgj10je7ri1q101h0e1goj6" type="file" style="font-size: 999px; opacity: 0; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"
+                                                            accept="image/jpeg,image/gif,image/png">
+                                                        </div>
+                                                    </div> -->
+                                                <div class="cj_sjcm_inputright cj_sjcm_inputright2 msg-error" id="picBackError" style="display:none;">
+                                                    你还没有上传照片
+                                                </div>
+                                                <!--  <div class="cj_sjcm_inputright cj_sjcm_inputright2" id="uploadProgressBack"
+                                                    style="display:none;">
+                                                    </div> -->
+                                                <p class="clear">
+                                                </p>
+                                                <!--  <div id="btnCancelYyzz">
+                                                    </div>
+                                                    <div id="YyzzUploadProgressBack" class="fieldset flash">
+                                                    </div> -->
+                                            </div>
+                                            <div class="cj_sjcm_sl" style="height:200px;">
+                                                <p class="sfzsl">
+                                                    <img style="width:240px;height:150px;" src="http://static.ecgci.com/images/sfz2.jpg">
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="cj_sjcmidts_fh" style="position:relative; width:500px; text-align:left;">
+                                <button type="button" id="returnBut">
+                                    返回
+                                </button>
+                            </p>
+                            <p class="c">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!--#include file="/data/channel/img_domain_data.html"-->
+<!--#include file="/common/footer.html"-->
+<script type="text/javascript" src="/script/libs/require.js"></script>
+<script type="text/javascript" src="/script/libs/require-config.js"></script>
+<script type="text/javascript" src="/script/member/security/validate_cardView.js"></script>
+
+</html>

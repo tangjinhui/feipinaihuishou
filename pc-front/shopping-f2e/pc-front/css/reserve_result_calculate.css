@@ -1,0 +1,209 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+@import url('http://static.ecgci.com/css/libs/dialog.css');
+
+a {
+    text-decoration: none;
+    color: #333;
+    outline: none;
+}
+.wrap {
+    margin: 0 auto;
+    width: 1240px;
+}
+.w1240 {
+    width: 1240px;
+    margin: 10px auto 25px auto;
+    font-family: Microsoft YaHei;
+}
+.ty_h3 {
+    height: 41px;
+    line-height: 41px;
+    padding-left: 33px;
+    font-size: 16px;
+    color: #565654;
+    margin: 0px;
+    margin-bottom: 7px;
+    font-weight: normal;
+    background: url(http://static.ecgci.com/images/icons_1.png) no-repeat -13px -125px #f8ecde;
+}
+
+.xg_td {
+    padding-top: 35px;
+    background: url(http://static.ecgci.com/images/big_bg2.jpg) repeat-x;
+    min-height: 370px;
+}
+.big_bg {
+    padding-top: 35px;
+    background: url(http://static.ecgci.com/images/big_bg.jpg) repeat;
+    min-height: 370px;
+    padding-bottom: 40px;
+}
+
+.xg_td .p_tit {
+    line-height: 60px;
+    font-size: 30px;
+    color: #333;
+    padding: 0px 240px 0px 240px;
+}
+.inp_s {
+    padding-left: 355px;
+    font-size: 14px;
+    color: #333;
+    padding-bottom: 10px;
+}
+.inp_s dl {
+    padding: 10px;
+}
+.inp_s dt {
+    width: 175px;
+    text-align: right;
+    float: left;
+    line-height: 30px;
+    margin-right: 10px;
+}
+.inp_s dd input {
+    line-height: 30px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    width: 180px;
+    height: 30px;
+    padding-left:5px;
+}
+.inp_s dd .errorTip{
+    display: inline-block;
+    height: 29px;
+    line-height: 29px;
+    width: auto;
+    color: #e43a3d;
+    font-family: 'SimSun';
+    font-size: 12px;
+    border: 1px solid #e43a3d;
+    padding: 0 10px 0 25px;
+    background: url(http://static.ecgci.com/images/icon.png) -180px -145px no-repeat;
+} 
+.inp_s dd .sucTip{
+    display: inline-block;
+    border: none;
+    height: auto;
+    font-size: 0;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    background: url(http://static.ecgci.com/images/icon.png) -180px -177px no-repeat;
+}
+.inp_s dd .font{
+    font-size:12px;
+    color:#999;
+}
+.inp_s dd.zhu{
+    padding-left:185px;
+    color:red;
+    font-size:10pt;
+}
+.inp_s dd.zhu a{
+    text-decoration:underline;
+    color:blue;
+}
+.inp_s .p_btn {
+    padding-top: 20px;
+    padding-left: 234px;
+}
+.inp_s .p_btn a {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    border-radius: 4px;
+    margin-right: 20px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.inp_s .p_btn .a2 {
+    background-color: #86cd2e;
+}
+.bor_cq {
+    border: 1px solid #ffead5;
+}
+.w675 {
+    width: 675px;
+    margin: 0px auto;
+    margin-top: 40px;
+}
+.w675 .tb_top {
+    background: url(http://static.ecgci.com/images/tb_top.jpg) no-repeat;
+    height: 11px;
+    width: 674px;
+}
+.w675 .tb_m {
+    border: 1px solid #f5ebdf;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+.w675 .tb_m .cq_h4 {
+    font-size: 16px;
+    line-height: 16px;
+    color: #fff;
+    text-align: center;
+    font-weight: normal;
+    padding-bottom: 11px;
+    background-color: #e43a3d;
+}
+.w675 .tb_bt {
+    height: 23px;
+    background: url(http://static.ecgci.com/images/tb_bb.jpg) no-repeat;
+}
+.w675 .cq_cont {
+    padding: 23px 70px 20px 107px;
+}
+.w675 .cq_cont dl {
+    padding: 5px 0px;
+}
+.w675 .cq_cont dt {
+    line-height: 30px;
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+}
+.w675 .cq_cont dt span {
+    color: #e43a3d;
+}
+.w675 .cq_cont dd {
+    line-height: 28px;
+    font-size: 12px;
+    font-family: "";
+    color: #999;
+}
+.w675 .cq_cont2 {
+    padding: 10px 20px;
+}
+.w675 .cq_cont2 table {
+    width: 100%;
+    text-align: center;
+}
+.w675 .cq_cont2 .cq_in {
+    max-height: 351px;
+    overflow: auto;
+}
+
+table th, table td {
+    padding: 5px 10px;
+}
+.TB1, td, .TB1 th, .TB2, td, .TB2 th {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+table, table th, table td {
+    border: #e1e1e1 1px solid;
+    line-height: 24px;
+    border-collapse: collapse;
+}

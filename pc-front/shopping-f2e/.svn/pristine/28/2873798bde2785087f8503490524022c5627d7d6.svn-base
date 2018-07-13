@@ -1,0 +1,604 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+@import url('http://static.ecgci.com/css/libs/dialog.css');
+body {
+    color: #666666;
+    background: #ffffff;
+}
+a {
+    color: #666666;
+}
+.cur {
+    color: #666666;
+}
+span.red {
+    color: #e43a3d
+}
+.in_btn {
+    background: #e43a3d;
+    color: #ffffff
+}
+input[type="radio"] {
+    width: 10px;
+    margin-right: 5px;
+}
+.flow_chart3 {
+    height: 35px;
+    line-height: 35px;
+    color: #58595b;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    overflow: hidden;
+    margin: 20px auto 0;
+}
+.flow_chart3 .cur {
+    color: #fff;
+    font-weight: bold;
+}
+.flow_chart3 {
+    background: url(http://static.ecgci.com/images/cart_bg.png) 0 0 no-repeat;
+    width: 697px;
+}
+.flow_chart3 li {
+    float: left;
+    width: 207px;
+    padding: 0 0 0 30px;
+}
+.flow_chart3 .last {
+    padding: 0 10px 0 25px;
+    width: 185px;
+}
+.step3 {
+    background-position: 0 -70px;
+}
+h2.back {
+    background: #f3f3f3;
+    padding: 27px 0 27px 445px;
+    font-size: 18px;
+    color: #e43a3d;
+}
+h2.backv {
+    padding: 3px 10px;
+    color: #000;
+}
+h2.back b {
+    float: left;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-top: -6px;
+    background: url(http://static.ecgci.com/images/icon.png) -160px -402px no-repeat;
+    margin-right: 8px;
+}
+.in_btn {
+    width: 100px;
+    margin-left: 10px;
+    height: 24px;
+    padding: 0;
+    font-weight: bold;
+    color: #fff;
+    line-height: 18px;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    font-size: 12px;
+}
+.red {
+    color: #e43a3d;
+}
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+.tishi {
+    line-height: 20px;
+    padding: 9px 0;
+}
+.cj_sjcmidsh {
+    padding: 0 0 0 13px;
+}
+td, td {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+.TB3 {
+    padding: 0 15px 13px 5px;
+}
+.TB3 ul {
+    float: left;
+    width: 620px;
+}
+.TB3 li {
+    float: left;
+    width: 15%;
+}
+.TB3 li span {
+    display: inline-block;
+    padding: 5px 2px;
+    vertical-align: middle;
+}
+.TB3 li input {
+    vertical-align: middle;
+}
+.TB3 strong {
+    float: left;
+    padding: 2px 0 0;
+    width: 65px;
+}
+.TB3 input, .TB3 span img {
+    vertical-align: middle;
+}
+.TB3 span img {
+    margin: 0 0 0 5px;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+body {
+    margin: 0;
+    padding: 0px;
+    font-size: 12px;
+    text-align: left;
+    font-family: Arial, Lucida, Verdana, Helvetica, sans-serif;
+}
+div, span, input, p, h2, ul, li, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+ul, li {
+    list-style: none;
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+input, img, label {
+    vertical-align: middle;
+}
+.c, .clear, .clearfix {
+    clear: both;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+.mart12 {
+    margin-top: 10px;
+}
+table, table td {
+    border: #e1e1e1 1px solid;
+    line-height: 24px;
+    border-collapse: collapse
+}
+table td {
+    padding: 5px 10px;
+}
+h2 {
+    height: 28px;
+    line-height: 28px;
+    color: #58595b;
+    border: none;
+    padding: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.dn {
+    display: none;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.posr {
+    position: relative;
+}
+.clearfix {}
+.wrap {
+    margin: 0 auto;
+    width: 1240px;
+}
+.clearfix {
+    *zoom: 1;
+}
+.wrap {
+    margin: 0 auto;
+    width: 1240px;
+}
+.posr {
+    position: relative;
+}
+.posa {
+    position: absolute;
+}
+.inputTxt {
+    text-align: left;
+    line-height: 22px;
+    margin: 0px;
+    vertical-align: middle;
+    border: 1px solid #e1e1e1;
+    font-size: 12px;
+    color: #666;
+    padding: 4px;
+    height: 22px;
+}
+.posr .icon {
+    position: absolute;
+    background: url(http://static.ecgci.com/images/icon_bg.png) no-repeat;
+}
+.bor-bot {
+    border-top: #eee 1px solid;
+    padding: 30px 0;
+    margin: 30px auto 0;
+}
+.footer_sm .txt {
+    line-height: 18px;
+    color: #666;
+    text-align: center;
+}
+.footer_sm .img {
+    margin: 15px 0 0;
+    height: 41px;
+}
+.footer_sm .img a {
+    width: 112px;
+    height: 41px;
+}
+.posr .icon_f5 {
+    background-position: -155px -455px;
+    left: 412px;
+}
+.posr .icon_f6 {
+    background-position: -155px -545px;
+    left: 560px;
+}
+.posr .icon_f7 {
+    background-position: -155px -635px;
+    left: 712px;
+}
+.posr .icon_f8 {
+    background-position: -155px -725px;
+    left: 754px;
+    display: none;
+}
+h2, h3 {
+    font-weight: normal;
+}
+.huikuan {
+    margin-left: 4px
+}
+.TB3 {
+    overflow: hidden;
+    zoom: 1;
+}
+.TB3 {
+    padding: 5px 15px;
+}
+.TB3 ul {
+    float: left;
+    width: 620px;
+}
+.TB3 li {
+    float: left;
+    width: 28%;
+    line-height: 30px;
+}
+.TB3 li span {
+    display: inline-block;
+    padding: 5px 2px;
+    vertical-align: middle;
+}
+.TB3 li input {
+    vertical-align: middle;
+}
+.TB3 strong {
+    float: left;
+    width: 80px;
+    padding: 12px 0 0 12px;
+}
+.TB3 input, .TB3 span img {
+    vertical-align: middle;
+}
+.TB3 span img {
+    margin: 0 0 0 5PX;
+    border: 1px solid #ccc;
+}
+.Main_c {
+    border: #e5e5e5 1px solid;
+    width: 1240px;
+    margin: 20px auto 10px auto;
+}
+.clear {
+    clear: both
+}
+h2.back {
+    background: #F7F7F7;
+    padding-top: 12px;
+}
+.cj_sjcmidsh {
+    padding: 0 50px 10px;
+}
+.cj_sjcmidsh .invo_table {
+    margin-bottom: 0;
+    padding: 0;
+    background: #f7f7f7;
+    border: #e1e1e1 1px solid;
+}
+.cj_sjcmidsh .invo_table td {
+    padding: 0;
+    border: none;
+}
+#onlinePay, #yck {
+    text-align: left;
+}
+.in_btn {
+    height: 28px;
+    line-height: 13px;
+}
+.anniu_zf {
+    margin: 0 0 10px 5px;
+}
+.dingd_tit {
+    padding: 6px 0 15px 60px;
+    font-size: 13px;
+    background: #f7f7f7;
+}
+.dingd_tit .red, .tag_tishir {
+    color: #e43a3d;
+    font-weight: bold;
+}
+.dingd_tit .marg-r40 {
+    margin-right: 40px
+}
+#mobiles {
+    padding: 7px 0;
+}
+#onlinePay {
+    padding: 15px 10px;
+}
+#payment {
+    padding: 7px 10px;
+}
+.Main_c h2.back {
+    font-size: 27px;
+    font-weight: normal;
+    color: #e43a3d;
+    font-family: "Microsoft YaHei";
+    height: 45px;
+    line-height: 45px;
+    padding-top: 15px;
+    padding-bottom: 0px;
+}
+.Main_c .back b {
+    margin-top: 5px;
+}
+.dingd_tit {
+    margin-bottom: 11px;
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+    color: #666;
+}
+.xe_sm {
+    width: 435px;
+    border: 1px solid #e1e1e1;
+    background: #fff;
+    font-family: "Microsoft YaHei";
+    margin: 10px auto;
+}
+.xe_sm h3 {
+    margin: 0px;
+    padding-left: 14px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    color: #191919;
+}
+.xe_sm h3.bor_top {
+    border-top: #e1e1e1 1px solid;
+}
+.xe_sm table {
+    width: 100%;
+    font-size: 12px;
+    color: #8e8e8e;
+    font-family: "ýýýý";
+    border-left: none;
+    border-right: none;
+    text-align: center;
+}
+.xe_sm table .tr_1 td {
+    font-weight: bold;
+}
+.xe_sm table .tr_1 .w115 {
+    min-width: 91px;
+    padding: 1px 2px;
+}
+.xe_sm table .td_leftno {
+    border-left: none;
+}
+.xe_sm table .td_rightno {
+    border-right: none;
+}
+.xe_sm p {
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+    font-family: "ýýýý";
+    color: #8e8e8e;
+    padding-left: 14px;
+}
+.xe_sm p .span1 {
+    font-weight: bold;
+}
+#mobiles {
+    position: relative;
+}
+.xe_sm {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+table td {
+    padding: 1px 1px;
+}
+.disno1, .disno2, .disno3, .disno4, .disno5 {
+    display: none;
+}
+
+/**/
+
+.sh_dialog {
+    display: none;
+    position: fixed;
+    left: 60%;
+    top: 60%;
+    margin-left: -307px;
+    margin-top: -191px;
+    width: 300px;
+    height: 151px;
+    z-index: 999;
+    background-color: #fff;
+}
+.goods {
+    margin-left: 25px;
+}
+.queding {
+    right: 20px;
+    text-indent: 0;
+    background-color: #f6f6f6
+}
+.sh_dialog .top {
+    text-indent: 1em;
+    width: 100%;
+    font-weight: 700;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #e43a3d;
+    cursor: pointer
+}
+.sh_dialog .top .queding {
+    line-height: 24px;
+    font-size: 12px;
+    text-indent: 0;
+    text-align: center;
+    position: absolute;
+    padding: 0 7px;
+    bottom: 12px;
+    right: 20px;
+    cursor: default;
+    background-color: #f6f6f6;
+    border: 1px solid #e5e5e5;
+    color: #666;
+}
+.hqp {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: #ddd;
+    opacity: 0.5;
+    display: none;
+}
+.txt {
+    color: #58595B;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    max-height: 110px;
+    overflow: hidden;
+    padding: 25px 18px 20px 20px;
+}
+
+/*弹框*/
+
+#jsPrompt1 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .2);
+    background: url(http://static.ecgci.com/images/black.png) repeat \9;
+    left: 0;
+    top: 0;
+    z-index: 200;
+}
+
+.prompt1 {
+    width: 300px;
+    padding-bottom: 46px;
+    position: fixed;
+    left: 50%;
+    margin-left: -150px;
+    top: 50%;
+    margin-top: -75px;
+    background-color: #eee;
+}
+
+.prompt1 .top {
+    text-indent: 1em;
+    width: 100%;
+    font-weight: 700;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #e43a3d;
+    cursor: pointer;
+}
+
+.prompt1 .close {
+    font-family: "ËÎÌå";
+    line-height: 24px;
+    font-size: 12px;
+    text-indent: 0;
+    text-align: center;
+    padding: 0 7px;
+    background-color: #f6f6f6;
+    border: 1px solid #e5e5e5;
+    color: #666;
+    cursor: pointer;
+    float: right;
+    margin-right: 5px;
+}
+
+.prompt1 .close:hover {
+    background-color: #e43a3d;
+    color: #fff;
+    text-decoration: none;
+}
+
+.prompt1 .content {
+    padding: 6px 10px;
+    line-height: 18px;
+    color: #333;
+}
+
+.prompt1 .content .txt {
+    color: #58595B;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    max-height: 36px;
+    overflow: hidden;
+    padding: 20px 0 20px 20px;
+}
+
+.pormp_set_box1 {
+    position: absolute;
+    width: 96%;
+    bottom: 20px;
+}

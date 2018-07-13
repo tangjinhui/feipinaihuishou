@@ -1,0 +1,31 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+@import url('http://static.ecgci.com/css/libs/dialog.css');
+
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+.retBox {
+    min-height: 300px;
+}
+.retTitle {
+    padding: 16px;
+    background: #ecffdc;
+    font-size: 16px;
+}
+.retBox p {
+    margin-top: 16px;
+    margin-left: 50px;
+    font-size: 14px;
+}
+.retBox .last_p {
+    font-size: 12px;
+}
+.retBox a {
+    color: #2800f6;
+}
+a {
+    color: #666666;
+    text-decoration: none;
+}

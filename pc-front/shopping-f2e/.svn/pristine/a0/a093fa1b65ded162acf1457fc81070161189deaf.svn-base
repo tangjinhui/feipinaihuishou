@@ -1,0 +1,65 @@
+<div id="identity">
+    <table border="0px" class="formtable" id="mobileDivValid" style="display: table;margin-left:160px;">
+        <tbody>
+            <tr>
+                <td align="right" width="130" valign="top">
+                    验证身份方式：
+                </td>
+                <td width="488" colspan="3">
+                    手机验证
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="130">
+                    已验证手机：
+                </td>
+                <td width="488" colspan="3">
+                    <span id="validMobile"></span>
+                    <input type="button" id="sendMobileCode_h" value="获取短信验证码" class="button_anniu_w">
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td width="130" align="right">
+                    短信验证码：
+                </td>
+                <td width="488" colspan="3">
+                    <input type="text" name="mobileCode_h" id="mobileCode_h" autocomplete="off" style="ime-mode:disabled;width:120px" tabindex="6" maxlength="6">
+                    <span id="mobileCode_h_error" class="msg-error" style="display: none">
+                    </span>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="130">
+                    验证码：
+                </td>
+                <td width="488" colspan="3" class="re">
+                    <input type="text" name="rand_h" id="rand_h" autocomplete="off" style="width:80px" maxlength="4">
+                    <span id="rand_h_error" class="msg-error" style="display: none"></span>
+                    <div class="codeBox">
+                        <img border="0" id="rand_h_img" src="/front/authCode"> 看不清?
+                        <a href="Javascript:void(0);" id="rand_h_btn">
+                            换一张
+                        </a>
+                    </div>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td colspan="2">
+                    <input name="" value="下一步" type="button" class="btn" id="identityNext">
+                </td>
+                <td>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,148 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{color:#666666;background:#ffffff;}
+a{color:#666666;}
+a:hover{color:#e43a3d;}
+a.anniu{color:#ffffff;background:#e43a3d;}
+/*头部样色*/
+.f_red{color:#e43a3d;}
+
+.gwc_log a{color:#666666;}
+/* .cate_cont{border:#e1e1e1 1px solid;background:#ffffff;} */
+/* .cate_cont dt{color:#e43a3d;} */
+/* .cate_cont dd{color:#666666;} */
+/* .cate_blank{background:#ffffff;} */
+/*尾部样式*/
+.guide{background:#ffffff;border-top:#e1e1e1 2px solid;}
+
+/***修改**/
+/**首页**/
+.flash_sale h1{ background:no-repeat scroll 304px -847px #e43a3d;}  /**限时抢购 **/
+.flash_sale h1{ color:#ffffff;}  
+.chongz a.select, .chongz a:hover ,.tab-titt ul li.cur{border:#e1e1e1 1px solid;color:#e1e1e1;}  /***首页话费充�?**/ 
+.czhi_padding a.buy{background: #e43a3d;color:#ffffff} /**首页充�?按钮***/
+.in_page * {border: 1px solid #e1e1e1;} /**首页广告�?**/
+.in_page .current{background:#e43a3d;color:#ffffff}
+a.bdr_04,a.bdr_04:hover{background:#e43a3d;color:#ffffff}
+.simcard_m .buy {background:#e43a3d;color:#ffffff}
+/**商品终极�?*/
+/**按钮文字***/
+.czhi_padding a.buy:hover,.tab_anniu,.join-car a:hover{color:#ffffff}
+.tz-info a,.gm_cppj a ,.join-car a{background:#e43a3d;color:#ffffff}
+.tab-tit ul li.cur{color:#e43a3d;}
+.orange-color {color: #e43a3d;}    /**图形菜单和添加方�?*/
+.rongl2.dangq,.color1.dangq,.color2.dangq {border: 1px solid #e1e1e1;}
+.xts dd{color:#e43a3d}
+.cur  {color: #666666;}
+.main-tit ul li.cur a { color: #e43a3d;}
+.tab_anniu {background:#e43a3d;}
+.db_cur a.db {background: #e43a3d;border: 1px solid #e1e1e1;}
+a.db:hover{color:#ffffff}
+.ckhf a, .tyzx_nav a.allzx {color: #e43a3d;}
+.tycn dt { color: #e43a3d;}
+.diff-operate a.duibi{color:#ffffff} 
+.color2.dangq {border: 1px solid #e1e1e1}
+/****  会员中心文字颜色
+.order_info p span.red, #yanzheng span.red, td span.red, .red{color:#e43a3d}
+***/
+span.red{color:#e43a3d}
+/**搜索****/
+.filter .order .curr{background:#e43a3d;}
+.pj_left{    border: 1px solid #e1e1e1;}
+.over h3 {color: #e43a3d;}
+.cha_cate dd a {color:#666666}
+.pagin .prev, .pagin .next{background: #e43a3d;}
+.ss_list_menu a.jrgwc:hover {border: 1px solid #e1e1e1; background: #e43a3d;color:#ffffff}
+.pagin a:hover, .pagin a:active {background:  #e43a3d;}
+.cx_ss input[type="button"], .cx_ss input.ss_btn{background:#e43a3d;color:#ffffff}
+
+.ss_tj dl dd a:hover, .ss_tj dl dd a.cur, .xh_search dl dd a.cur {background:  #e43a3d;}
+.diff-operate a.db_hong {background: #e43a3d;}
+.db_tit{color: #e43a3d}
+.page a.selected,.page a:hover,.ui-state-hover,.ui-widget-header {background:  #e43a3d;border: 1px solid #e1e1e1;}
+.ui-widget-header{border:none;}
+/***首页搜索下拉�?*/
+
+/******购物�?****/
+a.ljjs:hover{color:#ffffff;}
+a.ljjs {background-color:#e43a3d;color:#ffffff;}
+.btnfrm,.btn { background: #e43a3d;color:#ffffff}
+
+/****会员中心*****/
+/**订单**/
+.tuiji .in_btn, .in_btn,.btns_02, .btns_03, .btn_06, .btns_01, .btns_04 {background:#e43a3d;color:#ffffff}
+
+.btnF_03{background:#e43a3d;color:#ffffff}
+.cj_sjctop1{background:#e43a3d;color:#ffffff}
+/***团购***/
+.ca-begin,.ca-tit,.ca-info span.ca-time,.cp_tit_l, .cp_tit_r,.cp_tit1,.cp-foot {color:#ffffff}
+.tz-info a:hover,.join-car a:hover,a.anniu:hover,a:link.ljjs,a:hover.ljjs,a:visited.ljjs{color:#ffffff;}
+ .buy a{color:#ffffff}
+ .tg_price a.anniu{color:#ffffff}
+.souss input[type="button"]{background:#e43a3d;color:#ffffff}
+/****帮助中心****/
+.cha_cate h2, .help_mune h2 {background:#e43a3d;color:#ffffff;border: 1px solid #e1e1e1}
+
+.cha_cate dt {color:#e43a3d}
+
+/**频道***/
+.shop_fl h2 {color:#e43a3d}
+.shop_fl {border-bottom: 3px solid #e1e1e1;}
+.flove .select {
+    color: #ffffff;
+    background: #e43a3d}
+.flove li {border: 1px solid #e1e1e1}
+.y-jiage a.select ,.y-jiage .y-jiaj a{background:#e43a3d;color:#ffffff;}
+.four-nav1 h2 {
+    background: #e43a3d}
+ .four-nav1{border:1px solid  #e1e1e1}
+.query_form .in_btn{background: #e43a3d}
+a.anniu{background:#e43a3d;color:#ffffff;}
+a.shouye {color:#666666;}
+.close{background:#e43a3d}
+/**登录***/
+ input.btnF_04{background:#e43a3d;color:#ffffff;border: 1px solid #e1e1e1}
+.color{color:#e43a3d;}
+
+#thicktitler{background:#e43a3d;border: 1px solid #e1e1e1;color:#ffffff}
+#thickconr{border: 1px solid #e1e1e1}
+.db_lan{border: 3px solid #e43a3d}
+.diff-hdb{border-top: 3px solid #e1e1e1}   
+.db_tit{border-top: 3px solid #e43a3d;border-right: 3px solid #e43a3d;}
+.ui-widget-header{background:#e43a3d}
+.ui-state-hover{background:#e43a3d}
+.button_anniu_w,b.anniu{background:#e43a3d;color:#ffffff;border: 1px solid #e1e1e1}
+.ckzx a.zxall{color:#e43a3d}
+.zx_list li .zx_hy{color:#e1e1e1;}
+.cj_sjctop1,.tuiji .in_btn, .in_btn, .btns_02, .btns_03, .btn_06, .btns_01, .btns_04,.btnfrm, .btn{background:#e43a3d;}
+.page a.selected, .page a:hover, .ui-state-hover, .ui-widget-header,.consignor_tc .channel_anniu .btn,.btnt_02t{background:#e43a3d;color:#fff;}
+#submitBtn { background-color: #e43a3d;}
+
+/*1.15修改*/
+.channel_pros .price{color:#e43a3d; padding-top:5px;}
+.channel_pros .price .yj_pj{color:#333; float:right;}
+
+
+
+/*1.19修改*/
+#saveLI input{margin:20px 45px;}
+#addressSelect,#saveInvoice{color: #fff;
+    cursor: pointer;
+    font-family: Arial,Lucida,Verdana,Helvetica,sans-serif;
+    font-size: 12px;
+    line-height: 22px;
+    margin-right: 10px;
+    padding: 2px 8px;
+    text-align: center;
+    vertical-align: middle;
+    background-color:#e43a3d;
+    margin:10px 0px 0px 45px;
+    text-decoration:none;
+    }
+
+.button_anniu_w {
+    cursor: pointer;
+    height: 30px;
+    margin: 0 0 0 10px;
+    width: 130px;
+}

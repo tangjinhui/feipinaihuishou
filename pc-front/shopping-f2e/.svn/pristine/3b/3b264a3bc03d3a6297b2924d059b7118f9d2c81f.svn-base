@@ -1,0 +1,502 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/limitPage.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+@import url('http://static.ecgci.com/css/libs/dialog.css');
+@import url('../plugin/menu.css');
+@import url('../plugin/accountDialog.css');
+
+.c, .clear {
+    clear: both;
+}
+
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.right_a {
+    width: 1003px;
+}
+
+.mart12 {
+    margin-top: 10px;
+}
+
+.text_l {
+    text-align: left;
+}
+
+a.anniu {
+    display: inline-block;
+    font-family: "Microsoft YaHei";
+    padding: 2px 10px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+a.anniu:hover {
+    color: #fff;
+    text-decoration: none
+}
+
+table, table th, table td {
+    border: #e1e1e1 1px solid;
+    line-height: 24px;
+    border-collapse: collapse
+}
+
+table th {
+    background: #f3f3f3;
+    text-align: center;
+}
+
+table th, table td {
+    padding: 5px 10px;
+}
+
+h2 {
+    height: 28px;
+    line-height: 28px;
+    color: #58595b;
+    border: none;
+    padding: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.page {
+    position: relative;
+    color: #58595b;
+    font: 14px/27px;
+    height: 28px;
+    line-height: 28px;
+    margin: 10px 0;
+    text-align: right;
+    width: 100%;
+}
+
+.page a {
+    border: 1px solid #e5e5e5;
+    color: #58595b;
+    padding: 5px 10px;
+    margin: 0 2px;
+}
+
+.page a:hover, .page a.selected {
+    background: #e43a3d;
+    border: 1px solid #e43a3d;
+    color: #fff;
+    text-decoration: none;
+}
+
+.page a b {
+    font-size: 12px;
+    font-weight: normal
+}
+
+th {
+    border: none;
+}
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+input[type="radio"] {
+    width: 10px;
+    margin-right: 5px;
+}
+
+.crumbs {
+    height: 52px;
+    line-height: 52px;
+    color: #58595b;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+}
+
+.crumbs span {
+    padding: 0 6px;
+}
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+
+.m_right td img {
+    width: 80px;
+    height: 80px;
+}
+
+.m_right td.text_l img {
+    margin-left: 10px;
+}
+
+table .cg_titp {
+    line-height: 20px;
+    clear: both
+}
+
+table .caoz {
+    line-height: 30px;
+    text-align: center;
+}
+
+table .cg_titp img {
+    display: block;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin: 5px 8px 5px 0;
+    overflow: hidden;
+}
+
+h6 {
+    padding: 0 10px;
+    background: #f3f3f3;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: #e1e1e1 1px solid;
+    margin: 0;
+}
+em {
+    font-style: normal;
+}
+
+#company_span #comPanyName {
+    border: #e1e1e1 1px solid;
+    width: 317px;
+}
+#selectbox {
+    width: 600px;
+}
+
+.cj_sjcm_padding #selectbox {
+    width: auto;
+}
+.cj_sjccont1 {
+    width: 711px;
+    border: #666 1px solid;
+    background: #fff;
+    height: outo;
+    margin: 0 auto;
+    text-align: left
+}
+
+.cj_sjctop1 {
+    background: #e43a3d;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 0 0 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Microsoft YaHei';
+}
+
+.cj_sjcmidsh {
+    padding: 0 0 0 13px;
+}
+
+.cj_sjcm_alisj {
+    text-align: right;
+    vertical-align: top;
+}
+
+.cj_sjcm_input {
+    border: #e1e1e1 1px solid;
+    height: 23px;
+    line-height: 23px;
+    font-size: 12px;
+    margin: 0 10px 0 0;
+}
+
+.cj_sjcm_inputleft {
+    float: left;
+}
+
+.cj_sjcm_inputright {
+    float: left;
+    margin: 6px 0 0 0;
+}
+
+.cj_sjcm_inputright2 {
+    width: 126px;
+    height: 25px;
+    line-height: 25px;
+    margin: 1px 0 0 6px;
+    padding: 0 0 0 30px;
+    color: #CC0001;
+    border: 0;
+    overflow: hidden;
+}
+
+.cj_sjcm_inputw1 {
+    width: 135px;
+    padding: 0 0 0 5px;
+    overflow: hidden;
+}
+
+.cj_sjcm_inputw3 {
+    width: 280px;
+    padding: 0 0 0 5px;
+    overflow: hidden;
+}
+
+.cj_sjcred {
+    color: #e43a3d;
+    line-height: 25px;
+    text-align: left;
+}
+
+.cj_sjcmidts_fh {
+    width: 245px;
+    height: 32px;
+    margin: 20px auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.cj_sjcmidts_fh a {
+    display: inline-block;
+    padding: 3px 10px;
+    height: 24px;
+    margin-left: 10px;
+    line-height: 24px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.cj_sjcmidts_fh a, .cj_sjcmidts_fh a:link, .cj_sjcmidts_fh a:visited, .cj_sjcmidts_fh a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+td, td {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+.mt_bord {
+    padding: 30px;
+    background: #f3f3f3;
+}
+
+.mt_left img {
+    width: 90px;
+    height: 90px;
+}
+
+.mt_mxq {
+    width: 822px;
+}
+
+.username {
+    padding-left: 15px;
+    color: #333;
+    height: 34px;
+    line-height: 34px;
+    font-size: 18px;
+    font-family: Microsoft YaHei;
+}
+.jphy {
+    color: #333;
+    font-size: 14px;
+    font-family: Microsoft YaHei;
+}
+
+.member {
+    line-height: 30px;
+    padding-left: 15px;
+}
+
+#open_account, #open_recharge {
+    overflow: hidden;
+    padding: 0 22px;
+    background-color: #fff;
+    margin-top: 20px;
+    height: 80px;
+    width: 900px;
+    line-height: 80px;
+    text-align: center;
+    position: relative;
+}
+#open_account .go_open, #open_account .go_open:hover,
+#open_recharge .go_open, #open_recharge .go_open:hover {
+    padding: 10px 22px;
+    background: #ff0000;
+    color: #fff;
+    text-decoration: none;
+}
+#open_account .no_open, #open_account .no_open:hover {
+    padding: 10px 22px;
+    background: #ddd;
+    text-decoration: none;
+    color: #666;
+    cursor: default;
+}
+.mem_dd {
+    overflow: hidden;
+    padding: 0 18px;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+.mem_dd .dd_info {
+    float: left;
+    width: 500px;
+    padding: 10px 0;
+}
+
+.mem_dd .dd_info dd {
+    padding-right: 15px;
+    width: 130px;
+}
+
+.mem_dd .dd_info dd a:hover {
+    text-decoration: none;
+}
+
+.mem_dd .dd_info dd a span {
+    color: #e43a3d;
+}
+
+.mem_dd dl {
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+.mem_dd dl dt, .mem_dd dl dd {
+    float: left;
+}
+
+.acco-safe {
+    line-height: 30px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding: 0 0 0 15px;
+}
+
+.acco-safe .rank-text1,
+.acco-safe .rank-text2,
+.acco-safe .rank-text3 {
+    margin-right: 8px;
+}
+.acco-safe .rank-text1 {
+    color: #df1313;
+}
+.acco-safe .rank-text2 {
+    color: #fb8800;
+}
+.acco-safe .rank-text3 {
+    color: #7ac200;
+}
+.acco-safe a {
+    margin-right: 8px;
+}
+
+.acco-safe a:hover {
+    text-decoration: none;
+}
+
+.rank1, .rank2, .rank3 {
+    margin-right: 9px;
+    background: url(http://static.ecgci.com/images/icon.png) no-repeat;
+    display: inline-block;
+    font-size: 0;
+    height: 14px;
+    line-height: 0;
+    margin-right: 20px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 106px;
+}
+.rank1 {
+    background-position: -94px -204px;
+}
+.rank2 {
+    background-position: -94px -220px;
+}
+.rank3 {
+    background-position: -94px -236px;
+}
+.acco-safe s.sec {
+    background: url(http://static.ecgci.com/images/icon.png) -37px -182px no-repeat;
+}
+.acco-safe s.unSec {
+    background: url(http://static.ecgci.com/images/icon.png) -37px -199px no-repeat;
+}
+.acco-safe s.spsd {
+    background: url(http://static.ecgci.com/images/icon.png) -71px -182px no-repeat;
+}
+.acco-safe s.spsdn {
+    background: url(http://static.ecgci.com/images/icon.png) -71px -198px no-repeat;
+}
+.acco-safe s {
+    display: inline-block;
+    font-size: 0;
+    height: 16px;
+    line-height: 100px;
+    margin-right: 3px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 16px;
+}
+.acco-safe .mailn s {
+    background-position: -54px -199px;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline
+}
+.right_a .page {
+    margin-top: 20px;
+}
+.hy_ck a {
+    color: #000
+}
+.hy_ck a:hover {
+    color: #e43a3d
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+#company_span #comPanyName {
+    height: 26px;
+    line-height: 26px;
+    padding: 0 5px
+}
+.crumbs a:hover {
+    color: #c42605;
+}
+a:hover {
+    color: #e43a3d;
+}
+
+.page a.selected, .page a:hover {
+    background: #e43a3d;
+    border: 1px solid #e1e1e1;
+}
+
+.cj_sjctop1 {
+    background: #e43a3d;
+    color: #ffffff
+}
+
+a.anniu:hover {
+    color: #ffffff;
+}
+a.anniu {
+    background: #e43a3d;
+    color: #ffffff;
+    margin-right: 4px;
+}
+.cj_sjctop1 {
+    background: #e43a3d;
+}
+.page a.selected, .page a:hover {
+    background: #e43a3d;
+    color: #fff;
+}

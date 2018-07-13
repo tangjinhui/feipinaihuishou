@@ -1,0 +1,264 @@
+require(['jquery', 'handlebars', 'plupload', 'dialog', 'getUrlParam', 'header', 'modules/menu'], function($, Handlebars, plupload, dialog, getUrlParam) {
+    var afterSaleId = getUrlParam('afterSaleId');
+    if (!afterSaleId) return;
+
+    Handlebars.registerHelper("addIndex", function(index, options) {
+        return parseInt(index) + 1;
+    });
+
+    Handlebars.registerHelper("formatUnitPrice", function(unitPrice) {
+        unitPrice = '' + unitPrice;
+        return unitPrice.indexOf('.') != -1 ? unitPrice : unitPrice + '.00';
+    });
+     Handlebars.registerHelper("imgConf", function(imgUrl, id) {
+        return img_domain_data[id % img_domain_data.length] + '/' + imgUrl;
+    });
+    Handlebars.registerHelper("returnRolicy", function(isReturnAble, isChangeAble) {
+        var str = '';
+        if (parseInt(isReturnAble) == 1 && parseInt(isChangeAble) == 1) {
+            str = "可退可换";
+        } else if (parseInt(isReturnAble) == 1 && parseInt(isChangeAble) != 1) {
+            str = "只退不换";
+        } else if (parseInt(isReturnAble) != 1 && parseInt(isChangeAble) == 1) {
+            str = "只换不退";
+        } else if (parseInt(isReturnAble) != 1 && parseInt(isChangeAble) != 1) {
+            str = "不退不换";
+        }
+        return str;
+    });
+
+    Handlebars.registerHelper("protocolUrl", function(orderoAdscription) {
+        var str = '';
+        if ('001002007' == orderoAdscription) {
+            str = '/doing/helpCenter.html#aftersalePolicyBj';
+        } else if ('001002002' == orderoAdscription) {
+            str = '/doing/helpCenter.html#aftersalePolicySz';
+        } else if ('001002008' == orderoAdscription){
+            str = 'javascript:void(0)';
+        }
+        return str;
+    });
+    Handlebars.registerHelper("checkContentDesc", function(contentDesc, options) {
+        if (contentDesc != '') {
+            return options.fn(this);
+        } else {
+            return options.inverse(this);
+        }
+    });
+    var orderId = "";
+    initData()
+
+    function initData() {
+        var data = {
+            afterSaleId: afterSaleId
+        }
+        $.ajax({
+            url: '/front/member/afterSale/toUpdateReturnGoodsPage',
+            type: 'get',
+            dataType: 'json',
+            data: data,
+            success: function(res) {
+                if ('99' == res.code) {
+                    window.location.href = 'https://passportdev.ecgci.com/login.html';
+                } else if ('98' == res.code) {
+                    dialog({ title: '系统提示', content: '数据异常' });
+                } else if (res.code == '00') {
+                    var contentTemp = Handlebars.compile($("#content-template").html());
+                    $('#content_box').html(contentTemp(res.data));
+                    $("#reason").val(res.data.esAfterSale.servReason);
+                    orderId = res.data.esAfterSale.orderId;
+                    uploadImg(orderId);
+                } else {
+                    dialog({ title: '系统提示', content: '网络繁忙，请稍后重试' });
+                }
+            },
+            error: function() {
+                dialog({ title: '系统提示', content: '网络繁忙，请稍后重试' });
+            }
+        });
+    }
+    var fileList = [];
+    var imgHtml = '';
+    var upstate = false;
+
+    function uploadImg(orderId) {
+        var maxlength = 10-$("#file-list").find('li').length;
+        var uploader = new plupload.Uploader({
+            browse_button: 'returnOrderPictures',
+            url: '/front/member/upload/returnGoodsPicture?orderId=' + orderId,
+            flash_swf_url: '/front/member/upload/returnGoodsPicture?orderId=' + orderId,
+            silverlight_xap_url: '/front/member/upload/returnGoodsPicture?orderId=' + orderId,
+            filters: {
+                mime_types: [ //只允许上传图片文件
+                    { title: "图片文件", extensions: "bmp,gif,jpg,png,jpeg" }
+                ],
+                max_file_size: '5120kb', //最大只能上传5M的文件5120kb
+                prevent_duplicates: true //不允许队列中存在重复文件
+            },
+
+            init: {
+
+                FilesAdded: function(up, files) {
+                    if (uploader.files.length > maxlength) {
+                        uploader.splice((uploader.files.length - files.length), uploader.files.length);
+                        dialog({ title: '系统提示', content: '最多可上传10张图片！' });
+                        return;
+                    } else {
+                        //开始上传
+                        $('#console').text('图片正在上传中，请稍候...');
+                        uploader.start();
+                    }
+                    plupload.each(files, function(file) {
+                        //构造html来更新UI
+                        var html = '<li id="file-' + file.id + '"><p class="file-name">' + file.name +
+                            '</p><p id="file-' + file.id + '-progress">上传进度：0%</p></li>';
+                        $(html).appendTo('#file-list');
+                        $('#file-' + file.id).append('<input id="file-pic-s' + file.id + '" type="hidden" value=""/>');
+                        $('#file-' + file.id).append('<input id="file-pic-c' + file.id + '" type="hidden" value=""/>');
+                        $('#file-'+file.id).append('<img id="file-pic-src' + file.id +'" src="" />');
+                    });
+                },
+                UploadProgress: function(up, file) {
+                    $('#file-' + file.id + '-progress').text('上传进度：' + file.percent + '%');
+                },
+                FileUploaded: function(up, file, res) { //单文件上传完成后  
+                    upstate = false;
+                    var res = JSON.parse(res.response);
+                    if ('99' == res.code) {
+                        window.location.href = 'https://passportdev.ecgci.com/login.html';
+                    } else if (res && res.code == '00') {
+                        $('#file-pic-s' + file.id).val(res.data.standardPath);
+                        $('#file-pic-c' + file.id).val(res.data.compressPath);
+                        $('#file-pic-src' + file.id).attr("src", "http://static.ecgci.com" + res.data.compressPath);
+                    }
+                },
+                UploadComplete: function(up, files) { //上传完所有文件后
+                    upstate = true;
+                    $('#console').text('您好，所有图片上传完成！');
+                },
+
+
+                Error: function(up, err) {
+                    if (err.code < 0) {
+                        if (err.code == -300) {
+                            dialog({ title: '系统提示', content: '您本地的图片不可读取，请检查后重新上传！' });
+                        } else if (err.code == -600 || err.code == -702) {
+                            dialog({ title: '系统提示', content: '图片大小不能超过5M，请压缩图片重新上传！' });
+                        } else if (err.code == -601 || err.code == -700) {
+                            dialog({ title: '系统提示', content: '您上传的图片类型不符合要求！' });
+                        } else if (err.code == -602) {
+                            dialog({ title: '系统提示', content: '请不要重复上传相同的图片！' });
+                        } else {
+                            dialog({ title: '系统提示', content: '网络异常，请稍后再试！' });
+                        }
+                    }
+                }
+            }
+        });
+
+        uploader.init(); //初始化
+
+    }
+
+    $('body').on('click', '.returnGoodsSubmit', function() {
+        var reason = $("#returnOrderReason").val();
+        if (reason == undefined) {
+            reason = $("#reason").val();
+        }
+        var describe = $("#returnOrderDescription").val();
+        var agreement = $("input[type='checkbox']").prop('checked');
+        var returnNumArray = '';
+        var result = false;
+        $('input[id ="returnNum"]').each(function(i) {
+            var returnNum = parseInt($(this).val());
+            returnNumArray += returnNum + ',';
+            if (returnNum > 0) {
+                result = true;
+            }
+        });
+        if (!result) {
+            dialog({ title: '系统提示', content: '请填写申请数量！' });
+            return false;
+        }
+        var uploadImg = $('#uploadImg').val();
+        //组装上传图片路径
+        var returnPicSArray = '';
+        $('input[id^="file-pic-s"]').each(function(i) {
+            returnPicSArray += $(this).val() + ',';
+        });
+        var returnPicCArray = '';
+        $('input[id^="file-pic-c"]').each(function(i) {
+            returnPicCArray += $(this).val() + ',';
+        });
+        //上传了图片
+        if (returnPicSArray && returnPicSArray.length > 0) {
+            if (!upstate) {
+                dialog({ title: '系统提示', content: '待图片上传完成后，再提交！' });
+                return;
+            }
+        }
+
+        var data = {
+            afterSaleId: afterSaleId,
+            returnNum: returnNumArray,
+            reason: reason,
+            describe: describe,
+            agreement: agreement,
+            returnPicSArray: returnPicSArray,
+            returnPicCArray: returnPicCArray
+        }
+        if (!reason) {
+            dialog({ title: '系统提示', content: '请选择申请理由！' });
+            return;
+        }
+        if (!describe || describe.length < 10 || describe.length > 500) {
+            dialog({ title: '系统提示', content: '请按要求输入问题描述！' });
+            return;
+        }
+        if (!agreement) {
+            dialog({ title: '系统提示', content: '您必须同意中国金币网上商城退换货协议后，才能提交申请！' });
+            return;
+        }
+        $.ajax({
+            url: '/front/member/afterSale/updateReturnGoodsSubmit',
+            type: 'get',
+            dataType: 'json',
+            data: data,
+            success: function(res) {
+                if ('99' == res.code) {
+                    window.location.href = 'https://passportdev.ecgci.com/login.html';
+                } else if (res.code == '01') {
+                    dialog({ title: '系统提示', content: '请不要重复提交！' });
+                    return;
+                } else if (res.code == '02') {
+                    dialog({ title: '系统提示', content: '请按要求填写售后服务申请！' });
+                    return;
+                } else if (res.code == '03') {
+                    dialog({ title: '系统提示', content: '修改售后服务申请失败！' });
+                    return;
+                } else if (res.code == '04') {
+                    dialog({
+                        content: '修改退货服务申请单状态已经变化，不能进行修改！',
+                        callback: function() {
+                            window.location.href = '/member/after_sale.html';
+                        }
+                    });
+                } else if (res.code == '00') {
+                    dialog({
+                        content: '您的退货服务申请单已提交，正在审核中，审核结果将以短信通知您!',
+                        callback: function() {
+                            window.location.href = '/member/after_sale.html';
+                        }
+                    });
+                } else {
+                    dialog({ title: '系统提示', content: '网络繁忙，请稍后重试' });
+                }
+            },
+            error: function() {
+                dialog({ title: '系统提示', content: '网络繁忙，请稍后重试' });
+            }
+        });
+    });
+   
+
+});

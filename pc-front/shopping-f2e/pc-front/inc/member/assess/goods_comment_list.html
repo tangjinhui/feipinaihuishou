@@ -1,0 +1,125 @@
+<script id="comment-template" type="text/x-handlebars-template">
+    {{#each list}}
+    <div class="item marb10">
+        <div class="i-item">
+            <div class="comment-content clearfix">
+                <dl class="xinde">
+                    <dd>{{content}}
+                        <div class="comment-show-pic">
+                            <table cellspacing="10">
+                                <tbody>
+                                    <tr>
+                                        {{#each esCommentImageSrc}} {{#compare @index 3}}
+                                        <td>
+                                            <a href="/comment_detail.html?goodsId={{../goodsId}}&commentId={{../commentId}}">
+                                                <img src="{{imgConf imgSrc ../goodsId}}" width="75px" height="75px">
+                                            </a>
+                                        </td>
+                                        {{/compare}} {{/each}}
+                                    </tr>
+                                </tbody>
+                            </table>
+                            {{#info imgCount}}
+                            <span style="{{info esCommentImageSrc}}">
+                                    <b style="margin-right:5px;" class="fl">共{{imgCount}}张图片</b>
+                                    <a target="_blank" href="/comment_detail.html?goodsId={{goodsId}}&commentId={{commentId}}"class="red"> 查看晒单&gt;</a>
+                                </span> {{/info}}
+                        </div>
+                    </dd>
+                    <span class="date-comment">{{dateSub addTime}}</span>
+                </dl>
+                <div class="o-topic">
+                    {{#topic setEssence}}
+                    <strong class="topic topic-best"></strong> {{/topic}}
+                    <span class="star sa{{averagePoints}}"></span>
+                </div>
+                <div class="dl-extra">
+                    <dl class="gmrq">
+                        <dd>
+                            <span class="level_bg level_{{levelId}}"></span> {{account}}
+                        </dd>
+                        <dd>
+                            <span class="u-level red">{{levelName}}</span>
+                        </dd>
+                        <dd>
+                            {{dateSub accessDate}}<span class="address">购买</span>
+                        </dd>
+                    </dl>
+                    <p class="c"></p>
+                </div>
+            </div>
+            <div class="btns">
+                <a title="回复" class="btn-reply" href="javascript:void(0);">回复(<span>{{replyCount}}</span>)</a>
+                <div class="useful">
+                    <a href="javascript:void(0);" class="btn-agree" data-commentId="{{commentId}}" name="agree">赞(<font>{{praiseCount}}</font>)</a>
+                </div>
+                <div class="ac text_r" style="padding-right: 20px;">
+                    <a href="/comment_detail.html?goodsId={{goodsId}}&commentId={{commentId}}" target="_blank" title="查看全部回复" class="red">查看全部回复</a>
+                </div>
+            </div>
+            <div style="display: none;" class="item-reply reply-lz">
+                <div class="reply-list">
+                    <!-- 弹出回复层 -->
+                    <div class="replay-form">
+                        <div class="arrow">
+                            <em>◆</em><span>◆</span>
+                        </div>
+                        <div class="reply-wrap">
+                            <p>
+                                <em>回复</em> <span class="u-name">{{account}}</span>
+                            </p>
+                            <div class="reply-input">
+                                <div class="fl">
+                                    <input type="text" maxlength="100">
+                                </div>
+                                <a class="reply-btn btn-gray" data-account="{{account}}" data-commentid="{{commentId}}" href="javascript:void(0);">回复</a>
+                                <div class="c"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 弹出回复层 -->
+                </div>
+            </div>
+            <!-- replies begin-->
+            {{#each replyContentList}} {{#compare @index 5}}
+            <div class="item-reply none">
+                <strong>{{addIndex @index ../replyCount}}</strong>
+                <div class="reply-list">
+                    <div class="reply-con">
+                        <span class="u-name"> <a class="red" target="_blank" href="javascript:void(0)">{{replyAccount}}</a></span>回复
+                        <span class="u-name"> <a target="_blank" class="red" href="javascript:void(0)">{{commentAccount}}</a> ： </span>
+                        <span class="u-con">{{replyContent}}</span>
+                    </div>
+                    <div class="reply-meta">
+                        <span class="reply-left fl">{{replyDate}}</span> <a href="javascript:void(0);" class="p-bfc">回复</a>
+                    </div>
+                    <div style="display:none;" class="replay-form">
+                        <div class="arrow">
+                            <em>◆</em><span>◆</span>
+                        </div>
+                        <div class="reply-wrap">
+                            <p>
+                                <em>回复</em> <span class="u-name">{{replyAccount}}:</span>
+                            </p>
+                            <div class="reply-input">
+                                <div class="fl">
+                                    <input type="text" maxlength="100">
+                                </div>
+                                <a class="reply-btn btn-gray" data-account="{{replyAccount}}" data-commentid="{{../commentId}}" href="javascript:void(0);">回复</a>
+                                <div class="c"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/compare}} {{/each}}
+        </div>
+    </div>
+    {{/each}}
+    <!-- 分页开始 -->
+    <div class="pagetycp" id="pagetycpComment">
+        <div class="page">
+            <!--#include file="/inc/plugin/limitPage.html"-->
+        </div>
+    </div>
+</script>

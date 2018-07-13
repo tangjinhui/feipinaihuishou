@@ -1,0 +1,195 @@
+define(['jquery', 'getCookie', 'autocomplete', 'setCookie', 'base64', 'json2'], function($, getCookie, autocomplete, setCookie) {
+
+    //导航栏选中效果
+    var url = document.location.toString();
+    var pageName = url.split('.com/')[1];
+    if (pageName != 'index.html') {
+        var attrVal = $('.nav_mune li').find('a[href$="/' + pageName + '"]').addClass('bg_nav_sel');
+    }
+
+    $('#j_searchBtn').on('click', function() {
+        var val = $.trim($('.search_inputBox').val());
+        val = val ? val : searchTextDefault;
+        val = encodeURI(val);
+        $(this).attr('href', 'http://pfdev.ecgci.com/search.html?keyVal=' + val);
+    });
+
+    //设置input的默认值，（选中效果，placeholder没有）
+    var searchText = $('#search_inputBox').val();
+    var searchTextDefault = '熊猫币';
+    $('#search_inputBox').val(searchTextDefault);
+
+    $('#search_inputBox').on('mouseover', function() {
+        $(this).select();
+    });
+
+    $('#search_inputBox').on('click', function() {
+        if($(this).val() == searchTextDefault){
+            $(this).val('');
+        }
+        $(this).css('color','#000');
+    });
+
+    //enter键盘操作
+    $('#search_inputBox').on('keyup',function(ev){
+        var ev = window.event || arguments.callee.caller.arguments[0];
+        var code = ev.keyCode || ev.which;
+
+        if(code == 13){   //enter
+            ev.returnValue = false;
+            ev.cancel = true;
+            var val = $.trim($('.search_inputBox').val());
+            val = val ? val : $('.search_inputBox').attr('placeholder');
+            val = encodeURI(val);
+            openNewWin('http://pfdev.ecgci.com/search.html?keyVal=' + val);
+        }
+        ev.returnValue = true;
+    });
+
+    var nickName = $.base64.atob(getCookie('nickname'), true);
+
+    if (nickName) {
+        $("#user_nickname").html('<a href="http://pfdev.ecgci.com/member/index.html"  target="_blank" ><span id="user_is_login" style="color: red">' + nickName + '</span></a>&nbsp;您好，欢迎来到中国金币网上商城！');
+        $("#user_loginout").html('<a class="login_out" href="javascript:void(0);">退出</a>');
+    }
+
+    $('.cate_left .fly').on('mouseover', function() {
+        $(this).find('.cate_cont').show();
+    });
+
+    var pathname = window.location.pathname;
+
+    $('.cate_left .fly').on('mouseleave', function() {
+        $(this).find('.cate_cont').hide();
+    });
+
+    $('.categorys').on('mouseover', function() {
+        if (pathname == '/' || pathname == '/index.html') return false;
+        $('.cate_left').show();
+    });
+
+    $('.categorys').on('mouseleave', function() {
+        if (pathname == '/' || pathname == '/index.html') return false;
+        $('.cate_left').hide();
+    });
+
+    $('.toSearch').on('click', function() {
+        var keyVal = $(this).attr('data-keyVal') ? $(this).attr('data-keyVal') : '';
+        var keyAttr = $(this).attr('data-attr') ? $(this).attr('data-attr') : '';
+        var keyCategory = $(this).attr('data-category') ? $(this).attr('data-category') : '';
+        var href = 'http://pfdev.ecgci.com/search.html?keyName=' + encodeURI(keyVal) + '&keyAttr=' + encodeURI(keyAttr) + '&keyCategory=' + encodeURI(keyCategory);
+        $(this).attr('href', href);
+    });
+
+    $('.toKefu').on('click', function() {
+        var memberId = $.base64.atob(getCookie('memberId'));
+        if (memberId) {
+            window.open('http://www.sobot.com/chat/pc/index.html?sysNum=cb163f1d67d348a891ba4979a2440858&partnerId=' + memberId, "_blank");
+        } else {
+            $('.tMask').show();
+            $('.t_login_tips').show();
+        }
+    });
+
+    $('body').on('click', '.login_out', function() {
+        $.ajax({
+            url: 'https://passportdev.ecgci.com/user/logout',
+            type: 'get',
+            dataType: 'jsonp',
+            success: function(res) {
+                if (res.code == '00') {
+                    window.location.reload();
+                }
+            }
+        });
+        return false;
+    });
+
+    //右侧“在线客服”小熊猫鼠标效果
+    $(".xm_nav").hover(function() {
+        $(this).stop(true, true).animate({ right: -105 }, 150).animate({ right: -95 }, 150);
+        $(".xm_navt").stop(true, true).fadeIn(400);
+    }, function() {
+        $(this).stop(true, true).animate({ right: -95 }, 150).animate({ right: -105 }, 150);
+        $(".xm_navt").stop(true, true).fadeOut(400);
+    });
+
+    //购物车鼠标效果
+    $('#header_cart').hover(function() {
+        var newNickName = $.base64.atob(getCookie('nickname'), true);
+        if (newNickName) {
+            $.ajax({
+                url: 'http://pfdev.ecgci.com/front/getCartItemNum',
+                type: 'get',
+                dataType: 'jsonp',
+                success: function(res) {
+                    if (res.code == '00') {
+                        cartText = JSON.parse(res.data).data;
+                        $('.sp_js_k').text(cartText);
+                    }
+                }
+            });
+        } else {
+            $('.sp_js_k').text('0');
+        }
+        $(this).find('.sp_js_k').show();
+    }, function() {
+        $(this).find('.sp_js_k').hide();
+    });
+
+    //自动补全
+    $('.search_inputBox').autocomplete('http://pfdev.ecgci.com/front/realTimeSearch', {
+        scrollHeight: 300,
+        width: 363,
+        delay: 10,
+        minChars: 1,
+        matchSubset: 1,
+        matchContains: 1,
+        cacheLength: 1,
+        selectFirst: false,
+        autoFill: false,
+        dataType: 'jsonp',
+        parse: function(data) {
+            var arr = data.data;
+            var rows = [];
+            for (var i = 0; i < arr.length; i++) {
+                rows[rows.length] = {
+                    data: arr[i],
+                    value: arr[i].name,
+                    result: arr[i].name
+                };
+            }
+            return rows;
+        },
+        formatItem: function(row, i, n) {
+            // console.log(row);
+            var temp = row.name;
+            if (temp.length > 25) {
+                temp = temp.substring(0, 25) + "...";
+            }
+            return temp + "<span>约" + row.count + "个商品</span>"
+        }
+    }).result(function() {
+        var val = $.trim($('.search_inputBox').val());
+        val = val ? val : $('.search_inputBox').attr('placeholder');
+        val = encodeURI(val);
+        openNewWin('http://pfdev.ecgci.com/search.html?keyVal=' + val);
+    });
+
+    //登录提示框
+    $('.t_close_btn').on('click',function(){
+        $('.tMask').hide();
+        $('.t_login_tips').hide();
+    });
+
+    //在新窗口打开
+    function openNewWin(url){
+        var a = document.createElement('a');
+        a.href = url;
+        a.type="hidden";
+        a.target = 'blank';
+        document.body.appendChild(a);
+        a.click();
+    }
+
+});

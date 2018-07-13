@@ -1,0 +1,23 @@
+<div class="zh_wc" id="finish" style="display:none;">
+    <p class="wc_mm">
+        <span>
+        </span> 恭喜您，修改已验证手机成功！
+    </p>
+    <div class="aq_dengji">
+        <p class="acco-safe">
+            <span>
+                账户安全：
+            </span>
+            <span class="red bold">
+                <span id="strength_title" class="">
+                </span>
+            <i id="strength_content" class="">
+                </i>
+            <span class="red">
+                </span>
+            </span>
+        </p>
+        <p class="acco-safe acco-safe-prompt">
+        </p>
+    </div>
+</div>

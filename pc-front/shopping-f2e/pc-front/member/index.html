@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>会员中心 - 中国金币商城</title>
+<meta name="Keywords" content="">
+<meta name="description" content="">
+<link href="/css/member/indexCenter.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div class="w crumbs">当前位置：
+        <a href="/index.html">首页</a>
+        <span>&gt;</span>会员中心
+    </div>
+    <div class="w clearfix">
+        <!--#include file="/inc/member/menu.html"-->
+        <div class="fr">
+            <div class="fr">
+                <div class="right_a m_right">
+                    <div class="mt_bord">
+                        <div class="fl mt_left">
+                            <img id="levelImg" src="http://static.ecgci.com/images/user_header.jpg">
+                        </div>
+                        <div class="fr mt_mxq">
+                            <p class="username">
+                                <span id="account"></span>
+                                <span>
+                                        ,欢迎您！
+                                    </span>
+                            </p>
+                            <div class="member" style="font-size:14px">
+                                <a href="/member/level.html" id="levelName">
+                                    </a>
+                                <span style="margin:0 0 0 10px">
+                                        成长值：
+                                        <span id="nextMarkValue"></span>
+                                </span>
+                            </div>
+                            <div class="acco-safe">
+                                <span class="jphy">
+                                        账户安全
+                                    </span>
+                                <strong id="memberSafeLevel">
+                                    </strong>
+                                <i id="cla">
+                                    </i>
+                                <a href="/member/security.html" class="tel">
+                                    <s>
+                                    </s>
+                                    <span id="mobileValid">
+                                        </span>
+                                </a>
+                                <a href="/member/security.html" class="memberDynamic">
+                                    <s>
+                                    </s>
+                                    <span id="memberValidateDynamic">
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="open_account" class="dn">
+                            <span class="fl" id="accountText">
+                                </span>
+                            <a id="index_open" class="go_open" onclick="return false" target="_blank" href="javascript:void(0);">
+                            <a id="open_cmbc" class="go_open" target="_blank" href="javascript:void(0);">
+                                </a>
+                            <a href="javascript:void(0);" style="color:#30f;position: absolute;right: 8px;" target="_blank" class="fr" id="linkText">
+                                </a>
+                        </div>
+                        <p class="c">
+                        </p>
+                        <div class="mem_dd">
+                            <div class="dd_info" style="width:900px;">
+                                <dl>
+                                    <dt>
+                                        订单提醒：
+                                    </dt>
+                                    <dd>
+                                        <span style="flk-03">
+                                                <a href="/member/order.html?orderStatus=0">
+                                                    待支付(
+                                                    <span id="dai_zf">
+                                                    </span> )
+                                        </a>
+                                        </span>
+                                    </dd>
+                                    <dd>
+                                        <a href="/member/assess.html">
+                                                待评价晒单商品(
+                                                <span id="dai_pj">
+                                                </span>
+                                                )
+                                            </a>
+                                    </dd>
+                                    <dd>
+                                        <a href="/member/order.html?orderStatus=7">
+                                                待确认收货(
+                                                <span id="dai_qr">
+                                                </span>
+                                                )
+                                            </a>
+                                    </dd>
+                                    <dd style="width:auto">
+                                        可用预存款：
+                                        <a href="/member/predeposit.html" id="">
+                                                <span id="validPredeposit">
+                                                </span>
+                                            </a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        消息精灵：
+                                    </dt>
+                                    <dd>
+                                        <a href="/member/sms.html">
+                                                短消息(
+                                                <span id="no_read_msg">
+                                                </span>
+                                                )
+                                            </a>
+                                    </dd>
+                                    <dd>
+                                        <a href="/member/consult.html">
+                                                已回复的咨询(
+                                                <span id="goods_consulting">
+                                                </span>
+                                                )
+                                            </a>
+                                    </dd>
+                                    <dd>
+                                        <a href="/member/bean.html">
+                                                我的金豆(
+                                                <span id="my_bean">
+                                                </span>
+                                                )
+                                            </a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="order_list" class="mart12">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <thead>
+                                <tr>
+                                    <th width="8%" align="center">
+                                        订单号
+                                    </th>
+                                    <th width="27%" align="center">
+                                        商品名称
+                                    </th>
+                                    <th width="8%" align="center">
+                                        收货人
+                                    </th>
+                                    <th width="10%" align="center">
+                                        订单金额
+                                    </th>
+                                    <th width="10%" align="center">
+                                        <select name="flag">
+                                            <option selected value="">
+                                                全部
+                                            </option>
+                                            <option value="1">
+                                                最近一周
+                                            </option>
+                                            <option value="2">
+                                                最近一月
+                                            </option>
+                                            <option value="3">
+                                                最近一年
+                                            </option>
+                                        </select>
+                                    </th>
+                                    <th width="10%" align="center">
+                                        <select name="orderStatus">
+                                            <option selected value="">
+                                                全部状态
+                                            </option>
+                                            <option value="0">
+                                                未支付
+                                            </option>
+                                            <option value="1">
+                                                待财务审核
+                                            </option>
+                                            <option value="5">
+                                                正在配货
+                                            </option>
+                                            <option value="6">
+                                                正在发货
+                                            </option>
+                                            <option value="7">
+                                                已发货
+                                            </option>
+                                            <option value="8">
+                                                交易完成
+                                            </option>
+                                            <option value="-3">
+                                                失效订单
+                                            </option>
+                                            <option value="-4">
+                                                已拒收
+                                            </option>
+                                            <option value="-5">
+                                                部分退货
+                                            </option>
+                                            <option value="-6">
+                                                已退货
+                                            </option>
+                                        </select>
+                                    </th>
+                                    <th width="11%" align="center">
+                                        快递单号
+                                    </th>
+                                    <th width="8%" align="center">
+                                        <select name="orderType">
+                                            <option value="">
+                                                全部类型
+                                            </option>
+                                            <option value="2">
+                                                PC订单
+                                            </option>
+                                            <option value="weixin">
+                                                微信订单
+                                            </option>
+                                            <option value="4">
+                                                竞价订单
+                                            </option>
+                                            <option value="spike">
+                                                秒杀订单
+                                            </option>
+                                            <option value="53">
+                                                抽签预订订单
+                                            </option>
+                                            <option value="51">
+                                                全年预订订单
+                                            </option>
+                                            <option value="onlinePerson">
+                                                现场订单
+                                            </option>
+                                            <option value="55">
+                                                其他渠道订单
+                                            </option>
+                                        </select>
+                                    </th>
+                                    <th width="10%" class="caoz">
+                                        操作
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="list_box">
+                                <tr>
+                                    <td colspan="9" style="text-align: center;">正在加载...</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="pageLimit" style="display: none;">
+                                    <td colspan="9" style="text-align: right;">
+                                        <!--#include file="/inc/plugin/limitPage.html"-->
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <div id="showDiv">
+                            <div class="show_small">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/common/footer.html"-->
+    <!--#include file="/inc/plugin/accountDialog.html"-->
+    <!--#include file="/inc/member/index/list.html"-->
+    <!--#include file="/data/channel/img_domain_data.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/member/indexCenter.js"></script>
+</body>
+
+</html>

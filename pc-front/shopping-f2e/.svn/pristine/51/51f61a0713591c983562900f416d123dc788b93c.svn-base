@@ -1,0 +1,21 @@
+<script id="list-template" type="text/x-handlebars-template">
+    {{#each list}}
+    <tr>
+        <td>
+            {{compaintContent}}</td>
+        <td>
+            <a href="/member/complain_view.html?complaintId={{esCompaintId}}" target="_blank">{{complaintTitle}}</a>
+        </td>
+        <td>
+            {{orderId}}
+        </td>
+        <td>
+            {{{replyDetail}}}</td>
+        <td>
+            {{replyDate}}
+        </td>
+        <td>
+            {{statusName status}}</td>
+    </tr>
+    {{/each}}
+</script>

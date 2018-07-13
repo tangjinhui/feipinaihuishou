@@ -1,0 +1,22 @@
+<script id="all-goods-zx" type="text/x-handlebars-template">
+	 <ul>
+       {{#each list}}                 
+        <li>
+            <p class="hy_xinxi"><span>会员：{{account}}</span>
+                <span>会员级别：
+                   {{memberType levelId}}
+                </span>
+                <span>咨询时间：{{postTime}}</span>
+                <span>回复时间：{{replyTime}}</span></p>
+
+            <p class="zx_nr"> {{content}}</p>
+
+            <p class="zx_hy"><span class="sp_ico"></span>商城回复：{{replyContent}}</p>
+
+        </li>
+        {{/each}}
+      
+      </ul>
+      
+      
+</script>

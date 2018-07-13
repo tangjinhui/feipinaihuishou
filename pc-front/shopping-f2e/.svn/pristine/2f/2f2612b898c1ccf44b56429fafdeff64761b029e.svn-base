@@ -1,0 +1,52 @@
+<script id="list-template" type="text/x-handlebars-template">
+    {{#listLen result}} 
+    {{#each result}}
+    <li>
+        <dl class=" ">
+            <dt>
+                <a href="http://itemdev.ecgci.com/product_detail_{{goodsid}}.html" target="_blank">
+                    <img data-original="{{imgConf goodsimg goodsid}}" class="img_loading" src="http://static.ecgci.com/images/git.png" alt="{{goodsname}}"
+                    title="{{goodsname}}" width="240" height="240">
+                </a>
+            </dt>
+            <dd class="tit" style="word-break: break-all;">
+                <a href="http://itemdev.ecgci.com/product_detail_{{goodsid}}.html" target="_blank" title="{{goodsname}}">
+                    {{{goodsname_show}}}
+                </a>
+            </dd>
+            <dd class="price clearfix">
+                <span class="fl">
+                    ￥{{formatPrice shopprice}}
+                </span>
+                <span class="yj_pj">
+                    <a href="/goods_comment.html?goodsId={{goodsid}}" target="_blank">
+                        已有{{commentcount}}人评价
+                    </a>
+                </span>
+            </dd>
+            <dd>
+                <div class="ss_list_menu">
+                    {{#isCanAddCart canAddCart}}
+                    <a class="jrgwc addCart" href="javascript:void(0);" data-goodsId='{{goodsid}}'>
+                        加入购物车
+                    </a>
+                    {{/isCanAddCart}}
+                    <a class="guanzhu addFavor" href="javascript:void(0);" data-goodsId='{{goodsid}}'> 
+                        关注
+                    </a>
+                    <p class="c">
+                    </p>
+                </div>
+            </dd>
+        </dl>
+    </li>
+    {{/each}} 
+    {{else}}
+    <div id="notfound" class="bord right_b mart12">
+        <h2>
+            抱歉,没有找到符合条件的商品！
+        </h2>
+        <b></b>
+    </div>
+    {{/listLen}}
+</script>

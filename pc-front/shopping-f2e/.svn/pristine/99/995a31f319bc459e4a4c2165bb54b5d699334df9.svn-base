@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>账户中心 - 会员中心 - 中国金币官方网上商城</title>
+    <meta name="Keywords" content="">
+    <meta name="description" content="">
+    <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" type="text/css" href="/css/member/open_account.css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div class="w crumbs">当前位置：
+        <a href="/index.html">首页</a>
+        <span>&gt;</span>
+        <a href="/member/index.html">会员中心</a>
+        <span>&gt;</span>交易账户开户
+    </div>
+    <div class="w clearfix">
+        <!--#include file="/inc/member/menu.html"-->
+        <div class="fl">
+            <!-- 在开户页面退出重新登录时，不是实名会员直接跳转到会员中心首页 -->
+            <table border="0" cellspacing="0" class="text_l" cellpadding="0" style="margin-bottom: 10px;margin-left: 16px;width: 998px;padding: 7px;">
+                <tbody>
+                    <tr>
+                        <td style="padding: 6px 10px; background-color:#f7f7f7;">
+                            <h2 style="font-weight:bold;">
+                                    交易账户开户
+                                </h2>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="open_box">
+                <div class="clearfix">
+                    <div class="open_title">
+                        <i>*</i> 姓名：
+                    </div>
+                    <div class="open_msg" id="realName">
+                    </div>
+                    <div class="open_error">
+                        <a href="javascript:void(0);">
+                                系统中我的姓名有误&gt;
+                            </a>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="open_title">
+                        <i>*</i> 性别：
+                    </div>
+                    <div class="open_msg open_sex bor">
+                        <div class="fl">
+                            <label for="sex1">
+                                男
+                            </label>
+                            &nbsp;&nbsp;
+                            <input type="radio" name="sex" id="sex1" value="n">
+                        </div>
+                        <div class="fr">
+                            <input type="radio" name="sex" id="sex2" value="v"> &nbsp;&nbsp;
+                            <label for="sex2">
+                                女
+                            </label>
+                        </div>
+                    </div>
+                    <div class="open_error">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="open_title">
+                        <i>
+                                *
+                            </i> 手机：
+                    </div>
+                    <div class="open_msg">
+                        <span id="mobile">
+                            </span>
+                    </div>
+                    <div class="open_error">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="open_title">
+                        <i>
+                                *
+                            </i> 邮箱：
+                    </div>
+                    <div class="open_msg no_border bor">
+                        <input type="text" name="email" value="">
+                    </div>
+                    <div class="open_error">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="open_title">
+                        <i>
+                                *
+                            </i> 身份证号：
+                    </div>
+                    <div class="open_msg" id="psCode">
+                    </div>
+                    <div class="open_error">
+                        <a href="javascript:void(0);">
+                                系统中我的身份证号有误&gt;
+                            </a>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="open_checkbox">
+                        <input type="checkbox" id="open_check" checked="checked">
+                    </div>
+                    <div class="open_msg open_read">
+                        <span>
+                                我已阅读并同意
+                            </span>
+                        <a href="/doing/virtual_account_protocol.html" target="_black">
+                                《中国金币网上商城虚拟交易账户开户协议》
+                            </a>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="open_title">
+                    </div>
+                    <div class="open_msg go_open">
+                        <button id="go_open" class="btndis">
+                            去开户
+                        </button>
+                    </div>
+                    <div class="open_error">
+                    </div>
+                </div>
+                <div class="open_error_msg dn">
+                    <strong>
+                            1.系统中我的姓名认证错误
+                        </strong>
+                    <p>
+                        如果系统中认证您的姓名有误，请您联系中国金币客服进行修改申请，修改正确后再进行开户，否则无法正常开户。客服电话：4008-188-666；
+                    </p>
+                    <strong>
+                            2.系统中我的身份证号有误
+                        </strong>
+                    <p>
+                        如果系统中认证的您的身份证号有误，请您联系中国金币客服申请修改。客服电话：4008-188-666。
+                    </p>
+                </div>
+                <a target="_blank" id="open_href" href="javascript:void(0);">
+                    </a>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/common/footer.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/member/open_account.js"></script>
+</body>
+
+</html>

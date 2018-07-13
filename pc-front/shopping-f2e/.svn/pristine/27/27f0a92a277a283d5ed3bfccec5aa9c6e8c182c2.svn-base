@@ -1,0 +1,178 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/dialog.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+@import url('../plugin/menu.css');
+@import url('../plugin/accountDialog.css');
+
+label {
+    vertical-align: middle;
+}
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+.text_l {
+    text-align: left;
+}
+.clear_fix {
+    zoom: 1
+}
+table, table td {
+    border: #e1e1e1 1px solid;
+    line-height: 24px;
+    border-collapse: collapse
+}
+table td {
+    padding: 5px 10px;
+}
+h2 {
+    height: 28px;
+    line-height: 28px;
+    color: #58595b;
+    border: none;
+    padding: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+h2 {
+    font-weight: normal;
+}
+.crumbs {
+    height: 52px;
+    line-height: 52px;
+    color: #58595b;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+}
+.crumbs span {
+    padding: 0 6px;
+}
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+td {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+a:hover {
+    text-decoration: underline
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+#dep_box, #bind_box {
+    padding: 32px 0px;
+    margin-left: 16px;
+}
+#dep_box label, #bind_box label {
+    width: 84px;
+    float: left;
+    text-align: right;
+    margin-right: 30px;
+}
+#dep_box>div, #bind_box>div {
+    margin-bottom: 30px;
+}
+#dep_box .sum a, #bind_box .sum a {
+    padding: 8px 18px;
+    border: 1px solid #a0a0a0;
+    color: #000;
+}
+#dep_box .sum .cz, #bind_box .sum .cz {
+    color: #fff;
+    background: #e54346;
+    border: 1px solid #e54346;
+    margin-right: 12px;
+}
+#dep_box .to_all, #bind_box .to_all {
+    margin-top: 20px;
+    text-align: right;
+    width: 994px;
+}
+#js_bk {
+    margin-left: 114px;
+}
+#dep_box .yh_code, #bind_box .yh_code {
+    float: left;
+    width: 200px;
+    height: 102px;
+    border: 1px solid #b3b3b3;
+    padding: 14px;
+    border-radius: 10px;
+}
+#dep_box .yh_code div,
+#dep_box .yh_code p， #bind_box .yh_code div,
+#bind_box .yh_code p {
+    margin-bottom: 20px;
+}
+#dep_box i, #bind_box i {
+    font-style: normal;
+}
+#dep_box .yh_code div span, #bind_box .yh_code div span {
+    vertical-align: middle;
+}
+#dep_box .yh_code div a, #bind_box .yh_code div a {
+    float: right;
+    padding: 6px 8px;
+    vertical-align: middle;
+    background: #cab253;
+    color: #000;
+}
+#dep_box a#jcbd {
+    color: #0009c4;
+    margin-left: 10px;
+}
+#dep_box .sum span, #bind_box .sum span {
+    margin-right: 84px;
+    width: 176px;
+    display: inline-block;
+    vertical-align: top;
+    *display: inline;
+    *zoom: 1;
+}
+#dep_box .col_bla, #bind_box .col_bla {
+    font-weight: bold;
+}
+#dep_box .col_red, #bind_box .col_red {
+    font-weight: bold;
+    color: #e54346;
+}
+#dep_box .sum .no_mar, #bind_box .sum .no_mar {
+    margin-right: 30px;
+}
+#dep_box .sum a，#bind_box .sum a {
+    padding: 8px 18px;
+    border: 1px solid #a0a0a0;
+    color: #000;
+}
+#dep_box .sum .cz, #bind_box .sum .cz {
+    color: #fff;
+    background: #e54346;
+    border: 1px solid #e54346;
+    margin-right: 12px;
+}
+#dep_box table, #bind_box table {
+    width: 994px;
+    margin-top: 8px;
+    text-align: center;
+    border: 1px solid #a0a0a0;
+    border-collapse: collapse;
+}
+#dep_box table tr, #bind_box table tr {
+    border: 1px solid #a0a0a0;
+    padding: 12px 0;
+}
+#dep_box table td, #bind_box table td {
+    padding: 12px 0;
+}
+#dep_box .fis_td, #bind_box .fis_td {
+    width: 212px;
+}
+#dep_box .to_all a, #bind_box .to_all a {
+    color: #0009c4;
+}
+#clientUser {
+    color: #0009c4;
+    margin-left: 18px;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>商品咨询</title>
+        <link rel="stylesheet" type="text/css" href="/css/goods_zx.css">
+    </head>
+<body>
+     <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+   <div class="w crumbs">
+        当前位置：
+        <a href="/index.html">首页</a>
+        <span>&gt;</span><span id="goodsLink"></span> 
+        <span>&gt;</span>商品咨询
+    </div>
+    <div class="wrap top">
+        <div class="zx_left bord" id="goodsInfo">
+              
+        </div>
+    
+    <!-- 右侧购买记录 -->
+    <div class="gm_in nor_b">
+        <div class="gm_zt">
+            <h3 class="jianttr">购买咨询</h3>
+            <div class="jp_xinxtb jp_xinxtb3 padr10 tabs" id="changeContent">
+                <ul class="fl">
+                    <li class="select" data-status="all">全部购买咨询</li>
+                    <li data-status="zixun_type1">产品咨询</li>
+                    <li data-status="zixun_type2">库存及配送</li>
+                    <li data-status="zixun_type3">支付及发票</li>
+                    <li data-status="zixun_type4">售后服务</li>
+                    <li class="last" data-status="zixun_type5">其他问题</li>
+                </ul>
+
+            </div>
+            <div>
+                 
+             </div>
+            <!-- ajax -->
+            <div id="jsPageBox" class="gm_cpmargin">
+                <div class="zx_list" id="goodsZx">
+                    <div id="load" style="text-align: center;line-height: 40px;">正在加载...</div>
+                   <p id="noGoodsZx" style="display: none; text-align: center;font-size: 14px; padding: 10px 0;">暂无更多</p>
+                </div>
+                 <div class="page" id="goodsZxPage">
+
+                        <!--#include file="/inc/plugin/limitPage.html"-->
+
+                </div> 
+               
+            </div>
+        </div>
+        
+        <div class="allpc">
+            <p class="ckhf ckzx">
+                购买之前，如有问题，请向客服咨询。
+                <a id="jsZX" href="javascript:;" class="zxall">[发表咨询]</a>
+            </p>
+
+    
+
+    <div style="display: none;" id="esGoodsConsultingFormDiv" class="bord mart12 right_b m_right dn">
+        <form  id="esGoodsConsultingForm" method="GET" name="esGoodsConsultingForm" action="/actions/shop/save_es_goods_consulting.bsh">
+                <table border="0px" class="formtable">
+                    <tbody>
+                        <tr>
+                            <td colspan="3">
+                                <span class="red pl20">声明：您可在购买前对产品包装、颜色、运输、库存等方面进行咨询，我们有专人进行回复！</span>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td align="right" width="80">咨询类型：</td>
+                            <td colspan="2">
+                                
+                                <label><input name="test" type="radio" value="zixun_type1" checked="">产品咨询</label>
+                                
+                                <label><input name="test" type="radio" value="zixun_type2">库存及配送</label>
+                                
+                                <label><input name="test" type="radio" value="zixun_type3">支付及发票</label>
+                                
+                                <label><input name="test" type="radio" value="zixun_type4">售后服务</label>
+                                
+                                <label><input name="test" type="radio" value="zixun_type5">其他</label>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td align="right">产品咨询：</td>
+                            <td colspan="2">咨询产品信息，请您拨打中国金币总公司客服热线：4008-188-666，以便获得更准确的信息。</td>
+                        </tr>
+                        <tr>
+                            <td align="right" valign="top">咨询内容：</td>
+                            <td width="368">
+                                <textarea name="content" id="content" cols="1" rows="10" class="required cp_cent_pfborderc required valid"></textarea>
+                                <label for="content" generated="true" class="error dn" style="margin-right:0;"><font color="red">*必填项</font></label>
+                                <p id="contentTips">还可以输入200字。</p>
+                            </td>
+                           
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2">
+                                <input id="jsSubmitZX" value="提交咨询" type="button" class="btn">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+    <!--#include file="/inc/member/assess/goods_info.html"-->
+    <!--#include file="/inc/goodsZx/allGoodsZx.html"-->    
+    <!--#include file="/common/footer.html"-->
+     <!--#include file="/data/channel/img_domain_data.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/goods_zx.js"></script>
+</html>

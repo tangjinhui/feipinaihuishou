@@ -1,0 +1,133 @@
+require(['jquery', 'handlebars', 'limitPage', 'dialog', 'header', 'modules/menu'], function($, Handlebars, limitPage, dialog) {
+
+    Handlebars.registerHelper("statusName", function(status) {
+        var str = '';
+        if (0 == parseInt(status)) {
+            str = '未回复';
+        } else if (1 == parseInt(status)) {
+            str = '已回复';
+        } else if (2 == parseInt(status)) {
+            str = '已解决';
+        }
+        return str;
+    });
+
+    initData();
+
+    function initData(pageNum) {
+        $.ajax({
+            url: '/front/member/complaint/list',
+            type: 'get',
+            dataType: 'json',
+            data: {
+                pageNum: pageNum || 1
+            },
+            success: function(res) {
+                if ('99' == res.code) {
+                    window.location.href = 'https://passportdev.ecgci.com/login.html';
+                } else if (res.code == '00') {
+                    var listTemp = Handlebars.compile($("#list-template").html());
+                    $('#list_box').html(listTemp(res.data.page));
+                    if (res.data.page.list.length) {
+                        $('.None_record').hide();
+                        initLimitPage(res.data.page.pages, res.data.page.pageNum);
+                    } else {
+                        $('.pageLimit').hide();
+                        $('.None_record').show();
+                    }
+                } else {
+                    dialog({ title: '系统提示', content: '网络繁忙，请您稍后重试' });
+                }
+            },
+            error: function() {
+                dialog({ title: '系统提示', content: '网络繁忙，请您稍后重试' });
+            }
+        });
+    }
+
+    function initLimitPage(pages, currentPage) {
+        $('.pageLimit').show();
+        $('#light-pagination').pagination({
+            pages: pages,
+            cssStyle: 'light-theme',
+            displayedPages: 3,
+            edges: 3,
+            currentPage: currentPage,
+            prevText: '上一页',
+            nextText: '下一页',
+            onPageClick: function(page) {
+                initData(page);
+                var top = $('#navi').height();
+                $('html,body').animate({
+                    scrollTop: top
+                }, 300);
+                return false;
+            }
+        });
+    }
+   
+    $('#complaintFrom').on('click', function() {
+        if ($(this).prop('disabled')) {
+            return;
+        }
+        var complaintTitle = $.trim($('#complaintTitle').val());
+        var complaintDetails = $.trim($('#textts').val());
+        var orderId = $.trim($("#orderId").val());
+        if (orderId) {
+            var reg = new RegExp("^[0-9]{1,10}$");
+            if (!reg.test(orderId)) {
+                dialog({ content: '请输入正确的订单号' });
+                return false;
+            }
+        }
+        if (!complaintTitle) {
+            dialog({
+                content: '请输入投诉主题'
+            });
+            return false;
+        }
+        if (!complaintDetails) {
+            dialog({ content: '请输入留言内容' });
+            return false;
+        }
+        $(this).prop('disabled', true);
+        $.ajax({
+            url: '/front/member/complaint/saveComplaint',
+            type: 'post',
+            dataType: 'json',
+            data: {
+                orderId: $.trim($('#orderId').val()),
+                complaintType: $('#complaintType').val(),
+                complaintTitle: complaintTitle,
+                complaintDetails: complaintDetails
+            },
+            success: function(res) {
+                if (res && res.code == "99") {
+                    window.location.href = 'https://passportdev.ecgci.com/login.html';
+                } else if (res && res.code == "00") {
+                    $("#orderId").val('');
+                    $("#complaintTitle").val('');
+                    $("#textts").val('');
+                    window.location.reload();
+                } else if (res && res.code == "01") {
+                    dialog({content: '请选择投诉类型'});
+                } else if (res && res.code == "02") {
+                    dialog({content: '请输入投诉主题'});
+                } else if (res && res.code == "03") {
+                    dialog({content: '请输入留言内容'});
+                } else if (res && res.code == "04") {
+                    dialog({content: '投诉主题最多可输入20字符数'});
+                } else if (res && res.code == "05") {
+                    dialog({content: '留言内容最多可输入200字符数'});
+                } else {
+                    dialog({content: '网络繁忙，请稍后重试'});
+                }
+                $('#complaintFrom').prop('disabled', false);
+            },
+            error: function() {
+                dialog({content: '网络连接超时，请您稍后重试'});
+                $('#complaintFrom').prop('disabled', false);
+            }
+        });
+    });
+});

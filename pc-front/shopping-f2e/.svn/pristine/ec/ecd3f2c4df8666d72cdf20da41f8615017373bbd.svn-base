@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        会员中心-服务中心-售后服务
+    </title>
+    <meta name="Keywords" content="会员中心-服务中心-售后服务">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="/css/member/after_sale/after_sale.css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div id="navi" class="w crumbs">
+        当前位置：
+        <a href="/index.html">
+                首页
+            </a>
+        <span>
+                &gt;
+            </span>
+        <a href="/member/index.html">
+                会员中心
+            </a>
+        <span>
+                &gt;
+            </span> 售后服务
+    </div>
+    <div class="w clearfix">
+        <!--#include file="/inc/member/menu.html"-->
+        <div class="fr">
+            <div class="fr">
+                <div class="right_a">
+                    <form id="esAfterSaleForm" name="esAfterSaleForm" action="/views/contents/member/es_member_return_goods/return_goods_list_paging.jsp" method="POST">
+                        <div class="top mar_bottom">
+                            <h2 class="tit">
+                                    售后服务记录
+                                </h2>
+                        </div>
+                        <p class="c">
+                        </p>
+                        <div id="page_list" style="padding:10px; margin-top: -15px;" class="bor3">
+                            <!-- 表格 -->
+                            <table class="fz_12" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <thead>
+                                    <!-- 标题 -->
+                                    <tr>
+                                        <th width="8%" align="center">
+                                            服务单号
+                                        </th>
+                                        <th width="8%" align="center">
+                                            订单号
+                                        </th>
+                                        <th width="25%" align="center">
+                                            售后商品
+                                        </th>
+                                        <th width="8%" align="center">
+                                            售后类型
+                                        </th>
+                                        <th width="15%" align="center">
+                                            申请时间
+                                        </th>
+                                        <th width="10%" align="center">
+                                            <select name="status">
+                                                <option value="0" selected="true">
+                                                    全部
+                                                </option>
+                                                <option value="101">
+                                                    待审核
+                                                </option>
+                                                <option value="105">
+                                                    待寄回
+                                                </option>
+                                                <option value="107">
+                                                    待验货
+                                                </option>
+                                                <option value="109">
+                                                    退款中
+                                                </option>
+                                                <option value="110">
+                                                    已完成
+                                                </option>
+                                                <option value="-110">
+                                                    已取消
+                                                </option>
+                                                <option value="-101">
+                                                    申请驳回
+                                                </option>
+                                                <option value="-107">
+                                                    验货驳回
+                                                </option>
+                                            </select>
+                                        </th>
+                                        <th width="26%" align="center">
+                                            操作
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="list_box">
+                                    <!-- 循环结束 -->
+                                </tbody>
+                                <tfoot>
+                                    <tr class="pageLimit" style="display: none;">
+                                        <td colspan="9" style="text-align: right;">
+                                            <!--#include file="/inc/plugin/limitPage.html"-->
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <div class="None_record" style="border-top: 0;display:none; margin-top: 0;">
+                                暂无符合条件的信息
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/inc/member/after_sale/list.html"-->
+    <!--#include file="/inc/plugin/logistics_information.html"-->
+    <!--#include file="/common/footer.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/member/after_sale/after_sale.js"></script>
+</body>
+
+</html>

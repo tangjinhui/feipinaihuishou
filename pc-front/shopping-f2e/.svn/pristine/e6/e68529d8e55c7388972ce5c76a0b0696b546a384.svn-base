@@ -1,0 +1,42 @@
+<div id="layer_ck" class="dn">
+    <div id="bd_tx" class="layer_ck_other">
+        <span id="closeCmbc" src="/views/contents/member/trans_member/imgs/xx.png"></span>
+        <div class="ck_title">
+        </div>
+        <div class="ck_input">
+        </div>
+        <div class="ck_sub">
+            <a href="javascript:void(0);" class="js_resh">已完成</a>
+        </div>
+    </div>
+</div>
+<div id="charge_box" class="dn">
+    <div id="cz_tx" class="layer_ck">
+        <div class="ck_title">充值
+            <a class="closeLayer" href="javascript:void(0);"></a>
+        </div>
+        <div class="ck_input">请输入充值金额：&nbsp;
+            <input id="js_czje" type="text">&nbsp;&nbsp;最低充值金额5元
+        </div>
+        <div class="ck_sub">
+            <a href="javascript:void(0);" id="js_gocz">去充值</a>
+        </div>
+    </div>
+</div>
+<div id="withdrawal_box" class="dn">
+    <div id="tx_tx" class="layer_tx">
+        <div class="ck_title">提现
+            <a class="closeLayer" href="javascript:void(0);"></a>
+        </div>
+        <div class="ck_input">请输入提现金额：&nbsp;
+            <input id="js_txje" type="text">
+        </div>
+        <div class="tx_shuoming">
+            <span>《提现说明》</span>
+            <a target="_blank" href="/doing/virtual_account.html#withdraw">点击查看>></a>
+        </div>
+        <div class="ck_sub">
+            <a id="js_gotx" href="javascript:void(0);">去提现</a>
+        </div>
+    </div>
+</div>

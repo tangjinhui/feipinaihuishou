@@ -1,0 +1,380 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/dialog.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+@import url('../../plugin/menu.css');
+.clearfix {
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.right_a {
+    width: 1003px;
+}
+
+.text_l {
+    text-align: left;
+}
+
+table, table th, table td {
+    border: #e1e1e1 1px solid;
+    line-height: 24px;
+    border-collapse: collapse
+}
+
+table th {
+    background: #f3f3f3;
+    text-align: center;
+}
+
+table th, table td {
+    padding: 5px 10px;
+}
+
+h2 {
+    height: 28px;
+    line-height: 28px;
+    color: #58595b;
+    border: none;
+    padding: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearfix {}
+
+th {
+    border: none;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+input[type="checkbox"] {
+    width: 14px;
+    margin-right: 5px;
+}
+
+input[type="radio"] {
+    width: 10px;
+    margin-right: 5px;
+}
+
+.crumbs {
+    height: 52px;
+    line-height: 52px;
+    color: #58595b;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+}
+
+.crumbs span {
+    padding: 0 6px;
+}
+
+.red {
+    color: #e43a3d;
+}
+
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+
+table .cg_titp {
+    line-height: 20px;
+    clear: both
+}
+
+h6 {
+    padding: 0 10px;
+    background: #f3f3f3;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: #e1e1e1 1px solid;
+    margin: 0;
+}
+
+em {
+    font-style: normal;
+}
+
+input.num {
+    width: 27px;
+    height: 22px;
+    border: #e1e1e1 1px solid;
+    text-align: center;
+}
+
+td, td {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+
+.crumbs a:hover {
+    color: #c42605;
+}
+
+a {
+    color: #666666;
+}
+
+a:hover {
+    color: #e43a3d;
+}
+
+span.red {
+    color: #e43a3d
+}
+
+.fz_12 {
+    font-size: 12px;
+}
+
+.right_a .top {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    padding: 5px 0 0px 10px;
+    overflow: hidden;
+}
+
+.right_a .top .tit {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    float: left;
+}
+
+.dd_th {
+    border: 1px solid #ccc;
+    border-top: 0 none;
+    padding: 10px 0 5px;
+}
+
+.dd_th .pic {
+    width: 859px;
+    height: 59px;
+    background: url(http://static.ecgci.com/images/dd_shfw.png) no-repeat;
+    margin: 0 auto;
+}
+
+.dd_th .pic.p1 {
+    background-position: 0 0;
+}
+.dd_th .pic.p7 {
+    background-position: 0 -378px;
+}
+
+/*È…ß*/
+
+.service_type {}
+
+.right_a .glo {
+    margin: 20px 0;
+    font-size: 14px;
+    line-height: 28px;
+    color: #333;
+}
+
+.right_a .glo .tit {}
+
+.right_a .glo .m_l {
+    margin-left: 12px;
+}
+
+.right_a .glo .ico_goback {
+    width: 78px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+    border: 1px solid #e4393c;
+    position: relative;
+    cursor: pointer;
+}
+
+.right_a .glo .gro {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+/*Á4zT²z*/
+
+.num_change {
+    width: 84px;
+    height: 26px;
+    line-height: 26px;
+    color: #777;
+    border: 1px solid #777;
+    font-size: 14px;
+}
+
+.num_change input {
+    border: 0 none;
+    outline: none;
+    height: 26px;
+    line-height: 26px;
+}
+
+.num_change .num_less, .num_change .num_more {
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.num_change .num_less {
+    border-right: 1px solid #777;
+}
+
+.num_change .num {
+    text-align: center;
+    width: 30px;
+}
+
+.num_change .num_more {
+    border-left: 1px solid #777;
+}
+
+
+/*»*&Ç*/
+
+.info_wrap {
+    margin-top: 20px;
+    padding: 30px 10px;
+    border: 1px solid #ccc;
+}
+
+.info_wrap .line {
+    line-height: 25px;
+    margin-bottom: 25px;
+}
+
+.info_wrap .line textarea {
+    resize: none;
+    width: 400px;
+    height: 180px;
+}
+
+.info_wrap .img_btn {
+    width: 198px;
+    height: 38px;
+    border: 0 none;
+    cursor: pointer;
+    background-color: #e85a5d;
+    margin-bottom: 10px;
+    color: #FFF;
+}
+
+
+/*4â4»*&*/
+
+.bottom {
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.bottom .xy {
+    color: #0000ff;
+}
+
+.sub_btn {
+    width: 198px;
+    height: 38px;
+    background-color: #e85a5d;
+    color: #FFF;
+    border: 0 none;
+    margin: 0 auto;
+    margin-top: 50px;
+    clear: both;
+    display: block;
+    cursor: pointer;
+}
+
+.txt_wrap {
+    width: 410px;
+    overflow: hidden;
+}
+
+.txt_wrap p.fl {
+    width: 400px;
+}
+
+#file-list {
+    width: 100%;
+    overflow: hidden;
+}
+#file-list li {
+    float: left;
+    width: 20%;
+    height: 230px;
+    overflow: hidden;
+    margin-right: 1%;
+}
+.w100 {
+    width: 90%;
+}
+
+#checTemp_active {
+    width: 340px;
+}
+
+#console {
+    position: relative;
+    left: 5px;
+    *top: -20px;
+}
+
+.num_change.no_change {
+    color: #ccc;
+    cursor: default;
+}
+
+.num_change.no_change input {
+    color: #ccc;
+}

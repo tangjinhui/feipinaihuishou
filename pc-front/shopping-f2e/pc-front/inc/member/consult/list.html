@@ -1,0 +1,26 @@
+<script id="list-template" type="text/x-handlebars-template">
+    {{#each list}}
+    <tr>
+        <td class="font_02 tr_left">
+            <a href="http://itemdev.ecgci.com/product_detail_{{goodsId}}.html" target="_blank">
+                    {{goodsName}}
+                </a>
+        </td>
+        <td align="cencer">
+            {{consultingType}}
+        </td>
+        <td class="tr_left">
+            <div>
+                {{content}}
+            </div>
+            {{postTime}}
+        </td>
+        <td class="tr_left">
+            <div>
+                {{replyData data}}
+            </div>
+            {{replyTime}}
+        </td>
+    </tr>
+    {{/each}}
+</script>

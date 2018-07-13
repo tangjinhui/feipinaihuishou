@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>中国金币网上商城-中国金币云商线上销售平台</title>
+    <meta name="Keywords" content="中国金币云商平台" />
+    <meta name="description" content="中国金币云商平台" />
+    <meta content=IE=edge http-equiv=X-UA-Compatible />
+    <link rel="icon" href="http://static.ecgci.com/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div class="wrap clearfix">
+        <div class="fl jdt">
+            <!-- 焦点图 -->
+            <div class="first-screen-view" id="jdt" style="">
+                <div class="first_view_main">
+                    <div class="home_banner">
+                        <div class="swiper-container">
+                            <div id="banner" class="swiper-wrapper">
+                            </div>
+                            <div class="pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 熊猫币实时价 -->
+        <div class="fr right">
+            <div class="gold_pan">
+                <h3>
+                    熊猫币实时价
+                </h3>
+                <div id="gold_loc" class="padan">
+                </div>
+                <div id="gold_au" class="au posr">
+                </div>
+            </div>
+            <div class="sub_nav">
+                <div class="one">
+                </div>
+                <div class="four clearfix">
+                    <a href="http://ydingdev.ecgci.com/reserve_year.html" class="qn bor bob" target="_blank">
+                        <i class="posa icon">
+                        </i>
+                        全年预订
+                    </a>
+                    <a href="javascript:void(0)" class="ms bob" target="_blank">
+                        <i class="icon posa">
+                        </i>
+                        秒杀
+                    </a>
+                    <a href="http://ydingdev.ecgci.com/" class="cq bor" target="_blank">
+                        <i class="icon posa">
+                        </i>
+                        抽签购
+                    </a>
+                    <a href="http://auctiondev.ecgci.com/auction.html" class="jp" target="_blank">
+                        <i class="icon posa">
+                        </i>
+                        竞价
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 楼层1 -->
+    <div class="panda_coin wrap clearfix floor">
+        <h2>
+            <i class="icon ">
+            </i>
+            熊猫币
+            <a href="javascript:void(0)" target="_blank" class="toSearch" data-category="10006" data-keyVal="熊猫币">
+                更多
+            </a>
+        </h2>
+        <div class="fr fot_pro">
+        </div>
+    </div>
+    <!-- 楼层2 -->
+    <div class="keepsake_coin wrap clearfix floor">
+        <h2>
+            <i class="icon ">
+            </i>
+            纪念币
+            <a href="javascript:void(0)" target="_blank" class="toSearch" data-category="10005" data-keyVal="纪念币">
+                更多
+            </a>
+        </h2>
+        <div class="fr fot_pro">
+        </div>
+    </div>
+    <!-- 楼层3 -->
+    <div class="foreign_coin wrap clearfix floor">
+        <h2>
+            <i class="icon ">
+            </i>
+            外国币
+            <a href="javascript:void(0)" target="_blank" class="toSearch" data-category="10007" data-keyVal="外国币">
+                更多
+            </a>
+        </h2>
+        <div class="fr fot_pro">
+        </div>
+    </div>
+    <!-- 楼层4 -->
+    <div class="other_coin wrap clearfix floor">
+        <h2>
+            <i class="icon ">
+            </i>
+            其他商品
+            <a href="javascript:void(0)" target="_blank" class="toSearch" data-category="10039" data-keyVal="其他商品">
+                更多
+            </a>
+        </h2>
+        <div class="fr fot_pro">
+        </div>
+    </div>
+    <div class="wrap base_info clearfix">
+        <div>
+            <p>
+                商城公告
+            </p>
+            <dl class="nc clearfix">
+                <dt>
+                    <i class="posa icon icon_base1">
+                    </i>
+                </dt>
+                <dd id="article">
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <p>
+                知识堂
+            </p>
+            <dl class="kb clearfix">
+                <dt>
+                    <i class="posa icon icon_base2">
+                    </i>
+                </dt>
+                <dd id="kownledge">
+                </dd>
+            </dl>
+        </div>
+        <div class="last">
+            <p>
+                联系我们
+            </p>
+            <dl class="tel clearfix">
+                <dt>
+                    <i class="posa icon icon_base3">
+                    </i>
+                </dt>
+                <dd style="padding-bottom: 24px">
+                    全国服务热线
+                    <span>
+                        4008-188-666
+                    </span>
+                    <a href="mailto:service@chngc.net" style="cursor:pointer">
+                        Email：service@chngc.net
+                    </a>
+                    <span style="font-size:12px">
+                        8:30-18:00 节假日除外
+                    </span>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <!--#include file="/common/footer.html"-->
+    <!--#include file="/inc/index/focus.html"-->
+    <!--#include file="/inc/index/gold.html"-->
+    <!--#include file="/inc/index/item.html"-->
+    <!--#include file="/inc/index/article.html"-->
+    <!--#include file="/data/channel/img_domain_data.html"-->
+    <!--#include file="/data/channel/index_data.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/index.js"></script>
+</body>
+
+</html>

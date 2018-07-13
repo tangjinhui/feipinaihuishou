@@ -1,0 +1,97 @@
+.mainIframe{
+    /*padding: 10px 20px;*/
+    padding-top: 3px;
+    padding-left: 10px;
+}
+.mainIframe h3{
+    text-align: center;
+    font-family: "微软雅黑","Microsoft YaHei";
+    font-size: 20px;
+    color:#4f4f4f;
+    font-weight: bold;
+}
+.mainIframe h4{
+	font-size: 16px;
+    color: #4f4f4f;
+    margin: 1.33em 0;
+}
+.mainIframe p{
+    font-family: "宋体";
+    font-size: 12px;
+    color:#4f4f4f;
+    margin: 1em 0;
+}
+.mainIframe p.praBlock,.mainIframe h4.praBlock{
+    text-indent: 36px;
+    line-height: 30px;
+}
+.mainIframe a{
+    color: rgb(85,26,139);
+    text-decoration: underline;
+}
+.mainTxt1,.mainIframe>img,.mainTxt1>img{
+    padding-left: 64px;
+    padding-right: 59px;
+    /*margin-bottom: 46px;
+    margin-top: 26px;*/
+}
+.mainIframe img.imgBlock{
+	padding-left: 32px;
+    padding-right: 59px;
+}
+#normShoppingProcess .mainTxt1>img{
+	padding-left: 0;
+    padding-right: 10px;
+}
+span.red{
+    background-color: #E6393B;
+    color: #fff;
+    padding: 4px;
+}
+.mainTxt1 table,.mainTxt1 table th,.mainTxt1 table td,
+.mainTxt2 table,.mainTxt2 table th,.mainTxt2 table td,
+.mainTxt4 table,.mainTxt4 table th,.mainTxt4 table td{
+    border: #e1e1e1 1px solid;
+    line-height: 24px;
+    border-collapse: collapse;
+    font-family: "宋体";
+    font-size:12px;
+}
+.mainTxt1 table td,.mainTxt2 table td,.mainTxt4 table td{
+    padding: 5px 10px;
+    text-align: center;
+}
+.mainTxt2{
+    padding-left: 20px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+.mainTxt3{
+	padding-right: 59px;
+}
+.mainTxt4{
+    padding-left: 36px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    padding-right: 59px;
+}
+.mainTxt1 table{
+	margin-left: 36px;
+}
+p.praHeight{
+    line-height: 30px;
+}
+.mainIframe p span.fw{
+	font-weight: bold;
+}
+.mainTxt1 p.textRight{
+	text-align:right;
+}
+.mainTxt1 table td.bg{
+	background-color: #ccc;
+	width:15%;
+}
+.mainTxt2 p.noIndent{
+    text-indent: 0;
+    padding-left: 36px;
+}

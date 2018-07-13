@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title> 应用中心 - 会员中心 - 中国金币官方网上商城</title>
+    <meta name="Keywords" content="">
+    <meta name="description" content="">
+    <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" type="text/css" href="/css/member/assess/assess.css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div id="navi" class="w crumbs">
+        当前位置：
+        <a href="/index.html">
+        首页
+    </a>
+        <span>
+        &gt;
+    </span>
+        <a href="/member/index.html">
+        会员中心
+    </a>
+        <span>
+        &gt;
+    </span> 商品评价
+    </div>
+    <div class="w clearfix">
+        <!--#include file="/inc/member/menu.html"-->
+        <div class="fr">
+            <form id="esOrderMemberForm">
+                <div class="right_a m_right">
+                    <div style="border:1px solid #e1e1e1; border-bottom:0px;">
+                        <h2>
+                        商品评价
+                    </h2>
+                        <p class="padt10 padl10 padb10" style="padding-bottom:10px;">
+                            <select name="type" class="textarea sel">
+                                <option value="4" selected="true">全部评价</option>
+                                <option value="0">发表评价</option>
+                                <option value="2">审核通过</option>
+                                <option value="1">等待审核</option>
+                                <option value="-1">审核不通过</option>
+                            </select>
+                        </p>
+                    </div>
+                    <!-- 商品评价begin -->
+                    <div class="bor3" style="padding:10px;padding-bottom:0;">
+                        <table width="99%" border="0" cellspacing="0" cellpadding="0" class="text_c mar10" style="margin-left:auto;margin-right:auto;">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        商品图片
+                                    </th>
+                                    <th>
+                                        商品信息
+                                    </th>
+                                    <th>
+                                        购买时间
+                                    </th>
+                                    <th>
+                                        评价晒单
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="list_box">
+                            </tbody>
+                            <tfoot>
+                                <tr class="pageLimit" style="display: none;">
+                                    <td colspan="4" style="text-align: right;">
+                                        <!--#include file="/inc/plugin/limitPage.html"-->
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <div class="none_record" style="display:none;padding-left: 6px;padding-bottom: 10px;">
+                            没有符合条件的记录
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!--发表评价并打分开始-->
+            <div class="right_b mart12 ui-tabs-hide bord m_right pos" id="pj_biaod" style="display: none;">
+                <div class="pjls_ts">
+                    <p>欢迎您对商品进行评价，通过审核后将有金豆奖励。</p>
+                    <p class="bold mart12">关于评价/晒单贴：</p>
+                    <p class="mart12">您可以将自己的使用感受、选购建议、实物照片、使用场景、拆包过程等与网友们分享；</p>
+                    <p class="mart12">每个商品前5位成功晒单者且图片数在3张及以上的客户可获得10个金豆奖励；其他用户不再奖励金豆；赠品晒单帖不奖励金豆；</p>
+                    <p class="mart12">请保证所上传的图片是原创的及合法的，否则商城有权删除图片及冻结帐号，且保留追究其法律责任的权利；</p>
+                </div>
+                <h2>评价/晒单</h2>
+                <form id="esCommentForm" method="POST">
+                    <input type="hidden" id="goodsId" name="goodsId">
+                    <input type="hidden" id="commentId" name="commentId">
+                    <input type="hidden" id="commentRank0" name="commentRank0" value="5">
+                    <input type="hidden" id="commentRank1" name="commentRank1" value="5">
+                    <input type="hidden" id="commentRank2" name="commentRank2" value="5">
+                    <input type="hidden" id="commentRank3" name="commentRank3" value="5">
+                    <table border="0px" cellpadding="0" cellspacing="0" class="formtable">
+                        <tbody>
+                            <tr>
+                                <td align="right" width="130">评价/晒单标题:</td>
+                                <td width="228">
+                                    <input type="text" id="title" name="title" maxlength="50" class="required cp_cent_pfborder">
+                                </td>
+                                <td class="360">
+                                    <div id="biaotiTip" class="tipt">已输入0个字符。</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">商品评分</td>
+                                <td colspan="2">
+                                    <div class="star-list fl">
+                                        <img width="15" ref="很差" src="http://static.ecgci.com/images/xing.gif">
+                                        <img width="15" ref="较差" src="http://static.ecgci.com/images/xing.gif">
+                                        <img width="15" ref="还行" src="http://static.ecgci.com/images/xing.gif">
+                                        <img width="15" ref="推荐" src="http://static.ecgci.com/images/xing.gif">
+                                        <img width="15" ref="力荐" src="http://static.ecgci.com/images/xing.gif">
+                                        <span class="coment-text marll5" id="coment-text1">力荐</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">服务评分</td>
+                                <td colspan="2">
+                                    <div class="star-list fl">
+                                        <img width="15" ref="很差" src="http://static.ecgci.com/images/xing.gif">
+                                        <img width="15" ref="较差" src="http://static.ecgci.com/images/xing.gif">
+                                        <img width="15" ref="还行" src="http://static.ecgci.com/images/xing.gif">
+                                        <img width="15" ref="推荐" src="http://static.ecgci.com/images/xing.gif">
+                                        <img width="15" ref="力荐" src="http://static.ecgci.com/images/xing.gif">
+                                        <span class="coment-text marll5" id="coment-text2">力荐</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">物流评分</td>
+                                <td colspan="2">
+                                    <div class="star-list fl">
+                                        <img width="15" ref="很差" src="http://static.ecgci.com/images/xing.gif">
+                                        <img width="15" ref="较差" src="http://static.ecgci.com/images/xing.gif">
+                                        <img width="15" ref="还行" src="http://static.ecgci.com/images/xing.gif">
+                                        <img width="15" ref="推荐" src="http://static.ecgci.com/images/xing.gif">
+                                        <img width="15" ref="力荐" src="http://static.ecgci.com/images/xing.gif">
+                                        <span class="coment-text marll5" id="coment-text3">力荐</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">包装评分</td>
+                                <td colspan="2">
+                                    <div class="star-list fl">
+                                        <img width="15" ref="很差" src="http://static.ecgci.com/images/xing.gif">
+                                        <img width="15" ref="较差" src="http://static.ecgci.com/images/xing.gif">
+                                        <img width="15" ref="还行" src="http://static.ecgci.com/images/xing.gif">
+                                        <img width="15" ref="推荐" src="http://static.ecgci.com/images/xing.gif">
+                                        <img width="15" ref="力荐" src="http://static.ecgci.com/images/xing.gif">
+                                        <span class="coment-text marll5" id="coment-text4">力荐</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="top">心得</td>
+                                <td colspan="2">
+                                    <textarea placeholder="商品是否给力？快分享你的购买心得吧~" name="content" id="content" maxlength="500"  cols="" class="required fl" rows=""></textarea>
+                                    <p style="width:308px;text-align:right;clear:both;" id="contactTips"></p>
+                                </td>
+                            </tr>
+                            <tr id="impression_tr" class="impressionDisplayTR" style="display: none;">
+                                <td align="right" valign="top">买家印象</td>
+                                <td colspan="2">
+                                    <div class="tips-list fl" id="impression_val"></div>
+                                    <p class="c"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">上传图片（晒单）</td>
+                                <td colspan="2">
+                                    <div class="wrap" style="width:570px;">
+                                        <div id="container" style="position: relative;width: 126px;height: 30px;"><a id="pickfiles" href="javascript:void(0);" style="position: relative; z-index: 1;display:block;width:100% ;height:100% ;"></a>
+                                            <div id="html5_1c8uhtp7vp5u1md5ckk1l1ebe43_container" class="moxie-shim moxie-shim-html5" style="position: absolute; top: 0px; left: 0px; width: 0px; height: 0px; overflow: hidden; z-index: 0;">
+                                                <input id="html5_1c8uhtp7vp5u1md5ckk1l1ebe43" type="file" style="font-size: 999px; opacity: 0; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" multiple="" accept="image/jpeg,image/png,image/gif">
+                                            </div>
+                                        </div>
+                                        <div class="addpic" name="mscolluploadImg" style="margin-top:10px;">
+                                            <div class="dd_addpic">
+                                                <ul name="mscolluploadImg-list" class="fl commentPic">
+                                                </ul>
+                                                <p class="c"></p>
+                                            </div>
+                                        </div>
+                                        <div id="test" style="margin-top:20px;"></div>
+                                        <div id="YyzzUploadProgress" class="prName" style="display: none;"></div>
+                                        <div id="btnCancelYyzz"></div>
+                                        <input type="hidden" name="filePath" id="filePath" value="">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="2">
+                                    <p class="tishi">请上传晒单图片，最多6张图片，每张图片不超过1M，支持的图片格式为jpg，jpeg，png，gif；
+                                        <br>按住“Ctrl”键，可一次选择多张；
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="2">
+                                    <input name="" value="评价/晒单并继续" type="button" class="btn" id="commentBtn">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/inc/member/assess/list.html"-->
+    <!--#include file="/data/channel/img_domain_data.html"-->
+    <!--#include file="/common/footer.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/member/assess/assess.js"></script>
+</body>
+
+</html>

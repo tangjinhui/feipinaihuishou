@@ -1,0 +1,241 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/swiper.css');
+@import url('http://static.ecgci.com/css/libs/common.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+
+
+.c {
+    clear: both;
+}
+.wt {
+    width: 1241px;
+    margin: 0 auto;
+}
+.flour {
+    margin-top: 22px;
+    height: 38px;
+    line-height: 38px;
+}
+.flour h2 {
+    height: 28px;
+    background: #fff;
+    border-bottom: #b61e1d 2px solid;
+    color: #b61e1d;
+    padding: 0;
+    font-family: "Microsoft YaHei";
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: normal;
+    width: 100%;
+}
+.fl {
+    float: left;
+}
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+.mart12 {
+    margin-top: 10px;
+}
+.font_mc {
+    font-family: "Microsoft YaHei";
+}
+table {
+    border: #e1e1e1 1px solid;
+    line-height: 24px;
+    border-collapse: collapse
+}
+h2 {
+    height: 28px;
+    line-height: 28px;
+    color: #58595b;
+    border: none;
+    padding: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.fl {
+    float: left;
+}
+.product {
+    border: #e1e1e1 1px solid;
+    border-left: none;
+}
+.product li {
+    float: left;
+    width: 309px;
+    border-left: #e1e1e1 1px solid;
+}
+.product dl {
+    height: 359px;
+    border: #fff 8px solid;
+    padding: 18px 9px;
+    background: #fff;
+    overflow: hidden;
+}
+.product dt {
+    width: 240px;
+    height: 240px;
+    margin: 10px auto 20px;
+}
+.product dl dd.tit {
+    line-height: 22px;
+    font-size: 15px;
+    color: #333;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+}
+.product dl dd.tit a {
+    color: #333;
+}
+.product dl dd.tit a:hover {
+    color: #e43a3d;
+}
+.product dl dd.info {
+    height: 40px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #808080;
+    overflow: hidden;
+}
+.product .active dl {
+    border: #f3f3f3 8px solid;
+}
+.channel_prov {
+    width: 1241px;
+    margin-bottom: -40px;
+    border: none;
+    overflow: hidden;
+}
+.channel_prov li {
+    width: 309px;
+    margin-bottom: 40px;
+    border: #e1e1e1 1px solid;
+    margin-right: -1px;
+}
+.product dl dd.tit {
+    height: 22px;
+    overflow: hidden;
+}
+#jdt {
+    display: none;
+}
+.foucs {
+    position: relative;
+    width: 988px;
+    height: 360px;
+    margin: 10px 0 0 252px;
+    _margin: 10px 0 0 127px;
+    overflow: hidden;
+}
+.focusPic {
+    float: left;
+    width: 988px;
+    height: 410px;
+    position: relative;
+}
+.focusPic a {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+.in_page {
+    bottom: 6px;
+    font-weight: bold;
+    height: 24px;
+    margin-right: 1px;
+    position: absolute;
+    right: 5px;
+    z-index: 3;
+}
+.channel_focus, .channel_focusPic {
+    width: 1240px;
+}
+.channel_focus {
+    margin: 10px auto 0;
+}
+th {
+    border: none;
+}
+.product dl dd.price {
+    color: #e43a3d;
+    font-size: 12px;
+}
+h1, h2, h3 {
+    font-weight: normal;
+}
+.xm_nav {
+    position: fixed;
+    width: 132px;
+    height: 74px;
+    right: -104px;
+    top: 200px;
+    background: url(http://static.ecgci.com/images/custPanda.png) 0 18px no-repeat;
+    z-index: 101
+}
+.xm_navt {
+    position: absolute;
+    width: 72px;
+    height: 43px;
+    background: url(http://static.ecgci.com/images/custOnline.png) 0 0 no-repeat;
+    left: -75px;
+    top: 2px;
+    z-index: 100
+}
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+h6 {
+    padding: 0 10px;
+    background: #f3f3f3;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: #e1e1e1 1px solid;
+    margin: 0;
+}
+em {
+    font-style: normal;
+}
+td, td {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+body {
+    color: #666666;
+    background: #ffffff;
+}
+a {
+    color: #666666;
+}
+a:hover {
+    color: #e43a3d;
+}
+.fr_menuv{
+    width: 32px;
+    height: 80px;
+    position: fixed;
+    bottom: 50px;
+    z-index: 21;
+    right: 20px;
+}
+.fr_menuv a {
+    display: block;
+    width: 32px;
+    height: 35px;
+    background: url(http://static.ecgci.com/images/all_bg.png) -97px -741px no-repeat;
+    margin: 0 0 5px 0;
+}

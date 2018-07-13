@@ -1,0 +1,35 @@
+<script id="property-template" type="text/x-handlebars-template">
+    {{#brandLen brandFacet}}
+    <li class="shuju">
+        <dl>
+            <dt>
+                {{brandFacet.name}}：
+            </dt>
+            <dd class="">
+                <a data-key="brandid" data-value="" href="javascript:void(0);" class="cur" target="_self">
+                    不限
+                </a> {{#each brandFacet.counts}}
+                <a href="javascript:void(0);" data-key="brandid" data-value="{{value}}" target="_self">
+                    {{name}}
+                </a> {{/each}}
+            </dd>
+        </dl>
+    </li>
+    {{/brandLen}} {{#each ctaFacets}}
+    <li class="shuju {{liClass @index}}">
+        <dl>
+            <dt>
+                {{name}}：
+            </dt>
+            <dd class="">
+                <a data-key="{{value}}" data-value="" href="javascript:void(0);" class="{{bxClass value}}" target="_self">
+                    不限
+                </a> {{#each counts}}
+                <a href="javascript:void(0);" data-key="{{../value}}" data-value="{{value}}" target="_self" class="{{itemClass ../value value}}">
+                    {{name}}
+                </a> {{/each}}
+            </dd>
+        </dl>
+    </li>
+    {{/each}}
+</script>

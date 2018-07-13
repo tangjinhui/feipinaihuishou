@@ -1,0 +1,664 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/limitPage.css');
+@import url('http://static.ecgci.com/css/libs/dialog.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+@import url('http://static.ecgci.com/css/libs/mini_login.css');
+a {
+    color: #666;
+}
+a:hover {
+    text-decoration: block;
+    color: red;
+    text-decoration:underline; 
+}
+ .gm_in {
+    float: right;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.zx_left {
+    padding: 20px 9px 20px 19px;
+    width: 210px;
+    float: left;
+}
+.zx_left dt {
+    text-align: center;
+}
+.zx_left dt img {
+    width: 160px;
+    height: 160px;
+}
+.zx_left .zx_pirce {
+    font-weight: bold;
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+    color: #e43a3d;
+    height: 36px;
+    line-height: 36px;
+}
+.zx_left .zx_pingf {
+    height: 12px;
+    line-height: 12px;
+}
+.zx_left .zx_pingf span {
+    height: 12px;
+    vertical-align: middle;
+}
+.zx_left .zx_yyr {
+    height: 30px;
+    line-height: 30px;
+    color: #c1c1c1;
+}
+.zx_list {
+    padding: 0 45px 10px 30px;
+    width: 903px;
+}
+.zx_list li .hy_xinxi {
+    height: 22px;
+    line-height: 22px;
+    padding-bottom: 10px;
+}
+.zx_list li .hy_xinxi span {
+    margin-right: 40px;
+}
+.zx_list li .zx_nr {
+    background-position: -182px 0px;
+}
+.zx_list li .zx_hy {
+    background: none;
+    position: relative;
+    word-break: break-all;
+}
+a.anniu {
+    display: inline-block;
+    font-family: "Microsoft YaHei";
+    padding: 2px 10px;
+    line-height: 24px;
+    cursor: pointer;
+    font-weight: normal;
+}
+.jianttr {
+    margin-top: 0;
+}
+.wrap.top {
+    margin-top: 0;
+    overflow: hidden;
+}
+.crumbs {
+    height: 52px;
+    line-height: 52px;
+    color: #58595b;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+}
+.w {
+    width:1240px;
+    margin:0 auto;
+}
+.right_b {
+    width:1003px;
+}
+.mart12 {
+    margin-top:10px;
+}
+.padr10 {
+    padding-right:10px;
+}
+a.anniu {
+    display:inline-block;
+    font-family:"Microsoft YaHei";
+    padding:2px 10px;
+    line-height:24px;
+    cursor:pointer;
+    font-weight:noraml
+}
+table,table td {
+    border:#e1e1e1 1px solid;
+    line-height:24px;
+    border-collapse:collapse
+}
+table td {
+    padding:5px 10px;
+
+}
+.bord {
+    border:#e1e1e1 1px solid;
+}
+
+.wrap {
+    margin: 0 auto;
+    width: 1240px;
+}
+.page {
+    position:relative;
+    color:#58595b;
+    font:14px/27px simsun;
+    height:28px;
+    line-height:28px;
+    margin:10px 0;
+    text-align:right;
+    width:100%;
+}
+.clearfix {
+    *zoom:1;
+}
+
+table.formtable {
+    margin:40px 0;
+}
+table.formtable,table.formtable td,table.formtable {
+    border:none;
+}
+table.formtable td {
+    line-height:30px;
+    padding:5px;
+}
+table.formtable td textarea {
+    overflow-y:auto;
+    height:66px;
+    width:302px;
+    vertical-align:top;
+    padding:5px;
+    font-size:12px;
+    color:#666
+}
+table.formtable td label {
+    margin-right:10px;
+}
+
+.pad30 {
+    padding: 30px 0 0;
+}
+.bor-bot {
+    border-top: #eee 1px solid;
+    padding: 30px 0;
+    margin: 30px auto 0;
+}
+
+
+h1,h3 {
+    font-weight: normal;
+}
+textarea.required {
+    border: 1px solid #00A8E6;
+    border-color:#666 #CBCBCB #CBCBCB #666;
+    color:#666
+}
+input[type="radio"] {
+    width:10px;
+    margin-right:5px;
+}
+.btn {
+    padding:2px 8px;
+    display:inline-block;
+    border:none;
+    font-size:12px;
+    vertical-align:middle;
+    text-align:center;
+    color:#fff;
+    font-family:"Microsoft YaHei";
+    line-height:22px;
+    cursor:pointer;
+    margin-right:10px;
+}
+label.error {
+    color:#e43a3d;
+}
+.crumbs {
+    height:52px;
+    line-height:52px;
+    color:#58595b;
+    font-family:"Microsoft YaHei";
+    overflow:hidden;
+}
+.crumbs span {
+    padding:0 6px;
+}
+.jp_xinxtb li.select {
+    background:#fff;
+    font-weight:bold;
+    font-family:"Microsoft YaHei";
+    color:#333;
+}
+.jp_xinxtb li.select {
+    border-top: 2px solid #b98a38;
+    color: #b98a38;
+    font-size: 14px;
+    font-weight: normal;
+}
+td span.red,.red {
+    color:#e43a3d;
+}
+.item-reply .reply-list .reply-meta .p-bfc
+.tbwid {
+    margin:0 auto;
+}
+.zx_left .zx_pingf span {
+    display:inline-block;
+    height:16px;
+    overflow:hidden;
+    width:85px;
+    background:url(http://static.ecgci.com/images/all_bg.png) no-repeat;
+}
+.sa4 {
+    background-position:-850px -224px;
+}
+.zx_pingf span.sa4 {
+    background-position:-850px -226px;
+}
+.jp_xinxtb {
+    background-color:#f7f7f7;
+    height:40px;
+    line-height:40px;
+    overflow: hidden;
+}
+.jp_xinxtb li {
+    float:left;
+    width:123px;
+    text-align:center;
+    color:#666;
+    font-size:14px;
+    height:38px;
+    font-family:"Microsoft YaHei";
+    cursor:pointer;
+    overflow:hidden;
+    border-right:0px;
+    background:url(../images/ax_03.jpg) no-repeat center right;
+    border-top: 2px solid #f8f8f8;
+}
+.jp_xinxtb ul li.last {
+    background: none;
+}
+.jp_xinxtb ul li.select {
+    background-color:#fff;
+}
+.zx_l_tit {
+    line-height:16px;
+    height:32px;
+    overflow:hidden;
+    padding-top:15px;
+}
+.zx_left {
+    padding:20px 9px 20px 19px;
+    width:210px;
+}
+.zx_left dt {
+    text-align:center;
+}
+.zx_left dt img {
+    width:160px;
+    height:160px;
+}
+.zx_left .zx_pirce
+/**,.tg_xianj**/
+     {
+    font-weight:bold;
+    font-family:"Microsoft YaHei";
+    font-size:16px;
+    color:#e43a3d;
+    height:36px;
+    line-height:36px;
+}
+.zx_left .zx_pingf {
+    height:12px;
+    line-height:12px;
+}
+.zx_left .zx_pingf span {
+    height:12px;
+    vertical-align:middle;
+}
+.zx_left .zx_yyr {
+    height:30px;
+    line-height:30px;
+    color:#c1c1c1;
+}
+.zx_list {
+    padding:0 45px 10px 30px;
+    width:903px;
+}
+.zx_list li {
+    padding:21px 32px 21px 0;
+    width:871px;
+    float:left;
+    border-bottom:#e1e1e1 1px dotted;
+}
+.zx_list li .hy_xinxi {
+    height:22px;
+    line-height:22px;
+    padding-bottom:10px;
+}
+.zx_list li .hy_xinxi span {
+    margin-right:40px;
+}
+.zx_list li .zx_nr,.zx_list li .zx_hy {
+    line-height:18px;
+    background:url(http://img2.ecgci.com/upload/topic/detail_img/icon.png) no-repeat;
+    padding:0 0 8px 30px;
+}
+.zx_list li .zx_nr {
+    background-position:-182px 0px;
+}
+.zx_list li .zx_hy {
+    background:none;
+    position:relative;
+}
+.zx_list li p.zx_hy span.sp_ico {
+    display:inline-block;
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    _left:-30px;
+    background:url("http://img2.ecgci.com/upload/topic/detail_img/icon.png") no-repeat -182px -72px;
+}
+.ckhf {
+    padding:0 0 0 120px;
+}
+td,td {
+    padding:10px 20px;
+    border:1px solid #ccc;
+    font-weight:normal;
+}
+.btn {
+    background: #e43a3d;
+    color:#FFFFFF
+}
+.jp_xinxtb li.select {
+    border-top: 2px solid #ce4c32;
+}
+.jp_xinxtb {
+    background-color:#e6e6e6;
+}
+.jp_xinxtb li {
+    border-top:0px;
+}
+.gm_zt div {
+    padding:0px;
+}
+.zx_left {
+    padding: 20px 4px 20px 14px;
+    width: 210px;
+}
+.right_b {
+    width:1001px;
+}
+.jp_xinxtb li.select {
+    color:#666;
+}
+#esGoodsConsultingFormDiv {
+    width:785px;
+    margin:20px;
+    margin-top:35px;
+}
+a.anniu {
+    color:#ffffff;
+    background:#e43a3d;
+}
+.ckhf a {
+    color: #e43a3d;
+}
+span.red {
+    color:#e43a3d
+}
+.btn {
+    background: #e43a3d;
+    color:#ffffff
+}
+a.anniu {
+    background:#e43a3d;
+    color:#ffffff;
+}
+.ckzx a.zxall {
+    color:#e43a3d
+}
+.zx_list li .zx_hy {
+    color:#e1e1e1;
+}
+#changeContent {
+    height: 40px;
+    background: none;
+    background-color: #e6e6e6;
+    color: #303030;
+    font-size: 15px;
+    font-weight: normal;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    overflow: hidden;
+}
+#changeContent li {
+    color: #4d4d4d;
+    width: 123px;
+    height: 38px;
+    line-height: 38px;
+    padding: 0px;
+    text-align: center;
+    border-top: 2px solid #f8f8f8;
+    float: left;
+    cursor: pointer;
+}
+div.zx_list {
+    width: auto;
+    padding: 0 45px 10px 20px;
+}
+.gm_cpmargin {
+    padding-bottom10px
+}
+#changeContent li.select {
+    border-top: 2px solid #b98a38;
+    color: #b98a38;
+    font-weight: normal;
+    font-size: 14px;
+    background-color: #fff;
+}
+.jp_xinxtb ul li {
+    border-right: 0px;
+    background: url(http://img2.ecgci.com/upload/topic/detail_img/ax_03.jpg) no-repeat center right;
+}
+.jp_xinxtb ul li.last {
+    background: none;
+}
+.w {
+    z-index: 1;
+}
+.fl {
+    float: left;
+}
+.ckhf {
+    text-align: left;
+    padding: 0 10px 0 120px;
+}
+.ckhf a {
+    text-decoration: none;
+}
+.allpc {
+    height: auto;
+    min-height: 50px;
+    color: #000;
+    padding: 0 10px 0 0;
+    overflow: hidden;
+}
+.ckzx {
+    float: left;
+    margin: 0 0 0 124px;
+    text-align: left;
+    padding: 8px 0 0;
+}
+.ckzx {
+    margin: 0 10px 0 24px;
+}
+.ckzx a {
+    font-weight: bold;
+}
+.ckzx a.zxall {
+    margin: 0 0 0 22px;
+}
+#changeContent {
+    font-size: 14px;
+}
+.m_right {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.m_right {
+    width: 928px
+}
+table {
+    font-size: inherit;
+    *border-collapse: collapse;
+    *empty-cells: show;
+}
+td {
+    word-break: keep-all;
+    word-wrap: break-word;
+    overflow: hidden;
+    font-size: inherit;
+    text-align: left;
+    white-space:nowrap; 
+}
+.jianttr {
+    padding: 20px 0px;
+    height: 30px;
+    line-height: 30px;
+    background: url(http://img2.ecgci.com/upload/topic/detail_img/jianttr.png) no-repeat left center #fff;
+    color: #fff;
+    font-size: 15px;
+    width: 110px;
+    text-align: center;
+    font-weight: normal;
+}
+.gm_in {
+    border: 1px solid #dcdcdc;
+}
+.gm_zt {
+    color: #303030;
+    padding: 0px;
+    padding-top: 0px;
+}
+.allpc div {
+    padding: 0px 17px;
+}
+.w {
+    width: 1240px;
+    margin: 0px auto;
+}
+.page {
+    color: #58595b;
+    font: 14px/27px simsun;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 0;
+    position: relative;
+    text-align: right;
+    width: 100%;
+}
+.jp_xinxtb {
+    background-color: #f7f7f7;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+}
+ul,
+li {
+    list-style: outside none none;
+}
+#changeContent li.select {
+    background-color: #fff;
+    border-top: 2px solid #ce4c32;
+    font-size: 15px;
+    font-weight: normal;
+    color: #303030;
+}
+#changeContent li {
+    border-top: 2px solid #e6e6e6;
+    width: 150px;
+}
+.jp_xinxtb li {
+    font-size: 15px;
+}
+.allpc {
+    color: #000;
+    min-height: 50px;
+    height: auto;
+    overflow: hidden;
+    padding: 0 10px 0 0;
+}
+.zx_list li {
+    border-bottom: 1px dotted #f3f3f3;
+    float: left;
+    padding: 21px 22px 21px 0;
+    width: 871px;
+}
+.gm_zt {
+    width: 928px;
+    overflow: hidden;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.clearfix {
+    clear: none;
+}
+.gm_zt {
+    width: 928px;
+    overflow: hidden;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.zx_list li .zx_hy {
+    color: #525050;
+}
+.zx_list li .zx_nr {
+    background: url(http://img2.ecgci.com/upload/topic/detail_img/icon_3.png) no-repeat;
+    background-position: -182px 0;
+}
+.jianttr {
+    padding: 18px 4px;
+    height: 0;
+    color: #fff;
+    font-size: 15px;
+    width: 110px;
+    text-align: center;
+    font-weight: normal;
+    background: #e64346;
+    line-height: 0;
+    /* margin-top: 20px;*/
+}
+.jianttr {
+    margin-bottom: 10px;
+}
+.gm_cpmargin {
+    border: 1px solid #ddd;
+    border-top: none;
+    padding-left: 0;
+}
+.zx_list li {
+    float: left;
+    padding: 21px 0px 21px 60px;
+    border-bottom: 1px dotted rgb(221, 221, 221);
+}
+#changeContent {
+    border-left: 1px solid #ddd;
+}
+div.zx_list {
+    overflow: hidden;
+    padding: 0px 0 10px 0;
+}
+.gm_in,
+.gm_zt {
+    width: 990px;
+}
+.gm_in.nor_b {
+    border: 0 none;
+}
+.red {
+    color: #ff0000;
+}
+table.formtable {
+    margin: 40px 0;
+}
+#contentTips {
+    width: 308px;
+    text-align: right;
+}
+

@@ -1,0 +1,68 @@
+<div id="dep_box" style="margin-left: 20px;display: none;">
+    <script id="dep-template" type="text/x-handlebars-template">
+        <div>
+            <label>账户姓名：</label>
+            <span id="js_clientName">{{clientName}}</span>
+            <a id="clientUser" href="javascript:void(0);">基本账户管理</a>
+        </div>
+        <div>
+            <label>交易账号：</label>
+            <span id="js_fundAcc">{{transactionAccount}}</span>
+        </div>
+        <div class="clear_fix">
+            <label>已绑定银行卡：</label>
+            <div class="yh_code">
+                <div>
+                    <span id="js_bankName">{{bankName}}</span> <a href="javascript:void(0);">储蓄卡</a>
+                </div>
+                <p id="">
+                    **** **** **** <span id="js_bankAcc">{{bankAcc}}</span>
+                </p>
+                <p id="js_clientName"></p>
+            </div>
+            {{#showBtn operateCode}}
+            <a id="jcbd" href="javascript:void(0);">解除绑定</a> {{/showBtn}}
+            <div style="clear:both;"></div>
+        </div>
+        <div class="sum">
+            <label>交易账户余额：</label>
+            <span>总额：
+			<i class="col_bla" id="js_balance">{{total}}</i> 元
+		</span>
+            <span>其中，可用余额：
+			<i class="col_red" id="js_useBala">{{availableBalance}}</i> 元
+		</span>
+            <span class="no_mar">冻结：
+			<i class="col_bla" id="js_cashBala">{{amountFrozen}}</i> 元
+		</span> {{#showBtn operateCode}}
+            <a href="javascript:void(0);" id="js_cz" class="cz">充 值</a>
+            <a href="javascript:void(0);" id="js_tx">提现</a> {{else}}
+            <a href="javascript:void(0);" id="js_bind_card" class="cz">去绑卡</a> {{/showBtn}}
+        </div>
+        <div>
+            <label>最近余额变动：</label>
+            <div style="clear:both;"></div>
+        </div>
+        <table>
+            <tbody>
+                <tr id="js_table">
+                    <td class="fis_td">日期</td>
+                    <td>金额变动</td>
+                    <td>信息</td>
+                    <td>账户总余额</td>
+                </tr>
+                {{#each transMessage}}
+                <tr>
+                    <td class="fis_td">{{transDate}}</td>
+                    <td>{{amt}} 元</td>
+                    <td>{{businName}}</td>
+                    <td>{{postBala}} 元</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <div id="js_all" class="to_all">
+            <a target="_blank" href="javascript:void(0);" onclick="return false">更多&gt;&gt;</a>
+        </div>
+    </script>
+</div>

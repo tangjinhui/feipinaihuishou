@@ -1,0 +1,35 @@
+<script id="content-template" type="text/x-handlebars-template">
+    {{#each successOrderList}}
+    <div class="p1">
+        <span class="kong" style="padding-left:13px;">您的订单号：
+			<a href="javascript:void(0)">
+				<span class="red" id="orderId" data-orderId='{{orderId}}'>{{orderId}}</span>
+        </a>
+        </span>
+        <span class="kong">订单金额：<span class="red">￥{{orderPayActual orderPrice}}</span></span>
+        <span class="kong">
+				支付方式：
+				<span class="red">在线支付</span>
+        </span>
+        <span id="chooseBlank" class="kong" style="cursor: pointer; display: inline-block; vertical-align: middle;display: inline-block; height: 30px; background: #e43a3d; font-weight: normal; line-height: 30px; padding: 0 15px; color: #fff; font-size: 14px; text-align: center; width: 80px;position: absolute;" data-orderId='{{orderId}}'>
+				立即支付
+			</span>
+    </div>
+    {{/each}}
+    
+    <div style="display: none;" class="hqp" id="hqp"></div>
+    <div style="display: none;" id="jsShwin" class="sh_dialog">
+        <div class="top">
+            提示
+            <div class="queding" id="topQueDing">确定</div>
+        </div>
+        <div class="txt">
+            <div>由于:</div><br/>
+                <div class="goods" id="goods">
+                </div><br>
+                <div>下单失败！</div>
+        </div>
+    </div>
+
+
+</script>

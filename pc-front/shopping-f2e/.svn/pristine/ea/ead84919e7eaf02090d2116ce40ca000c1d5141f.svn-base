@@ -1,0 +1,24 @@
+<div id="finish" style="display:none;">
+    <div class="zh_wc yz_success" style="padding-bottom:30px;display:block;">
+        <p class="wc_mm" style="font-size:30px;line-height:46px;">
+            <span></span> 恭喜您，修改登录密码成功！
+        </p>
+        <div class="aq_dengji">
+            <p class="acco-safe"><span>账户安全：</span>
+                <span class="red bold">
+			    	<span id="strength_title" class="rank-text2">中</span>
+                <i id="strength_content" class="rank2"></i>
+                <span class="red"></span>
+                </span>
+            </p>
+            <p class="acco-safe">您的帐户安全级还能提升哦，快去
+                <a href="javascript:void(0);" style="margin:0 5px;color:#ff3000">安全中心</a> 完善其它安全设置提高评级吧！
+            </p>
+        </div>
+    </div>
+    <div class="zh_wc yz_fail" style="padding-bottom:30px;display:none;">
+        <p class="wc_mm" style="font-size:30px;line-height:46px;">
+            <span class="wyz"></span> 非常抱歉，修改登录密码失败！
+        </p>
+    </div>
+</div>

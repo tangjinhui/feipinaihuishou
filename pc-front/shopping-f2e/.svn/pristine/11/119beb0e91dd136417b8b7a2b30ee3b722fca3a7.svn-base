@@ -1,0 +1,582 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+@import url('../../plugin/menu.css');
+html {
+    background-image: url(about:blank);
+    background-attachment: fixed;
+}
+input, img {
+    vertical-align: middle;
+}
+.fr {
+    float: right;
+}
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+.right_b {
+    width: 1003px;
+}
+table, table td {
+    border: #e1e1e1 1px solid;
+    line-height: 24px;
+    border-collapse: collapse
+}
+table td {
+    padding: 5px 10px;
+}
+.bord {
+    border: #e1e1e1 1px solid;
+}
+h2 {
+    height: 28px;
+    line-height: 28px;
+    color: #58595b;
+    border: none;
+    padding: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+table.formtable {
+    margin: 20px auto;
+}
+table.formtable, table.formtable td, table.formtable {
+    border: none;
+}
+table.formtable td {
+    line-height: 30px;
+    padding: 5px;
+}
+table.formtable td input[type="text"] {
+    text-align: left;
+    line-height: 22px;
+    margin: 0px;
+    vertical-align: middle;
+    border: 1px solid #e1e1e1;
+    font-size: 12px;
+    color: #666;
+    padding: 4px;
+    height: 22px;
+}
+table.formtable td a {
+    margin: 0 5px;
+}
+table.formtable td input[type="text"] {
+    width: 302px;
+}
+.codeBox {
+    position: absolute;
+    top: 5px;
+    left: 109px;
+}
+.codeBox a{
+    color: #e64346;
+}
+table.formtable td img {
+    width: 60px;
+    height: 20px;
+    margin-right: 5px;
+}
+#form table.formtable {
+    margin: 20px 0 40px 160px
+}
+h2 {
+    font-weight: normal;
+}
+.flow_chart3 {
+    height: 35px;
+    line-height: 35px;
+    color: #58595b;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    overflow: hidden;
+    margin: 20px auto 0;
+}
+.flow_chart3 .cur {
+    color: #fff;
+    font-weight: bold;
+}
+.flow_chart3 {
+    background: url(http://static.ecgci.com/images/cart_bg.png) 0 0 no-repeat;
+    width: 697px;
+}
+.flow_chart3 li {
+    float: left;
+    width: 207px;
+    padding: 0 0 0 30px;
+}
+.flow_chart3 .last {
+    padding: 0 10px 0 25px;
+    width: 185px;
+}
+.btn {
+    padding: 2px 8px;
+    display: inline-block;
+    border: none;
+    font-size: 12px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    font-family: "Microsoft YaHei";
+    line-height: 22px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.msg-error {
+    color: #e43a3d;
+    display: block;
+}
+.re {
+    position: relative;
+}
+.crumbs {
+    height: 52px;
+    line-height: 52px;
+    color: #58595b;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+}
+.crumbs span {
+    padding: 0 6px;
+}
+.m_right h2 {
+    height: 30px;
+    font-weight: bold;
+    padding: 2px 10px;
+    border-bottom: #e1e1e1 0px solid;
+    font-size: 14px;
+    line-height: 30px;
+    color: #58595b;
+    font-family: "SimSun";
+    text-align: left;
+    background-color: #f7f7f7;
+}
+.padl {
+    padding-left: 10px;
+}
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+.m_right td img {
+    width: 80px;
+    height: 80px;
+}
+td {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+.right_b {
+    width: 1001px;
+}
+.msg-text {
+    line-height: 24px;
+    color: #e43a3d
+}
+a {
+    color: #666666;
+}
+.cur {
+    color: #666666;
+}
+.btn {
+    background: #e43a3d;
+    color: #ffffff
+}
+.button_anniu_w {
+    background: #e43a3d;
+    color: #ffffff;
+    border: 1px solid #e1e1e1;
+    cursor: pointer;
+    height: 30px;
+    margin: 0 0 0 10px;
+    width: 130px;
+}
+.anniuyzm, .anniuyzm:hover {
+    cursor: default;
+    display: inline-block;
+    font-family: "Microsoft YaHei";
+    line-height: 24px;
+    padding: 1px 9px;
+    background: #f3f3f3;
+    color: #555;
+    border: #e1e1e1 1px solid;
+    margin: 0 0 0 10px;
+}
+
+@charset "utf-8";
+input, img {
+    vertical-align: middle;
+}
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+.right_b {
+    width: 1003px;
+}
+table, table td {
+    border: #e1e1e1 1px solid;
+    line-height: 24px;
+    border-collapse: collapse
+}
+table td {
+    padding: 5px 10px;
+}
+.bord {
+    border: #e1e1e1 1px solid;
+}
+h2 {
+    height: 28px;
+    line-height: 28px;
+    color: #58595b;
+    border: none;
+    padding: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+table.formtable td input[type="text"] {
+    text-align: left;
+    line-height: 22px;
+    margin: 0px;
+    vertical-align: middle;
+    border: 1px solid #e1e1e1;
+    font-size: 12px;
+    color: #666;
+    padding: 4px;
+    height: 22px;
+}
+table.formtable {
+    margin: 20px auto;
+}
+table.formtable, table.formtable td, table.formtable {
+    border: none;
+}
+table.formtable td {
+    line-height: 30px;
+    padding: 5px;
+}
+table.formtable td a {
+    margin: 0 5px;
+}
+table.formtable td input[type="text"] {
+    width: 302px;
+}
+table.formtable td img {
+    width: 60px;
+    height: 20px;
+    margin-right: 5px;
+}
+h2 {
+    font-weight: normal;
+}
+.flow_chart3 {
+    height: 35px;
+    line-height: 35px;
+    color: #58595b;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    overflow: hidden;
+    margin: 20px auto 0;
+}
+.flow_chart3 .cur {
+    color: #fff;
+    font-weight: bold;
+}
+.flow_chart3 {
+    background: url(http://static.ecgci.com/images/cart_bg.png) 0 0 no-repeat;
+    width: 697px;
+}
+.flow_chart3 li {
+    float: left;
+    width: 207px;
+    padding: 0 0 0 30px;
+}
+.flow_chart3 .last {
+    padding: 0 10px 0 25px;
+    width: 185px;
+}
+.step2 {
+    background-position: 0 -35px;
+}
+.step3 {
+    background-position: 0 -69px;
+}
+.btn {
+    padding: 2px 8px;
+    display: inline-block;
+    border: none;
+    font-size: 12px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    font-family: "Microsoft YaHei";
+    line-height: 22px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.msg-error, #mobileCodeSucMessage_W, #mobileCode_error {
+    color: #e43a3d;
+}
+.crumbs {
+    height: 52px;
+    line-height: 52px;
+    color: #58595b;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+}
+.crumbs span {
+    padding: 0 6px;
+}
+.m_right h2 {
+    height: 30px;
+    font-weight: bold;
+    padding: 2px 10px;
+    border-bottom: #e1e1e1 0px solid;
+    font-size: 14px;
+    line-height: 30px;
+    color: #58595b;
+    font-family: "SimSun";
+    text-align: left;
+    background-color: #f7f7f7;
+}
+.padl {
+    padding-left: 10px;
+}
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+.m_right td img {
+    width: 80px;
+    height: 80px;
+}
+td {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+.btn {
+    background: #e43a3d;
+    color: #FFFFFF
+}
+.right_b {
+    width: 1001px;
+}
+.msg-text {
+    line-height: 24px;
+    color: #e43a3d
+}
+a {
+    color: #666666;
+}
+.cur {
+    color: #666666;
+}
+.btn {
+    background: #e43a3d;
+    color: #ffffff
+}
+.button_anniu_w {
+    background: #e43a3d;
+    color: #ffffff;
+    border: 1px solid #e1e1e1
+}
+.button_anniu_w {
+    cursor: pointer;
+    height: 30px;
+    margin: 0 0 0 10px;
+    width: 130px;
+}
+#sendMobileCode_s {
+    position: absolute;
+    top: 6px;
+    left: 136px;
+}
+input.required {
+    border: 1px solid #00A8E6;
+    border-color: #666 #CBCBCB #CBCBCB #666;
+    color: #666
+}
+.re {
+    position: relative;
+}
+a {
+    color: #666666;
+}
+h2 {
+    height: 28px;
+    line-height: 28px;
+    color: #58595b;
+    border: none;
+    padding: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.cur {
+    color: #666666;
+}
+span.red {
+    color: #e43a3d
+}
+.flow_chart3 {
+    height: 35px;
+    line-height: 35px;
+    color: #58595b;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    overflow: hidden;
+    margin: 20px auto 0;
+}
+.flow_chart3 .cur {
+    color: #fff;
+    font-weight: bold;
+}
+.flow_chart3 li {
+    float: left;
+    width: 207px;
+    padding: 0 0 0 30px;
+}
+.flow_chart3 .last {
+    padding: 0 10px 0 25px;
+    width: 185px;
+}
+.step3 {
+    background-position: 0 -70px;
+}
+.zh_wc {
+    height: 220px;
+    font-family: "Microsoft YaHei";
+    width: 600px;
+    padding: 40px 0;
+    margin: 0 auto;
+}
+.wc_mm {
+    line-height: 44px;
+    color: #5fb72c;
+    font-size: 22px;
+    height: 44px;
+    padding: 5px 10px;
+}
+.crumbs {
+    height: 52px;
+    line-height: 52px;
+    color: #58595b;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+}
+.crumbs span {
+    padding: 0 6px;
+}
+.m_right h2 {
+    height: 30px;
+    font-weight: bold;
+    padding: 2px 10px;
+    border-bottom: #e1e1e1 0px solid;
+    font-size: 14px;
+    line-height: 30px;
+    color: #58595b;
+    font-family: "SimSun";
+    text-align: left;
+    background-color: #f7f7f7;
+}
+.padl {
+    padding-left: 10px;
+}
+.red {
+    color: #e43a3d;
+}
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+.aq_dengji .acco-safe {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 0 5px;
+    margin: 0;
+    font-size: 14px;
+}
+.acco-safe {
+    line-height: 30px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding: 0 0 0 15px;
+}
+.acco-safe .rank-text1 {
+    color: #df1313;
+}
+.acco-safe .rank-text1,
+.acco-safe .rank-text2,
+.acco-safe .rank-text3 {
+    margin-right: 8px;
+}
+.acco-safe .rank-text3 {
+    color: #7ac200;
+}
+.acco-safe .rank-text2 {
+    color: #fb8800;
+}
+.acco-safe a {
+    margin-right: 8px;
+}
+.rank1, .rank2, .rank3 {
+    margin-right: 9px;
+    background: url(http://static.ecgci.com/images/icon.png) no-repeat;
+    display: inline-block;
+    font-size: 0;
+    height: 14px;
+    line-height: 0;
+    margin-right: 20px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 106px;
+}
+.rank1 {
+    background-position: -94px -204px;
+}
+.rank2 {
+    background-position: -94px -220px;
+}
+.rank3 {
+    background-position: -94px -236px;
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+.zh_wc {
+    font-family: "Microsoft YaHei";
+    height: auto;
+    margin: 0 auto;
+    width: 600px;
+    line-height: 30px;
+}
+.wc_mm {
+    color: #e43a3d;
+    font-size: 24px;
+    height: 56px;
+    line-height: 46px;
+    padding: 0;
+}
+.c {
+    clear: both;
+}
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+.right_b {
+    width: 1003px;
+}
+.bold, span.bold {
+    font-weight: bold;
+}
+.bord {
+    border: #e1e1e1 1px solid;
+}

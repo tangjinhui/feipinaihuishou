@@ -1,0 +1,34 @@
+<script id="list-template" type="text/x-handlebars-template">
+    {{#each list}}
+    <tr class="trbg2">
+        <!-- {{style readFlag}}作用，如果短消息未读，则加粗（添加class,sms_type）,引进样式-->
+        <td class="font_02 text_l {{style readFlag}}">
+            <a href="javascript:void(0)" class="title" data-msgId="{{msgId}}">{{title}}</a>
+        </td>
+        <td class="font_02 text_l {{style readFlag}}">
+            {{{message}}}
+        </td>
+        <td class="date {{style readFlag}}">
+            {{sendDate}}
+        </td>
+        <td class="caozuo {{style readFlag}}">
+            <a href="javascript:void(0)" class="detele" data-msgId="{{memMsgId}}">删除</a>
+        </td>
+    </tr>
+    <tr class="sms_open" style="display: none;">
+        <td colspan="5">
+            <div class="floatdiv2">
+                <span class="close">
+                    <a  style="color:#FFFFFF" href="javascript:void(0)" title="关闭">关闭</a>
+                </span>
+                <div class="flt_box">
+                    <dl>
+                        <dt></dt>
+                        <dd> {{{message}}}</dd>
+                    </dl>
+                </div>
+            </div>
+        </td>
+    </tr>
+    {{/each}}
+</script>

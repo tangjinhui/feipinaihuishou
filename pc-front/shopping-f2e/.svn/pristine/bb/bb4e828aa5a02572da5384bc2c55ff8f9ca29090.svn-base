@@ -1,0 +1,24 @@
+<script id="list-template" type="text/x-handlebars-template">
+    {{#each list}}
+    <tr id="currTR0">
+        <td>
+            <p class="cg_titpl text_c">
+                <a href="http://itemdev.ecgci.com/product_detail_{{goodsId}}.html" target="_blank">
+                    <img src="{{imgConf goodsThumb goodsId}}" width="5px" height="5px">
+                </a>
+            </p>
+        </td>
+        <td>
+            <a href="http://itemdev.ecgci.com/product_detail_{{goodsId}}.html" target="_blank">
+                {{goodsName}}
+            </a>
+        </td>
+        <td>
+            {{accessDate}}
+        </td>
+        <td class="colh">
+            {{{show goodsId commentId status}}}
+        </td>
+    </tr>
+    {{/each}}
+</script>

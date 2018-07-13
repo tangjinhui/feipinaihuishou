@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>账户中心 - 会员中心 - 中国金币官方网上商城</title>
+    <meta name="Keywords" content="">
+    <meta name="description" content="">
+    <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" type="text/css" href="/css/member/address.css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div class="w crumbs">当前位置：
+        <a href="/index.html">首页</a>
+        <span>&gt;</span>
+        <a href="/member/index.html">会员中心</a>
+        <span>&gt;</span>收货地址
+    </div>
+    <div class="w clearfix">
+        <!--#include file="/inc/member/menu.html"-->
+        <div class="fr">
+            <div class="right_b bordlrt m_right">
+                <h2>收货地址
+                        <a href="javascript:void(0);" class="anniu marl10" id="addAddress">
+                            新增
+                        </a>
+                    </h2>
+                <div id="list_box">
+                    <!--#include file="/inc/member/address/list.html"-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/inc/plugin/addAddress.html"-->
+    <!--#include file="/common/footer.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/member/address.js"></script>
+</body>
+
+</html>

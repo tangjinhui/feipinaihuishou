@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>会员中心-我的预存款</title>
+    <meta name="Keywords" content="会员中心-我的预存款" />
+    <meta name="description" content="" />
+    <link href="/css/member/predeposit.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div class="wrap clearfix">
+        <div id="navi" class="w crumbs">当前位置：
+            <a href="/index.html">首页</a>
+            <span>&gt;</span>
+            <a href="/member/index.html">会员中心</a>
+            <span>&gt;</span>我的预存款
+        </div>
+        <div class="w">
+            <!--#include file="/inc/member/menu.html"-->
+            <div class="fr">
+                <div class="right_a m_right">
+                    <div class="order_info bordlrt">
+                        <h2>我的预存款</h2>
+                        <ul class="bordb ">
+                            <li class="dj_icon">
+                                账户预存款总额：<span class="hyjb" id="sumPredeposit" value="" style="font-size:30px;"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 可用预存款：
+                                <span class="hyjb" id="usePredeposit" value=""></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 锁定预存款：
+                                <span class="hyjb" id="lockPredeposit" value=""></span>
+                                <p class="c"></p>
+                        </ul>
+                    </div>
+                    <div class="tabqh mart12">
+                        <div class="tab-tit bordlrt recom_tab tabs">
+                            <ul class="flag">
+                                <li class="select" id="yck_detail" data-status="0">
+                                    预存款变更明细
+                                </li>
+                                <li id="sdyck_detail" data-status="1">
+                                    锁定预存款明细
+                                </li>
+                                <li id="yckcz_detail" data-status="2">
+                                    预存款充值明细
+                                </li>
+                            </ul>
+                            <p class="c"></p>
+                        </div>
+                        <div class="padb10">
+                            <div id="page_list">
+                                <div class="R_box">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!--#include file="/inc/member/index/member_change_predeposit.html"-->
+<!--#include file="/inc/member/index/member_lock_predeposit.html"-->
+<!--#include file="/inc/member/index/member_add_predeposit.html"-->
+<!--#include file="/common/footer.html"-->
+<script type="text/javascript" src="/script/libs/require.js"></script>
+<script type="text/javascript" src="/script/libs/require-config.js"></script>
+<script type="text/javascript" src="/script/member/predeposit.js"></script>
+</body>
+
+</html>

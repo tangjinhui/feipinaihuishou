@@ -1,0 +1,8 @@
+<script id="rightAds-template" type="text/x-handlebars-template">
+    {{#each rightAds}}
+    <div>
+        <a href="{{asLink}}" target="{{target}}">
+		    <img src="{{imgConf adImg adId}}" width="248" height="268" title="{{adName}}" alt="{{adName}}"></a>
+    </div>
+    {{/each}}
+</script>

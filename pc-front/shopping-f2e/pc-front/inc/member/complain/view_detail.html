@@ -1,0 +1,35 @@
+<script id="view-complain-detail-template" type="text/x-handlebars-template">
+    {{#each complaintDetailList}} {{#replyTypeFun replyType}}
+    <tr>
+        <td>
+            <span>
+              留言内容：
+            </span> {{{replyDetail}}}
+        </td>
+    </tr>
+    <tr>
+        <td class="hui">
+            <p class="padb10">
+                <span>
+                提交时间：
+              </span> {{replyDate}}
+            </p>
+        </td>
+    </tr>
+    {{else}}
+    <tr>
+        <td class="huifu">
+            <span>
+                    客服回复：
+                </span> {{{replyDetail}}}
+        </td>
+    </tr>
+    <tr>
+        <td class="hui huifu">
+            <p class="padb10">
+                <span>回复时间：</span> {{replyDate}}
+            </p>
+        </td>
+    </tr>
+    {{/replyTypeFun}} {{/each}}
+</script>

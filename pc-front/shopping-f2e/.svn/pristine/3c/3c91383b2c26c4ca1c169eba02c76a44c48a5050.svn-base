@@ -1,0 +1,434 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/limitPage.css');
+@import url('http://static.ecgci.com/css/libs/dialog.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+@import url('http://static.ecgci.com/css/libs/mini_login.css');
+@import url('../../plugin/menu.css');
+input.required, textarea.required {
+    border: 1px solid #00A8E6;
+    border-color: #666 #CBCBCB #CBCBCB #666;
+    color: #666
+}
+@charset "utf-8";
+body {
+    margin: 0;
+    padding: 0px;
+    font-size: 12px;
+    text-align: left;
+    font-family: Arial, Lucida, Verdana, Helvetica, sans-serif;
+}
+div, span, input, form, p, h1, h2, h4, ul, li, dl, dt, dd, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+ul, li {
+    list-style: none;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: none;
+    padding: 0 5px;
+}
+
+input, img, label, select {
+    vertical-align: middle;
+}
+
+button {
+    -webkit-appearance: none;
+}
+.c, .clear, .clearfix {
+    clear: both;
+}
+.mar10 {
+    margin: 10px;
+    margin-top: 0px;
+}
+
+.colh a {
+    color: #000;
+}
+.bor3 {
+    border-right: 1px solid #e1e1e1;
+    border-left: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+.right_a {
+    width: 1003px;
+}
+
+.right_b {
+    width: 1003px;
+}
+
+.pos {
+    position: relative;
+}
+.mart12 {
+    margin-top: 10px;
+}
+.marll5 {
+    margin-left: 5px;
+}
+.padt10 {
+    padding-top: 10px;
+}
+
+.padl10 {
+    padding-left: 10px;
+}
+.padb10 {
+    padding-bottom: 10px;
+}
+.ui-tabs-hide {
+    display: none;
+}
+.text_c {
+    text-align: center;
+}
+.bold {
+    font-weight: bold;
+}
+table, table th, table td {
+    border: #e1e1e1 1px solid;
+    line-height: 24px;
+    border-collapse: collapse
+}
+
+table th {
+    background: #f3f3f3;
+    text-align: center;
+}
+
+table th, table td {
+    padding: 5px 10px;
+}
+
+.bord {
+    border: #e1e1e1 1px solid;
+}
+
+h2 {
+    height: 28px;
+    line-height: 28px;
+    color: #58595b;
+    border: none;
+    padding: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+.wrap {
+    margin: 0 auto;
+    width: 1240px;
+}
+* html {
+    background-image: url(about:blank);
+    background-attachment: fixed;
+}
+.page {
+    position: relative;
+    color: #58595b;
+    font: 14px/27px simsun;
+    height: 28px;
+    line-height: 28px;
+    margin: 10px 0;
+    text-align: right;
+    width: 100%;
+}
+.page a {
+    border: 1px solid #e5e5e5;
+    color: #58595b;
+    padding: 5px 10px;
+    margin: 0 2px;
+}
+
+.page a:hover, .page a.selected {
+    background: #e43a3d;
+    border: 1px solid #e43a3d;
+    color: #fff;
+    text-decoration: none;
+}
+.wrap {
+    margin: 0 auto;
+    width: 1240px;
+}
+table.formtable td input[type="text"] {
+    text-align: left;
+    line-height: 22px;
+    margin: 0px;
+    vertical-align: middle;
+    border: 1px solid #e1e1e1;
+    font-size: 12px;
+    color: #666;
+    padding: 4px;
+    height: 22px;
+}
+
+table.formtable {
+    margin: 40px 0;
+}
+
+table.formtable, table.formtable td, table.formtable, th {
+    border: none;
+}
+table.formtable td {
+    line-height: 30px;
+    padding: 5px;
+}
+table.formtable td a {
+    margin: 0 5px;
+}
+table.formtable td input[type="text"] {
+    width: 302px;
+}
+
+table.formtable td textarea {
+    overflow-y: auto;
+    height: 66px;
+    width: 302px;
+    vertical-align: top;
+    padding: 5px;
+    font-size: 12px;
+    color: #666
+}
+
+table.formtable td img {
+    width: 60px;
+    height: 20px;
+    margin-right: 5px;
+}
+h1, h2, h3 {
+    font-weight: normal;
+}
+#pickfiles {
+    display: block;
+    width: 126px;
+    height: 30px;
+    background: url("http://static.ecgci.com/images/sc_pj.gif") no-repeat;
+    background-position: 0px -30px;
+}
+
+#pickfiles:hover {
+    background-position: 0px 0px;
+}
+
+input[type="checkbox"] {
+    width: 14px;
+    margin-right: 5px;
+}
+.tipt {
+    width: 280px;
+    height: 24px;
+    overflow: hidden;
+}
+.btn {
+    padding: 2px 8px;
+    display: inline-block;
+    border: none;
+    font-size: 12px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    font-family: "Microsoft YaHei";
+    line-height: 22px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.crumbs {
+    height: 52px;
+    line-height: 52px;
+    color: #58595b;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+}
+
+.crumbs span {
+    padding: 0 6px;
+}
+.m_right h2 {
+    height: 30px;
+    font-weight: bold;
+    padding: 2px 10px;
+    border-bottom: #e1e1e1 0px solid;
+    font-size: 14px;
+    line-height: 30px;
+    color: #58595b;
+    font-family: "SimSun";
+    text-align: left;
+    background-color: #f7f7f7;
+}
+#test {
+    clear: both;
+    display: inline-block;
+    vertical-aling: middle;
+    margin-left: 20px;
+}
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+.tishi {
+    line-height: 20px;
+    padding: 9px 0;
+}
+.m_right td img {
+    width: 80px;
+    height: 80px;
+}
+table .cg_titpl img {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+}
+table.formtable td .star-list {
+    overflow: hidden;
+    width: 610px;
+}
+
+table.formtable td .star-list img {
+    padding: 0;
+    width: 16px;
+    height: 12px;
+    margin: 0;
+}
+
+.tips-list, .tips-list ul {
+    width: 302px;
+}
+
+.tips-list li {
+    display: inline-block;
+    margin: 0 18px 5px 0;
+    width: 80px;
+    line-height: 22px;
+}
+.pjls_ts {
+    position: absolute;
+    right: 20px;
+    top: 78px;
+    width: 298px;
+    line-height: 20px;
+}
+h6 {
+    padding: 0 10px;
+    background: #f3f3f3;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: #e1e1e1 1px solid;
+    margin: 0;
+}
+em {
+    font-style: normal;
+}
+.bor3 .colh a {
+    color: #999
+}
+td {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline
+}
+.right_a .page {
+    margin-top: 20px;
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+.m_right .bor3 .text_c td.colh a.ljpj {
+    display: inline-block;
+    line-height: 24px;
+}
+.bor3 .colh a.ljpj {
+    background: none;
+    color: #e43a3d
+}
+.btn {
+    background: #e43a3d;
+    color: #FFFFFF
+}
+.right_b {
+    width: 1001px;
+}
+
+.crumbs a:hover {
+    color: #c42605;
+}
+@charset "utf-8";
+body {
+    color: #666666;
+    background: #ffffff;
+}
+
+a {
+    color: #666666;
+}
+
+a:hover {
+    color: #e43a3d;
+}
+.page a.selected, .page a:hover {
+    background: #e43a3d;
+    border: 1px solid #e1e1e1;
+}
+.btn {
+    background: #e43a3d;
+    color: #ffffff
+}
+.btn {
+    background: #e43a3d;
+}
+.page a.selected, .page a:hover {
+    background: #e43a3d;
+    color: #fff;
+}
+#contactTips {
+    width: 308px;
+    text-align: right;
+}
+table.formtable td .sczp img {
+    width: 60px;
+    height: 60px;
+}
+td .dd_addpic li {
+    float: left;
+    margin-right: 10px;
+    position: relative;
+}

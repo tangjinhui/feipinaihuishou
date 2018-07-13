@@ -1,0 +1,119 @@
+require(['jquery', 'handlebars', 'getUrlParam', 'header', 'modules/menu'], function($, Handlebars, getUrlParam) {
+
+    var afterSaleId = getUrlParam('afterSaleId');
+    if (!afterSaleId) {
+        return false;
+    }
+    var length = "";
+    init();
+
+    Handlebars.registerHelper("imgConf", function(imgUrl, id) {
+        return img_domain_data[id % img_domain_data.length] + '/' + imgUrl;
+    });
+
+    
+     Handlebars.registerHelper('content', function(detailStatus,options) {
+        if (detailStatus =="p_l no_p_t") {
+            return options.fn(this);
+        } else {
+            return options.inverse(this);
+        }
+    }); 
+
+     Handlebars.registerHelper('returnPrice', function(afterSaleStatus,options) {
+        if (parseInt(afterSaleStatus) ==109 || parseInt(afterSaleStatus) ==110) {
+            return options.fn(this);
+        } else {
+            return options.inverse(this);
+        }
+    });  
+
+    Handlebars.registerHelper('show', function(operation) {
+        var str = "";
+        if (operation) {
+            str = "本人";
+        } else {
+            str = "金币电商";
+        }
+        return str;
+    });
+
+    Handlebars.registerHelper("addIndex", function(index, options) {
+        return parseInt(index) + 1;
+    });
+
+    Handlebars.registerHelper("showType", function(index) {
+        var str = "";
+        if (index + 1 == length) {
+            str = "xx_itme end";
+        } else {
+            str = "xx_itme";
+        }
+        return str;
+    });
+
+    Handlebars.registerHelper("showImg", function(index) {
+        var str = "";
+        if (index == 0) {
+            str = "http://static.ecgci.com/images/green.png";
+        } else {
+            str = "http://static.ecgci.com/images/gray.png";
+        }
+        return str;
+    });
+
+    Handlebars.registerHelper("formatPrice", function(price) {
+       if (!price) {
+            return '';
+        }
+        return parseFloat(price).toFixed(2);
+    });
+
+    Handlebars.registerHelper("buyerDelivery", function(bdl) {
+        var str = '';
+        if (bdl) {
+            str = "暂无";
+        } else {
+            str = bdl;
+        }
+        return str;
+    });
+
+    Handlebars.registerHelper("policy", function(isReturnAble, isChangeAble) {
+        if (!isReturnAble) {
+            isReturnAble = '0';
+        }
+        if (!isChangeAble) {
+            isChangeAble = '0';
+        }
+        var str = '';
+        if ('1' == isReturnAble && '1' == isChangeAble) {
+            str = '可退可换';
+        } else if ('0' == isReturnAble && '1' == isChangeAble) {
+            str = '只换不退';
+        } else if ('1' == isReturnAble && '0' == isChangeAble) {
+            str = '只退不换';
+        } else if ('0' == isReturnAble && '0' == isChangeAble) {
+            str = '不退不换';
+        }
+        return str;
+    });
+
+    function init() {
+        $.ajax({
+            url: '/front/member/afterSale/afterSaleView',
+            type: 'get',
+            dataType: 'json',
+            data: {
+                afterSaleId: afterSaleId
+            },
+            success: function(res) {
+                if (res.code == '00') {
+                    length = res.data.esAfterSaleLogs.length;
+                    var contentTemp = Handlebars.compile($("#content-template").html());
+                    $('#content_box').html(contentTemp(res.data));
+                }
+            }
+        });
+    };
+});

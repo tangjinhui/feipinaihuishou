@@ -1,0 +1,495 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/swiper.css');
+@import url('http://static.ecgci.com/css/libs/common.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+
+.posr {
+    position: relative;
+    zoom: 1;
+}
+.posa {
+    position: absolute;
+    zoom: 1;
+}
+a {
+    text-decoration: none;
+    color: #333;
+    outline: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: #e43a3d;
+}
+.wrap {
+    width: 1240px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+
+.jdt {
+    width: 744px;
+    height: 454px;
+    margin-left: 225px;
+    position: relative;
+    z-index: 1;
+}
+.right {
+    width: 266px
+}
+.gold_pan {
+    border: #eee 1px solid;
+}
+.gold_pan h3 {
+    border-bottom: #eee 1px solid;
+    line-height: 42px;
+    color: #333;
+    font-weight: bold;
+    font-family: Microsoft YaHei;
+    font-size: 18px;
+    text-align: center
+}
+.padan {
+    background: url(http://static.ecgci.com/images/icon_bg.png) 0 -794px no-repeat;
+    height: 187px;
+    overflow: hidden;
+}
+.padan a {
+    display: block;
+    background: url(http://static.ecgci.com/images/icon_bg.png) -13px -987px no-repeat;
+    height: 29px;
+    font-size: 14px;
+    line-height: 29px;
+    overflow: hidden;
+    text-decoration: none;
+}
+.padan a:hover {
+    background: #ececec url(http://static.ecgci.com/images/icon_bg.png) -13px -1017px no-repeat;
+    color: #e4393c;
+}
+.padan dt {
+    float: left;
+    width: 110px;
+    padding: 0 19px;
+    text-align: right;
+    oberflow: hidden;
+    cursor: pointer;
+}
+.padan dd {
+    float: right;
+    text-align: right;
+    padding: 0 40px 0 0;
+    cursor: pointer;
+}
+.au {
+    padding: 12px 0 16px 0;
+    background: #f1f1f1;
+    border-top: #eee 1px solid;
+}
+.au p {
+    background: url(http://static.ecgci.com/images/icon_bg.png) -221px -404px no-repeat;
+    padding: 0 0 0 50px;
+    color: #353535;
+    font-size: 14px;
+}
+.au span {
+    font-weight: bold;
+    font-size: 26px;
+    margin: 0 5px;
+}
+.sub_nav {
+    border: #eee 1px solid;
+    margin-top: 5px;
+    height: 151px;
+    overflow: hidden;
+}
+.four {
+    margin: 5px 12px;
+}
+.four a {
+    float: left;
+    display: block;
+    position: relative;
+    width: 118px;
+    height: 70px;
+    padding: 43px 0 0 0;
+    height: 27px;
+    line-height: 22px;
+    color: #b1191a;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+}
+.four a:hover {
+    font-weight: bold;
+    color: #b1191a;
+}
+.four a i {
+    display: block;
+    width: 50px;
+    height: 43px;
+}
+.four a.qn i {
+    background-position: 0px -138px;
+    left: 42px;
+    top: 0;
+    width: 40px
+}
+.four a.qn:hover i {
+    background-position: 0px -180px;
+}
+.four a.ms i {
+    background-position: -38px -136px;
+    left: 40px;
+    top: 0;
+    width: 40px
+}
+.four a.ms:hover i {
+    background-position: -38px -180px;
+}
+.four a.cq i {
+    background-position: -78px -134px;
+    left: 33px;
+    top: 0;
+}
+.four a.cq:hover i {
+    background-position: -78px -179px;
+}
+.four a.jp i {
+    background-position: -134px -133px;
+    left: 33px;
+    top: 0;
+}
+.four a.jp:hover i {
+    background-position: -134px -176px;
+}
+.four .bor {
+    border-right: #eee 1px solid;
+}
+.four .bob {
+    border-bottom: #eee 1px solid;
+}
+.floor h2 {
+    position: relative;
+    height: 26px;
+    border-bottom: #b67100 1px solid;
+    padding: 0 0 0 41px;
+    margin: 35px 0 19px;
+    line-height: 26px;
+    font-size: 18px;
+    color: #b1191a;
+    font-family: Microsoft YaHei
+}
+.floor h2 a {
+    display: block;
+    position: absolute;
+    font-size: 14px;
+    color: #b67100;
+    right: 10px;
+    bottom: 2px;
+    font-weight: normal;
+    text-decoration: none;
+}
+.floor h2 a:hover {
+    color: #b1191a;
+}
+.floor h2 i {
+    width: 41px;
+    height: 38px;
+    top: 0;
+    left: 0;
+}
+.floor h2 .fot1 {
+    background-position: 0 -324px;
+}
+.floor h2 .fot2 {
+    background-position: 0 -370px;
+}
+.floor h2 .fot3 {
+    background-position: 0 -417px;
+}
+.fot_pic {
+    width: 268px;
+    height: 320px;
+    overflow: hidden;
+}
+.fot_pro {
+    width: 972px;
+    height: 318px;
+    border-top: #eee 1px solid;
+    border-bottom: #eee 1px solid;
+    overflow: hidden;
+}
+.fot_pro dl {
+    float: left;
+    width: 242px;
+    height: 318px;
+    border-right: #eee 1px solid;
+}
+.fot_pro dl dt {
+    transition: .3s;
+}
+.fot_pro dl:hover dt {
+    margin-right: 11px;
+}
+.fot_pro dl .no_goods {
+    background: url(http://static.ecgci.com/images/zero_.png) 0 0 no-repeat;
+    width: 40px;
+    height: 41px;
+    left: 12px;
+    top: 0;
+    position: absolute;
+    transition: 1s 0.3s;
+    -moz-transition: 1s 0.3s;
+    -webkit-transition: 1s 0.3s;
+    -o-transition: 1s 0.3s;
+}
+.fot_pro dt {
+    height: 234px;
+    text-align: center;
+    position: relative;
+}
+.fot_pro dt img {
+    margin-top: 10px;
+}
+.fot_pro dd {
+    padding: 12px 47px;
+    background: url(http://static.ecgci.com/images/icon_bg.png) 0px -1048px no-repeat;
+    margin-right: -1px;
+}
+.fot_pro dd a {
+    color: #666;
+    text-decoration: none;
+}
+.fot_pro dd a:hover {
+    color: #b1191a;
+}
+.fot_pro .tit {
+    height: 34px;
+    margin-bottom: 5px;
+    line-height: 17px;
+    overflow: hidden;
+}
+.fot_pro .price {
+    color: #b1191a;
+    font-size: 16px;
+    font-family: Arial;
+    height: 16px;
+}
+.fot_pro .price span {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 1px;
+}
+.base_info {
+    margin-top: 24px;
+}
+.base_info div {
+    float: left;
+    width: 380px;
+    margin: 0 50px 0 0
+}
+.base_info p {
+    background: #fff;
+    height: 38px;
+    font-size: 18px;
+    line-height: 38px;
+    font-family: Microsoft YaHei
+}
+.base_info .nc, .base_info .tel {
+    background: #dbffff;
+}
+.base_info .kb {
+    background: #efe9ff;
+    width: 380px;
+}
+.base_info dt {
+    position: relative;
+    float: left;
+    width: 133px;
+    height: 133px;
+    margin: 10px 0;
+    border-right: #fff 1px solid;
+}
+.base_info .nc dd, .base_info .kb dd {
+    padding: 27px 0 0 0;
+    margin: 0 15px 0 155px;
+}
+.base_info dd a {
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    background: url(http://static.ecgci.com/images/icon_bg.png) -259px -348px no-repeat;
+    padding: 0 0 0 15px;
+    color: #666;
+    text-decoration: none;
+    overflow: hidden;
+}
+.base_info dd a:hover {
+    color: #b1191a;
+}
+.base_info .tel dd {
+    padding: 24px 0 0 0;
+    margin: 0 15px 0 165px;
+    line-height: 22px;
+}
+.base_info .tel span {
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial;
+    line-height: 32px;
+}
+.base_info i {
+    left: 31px;
+    top: 36px;
+    width: 75px;
+    height: 51px;
+}
+.base_info .icon_base1 {
+    background-position: -66px -325px;
+}
+.base_info .icon_base2 {
+    background-position: -66px -388px;
+}
+.base_info .icon_base3 {
+    background-position: -152px -323px;
+    left: 32px;
+    top: 32px;
+    width: 75px;
+    height: 75px;
+}
+.base_info .last {
+    margin: 0;
+}
+.home_banner .hd a {
+    color: #fff!important;
+    display: block;
+    padding-top: 13px;
+    width: 13px;
+    height: 0;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #fff;
+    overflow: hidden;
+}
+.home_banner .hd a:hover {
+    text-decoration: none;
+}
+.home_banner .hd ul {}
+.home_banner .hd .item {
+    position: relative;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin: 2px 6px;
+    text-align: center;
+    overflow: hidden;
+}
+.item img {
+    height: 454px;
+    width: 744px;
+}
+.home_banner .hd .on a, .home_banner .hd .item:hover a {
+    background: #d2022b;
+}
+.home_banner .hd .last {}
+.home_banner img {
+    display: block;
+    width: 744px;
+}
+#slides_tabs {
+    z-index: 11;
+    height: 19px;
+    line-height: 21px;
+    position: absolute;
+    left: 50%;
+    margin-left: -75px;
+    bottom: 17px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 2px 20px 0;
+}
+.fot_pro {
+    width: 1240px;
+    height: auto;
+    border-left: #eee 1px solid;
+    border-bottom: 0;
+}
+.fot_pic {
+    width: 248px;
+}
+.fot_pro dl {
+    height: 299px;
+    width: 227px;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    padding: 10px;
+    position: relative;
+}
+.fot_pro dl>span.static{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 34px;
+    height: 38px;
+    color: #fff;
+    font-size: 14px;
+    text-align:center;
+    padding: 5px 7px;
+    font-family: Microsoft Yahei;
+    z-index: 999;
+}
+.fot_pro dl>span.static_1{
+    background: url(http://static.ecgci.com/images/goodsStatic/startSoon.png) no-repeat;
+    padding: 9px 7px;  
+    line-height: 15px;
+}
+.fot_pro dl>span.static_2{
+    background: url(http://static.ecgci.com/images/goodsStatic/noGoods.png) no-repeat;  
+    line-height: 38px;
+}
+.fot_pro dl>span.static_3{
+    background: url(http://static.ecgci.com/images/goodsStatic/inventory.png) no-repeat;  
+    padding: 9px 7px;
+    line-height: 15px;
+}
+.fot_pro dt {
+    height: 228px;
+    margin-bottom: 10px;
+}
+.fot_pro dt img {
+    margin-top: 0;
+}
+.fot_pro dd {
+    margin-right: 0px;
+    padding: 3px 47px;
+}
+.fot_pro .tit {
+    margin-bottom: 0px;
+}
+.fot_pro .price {
+    height: 22px;
+}
+.fot_pro dl .no_goods {
+    left: 5px;
+    top: -10px;
+}
+h2 .fot4 {
+    background-position: 0 -1134px;
+}
+
+.panda_coin, .keepsake_coin, .foreign_coin, .other_coin {
+    display: none;
+}
+.home_banner {
+    height: 450px;
+}
+#nav ul.cate_left {
+    display: block;
+}

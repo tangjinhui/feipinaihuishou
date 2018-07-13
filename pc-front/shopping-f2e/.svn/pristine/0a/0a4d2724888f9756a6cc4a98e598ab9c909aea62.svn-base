@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>商品评价晒单</title>
+    <link rel="stylesheet" type="text/css" href="/css/comment_detail.css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div class="w crumbs">当前位置：
+        <a href="/index.html">首页</a>
+        <span>&gt;</span><span id="goodsLink"></span> 
+        <span>&gt;</span>商品评价晒单
+    </div>
+    <div class="w clearfix" id="content_box">
+        <div class="fl">
+            <div class="zx_left bord" id="goodsInfo"></div>
+        </div>
+        <div class="fr">
+            <div class="bord right_b pl_list pos" style="margin-top:0;z-index:1;">
+                <!--商品评价弹出层开始-->
+                <div class="Main_cd ui-tabs-hide">
+                    <div class="P_viewborder ">
+                        <p class="cls_dt">
+                            <img src="http://static.ecgci.com/images/delet.gif">
+                        </p>
+                        <div class="Pro_BigImage">
+                            <img src="" name="0" alt="点击查看下一张">
+                        </div>
+                        <ul class="fengyid">
+                            <li class="uppre">上一页</li>
+                            <li class="downpre">下一页</li>
+                        </ul>
+                    </div>
+                    <div class="P_view Pro_Info">
+                        <div class="Pro_Images">
+                            <div class="pro_hiden">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--商品评价弹出层结束-->
+                <!--商品评价0626评价详情1开始-->
+                <div class="item mart12">
+                    <div id="goodsOneComment">
+                    </div>
+                    <div class="i-item repley_style">
+                        <div id="replyContent">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!--#include file="/inc/member/assess/goods_info.html"-->
+<!--#include file="/inc/member/assess/goods_one_comment.html"-->
+<!--#include file="/inc/member/assess/reply.html"-->
+<!--#include file="/data/channel/img_domain_data.html"-->
+<!--#include file="/common/footer.html"-->
+<script type="text/javascript" src="/script/libs/require.js"></script>
+<script type="text/javascript" src="/script/libs/require-config.js"></script>
+<script type="text/javascript" src="/script/comment_detail.js"></script>
+
+</html>

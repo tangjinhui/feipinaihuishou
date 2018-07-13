@@ -1,0 +1,34 @@
+<script id="list-template" type="text/x-handlebars-template">
+    {{#dataLen list}} {{#each list}}
+    <div class="adrnav" id="viewAddressList{{@index}}">
+        <h3 class="fl">
+        <span class="marl10">
+            {{consignee}} - {{addressTag}}
+        </span>
+    </h3>
+        <p class="adrmr fl">
+            {{ifDefault defaultFlag}}
+        </p>
+        <ul class="fr">
+            <li>
+                <a href="javascript:void(0)" class="anniu edit" data-addressId="{{addressId}}">
+                编辑
+            </a>
+            </li>
+            {{isDefaultBtn defaultFlag}}
+        </ul>
+        <p class="c">
+        </p>
+    </div>
+    <p class="adress">
+        收货人：{{consignee}}
+        <br> 详细地址：{{addressLabel}}{{address}}
+        <br> 手机号码：{{mobile}}
+        <br> 固定电话：{{tel}}
+        <br> 电子邮件：{{email}}
+        <br> 邮政编码：{{zipcode}}
+    </p>
+    {{/each}} {{else}}
+    <p class="no_address">暂未添加收货地址</p>
+    {{/dataLen}}
+</script>

@@ -1,0 +1,96 @@
+require(['jquery', 'handlebars', 'header', 'modules/menu'], function($, Handlebars) {
+
+    var flag = {
+        //1:低 2\3:中 3:高
+        safeLevel: 1
+    };
+
+    $.ajax({
+        url: '/front/member/security/accountSecurity',
+        type: 'GET',
+        dataType: 'json',
+        success: function(res) {
+            if ('99' == res.code) {
+                window.location.href = 'https://passportdev.ecgci.com/login.html';
+            } else if (res && res.code == '00') {
+                var secHtml = $('#security-template').html();
+                var secTemplate = Handlebars.compile(secHtml);
+                Handlebars.registerHelper('grade', function(level, options) {
+                    switch (level) {
+                        case "1":
+                            return '低';
+                            break;
+                        case "3":
+                            return '高';
+                            break;
+                        default:
+                            return '中';
+                    }
+                });
+                Handlebars.registerHelper('gradetxt', function(level, options) {
+                    if (level < 3) {
+                        return '建议您启动全部安全设置，以保障账户及资金安全。';
+                    } else {
+                        return '您的账户安全级别较高。';
+                    }
+                });
+                Handlebars.registerHelper('status', function(gra, options) {
+                    switch (gra) {
+                        case 0:
+                            return new Handlebars.SafeString('<a href="/member/security/validate.html" class="red">立即认证</a>');
+                            break;
+                        case 1:
+                            return new Handlebars.SafeString('<a href="/member/security/validate.html" class="red">认证失败</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/member/security/validate_cardView.html" class="red">查看</a>');
+                            break;
+                        case 2:
+                            return '认证进行中';
+                            break;
+                        case 3:
+                            return new Handlebars.SafeString('<span>认证成功&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="/member/security/validate_cardView.html" class="red">查看</a>');
+                            break;
+                        case 4:
+                            return new Handlebars.SafeString('<span class="txt">待动态实名认证 </span> <img class="ico_i" src="http://static.ecgci.com//images/ico_i.png"><a href="/member/security/validate_dynamic.html" class="red">立即认证</a>');
+                            break;
+                        case 5:
+                            return new Handlebars.SafeString('<span class="txt">动态实名认证核查中 </span> <img class="ico_i" src="http://static.ecgci.com//images/ico_i.png">');
+                            break;
+                        case 6:
+                            return new Handlebars.SafeString('动态实名认证未通过 <img class="ico_i" src="http://static.ecgci.com//images/ico_i.png"><a href="/member/security/validate_dynamic.html" class="red">再次认证</a>');
+                            break;
+                        case 7:
+                            return '认证成功';
+                            break;
+                        default:
+                            return '<span class="lock">实名锁定</span>';
+                    }
+                });
+                Handlebars.registerHelper('isShow', function(gra, options) {
+                    if (gra == 4 || gra == 5 || gra == 6) {
+                        return options.fn(this);
+                    }
+                });
+                Handlebars.registerHelper('isLock', function(gra, options) {
+                    if (gra == 8) {
+                        return options.fn(this);
+                    }
+                });
+                Handlebars.registerHelper('isMobileValid', function(mobileValid) {
+                    if (mobileValid == 1) {
+                        return 'yyz';
+                    }else{
+                        return 'wyz';
+                    }
+                });
+                var html = secTemplate(res);
+                $('#yanzheng').html(html);
+            } else {
+                dialog({ content: '网络连接超时，请重新修改登录密码' });
+            }
+        },
+        error: function() {
+            dialog({ content: '网络连接超时，请您稍后重试' });
+        }
+    });
+
+
+});

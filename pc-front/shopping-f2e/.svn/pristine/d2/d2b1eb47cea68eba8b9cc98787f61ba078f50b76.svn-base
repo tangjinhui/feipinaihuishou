@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>账户中心 - 会员中心 - 中国金币官方网上商城</title>
+    <meta name="Keywords" content="">
+    <meta name="description" content="">
+    <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" type="text/css" href="/css/member/account.css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div class="w crumbs">当前位置：
+        <a href="/index.html">首页</a>
+        <span>&gt;</span>
+        <a href="/member/index.html">会员中心</a>
+        <span>&gt;</span>交易账户
+    </div>
+    <div class="w clearfix">
+        <!--#include file="/inc/member/menu.html"-->
+        <div class="fr">
+            <table border="0" cellspacing="0" class="text_l" cellpadding="0" style="margin-bottom: 10px;margin-left: 16px;width: 998px;padding: 7px;">
+                <tbody>
+                    <tr>
+                        <td style="padding: 6px 10px; background-color:#f7f7f7;">
+                            <h2 style="font-weight:bold;">交易账户</h2>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--#include file="/inc/member/account/bindCard.html"-->
+            <!--#include file="/inc/member/account/bindInfo.html"-->
+        </div>
+    </div>
+    <!--#include file="/inc/plugin/accountDialog.html"-->
+    <!--#include file="/common/footer.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/member/account.js"></script>
+</body>
+
+</html>

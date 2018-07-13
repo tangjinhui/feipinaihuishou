@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>帮助中心-支付方式-预存款支付</title>
+<meta name="Keywords" content="帮助中心-自助服务中心-帮助文章详情" />
+<meta name="description" content="帮助中心-自助服务中心-帮助文章详情" />
+<meta content=IE=EmulateIE7 http-equiv=X-UA-Compatible>
+<link type="text/css" rel="stylesheet" href="/doing/hel/css/common1.css">
+</head>
+<body>
+    <div class="main">
+        <h3>预存款支付</h3>
+        <div class="mainTxt1">
+	        <p class="praBlock">中国金币网上商城为每一个注册账号，开通一个虚拟账户，用户可以往账户中事先存入预存款。用户在下单支付的是时候可以直接使用预存款账户中的金额进行支付。这样更加方便快捷，支付速度更加迅速，尤其是在秒杀等活动中会更加有利。</p>
+	        <p class="praBlock">使用预存款金额进行支付时，系统会要求用户进行手机动态验证，以确认用户的正确身份。验证通过才可以使用，否则无法使用。</p>
+        </div>
+    </div>
+</body>
+</html>
+<p class="praBlock"></p>

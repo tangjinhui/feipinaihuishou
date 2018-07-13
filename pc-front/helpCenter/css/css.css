@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0px;
+    font-size: 12px;
+    text-align: left;
+    font-family: Arial,Lucida,Verdana,Helvetica,sans-serif;
+        color: #666666;
+    background: #ffffff;
+}
+div, span, input, form, p, h1, h2, h4, ul, li, dl, dt, dd, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+input, img, label, select {
+    vertical-align: middle;
+}
+ul, li {
+    list-style: none;
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: #666666;
+}
+
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+.fl {
+    float: left;
+}
+.four-nav1>ul {
+    padding: 0 0;
+}
+.four-nav1 ul {
+    padding: 0 0;
+}
+/*.four-nav ul.disb {
+    display: block;
+}*/
+.four-nav ul li {
+    font-size: 14px;
+    font-family: microsoft yahei;
+    font-weight: bold;
+    line-height: 30px;
+}
+.four-nav ul li a {
+    display: block;
+}
+.four-nav ul li ul {
+    display: none;
+    padding:0;
+}
+.four-nav ul li.show ul {
+    display: block;
+}
+.four-nav ul li ul li {
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 100;
+}
+.four-nav1>ul>li>ul>li>a {
+    line-height: 27px;
+    padding-left: 58px;
+    font-family: "宋体";
+    letter-spacing: 4px;
+    height: 27px;
+}

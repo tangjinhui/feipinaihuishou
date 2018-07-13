@@ -1,0 +1,26 @@
+<script id="category-template" type="text/x-handlebars-template">
+    <div class="m_left ss_left left_a">
+        <h2>
+            所有分类
+        </h2> {{#each data}}
+        <div class="ss_l_shu {{categoryClass show}}">
+            <h3>
+                {{categoryName}}({{count}})
+                <span>
+                </span>
+            </h3>
+            <ul style="display: {{categoryList show}};">
+                {{#each categorys}}
+                <li>
+                    <a href="/search.html?keyName={{categoryName}}&keyCategory={{encode categoryId}}" target="_self">
+                        <span class="{{categoryItem show}}">
+                            {{categoryName}}({{count}})
+                        </span>
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        {{/each}}
+    </div>
+</script>

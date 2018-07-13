@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        购物车 - 中国金币官方网上商城
+    </title>
+    <meta name="Keywords" content="中国金币云商平台" />
+    <meta name="description" content="中国金币云商平台" />
+    <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible">
+    <link href="/css/cart.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <div class="w mart12 clearfix" style="margin-top:20px;">
+        <div class="fl">
+            <a href="/index.html">
+                    <img src="http://static.ecgci.com/images/logo.png">
+                </a>
+        </div>
+        <div class="flow_chart3 fr step1">
+            <ul>
+                <li class="cur">
+                    1.我的购物车
+                </li>
+                <li>
+                    2.填写核对订单信息
+                </li>
+                <li class="last">
+                    3.成功提交订单
+                </li>
+                <p class="c">
+                </p>
+            </ul>
+        </div>
+    </div>
+    <!-- <div id="cartBox"></div> -->
+    <div class="w mart12 cart-empty dn" style="margin-top:25px;">
+        <div class="message bord">
+            <ul>
+                <li class="gwl1">
+                    购物车暂时没有商品！
+                </li>
+                <li>
+                    购物车内暂时没有商品，您可以去首页挑选喜欢的商品
+                </li>
+                <li>
+                    <a href="/index.html" class="ljjs last">
+                        进入商城首页
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+   
+    <div class="w cg_dg dn" id="success_flag">
+        <p class="fl cg_left">恭喜哦，商品已成功加入购物车！</p>
+        <div class="fr cg_r">
+            <a class="buy_go" href="/index.html"></a>
+        </div>
+        <p class="c"></p>
+    </div>
+    <div class="w dn" id="cartList">
+        <div class="gwt_tit gwt_tit2"></div>
+        <table class="table_tit font12" cellspacing="0" cellpadding="0" border="0" width="100%">
+            <thead>
+                <tr>
+                    <th width="6%">
+                        <input type="checkbox" name="allbox" class="allbox" {{#if allBoxChecked}}checked{{/if}}>全选</th>
+                    <th colspan="2">商品</th>
+                    <th width="10%">商城价</th>
+                    <th width="12%">金豆</th>
+                    <th width="12%">商品数量</th>
+                    <th width="10%">小计（元）</th>
+                    <th width="13%">操作</th>
+                </tr>
+            </thead>
+        </table>
+        <div class="border_all" id="cartBox">
+            <script id="cart-template" type="text/x-handlebars-template">
+            <table class="table_dan">
+                <tbody>
+                    {{#each cartInfos}}
+                    <tr class="no_border trcheck">
+                        <td width="6%">
+                            {{#pandaTrading pandacoins isPandaTradinghours}}
+                            <div>
+                                <img src="http://static.ecgci.com/images/jinzhi.gif" width="16" height="16" title="熊猫币实时交易已闭市，请下个交易日再次选购">
+                            </div>
+                            {{else}}
+                            <div class="check_gwc">
+                                <input type="checkbox" name="goodsId" value="{{goodsId}}" {{#if pitchOn}}checked{{/if}}/>
+                            </div>
+                            {{/pandaTrading}}
+                        </td>
+                        <td colspan="2" class="txt_left zp_ts">
+                            <a href="http://itemdev.ecgci.com/product_detail_{{goodsId}}.html" class="global_img" target="_blank">
+                                <img src="{{imgConf goodsThumb goodsId}}" width="75" height="75">
+                            </a>
+                            <span class="span_bl" id="goodName0">
+                                <a href="http://itemdev.ecgci.com/product_detail_{{goodsId}}.html" target="_blank">{{godosName}}</a>
+                                {{#pandaTrading pandacoins isPandaTradinghours}}
+                                <br><b style="color:#ff0000">熊猫币实时交易已闭市，请下个交易日再次选购</b>
+                                {{/pandaTrading}}
+                                
+                            </span>
+                        </td>
+                        <td width="10%"><span class="shopPrice" data-shopPrice={{shopPrice}}>￥{{formatPrice shopPrice}}</span>
+                        </td>
+                        <td width="12%"><span class="bean">{{payPoint}}</span>
+                        </td>
+                        <td width="12%">
+                            <img src="http://static.ecgci.com/images/cut_bg.png" class="reduce" alt="减少">
+                            <input data-goodsId="{{goodsId}}" type="text" value="{{buyNumber}}" class="num_gwc" name="commNumber">
+                            <img src="http://static.ecgci.com/images/add_bg.png" class="add" alt="添加">
+                        </td>
+                        <td width="10%">
+                            <span class="totalPrice">{{formatPrice totalPrice}}</span>
+                        </td>
+                        <td width="13%"><a class="delCartGoods" data-goodsId="{{goodsId}}" href="javascript:void(0);" class="cut">删除</a>
+                        </td>
+                    </tr>
+                    {{#if materialInfos}}
+                    <tr class="tr_tao trcheck">
+                        <td width="6%"></td>
+                        <td colspan="7" class="pd_t">
+                            <table class="table_tit font12" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                <thead>
+                                    <tr>
+                                        <th>商品</th>
+                                        <th width="12%">规格</th>
+                                        <th width="12%">成色</th>
+                                        <th width="12%">面值</th>
+                                        <th width="12%">直径</th>
+                                        <th width="12%">数量</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#each materialInfos}}
+                                    <tr>
+                                        <td class="sp_tit"><img src="{{imgConf materialImg materialId}}" width="75" height="75">
+                                            <span id="goodName0" class="span_bl">{{materialName}}</span>
+                                        </td>
+                                        <td width="10%">{{standard}}</td>
+                                        <td width="10%">{{quality}}</td>
+                                        <td width="10%">{{faceValue}}</td>
+                                        <td width="10%">{{diameter}}</td>
+                                        <td width="10%">{{quantity}}</td>
+                                    </tr>
+                                    {{/each}}
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    {{/if}}
+                    <tr style="border-top:1px solid #d0d0d0; padding: 0;">
+                        <td style="padding: 0;" colspan="8"></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            </script>
+        </div>
+        <div class="w">
+            <div class="gwc_b clearfix" style="border-top:1px solid #d0d0d0;">
+                <p class="text_l tpcheese">
+                    <a class="sc_xz" id="delAllGoods" href="javascript:void(0);"><b></b>删除选中的商品</a>
+                    <a class="cd_sp" href="/index.html"><b></b>继续购物</a>
+                </p>
+                <div class="text_r tprice">
+                    <span class="goodsAllLen"></span>件商品，总计：￥<span class="goodsAllPrice"></span>
+                    <br>赠送金豆：<span class="goodsAllbean"></span>个
+                </div>
+            </div>
+        </div>
+        <div class="w">
+            <div class="js_gwc">
+                商品总金额：￥<span class="goodsAllPrice"></span><a id="sub_order" href="javascript:void(0);"></a>
+            </div>
+        </div>
+    </div>
+       
+    <!--#include file="/common/footer.html"-->
+    <!--#include file="/data/channel/img_domain_data.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/cart.js"></script>
+</body>
+
+</html>

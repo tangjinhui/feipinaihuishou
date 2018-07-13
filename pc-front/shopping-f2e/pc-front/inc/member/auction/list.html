@@ -1,0 +1,38 @@
+<script id="list-template" type="text/x-handlebars-template">
+    {{#each list}}
+    <tr>
+        <td class="date">
+            <a href="http://auctiondev.ecgci.com/auction_detail_{{auctionId}}.html" target="_blank">
+                    {{name}}
+                </a>
+        </td>
+        <td class="date">
+            {{endTime}}
+        </td>
+        <td>
+            <span class="font_01">
+                    ￥{{formatMaxPrice startPrice}}
+                </span>
+        </td>
+        <td>
+            <span class="font_01">
+                    ￥{{formatMaxPrice maxPrice}}
+                </span>
+        </td>
+        <td>
+            {{priceCount}}
+        </td>
+        <td>
+            <span class="font_01">
+                    ￥{{formatMaxPrice myMaxPrice}}
+                </span>
+        </td>
+        <td>
+            {{status}}
+        </td>
+        <td>
+            {{{power orderId}}}
+        </td>
+    </tr>
+    {{/each}}
+</script>

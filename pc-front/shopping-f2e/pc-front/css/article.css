@@ -1,0 +1,92 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/dialog.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+
+body {
+    margin: 0;
+    padding: 0px;
+    font-size: 12px;
+    text-align: left;
+    font-family: Arial, Lucida, Verdana, Helvetica, sans-serif;
+}
+div, span, p, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+a {
+    text-decoration: none;
+}
+img {
+    vertical-align: middle;
+}
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+body {
+    color: #666666;
+    background: #ffffff;
+}
+a {
+    color: #666666;
+}
+.crumbs {
+    height: 52px;
+    line-height: 52px;
+    color: #58595b;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+}
+.crumbs span {
+    padding: 0 6px;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+.gongcont {
+    margin-bottom: 40px;
+    background: url(http://static.ecgci.com/images/gg_bg.gif) 0 0 repeat;
+    border: #fedcb1 1px solid;
+    padding: 43px 115px;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#cdcdcd', Direction=135, Strength=5);
+    background-color: #fff;
+    -moz-box-shadow: 2px 2px 5px #cdcdcd;
+    -webkit-box-shadow: 2px 2px 5px #cdcdcd;
+    box-shadow: 2px 2px 5px #cdcdcd;
+    font-family: "Microsoft YaHei";
+}
+.gongcont {
+    padding: 78px 115px;
+    color: #454545;
+}
+.gongcont .gcont_tit {
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+}
+.gongcont .gcont_time {
+    height: 26px;
+    padding: 0 0 20px;
+    line-height: 26px;
+    font-size: 12px;
+    text-align: center;
+}
+.gongcont .gcont_time span {
+    padding: 0 25px 0 0;
+}
+.gongcont .gcont_artic {
+    line-height: 25px;
+    font-size: 15px;
+    text-align: left;
+}

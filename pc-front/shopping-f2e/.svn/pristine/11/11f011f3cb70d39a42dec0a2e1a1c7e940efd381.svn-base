@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        查看我的投诉-会员中心-中国金币官方网上商城
+    </title>
+    <meta name="Keywords" content="">
+    <meta name="description" content="">
+    <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" type="text/css" href="/css/member/complain/view.css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div class="w crumbs">
+        当前位置：
+        <a href="/index.html">
+        首页
+      </a>
+        <span>
+        &gt;
+      </span>
+        <a href="/member/index.html">
+        会员中心
+      </a>
+        <span>
+        &gt;
+      </span>
+        <a href="/member/complain.html">
+        我的投诉
+      </a>
+        <span>
+        &gt;
+      </span> 我的投诉查看
+    </div>
+    <div class="w clearfix">
+        <!--#include file="/inc/member/menu.html"-->
+        <div class="fr">
+            <div class="right_a m_right">
+                <div class="bord" id="ckts">
+                    <div class="padr10">
+                        <h2 class="fl wdbord marr10">
+                查看我的投诉
+              </h2>
+                        <a class="fr red mart15" href="/member/complain.html">
+                返回
+              </a>
+                    </div>
+                    <p class="c">
+                    </p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody id="view-complain">
+                        </tbody>
+                    </table>
+                    <div class="crumbs marl10">
+                        <span class="tit">
+                详细信息
+              </span>
+                    </div>
+                </div>
+            </div>
+            <div class="right_a m_right">
+                <div id="hfxx">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody id="view-complain-detail">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="right_a m_right">
+                <div class="bord tousu">
+                    <table border="0px" class="formtable">
+                        <tbody>
+                            <tr>
+                                <td align="right" width="130" valign="top">
+                                    留言内容:
+                                    <span class="red">
+                        *
+                      </span>
+                                </td>
+                                <td colspan="2">
+                                    <textarea id="replyDetail" maxlength="200" name="replyDetail" cols="" rows="" class="hei100"></textarea>
+                                    &nbsp;&nbsp;
+                                    <span style="float: right; width:275px;">
+                          <font color="#EF6041">
+                              最多可输入200字符数，不要含有单引号、双引号等特殊字符
+                          </font>
+                      </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                </td>
+                                <td colspan="2">
+                                    <p id="shengyu">
+                                        还可以输入200字
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                                <td colspan="2">
+                                    <input id="complaintForm" value="提交" type="submit" class="btn" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/inc/member/complain/view.html"-->
+    <!--#include file="/inc/member/complain/view_detail.html"-->
+    <!--#include file="/common/footer.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/member/complain/view.js"></script>
+</body>
+
+</html>

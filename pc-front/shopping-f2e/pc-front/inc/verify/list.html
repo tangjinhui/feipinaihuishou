@@ -1,0 +1,101 @@
+<script id="ver-template" type="text/x-handlebars-template">
+    <div>
+        <div class="fl">
+            {{#isImg imageF}}
+            <a data-name="imageF" href="javascript:void(0);">
+                    <img data-name="imageF" src="http://static.ecgci.com/images/verifyNoPic.jpg">
+                </a> {{else}}
+            <a target="_blank" data-name="imageF" href="{{imageF}}">
+                   <img data-name="imageF" src="{{imageF}}">
+                </a> {{/isImg}}
+            <p class="bf_color">背面</p>
+        </div>
+        <div class="fr">
+            {{#isImg imageB}}
+            <a data-name="imageB" href="javascript:void(0);">
+                    <img data-name="imageB" src="http://static.ecgci.com/images/verifyNoPic.jpg">
+                </a> {{else}}
+            <a target="_blank" data-name="imageB" href="{{imageB}}">
+                   <img data-name="imageB" src="{{imageB}}">
+                </a> {{/isImg}}
+            <p class="bf_color">正面</p>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="msg_title ver_title">中国金币商品认证档案信息</div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="td_first" colspan="2">
+                    <span class="ver_name">认证编号：</span>
+                    <span title="" data-name="certificationNumber" class="ver_meg big_width">{{certificationNumber}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="td_first" colspan="2">
+                    <span class="ver_name">钱币名称：</span>
+                    <span class="ver_meg big_width" data-name="coinName">{{coinName}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="ver_name">评级结果：</span>
+                    <span class="ver_meg" data-name="grade">{{grade}}</span>
+                </td>
+                <td>
+                    <span class="ver_name">年份：</span>
+                    <span class="ver_meg" data-name="publishTime">{{publishTime}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="ver_name">材质：</span>
+                    <span class="ver_meg" data-name="material">{{material}}
+                    </span>
+                </td>
+                <td>
+                    <span class="ver_name">面额(元)：</span>
+                    <span class="ver_meg" data-name="denomination">{{denomination}}
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="ver_name">造币厂：</span>
+                    <span class="ver_meg" data-name="mint">{{mint}}</span>
+                </td>
+                <td>
+                    <span class="ver_name">最大发行量：</span>
+                    <span class="ver_meg" data-name="circulation">{{circulation}}
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="ver_name">直径(mm)：</span>
+                    <span class="ver_meg" data-name="diameter">{{diameter}}
+                    </span>
+                </td>
+                <td>
+                    <span class="ver_name">质量：</span>
+                    <span class="ver_meg" data-name="quality">{{quality}}
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <span class="ver_name">正面图案：</span>
+                    <span class="ver_meg big_width" data-name="frontage">{{frontage}}
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <span class="ver_name">背面图案：</span>
+                    <span class="ver_meg big_width" data-name="back">{{back}}
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</script>

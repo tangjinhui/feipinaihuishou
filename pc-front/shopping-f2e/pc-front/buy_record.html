@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>购买记录</title>
+    <meta name="Keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="/css/buy_record.css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div class="w crumbs">当前位置：
+        <a href="/index.html">首页</a>
+        <span>&gt;</span><span id="goodsLink"></span> 
+        <span>&gt;</span>购买记录
+    </div>
+    <div class="wrap top">
+        <div class="fl">
+            <div class="zx_left bord" id="goodsInfo"></div>
+        </div>
+        <!-- 右侧购买记录 -->
+        <div class="gm_in nor_b">
+            <h3 class="jianttr">购买记录</h3>
+            <div id="jsPageBox">
+                <ul class="ul1" id="buyRecord">
+                </ul>
+            </div>
+            <p class="c"></p>
+        </div>
+    </div>
+    <!--#include file="/inc/member/assess/goods_info.html"-->
+    <!--#include file="/inc/member/assess/buy_record_list.html"-->
+    <!--#include file="/data/channel/img_domain_data.html"-->
+    <!--#include file="/common/footer.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/buy_record.js"></script>
+</body>
+
+</html>

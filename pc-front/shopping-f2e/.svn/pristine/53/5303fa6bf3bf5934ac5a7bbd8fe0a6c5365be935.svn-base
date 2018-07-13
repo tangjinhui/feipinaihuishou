@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        订单中心 - 会员中心 - 中国金币官方网上商城
+    </title>
+    <meta name="Keywords" content="">
+    <meta name="description" content="">
+    <link href="/css/member/order/order.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div class="wrap clearfix">
+        <div id="navi" class="w crumbs">
+            当前位置：
+            <a href="/index.html">
+                首页
+            </a>
+            <span>
+                &gt;
+            </span>
+            <a href="/member/index.html">
+                会员中心
+            </a>
+            <span>
+                &gt;
+            </span> 我的订单
+        </div>
+        <div class="w">
+            <!--#include file="/inc/member/menu.html"-->
+            <div class="fr">
+                <div class="right_a m_right">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                            <tr style="background-color:#f7f7f7;">
+                                <td style="padding:0px 10px;">
+                                    <h2 class="wdbord">
+                                        我的订单
+                                    </h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="bold">
+                                        便利提醒：
+                                    </span>
+                                    <a href="javascript:void(0)" class="anniu">
+                                        待支付(<span id="dai_zf"></span>)
+                                    </a>
+                                    <a href="javascript:void(0)" class="anniu marl10">
+                                        待确认收货(<span id="dai_qs"></span>)
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--订单查询开始-->
+                    <div class="query" style="margin:0px; padding:10px; border-right:1px solid #e1e1e1;border-left:1px solid #e1e1e1;">
+                        <h2 class="fl wdbord">
+                                全部订单
+                            </h2>
+                        <div id="contentList" class="fr query_dds">
+                            <label>
+                                商品名称：
+                            </label>
+                            <input type="text" id="goodsName" class="marr10 sskys" name="goodsName">
+                            <label>
+                                订单编号：
+                            </label>
+                            <input type="text" id="orderId" class="sskys" name="orderId">
+                            <input type="button" id="orderSearch" class="in_btn" style="width:70px;" value="搜 索" name="">
+                        </div>
+                        <p class="c">
+                        </p>
+                    </div>
+                    <div id="page_list" style="padding:10px;" class="bor3">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <thead>
+                                <tr>
+                                    <th width="8%" align="center">
+                                        订单号
+                                    </th>
+                                    <th width="27%" align="center">
+                                        商品名称
+                                    </th>
+                                    <th width="8%" align="center">
+                                        收货人
+                                    </th>
+                                    <th width="10%" align="center">
+                                        订单金额
+                                    </th>
+                                    <th width="9%" align="center">
+                                        <select name="flag">
+                                            <option selected value="0">
+                                                全部
+                                            </option>
+                                            <option value="1">
+                                                最近一周
+                                            </option>
+                                            <option value="2">
+                                                最近一月
+                                            </option>
+                                            <option value="3">
+                                                最近一年
+                                            </option>
+                                        </select>
+                                    </th>
+                                    <th width="10%" align="center">
+                                        <select name="orderStatus">
+                                            <option selected value="">
+                                                全部状态
+                                            </option>
+                                            <option value="0">
+                                                未支付
+                                            </option>
+                                            <option value="1">
+                                                待财务审核
+                                            </option>
+                                            <option value="5">
+                                                正在配货
+                                            </option>
+                                            <option value="6">
+                                                正在发货
+                                            </option>
+                                            <option value="7">
+                                                已发货
+                                            </option>
+                                            <option value="8">
+                                                交易完成
+                                            </option>
+                                            <option value="-3">
+                                                失效订单
+                                            </option>
+                                            <option value="-4">
+                                                已拒收
+                                            </option>
+                                            <option value="-5">
+                                                部分退货
+                                            </option>
+                                            <option value="-6">
+                                                已退货
+                                            </option>
+                                        </select>
+                                    </th>
+                                    <th width="10%" align="center">
+                                        快递单号
+                                    </th>
+                                    <th width="8%" align="center">
+                                        <select name="orderType">
+                                            <option value="">
+                                                全部类型
+                                            </option>
+                                            <option value="2">
+                                                PC订单
+                                            </option>
+                                            <option value="weixin">
+                                                微信订单
+                                            </option>
+                                            <option value="4">
+                                                竞价订单
+                                            </option>
+                                            <option value="spike">
+                                                秒杀订单
+                                            </option>
+                                            <option value="53">
+                                                抽签预订订单
+                                            </option>
+                                            <option value="51">
+                                                全年预订订单
+                                            </option>
+                                            <option value="onlinePerson">
+                                                现场订单
+                                            </option>
+                                            <option value="55">
+                                                其他渠道订单
+                                            </option>
+                                        </select>
+                                    </th>
+                                    <th width="12%" class="caoz">
+                                        操作
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="list_box">
+                                <tr>
+                                    <td colspan="9" style="text-align: center;">正在加载...</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="pageLimit" style="display: none;">
+                                    <td colspan="9" style="text-align: right;">
+                                        <!--#include file="/inc/plugin/limitPage.html"-->
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/data/channel/img_domain_data.html"-->
+    <!--#include file="/inc/member/order/list.html"-->
+    <!--#include file="/inc/plugin/address.html"-->
+    <!--#include file="/inc/plugin/invoice.html"-->
+    <!--#include file="/inc/plugin/cancel_order.html"-->
+    <!--#include file="/common/footer.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/member/order/order.js"></script>
+</body>
+
+</html>

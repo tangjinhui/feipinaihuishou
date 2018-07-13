@@ -1,0 +1,46 @@
+input.required, textarea.required {
+    border: 1px solid #00A8E6;
+    border-color:#666 #CBCBCB #CBCBCB #666;
+    color:#666
+    
+}
+
+select.validation-failed,input.validation-failed, textarea.validation-failed {
+    
+    color : #FF3300;
+    background:#FFFF99;
+    color:#666
+}
+
+* html select.validation-failed {
+    background-color: #E8CDB9;
+}
+
+select.validation-passed, input.validation-passed, textarea.validation-passed {
+    
+}
+
+.validation-advice {
+            margin: 0px 0;
+            padding: 0px;
+            margin-left: 10px;
+            color : #FF3300;
+            font-weight: bold;
+            display: inline;
+}
+
+.custom-advice1 {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #DFF3FB;
+    color : #FF3300;
+    font-weight: bold;
+}
+
+.custom-advice2 {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #FF3300;
+    color : #FFF;
+    font-weight: bold;
+}

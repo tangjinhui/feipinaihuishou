@@ -1,0 +1,158 @@
+require(['jquery', 'handlebars', 'dialog', 'getUrlParam', 'modules/cancleOrder', 'header', 'modules/menu'], function($, Handlebars, dialog, getUrlParam) {
+
+    var id = getUrlParam('orderId');
+
+    if (!id) return false;
+
+    Handlebars.registerHelper("imgConf", function(imgUrl, id) {
+        return img_domain_data[id % img_domain_data.length] + '/' + imgUrl;
+    });
+
+    Handlebars.registerHelper("formatPrice", function(price) {
+        price = '' + price;
+        return price.indexOf('.') != -1 ? price : price + '.00';
+    });
+
+    Handlebars.registerHelper("formatPayCancle", function(orderInfoPay, cancelButton, orderId) {
+        var str = '';
+        if (orderInfoPay) {
+            str += '<a class="anniu toPay" href="/member/order/pay_type.html?orderId=' + orderId + '">支付</a>';
+        }
+        if (cancelButton) {
+            str += '<a href="javascript:void(0);" data-id="' + orderId + '" class="anniu marl10 toCancle cancel_order">取消</a>';
+        }
+        return str;
+    });
+
+    Handlebars.registerHelper("formatPrompt", function(prompt, address) {
+        var str = '';
+        prompt = parseInt(prompt);
+        if (prompt == 0) {
+            str = '尊敬的客户，我们还未收到该订单的款项，交易达成以付款成功为准，未成功付款订单我们不能确保为您保留商品库存，请您尽快付款（<a href="/doing/helpCenter.html#onlinePayment" target="_blank">在线支付帮助</a>）。';
+        }
+        if (prompt == 1) {
+            str = '支付成功！正在为您拣选商品，请耐心等候。';
+        }
+        if (prompt == 2) {
+            str = '商品出库，正在发往 (<span style="color:red;">' + address + '</span>)的途中，请耐心等候。';
+        }
+        if (prompt == 3) {
+            str = '商品已送达<span style="color:red;">' + address + '</span>，请注意查收。';
+        }
+        if (prompt == 4) {
+            str = '失效订单！';
+        }
+        if (prompt == 5) {
+            str = '拒收订单！';
+        }
+        return str;
+    });
+    Handlebars.registerHelper("comparePayType", function(payType, options) {
+        if (parseInt(payType) == 106) {
+            return options.fn(this);
+        } else {
+            return options.inverse(this);
+        }
+    });
+
+    Handlebars.registerHelper("invoice", function(invoiceTitle, options) {
+        if (parseInt(invoiceTitle) == 21) {
+            return options.fn(this);
+        } else {
+            return options.inverse(this);
+        }
+    });
+
+
+    Handlebars.registerHelper("addIndex", function(index) {
+        return parseInt(index) + 1;
+    });
+
+    Handlebars.registerHelper("isInvoice", function(isSendTax, options) {
+        if (parseInt(isSendTax) == 1) {
+            return options.fn(this);
+        } else {
+            return options.inverse(this);
+        }
+    });
+
+    Handlebars.registerHelper("invalidOrder", function(postDate, orderId) {
+        if (postDate != null) {
+            return '<li>取消时间：' + postDate + '</li><li>取消类型：【用户中心】失效订单' + orderId + '</li>';
+        } else {
+            return '';
+        }
+    });
+
+    Handlebars.registerHelper("sms_detail", function(goodsMaterDetail) {
+        return goodsMaterDetail.length ? '<div class="sms_detail sms_close" style="left:0px;"></div>' : '';
+    });
+
+    Handlebars.registerHelper("show_detail", function(goodsMaterDetail, options) {
+        return goodsMaterDetail.length ? options.fn(this) : options.inverse(this);
+    });
+
+    $('body').on('click', '.sms_detail', function() {
+        var flag = $(this).parents().nextAll('.detail_show').is(':visible');
+        if (flag) {
+            $(this).parents().nextAll('.detail_show').hide();
+            $(this).addClass('sms_open').removeClass('sms_close');
+        } else {
+            $(this).parents().nextAll('.detail_show').show();
+            $(this).addClass('sms_close').removeClass('sms_open');
+        }
+        return false;
+    });
+
+    $('body').on('click', '.addFavor', function() {
+        var goodsId = $(this).attr("data-goodsId");
+        $.ajax({
+            url: '/front/member/favory/addFavory',
+            type: 'get',
+            dataType: 'jsonp',
+            data: { goodsId: goodsId },
+            success: function(res) {
+                if ('99' == res.code) {
+                    window.location.href = 'https://passportdev.ecgci.com/login.html';
+                } else if (res.code == '00') {
+                    dialog({ title: '系统提示', content: '关注商品成功！' });
+                } else if (res.code == '03') {
+                    dialog({ title: '系统提示', content: '商品已下架，不能添加到关注！' });
+                } else if (res.code == '04') {
+                    dialog({ title: '系统提示', content: '该商品已在您的关注中，请不要重复添加！' });
+                } else {
+                    dialog({ title: '系统提示', content: '网络繁忙，请您稍后重试！' });
+                }
+            },
+            error: function() {
+                dialog({ title: '系统提示', content: '网络繁忙，请您稍后重试' });
+            }
+        });
+        return false;
+    });
+
+    $.ajax({
+        url: '/front/member/order/showOrderInfo',
+        type: 'get',
+        dataType: 'json',
+        data: {
+            orderId: id
+        },
+        success: function(res) {
+            if ('99' == res.code) {
+                window.location.href = 'https://passportdev.ecgci.com/login.html';
+            } else if (res.code == '00') {
+                var contentTemp = Handlebars.compile($("#content-template").html());
+                $('#content_box').html(contentTemp(res.data));
+            } else if (res.code == '01') {
+                window.location.href = '/member/order.html';
+            } else {
+                dialog({ title: '系统提示', content: '网络繁忙，请稍后重试' });
+            }
+        },
+        error: function() {
+            dialog({ title: '系统提示', content: '网络繁忙，请稍后重试' });
+        }
+    });
+
+});

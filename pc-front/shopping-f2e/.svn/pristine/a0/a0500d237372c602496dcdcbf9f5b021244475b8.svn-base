@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, Lucida, Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left
+}
+
+div, span, input, form, p, h1, h2, h3, h4, ul, li, dl, dt, dd, img {
+    border: 0 none;
+    margin: 0;
+    padding: 0
+}
+
+ul, li {
+    list-style: outside none none
+}
+
+a {
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: none
+}
+
+.del {
+    padding: 0 5px;
+    text-decoration: none
+}
+
+input, img, label, select {
+    vertical-align: middle
+}
+
+input:focus {
+    outline: 0
+}
+
+.clearfix {
+    clear: both
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.dn {
+    display: none
+}

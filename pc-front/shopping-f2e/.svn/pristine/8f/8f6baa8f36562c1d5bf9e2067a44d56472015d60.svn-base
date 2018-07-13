@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        服务中心 - 会员中心 - 中国金币官方网上商城
+    </title>
+    <meta name="Keywords" content="">
+    <meta name="description" content="">
+    <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" type="text/css" href="/css/member/complain/complain.css">
+</head>
+
+<body id="ext-gen6" class=" ext-safari">
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div id="navi" class="w crumbs">
+        当前位置：
+        <a href="/index.html">
+                首页
+            </a>
+        <span>
+                &gt;
+            </span>
+        <a href="/member/index.html">
+                会员中心
+            </a>
+        <span>
+                &gt;
+            </span> 我的投诉
+    </div>
+    <div class="w clearfix">
+        <!--#include file="/inc/member/menu.html"-->
+        <div class="fr">
+            <div class="right_a m_right">
+                <div class="bord">
+                    <div class="padr10" style="background-color:#f7f7f7;">
+                        <h2 class="fl wdbord">
+                                我的意见建议
+                            </h2>
+                        <p class="c">
+                        </p>
+                    </div>
+                    <p class="crumbs marl20">
+                        如果您对我们的商品或者服务有不满之处，请在此提交投诉，我们会尽快给予答复或处理！谢谢！
+                    </p>
+                </div>
+                <h2 class="bordlrt mart12">
+                        我的投诉
+                    </h2>
+                <div>
+                    <table width="100%" class="text_c" border="0" cellspacing="0" cellpadding="0" style="word-break: break-all;">
+                        <thead>
+                            <tr>
+                                <th width="15%">
+                                    投诉类型
+                                </th>
+                                <th width="15%">
+                                    投诉主题
+                                </th>
+                                <th width="15%">
+                                    关联订单
+                                </th>
+                                <th width="25%">
+                                    最后留言内容
+                                </th>
+                                <th width="15%">
+                                    最后留言时间
+                                </th>
+                                <th width="15%">
+                                    商城回复
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="list_box">
+                        </tbody>
+                        <tfoot>
+                            <tr class="pageLimit" style="display: none;">
+                                <td colspan="9" style="text-align: right;">
+                                    <!--#include file="/inc/plugin/limitPage.html"-->
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <div class="None_record" style="border-top: 0;display: none; margin-top: 0;">
+                        没有符合条件的记录
+                    </div>
+                </div>
+                <div class="bord mart12">
+                    <h2>
+                            提交新的投诉
+                        </h2>
+                    <table border="0px" class="formtable" style="margin:10px 0px;">
+                        <tbody>
+                            <tr>
+                                <td align="right" width="130">
+                                    投诉类型：
+                                </td>
+                                <td>
+                                    <select name="complaintType" id="complaintType">
+                                        <option value="compaint.type.02">
+                                            商品价格投诉
+                                        </option>
+                                        <option value="compaint.type.03">
+                                            商品质量投诉
+                                        </option>
+                                        <option value="compaint.type.04">
+                                            物流投诉
+                                        </option>
+                                        <option value="compaint.type.05">
+                                            换货时间投诉
+                                        </option>
+                                        <option value="compaint.type.06">
+                                            退款时间投诉
+                                        </option>
+                                        <option value="compaint.type.07">
+                                            物流人员态度投诉
+                                        </option>
+                                        <option value="compaint.type.08">
+                                            客服人员态度投诉
+                                        </option>
+                                    </select>
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    关联订单：
+                                </td>
+                                <td>
+                                    <input type="text" id="orderId" name="orderId">
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    投诉主题：&nbsp;
+                                    <span class="red">
+                                            *
+                                        </span>
+                                </td>
+                                <td>
+                                    <input type="text" id="complaintTitle" name="complaintTitle" maxlength="20"> &nbsp;&nbsp;
+                                    <font color="#EF6041">
+                                        最多可输入20字符数
+                                    </font>
+                                </td>
+                                <td>
+                                    <span id="randTemp" style="display:none;color:red">
+                                        </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    留言内容：&nbsp;
+                                    <span class="red">
+                                            *
+                                        </span>
+                                </td>
+                                <td>
+                                    <span style="float: left;">
+                                            <textarea id="textts" name="complaintDetails" style="resize: none;" maxlength="200"></textarea>
+                                        </span> &nbsp;&nbsp;
+                                    <span style="float: right; width:275px;">
+                                            <font color="#EF6041">
+                                                最多可输入200字符数，不要含有单引号、双引号等特殊字符
+                                            </font>
+                                        </span>
+                                </td>
+                                <td>
+                                    <span id="randTemps" style="display:none;color:red">
+                                        </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+                                    <input name="" value="提交" type="button" class="btn" id="complaintFrom">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="c">
+                </p>
+            </div>
+            <!--右侧结束-->
+        </div>
+    </div>
+    <!--#include file="/inc/member/complain/list.html"-->
+    <!--#include file="/common/footer.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/member/complain/complain.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+ .cj_sjccont1 {
+     width: 710px;
+     background: #fff;
+     margin: 0 auto;
+     position: fixed;
+     top: 20%;
+     left: 50%;
+     margin-left: -355px;
+     text-align: left;
+     padding-bottom: 10px;
+     display: none;
+     z-index: 100;
+ }
+
+ .cj_sjctop1 {
+     background: #e43a3d;
+     height: 34px;
+     line-height: 34px;
+     padding: 0 0 0 20px;
+     font-size: 14px;
+     font-weight: bold;
+     color: #fff;
+     font-family: 'Microsoft YaHei';
+ }
+
+ .cj_sjcmidsh {
+     padding: 0 0 0 12px;
+ }
+
+ .cj_sjcmidsh #invoiceForm table {
+     margin: 15px 0 0 15px;
+ }
+
+ .cj_sjcmidsh #invoiceForm td, .cj_sjcmidsh #invoiceForm table {
+     border: none;
+ }
+ input[type="radio"] {
+     margin-right: 5px;
+     cursor: pointer;
+ }
+
+ #company_span #comPanyName {
+     height: 26px;
+     line-height: 26px;
+     padding: 0 5px;
+ }
+
+ .gss_tj dl dd div.cur, #company_span #comPanyName {
+     border: #e1e1e1 1px solid;
+     width: 317px;
+ }
+
+ #taxCode {
+     height: 26px;
+     line-height: 26px;
+     padding: 0 5px;
+     border: #e1e1e1 1px solid;
+     margin-left: 98px;
+     margin-top: 10px;
+     width: 317px;
+     vertical-align: baseline;
+ }
+
+ #comPanyName {
+     margin-left: 8px;
+ }
+
+ .cj_sjcmidsh #invoiceForm td.fp_tishi {
+     color: #e43a3d;
+     text-align: left;
+ }
+
+ #invoiceLayer {
+     background: #000;
+     width: 100%;
+     height: 100%;
+     position: fixed;
+     z-index: 100;
+     opacity: 0.6;
+     top: 0;
+     left: 0;
+ }
+
+ .invoice_layer {
+     display: none;
+ }
+
+ #company_span {
+     display: none;
+ }

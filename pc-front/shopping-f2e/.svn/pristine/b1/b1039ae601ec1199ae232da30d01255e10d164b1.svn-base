@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>商品相册</title>
+    <link rel="icon" href="http://static.ecgci.com/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/image_view.css">
+</head>
+
+<body>
+    <div class="w Main_cd">
+        <div class="Pi_title">
+            <p class="fl">
+                <span class="tit">自动化无实物库存商品</span>
+                <a href="" class="anniu marl10">返回商品页</a>
+            </p>
+            <div class="btngouwu">
+                <a href="javascript:void(0);" class="anniu addCart">加入购物车</a>
+                <a href="javascript:void(0);" class="anniu addFavor">加关注</a>
+            </div>
+        </div>
+        <div class="P_viewborder ">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/index.html" class="shouye">[回首页]</a>
+            <div class="Pro_BigImage">
+                <img name='' src=''  alt='点击查看下一张'>
+            </div>
+            <ul class="fengyid">
+                <li class="uppre">上一页</li>
+                <li class="downpre">下一页</li>
+            </ul>
+            <ul class="fengyep Pro_Pagination">
+                <li class="uppre">上一页</li>
+                <li class="allye id=page_2"></li>
+                <li class="downpre">下一页</li>
+            </ul>
+        </div>
+        <div class="P_view Pro_Info">
+            <div class="Pro_Images">
+                <div class="pro_hiden" style="text-align:center" id="imageInfo">
+                    <script id="image-info-template" type="text/x-handlebars-template">
+                    {{#each goodsImages}}
+                        <img name="{{@index}}||{{imgUrl}}" src="http://static.ecgci.com/{{thumbUrl120}}">
+                     {{/each}}
+                     </script>
+                </div>
+            </div>
+        </div>
+        <ul class="fengyix">
+            <li class="uppre">上一张</li>
+            <li class="downpre">下一张</li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/image_view.js"></script>
+</body>
+
+</html>

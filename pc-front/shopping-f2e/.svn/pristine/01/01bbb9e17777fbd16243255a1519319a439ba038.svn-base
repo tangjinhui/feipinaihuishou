@@ -1,0 +1,303 @@
+require(['jquery', 'handlebars', 'getUrlParam', 'limitPage', 'lazyLoad', 'header', 'modules/addCart', 'modules/addFavor'], function($, Handlebars, getUrlParam, limitPage) {
+
+    var keyVal = getUrlParam('keyVal');
+    var keyAttr = getUrlParam('keyAttr');
+    var keyCategory = getUrlParam('keyCategory');
+    var keyName = getUrlParam('keyName');
+    var flag = false; //'显示更多搜索条件'
+    var priceFlag = true; //true:高-->低（初始）
+    var sort = 0; //0:相关度,；价格排序 1: 低-->高 2：高-->低； 销量排序 3；评价数排序 7:高-->低
+    var pageNumber = 1;
+    var totalPage = 1;
+
+    if (!keyVal && !keyAttr && !keyCategory) return false;
+
+    keyVal = decodeURI(keyVal);
+    keyAttr = decodeURI(keyAttr);
+    keyCategory = decodeURI(keyCategory);
+    keyName = decodeURI(keyName);
+    if (keyVal) {
+        $('#search_inputBox').val(keyVal).css('color','#000');
+    }
+    Handlebars.registerHelper("imgConf", function(imgUrl, id) {
+        return img_domain_data[id % img_domain_data.length] + '/' + imgUrl;
+    });
+
+    Handlebars.registerHelper("formatPrice", function(price) {
+        if (!price) {
+            return '';
+        }
+        return parseFloat(price).toFixed(2);
+    });
+
+    Handlebars.registerHelper("categoryClass", function(show) {
+        return show ? 'over' : '';
+    });
+
+    Handlebars.registerHelper("categoryList", function(show) {
+        return show ? 'block' : 'none';
+    });
+
+    Handlebars.registerHelper("categoryItem", function(show) {
+        return show ? 'red' : '';
+    });
+
+    Handlebars.registerHelper("encode", function(val) {
+        return encodeURI(val);
+    });
+
+    //限制初始化显示5条
+    Handlebars.registerHelper("liClass", function(val) {
+        return (val >= 4) ? 'dn' : '';
+    });
+
+    //回显'不限'
+    Handlebars.registerHelper("bxClass", function(val) {
+        var keyAttr_0 = keyAttr.slice(0, keyAttr.indexOf('#'));
+        var keyAttr_1 = keyAttr.slice(keyAttr.indexOf('#') + 1);
+        return (keyAttr_0 == val) ? '' : 'cur';
+    });
+
+    //回显选中
+    Handlebars.registerHelper("itemClass", function(val, subVal) {
+        var keyAttr_0 = keyAttr.slice(0, keyAttr.indexOf('#'));
+        var keyAttr_1 = keyAttr.slice(keyAttr.indexOf('#') + 1);
+        if (keyAttr_0 == val) {
+            if (keyAttr_1 == subVal) {
+                return 'cur';
+            }
+        }
+    });
+
+    Handlebars.registerHelper("brandLen", function(val, options) {
+        if (val) {
+            return options.fn(this);
+        } else {
+            return options.inverse(this);
+        }
+    });
+
+    Handlebars.registerHelper("listLen", function(val, options) {
+        if (val.length) {
+            return options.fn(this);
+        } else {
+            return options.inverse(this);
+        }
+    });
+
+    //是否能加入购物车
+    Handlebars.registerHelper("isCanAddCart", function(canAddCart, options) {
+        if (canAddCart) {
+            return options.fn(this);
+        }
+        return;
+    });
+
+    $('.keyValNav').text(keyName ? keyName : keyVal);
+
+    searchCategory();
+
+    function searchCategory() {
+        $.ajax({
+            url: '/front/searchCategorys',
+            type: 'get',
+            data: {
+                keyval: keyVal,
+                attr: keyAttr,
+                categoryId: keyCategory
+            },
+            dataType: 'json',
+            success: function(res) {
+                if (res.code == '00') {
+                    var categoryItem = Handlebars.compile($('#category-template').html());
+                    $('#categoryBox').html(categoryItem(res));
+                    var crumbsText = '';
+                    if ($('.ss_l_shu .red').length) {
+                        crumbsText = $('.ss_l_shu .red').text().split('(')[0];
+                    } else {
+                        crumbsText = '纪念币';
+                    }
+                    $('.crumbsKeyVal').text(crumbsText);
+                    searchProperty();
+                }
+            }
+        })
+    }
+
+    function searchProperty() {
+        $.ajax({
+            url: '/front/searchCtaFacets',
+            type: 'get',
+            data: {
+                keyval: keyVal,
+                attr: keyAttr,
+                categoryId: keyCategory
+            },
+            dataType: 'json',
+            success: function(res) {
+                if (res.code == '00') {
+                    var propertyItem = Handlebars.compile($('#property-template').html());
+                    $('#propertyBox').html(propertyItem(res.data));
+                    //判断是否显示更多条件
+                    var PropertyLen = res.data.ctaFacets.length;
+                    if (PropertyLen > 5) {
+                        $('#toggleTerms').removeClass('dn');
+                        flag = true;
+                    }
+                    searchList(1, 0);
+                }
+            }
+        })
+    }
+
+    function searchList(page, sort) {
+        var attr = keyAttr + '@';
+        $('#propertyBox .cur').each(function() {
+            if ($(this).attr('data-value')) {
+                attr += $(this).attr('data-key') + '#' + $(this).attr('data-value') + '@';
+            }
+        });
+        $.ajax({
+            url: '/front/searchPage',
+            type: 'get',
+            data: {
+                keyval: keyVal,
+                categoryId: keyCategory,
+                attr: attr,
+                pageNum: page,
+                sort: sort
+            },
+            dataType: 'json',
+            success: function(res) {
+                pageNumber = res.data.pageNumber;
+                totalPage = res.data.totalPage;
+                var listItem = Handlebars.compile($('#list-template').html());
+                $('#listBox').html(listItem(res.data));
+                //初始化列表上面的页码数据
+                $('#pageNo').html(pageNumber);
+                $('#totalPageCount').html(totalPage);
+                $('#totalCount').html(res.data.totalCount);
+                if (totalPage == 1) {
+                    $('#top_pagi a').removeClass('abled unabled').addClass('unabled');
+                } else if (totalPage > 1 && pageNumber == 1) {
+                    $('#top_pagi a.prev').removeClass('abled unabled').addClass('unabled');
+                    $('#top_pagi a.next').removeClass('abled unabled').addClass('abled');
+                } else if (totalPage > 1 && pageNumber != 1 && pageNumber < totalPage) {
+                    $('#top_pagi a.prev').removeClass('abled unabled').addClass('abled');
+                    $('#top_pagi a.next').removeClass('abled unabled').addClass('abled');
+                } else if (totalPage > 1 && pageNumber == totalPage) {
+                    $('#top_pagi a.prev').removeClass('abled unabled').addClass('abled');
+                    $('#top_pagi a.next').removeClass('abled unabled').addClass('unabled');
+                }
+                if (res.data.result.length) {
+                    $('.page').show();
+                    initLimitPage(totalPage, pageNumber);
+                }else{
+                    $('.page').hide();
+                }
+                $("[data-original]").lazyload({
+                    effect: "fadeIn",
+                    load: function() {
+
+                        $(this).removeClass('img_loading');
+
+                    },
+                    threshold: 200
+                });
+            }
+        })
+    }
+
+    $('body').on('click', '.ss_l_shu', function() {
+        $(this).addClass('over').siblings().removeClass('over').find('ul').slideUp();
+        $(this).find('ul').slideDown();
+    });
+
+    $('body').on('click', '#propertyBox a', function() {
+        $(this).addClass('cur').siblings().removeClass('cur');
+        searchList(1, 0);
+        return false;
+    });
+
+    //控制搜索框
+    $('#toggleTerms').on('click', function() {
+        if (flag) {
+            $('#propertyBox li.shuju').removeClass('dn');
+            $('#toggleTerms').removeClass('down-icon').addClass('up-icon').text('隐藏条件');
+        } else {
+            for (var i = 5; i < $('#propertyBox li.shuju').length; i++) {
+                $('#propertyBox li.shuju').eq(i).addClass('dn');
+            }
+            $('#toggleTerms').removeClass('up-icon').addClass('down-icon').text('更多筛选条件');
+        }
+        flag = !flag;
+    });
+
+    //搜索列表排序
+    $('.filterItem').on('click', function() {
+        if ($(this).index() == 3) {
+            if (priceFlag) {
+                $(this).removeClass('up').addClass('curr down').siblings().removeClass('curr down up');
+                sort = 2;
+            } else {
+                $(this).removeClass('down').addClass('curr up').siblings().removeClass('curr down up');
+                sort = 1;
+            }
+            priceFlag = !priceFlag;
+        } else {
+            if ($(this).index() == 1) {
+                sort = 0;
+            }
+            if ($(this).index() == 2) {
+                sort = 3;
+            }
+            if ($(this).index() == 4) {
+                sort = 7;
+            }
+            $(this).addClass('curr down').siblings().removeClass('curr down up');
+        }
+        searchList(1, sort)
+    });
+
+    //分页
+    $('#top_pagi a').on('click', function() {
+        var flag = $(this).attr('class').indexOf('unabled') < 0 ? true : false;
+        var isPrev = $(this).attr('class').indexOf('prev') >= 0 ? true : false;
+        var page = 1;
+        if (flag) {
+            if (isPrev) {
+                page = pageNumber - 1;
+            } else {
+                page = pageNumber + 1;
+            }
+            searchList(page, sort);
+        }
+    });
+
+    function initLimitPage(pages, currentPage) {
+        $('.pageLimit').show();
+        $('#light-pagination').pagination({
+            pages: pages,
+            cssStyle: 'light-theme',
+            displayedPages: 3,
+            edges: 3,
+            currentPage: currentPage,
+            prevText: '上一页',
+            nextText: '下一页',
+            onPageClick: function(page) {
+                searchList(page, sort);
+                var top = $('#navi').height();
+                $('html,body').animate({
+                    scrollTop: top
+                }, 300);
+                return false;
+            }
+        });
+    }
+
+    //重置条件
+    $('#reSetItem').on('click', function(){
+        searchProperty();
+    });
+
+});

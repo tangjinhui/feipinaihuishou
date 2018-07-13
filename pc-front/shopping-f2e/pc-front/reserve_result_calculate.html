@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>抽签结果计算-中国金币网上商城</title>
+    <meta name="Keywords" content="中国金币云商平台" />
+    <meta name="description" content="中国金币云商平台" />
+    <link rel="icon" href="http://static.ecgci.com/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/reserve_result_calculate.css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div class="w1240 bor_cq">
+        <h3 class="ty_h3">欢迎访问中国金币网上商城抽签结果计算功能</h3>
+        <div class="xg_td big_bg">
+            <p class="p_tit">抽签结果计算</p>
+            <div class="inp_s">
+                <dl class="clearfix">
+                    <dt>深证成指收盘行情：</dt>
+                    <dd>
+                        <input type="text" name="goldValue" id="goldValue">
+                        <span class="errorTip" style="display:none;"></span>
+                        <span class="sucTip" style="display:none;"></span>
+                        <font class="font">例如: 10432.699</font>
+                    </dd>
+                    <dd class="zhu">
+                        注: 以抽签活动公布的，抽签变量选取日的深证成指收盘行情为准，详见
+                        <a href="http://www.szse.cn/market/trend/index.html?code=399001" target="_blank">深圳证券交易所历史指数行情
+                        </a>
+                    </dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt>中小板指收盘行情：</dt>
+                    <dd>
+                        <input type="text" name="silverValue" id="silverValue">
+                        <span class="errorTip" style="display:none;"></span>
+                        <span class="sucTip" style="display:none;"></span>
+                        <font class="font">例如: 6627.871</font>
+                    </dd>
+                    <dd class="zhu">
+                        注: 以抽签活动公布的，抽签变量选取日的中小板指收盘行情为准，详见
+                        <a href="http://www.szse.cn/market/trend/index.html?code=399001" target="_blank">深圳证券交易所历史指数行情
+                        </a>
+                    </dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt>活动报名人数(位)：</dt>
+                    <dd>
+                        <input type="text" name="reserveTotalPerson" id="reserveIdNo"  maxlength="10">
+                        <span class="errorTip" style="display:none;"></span>
+                        <span class="sucTip" style="display:none;"></span>
+                        <font class="font">例如: 1000</font>
+                    </dd>
+                    <dd class="zhu">
+                        注: 以中国金币网上商城活动报名截止日公布的人数为准
+                    </dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt>活动中签人数(位)：</dt>
+                    <dd>
+                        <input type="text" name="luckyNumber" id="luckyNumber" maxlength="10">
+                        <span class="errorTip" style="display:none;"></span>
+                        <span class="sucTip" style="display:none;"></span>
+                        <font class="font">例如: 200</font>
+                    </dd>
+                    <dd class="zhu">
+                        注: 以中国金币网上商城公布的抽签结果人数为准
+                    </dd>
+                </dl>
+                <p class="p_btn">
+                    <a href="javascript:void(0);" class="a2" id="reckonNumber">计算所有中签号</a>
+                </p>
+            </div>
+            <div id="reserveNumbers">
+            </div>
+        </div>
+    </div>
+    <!--#include file="/inc/index/reseve_result_list.html"-->
+    <!--#include file="/common/footer.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/reserve_result_calculate.js"></script>
+</body>
+
+</html>

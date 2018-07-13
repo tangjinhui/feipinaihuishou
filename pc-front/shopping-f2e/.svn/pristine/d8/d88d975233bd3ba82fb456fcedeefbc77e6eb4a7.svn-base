@@ -1,0 +1,190 @@
+require(['jquery', 'handlebars', 'form-valid', 'mini_login', 'setCookie', 'header'], function($, Handlebars, valid, mini_login, setCookie) {
+
+    var timmer;
+    var check = {
+        codeVal: false
+    };
+    var verifyTimes = getCookie('verify_times') ? getCookie('verify_times') : 0; //获取验证次数
+
+    //$('#code_input').focus(); // 注释，防止默认进来失焦时有提示
+
+    Handlebars.registerHelper('isImg', function(img, options) {
+        if (img.split('relaPath=')[1] == '') {
+            return options.fn(this);
+        }
+        return options.inverse(this);
+    });
+
+    valid.settings = {
+        initTip: function(input, defaultTip) {
+
+        },
+        validTip: function(input, errorInfo, defaultTip) {
+            if (errorInfo) {
+                $("#jsPrompt").show();
+                $('#js_err').html(errorInfo);
+            }
+        }
+    };
+    valid.render({
+        '#code_input': {
+            option: "blur",
+            len: 8,
+            lenTip: "验证码格式错误,请重新输入",
+            type: "number",
+            errorTip: "验证码格式错误,请重新输入",
+            requiredTip: "请您输入封装币上的商品验证码",
+            success: function(input) {
+                check["codeVal"] = true;
+            }
+        }
+    }, {
+        required: true
+    });
+
+    $("#jsPromptClose").on("click", function() {
+        $("#jsPrompt").hide();
+        $('#js_err').html("");
+    });
+
+    $('.changeCode').on('click', function() {
+        $('.warp_code img').attr('src', '/front/authCode?t=' + new Date().getTime());
+    });
+
+    $('#jsClose').on('click', function() {
+        $('#codeLayer').addClass('dn');
+    });
+
+    $('#sub_code').on('click', function() {
+        var code = $.trim($('#qcode_val').val()); //验证码
+        if (!code) {
+            $('.qcode_ts').text('请输入验证码').removeClass('dn');
+            return;
+        }
+        if (code.length != 4) {
+            $('.qcode_ts').text('验证码输入错误，请重新输入').removeClass('dn');
+            return;
+        }
+        $('.qcode_ts').addClass('dn');
+        $('#codeLayer').addClass('dn');
+        startVerify(code);
+    });
+
+    //'立即验证'
+    $("#toCheck").on("click", function() {
+        // if (!check["codeVal"]) {
+        //     return;
+        // }
+        var codeVal = $.trim($("#code_input").val());
+        if (!codeVal) {
+            $("#jsPrompt").show();
+            $('#js_err').html("请您输入封装币上的商品验证码");
+            return;
+        }
+        verifyTimes++;
+        setCookie('verify_times', verifyTimes, { expires: 1 / 24 });
+        if (verifyTimes >= 4) {
+            $('#qcode_val').val('');
+            $('.changeCode').trigger('click');
+            $('#codeLayer').removeClass('dn');
+            return false;
+        }
+        startVerify();
+    });
+    // enter事件
+    $("#code_input").on("keypress", function(event) {
+        if (event.keyCode == 13) {
+            // 先失去焦点，用于验证填写格式
+            // $('#code_input').blur();
+            // if (!check["codeVal"]) {
+            //     return;
+            // }
+            var codeVal = $.trim($("#code_input").val());
+            if (!codeVal) {
+                $("#jsPrompt").show();
+                $('#js_err').html("请您输入封装币上的商品验证码");
+                return;
+            }
+            verifyTimes++;
+            setCookie('verify_times', verifyTimes, { expires: 1 / 24 });
+            if (verifyTimes >= 4) {
+                $('#qcode_val').val('');
+                $('.changeCode').trigger('click');
+                $('#codeLayer').removeClass('dn');
+                return false;
+            }
+            startVerify();
+        }
+    });
+
+    function startVerify(code) {
+        var len = $('#user_is_login').length;
+        if (!len) {
+            mini_login.show();
+            return;
+        }
+        var codeVal = $.trim($("#code_input").val());
+        // if (!codeVal) {
+        //     $("#jsPrompt").show();
+        //     $('#js_err').html("请您输入封装币上的商品验证码");
+        //     return;
+        // }
+        if (!check["codeVal"]) {
+            return;
+        }
+        $(".ver_box").addClass("dn");
+        var key = 1;
+        $("#toCheck").val("验证中").attr("disabled", true);
+        timmer = setInterval(function() {
+            var point = '';
+            for (var i = 0; i < key; i++) {
+                point += '.';
+            }
+            key++;
+            if (key == 4) key = 1;
+            $("#toCheck").val("验证中" + point);
+        }, 300);
+
+        $.ajax({
+            url: "/front/member/productVerify",
+            timeout: 30000, //超时时间设置，单位毫秒
+            type: "GET",
+            data: {
+                codeVal: codeVal,
+                code: code
+            },
+            dataType: "json",
+            success: function(res) {
+                if (res.code == "00") {
+                    $(".ver_box").removeClass("dn");
+                    var result = JSON.parse(res.data);
+                    var vTemplate = Handlebars.compile($("#ver-template").html());
+                    $("#var_info").html(vTemplate(result));
+                } else if (res.code == "02") {
+                    $("#jsPrompt").show();
+                    $('#js_err').html("图片验证码错误，请重新输入");
+                } else if (res.code == "03") {
+                    $("#jsPrompt").show();
+                    $('#js_err').html("您输入的产品验证码不存在，请重新输入");
+                } else if (res.code == "99") {
+                    mini_login.show();
+                } else if (res.code == "04") {
+                    $("#jsPrompt").show();
+                    $('#js_err').html("您访问过于频繁，请稍后再试");
+                } else {
+                    $("#jsPrompt").show();
+                    $('#js_err').html("网络连接超时，请您稍后重试");
+                }
+                clearInterval(timmer);
+                $("#toCheck").val("立即验证").attr("disabled", false);
+            },
+            error: function() {
+                clearInterval(timmer);
+                $("#jsPrompt").show();
+                $('#js_err').html("防伪验证系统暂时无法提供服务，请稍后再试");
+                $("#toCheck").val("立即验证").attr("disabled", false);
+            }
+        });
+    }
+
+});

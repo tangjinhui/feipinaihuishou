@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>商品测评</title>
+    <link rel="stylesheet" type="text/css" href="/css/goods_comment.css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div id="navi" class="w crumbs">
+        当前位置：
+        <a href="/index.html">首页</a>
+        <span>&gt;</span><span id="goodsLink"></span> 
+        <span>&gt;</span>商品测评
+    </div>
+    <div class="w clearfix">
+        <!--左侧开始-->
+        <div class="fl">
+            <p class="c"></p>
+            <div class="zx_left bord" id="goodsInfo">
+            </div>
+        </div>
+        <!--左侧结束-->
+        <!--右侧开始-->
+        <div class="fr">
+            <div class="thickdiv"></div>
+            <form id="goodsCommentForm" name="goodsCommentForm" method="post">
+                <input type="hidden" name="flag" id="flag" value="all">
+                <input type="hidden" name="pageNo" id="pageNo" value="1">
+                <input type="hidden" name="pageSize" id="pageSize" value="10">
+                <input type="hidden" name="goodsId" id="goodsId" value="1">
+                <input type="hidden" name="star" value="3">
+                <!--商品评价0626导航开始-->
+                <div class="mart12 sh_pt" id="p_j" style="margin-top:0px;">
+                    <h3 class="jianttr">收货评价</h3>
+                    <div id="goodsPraise">
+                    </div>
+                    <div id="nthing"></div>
+                    <div id="info_title" class="clearfix">
+                        <div class="t1">评价心得</div>
+                        <div class="t2">顾客满意度</div>
+                        <div class="t4">评论者</div>
+                    </div>
+                    <!--商品评价信息 end-->
+                    <div id="goods_assess_list" class="pl_list" style="display:block">
+                        <div class="none_record" style="border-top: 0;display: none; margin-top: 0;font-size: 16px;">
+                            没有符合条件的记录
+                        </div>
+                        <div id="goodsCommentList"></div>
+                    </div>
+                    <p class="c"></p>
+                </div>
+            </form>
+            <p class="c"></p>
+        </div>
+        <!--右侧结束-->
+    </div>
+    <!--#include file="/inc/member/assess/goods_info.html"-->
+    <!--#include file="/inc/member/assess/goods_comment_count.html"-->
+    <!--#include file="/inc/member/assess/goods_comment_list.html"-->
+    <!--#include file="/data/channel/img_domain_data.html"-->
+    <!--#include file="/common/footer.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/goods_comment.js"></script>
+</body>
+
+</html>

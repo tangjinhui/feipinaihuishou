@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        类别搜索 - 首页 - 中国金币官方网上商城
+    </title>
+    <meta name="Keywords" content="">
+    <meta name="description" content="">
+    <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible">
+    <link href="/css/search.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div class="w crumbs">
+        商品分类
+        <span>
+                &gt;
+            </span>
+        <a class="crumbsKeyVal" href="javascript:void(0);">
+                
+            </a>
+    </div>
+    <div class="w clearfix ">
+        <div id="categoryBox" class="fl">
+        </div>
+        <div class="fr">
+            <div class="right_a">
+                <div class="ss_tj bord ss_right right_b marb37 pos">
+                    <h3>
+                            <p class="fl">
+                                <span class="keyValNav red">
+                                    
+                                </span>
+                                - 商品筛选
+                            </p>
+                            <p class="fr">
+                                <a href=""
+                                class="red fontw1">
+                                    重置条件
+                                </a>
+                            </p>
+                            <p class="c">
+                            </p>
+                        </h3>
+                    <ul id="propertyBox">
+                    </ul>
+                    <p class="c">
+                    </p>
+                    <p class="more down-icon dn" id="toggleTerms">
+                        <a href="javascript:void(0);">
+                                更多筛选条件
+                            </a>
+                    </p>
+                </div>
+                <div class="marg50 bord filter">
+                    <dl class="order">
+                        <dt>
+                            排序：
+                        </dt>
+                        <dd class="filterItem curr">
+                            <a href="javascript:void(0);" target="_self">
+                                    相关度
+                                </a>
+                        </dd>
+                        <dd class="filterItem">
+                            <a href="javascript:void(0);" target="_self">
+                                    销量
+                                    <b>
+                                    </b>
+                                </a>
+                        </dd>
+                        <dd class="filterItem">
+                            <a href="javascript:void(0);" target="_self">
+                                    价格
+                                    <b>
+                                    </b>
+                                </a>
+                        </dd>
+                        <dd class="filterItem">
+                            <a href="javascript:void(0);" target="_self">
+                                    评价数
+                                </a>
+                        </dd>
+                    </dl>
+                    <div id="top_pagi" class="pagin pagin-m">
+                        <span class="text">
+                                <font id="pageNo">
+                                    1
+                                </font>
+                                /
+                                <font id="totalPageCount">
+                                    1
+                                </font>
+                            </span>
+                        <a href="javascript:void(0);" class="prev">
+                                上一页
+                                <b>
+                                </b>
+                            </a>
+                        <a href="javascript:void(0);" class="next">
+                                下一页
+                                <b>
+                                </b>
+                            </a>
+                    </div>
+                    <div class="total">
+                        共
+                        <span id="totalCount">0</span> 个商品
+                    </div>
+                    <p class="c">
+                    </p>
+                </div>
+                <div class="right_a mart12">
+                    <div class="product channel_pros">
+                        <ul id="listBox">
+                        </ul>
+                        <p class="c">
+                        </p>
+                        <div class="page">
+                            <!--#include file="/inc/plugin/limitPage.html"-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/common/footer.html"-->
+    <!--#include file="/data/channel/img_domain_data.html"-->
+    <!--#include file="/inc/search/category.html"-->
+    <!--#include file="/inc/search/property.html"-->
+    <!--#include file="/inc/search/list.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/search.js"></script>
+</body>
+
+</html>

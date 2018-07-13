@@ -1,0 +1,187 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+
+.c, .clearfix {
+    clear: both;
+}
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+.wrap {
+    margin: 0 auto;
+    width: 1240px;
+}
+.clearfix {
+    *zoom: 1;
+}
+.posr {
+    position: relative;
+}
+.posa {
+    position: absolute;
+}
+.posr .icon {
+    position: absolute;
+    background: url(http://static.ecgci.com/images/icon_bg.png) no-repeat;
+}
+.bor-bot {
+    border-top: #eee 1px solid;
+    padding: 30px 0;
+    margin: 30px auto 0;
+}
+.footer_sm .txt {
+    line-height: 18px;
+    color: #666;
+    text-align: center;
+}
+.footer_sm .img {
+    margin: 15px 0 0;
+    height: 41px;
+}
+.footer_sm .img a {
+    width: 112px;
+    height: 41px;
+}
+.posr .icon_f5 {
+    background-position: -155px -455px;
+    left: 412px;
+}
+.posr .icon_f6 {
+    background-position: -155px -545px;
+    left: 560px;
+}
+.posr .icon_f7 {
+    background-position: -155px -635px;
+    left: 712px;
+}
+.posr .icon_f8 {
+    background-position: -155px -725px;
+    left: 754px;
+    display: none;
+}
+.btnF_03 {
+    background: #e43a3d;
+    color: #ffffff
+}
+.zh_wc {
+    height: 220px;
+    font-family: "Microsoft YaHei";
+    width: 600px;
+    padding: 40px 0;
+    margin: 0 auto;
+}
+.wc_mm {
+    line-height: 44px;
+    color: #5fb72c;
+    font-size: 22px;
+    height: 44px;
+    padding: 5px 10px;
+}
+.wc_mm span.tubiao {
+    background: url(http://static.ecgci.com/images/icon.png) -148px -256px no-repeat;
+    width: 44px;
+    height: 44px;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+}
+.wc_mm span.zc_suff {
+    color: #e43a3d
+}
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+a:hover {
+    text-decoration: underline
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+.Recharge_Box {
+    background: #f3f3f3;
+    margin: 0 auto
+}
+.R_querydd {
+    border: 1px solid #ededed;
+    background: url("http://static.ecgci.com/images/zhuce_sus.png") 303px 40px no-repeat;
+}
+.reg_Success {
+    font-size: 14px;
+    margin: 0 auto;
+    padding-left: 450px;
+    width: 700px;
+}
+.zh_wc {
+    font-family: "Microsoft YaHei";
+    height: auto;
+    margin: 0 auto;
+    width: 600px;
+    line-height: 30px;
+}
+.zh_wc li span {
+    color: #e43a3d
+}
+.wc_mm {
+    color: #e43a3d;
+    font-size: 24px;
+    height: 56px;
+    line-height: 46px;
+    padding: 0;
+}
+.reg_Success ul {
+    margin: 0;
+}
+.reg_Success .BtnBox {
+    padding: 24px 0 40px;
+    text-align: left;
+}
+.reg_Success li {
+    line-height: 27px
+}
+.reg_Success .btnF_03 {
+    border: none;
+    cursor: pointer;
+    height: 30px;
+    width: 190px;
+    font-family: Microsoft YaHei;
+    text-align: center;
+    font-size: 14px;
+}
+a {
+    cursor: pointer;
+}
+a {
+    color: #666;
+    font-weight: normal;
+    text-decoration: none;
+}
+.w {
+    margin: 10px auto;
+}
+.new_logo {
+    float: left;
+    width: 300px;
+}
+.new_mune {
+    float: right;
+    width: 300px;
+    text-align: right;
+    color: #666;
+    line-height: 50px;
+}
+.new_mune a {
+    margin: 0 5px;
+    color: #666;
+    text-decoration: none;
+}
+.wc_mm {
+    position: relative;
+}
+.wc_mm span.tubiao {
+    position: absolute;
+    top: 5px;
+    left: -50px;
+}
+.zh_wc {
+    width: 620px;
+}

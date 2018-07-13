@@ -1,0 +1,12 @@
+<script id="hotsGoods-template" type="text/x-handlebars-template">
+    {{#each goodsList}}
+    <dl>
+        <dt>
+            <a href="http://itemdev.ecgci.com/product_detail_{{goodsId}}.html" target="_blank"><img class="img_loading" data-original="{{imgConf goodsMiddleImg goodsId}}" src="http://static.ecgci.com/images/git.png" alt="{{goodsName}}" title="{{goodsName}}"></a></dt>
+        <dd>
+            <p class="tit"><a href="http://itemdev.ecgci.com/product_detail_{{goodsId}}.html" target="_blank" title="{{goodsName}}">{{goodsName}}</a></p>
+            <p class="price"><span data-id="{{goodsId}}" class="goodsList price_{{goodsId}}">{{formatPrice shopPrice}}</span><a href="http://itemdev.ecgci.com/product_detail_{{goodsId}}.html" target="_blank" title="{{goodsName}}">立即购买</a></p>
+        </dd>
+    </dl>
+    {{/each}}
+</script>

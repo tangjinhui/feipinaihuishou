@@ -1,0 +1,75 @@
+#jsPrompt, #jsXy {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .2);
+    background: url(http://static.ecgci.com/images/black.png) repeat \9;
+    left: 0;
+    top: 0;
+    z-index: 200;
+}
+
+.prompt {
+    width: 300px;
+    padding-bottom: 46px;
+    position: fixed;
+    left: 50%;
+    margin-left: -150px;
+    top: 50%;
+    margin-top: -75px;
+    background-color: #eee;
+}
+
+.prompt .top {
+    text-indent: 1em;
+    width: 100%;
+    font-weight: 700;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #e43a3d;
+    cursor: pointer;
+}
+
+.prompt .close {
+    font-family: "ËÎÌå";
+    line-height: 24px;
+    font-size: 12px;
+    text-indent: 0;
+    text-align: center;
+    padding: 0 7px;
+    background-color: #f6f6f6;
+    border: 1px solid #e5e5e5;
+    color: #666;
+    cursor: pointer;
+    float: right;
+    margin-right: 5px;
+}
+
+.prompt .close:hover {
+    background-color: #e43a3d;
+    color: #fff;
+    text-decoration: none;
+}
+
+.prompt .content {
+    padding: 6px 10px;
+    line-height: 18px;
+    color: #333;
+}
+
+.prompt .content .txt {
+    color: #58595B;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    max-height: 36px;
+    overflow: hidden;
+    padding: 20px 0 20px 20px;
+}
+
+.pormp_set_box {
+    position: absolute;
+    width: 96%;
+    bottom: 20px;
+}

@@ -1,0 +1,276 @@
+require(['jquery', 'form-valid', 'base64', 'dialog'], function($, valid, base64, dialog) {
+    var countSeconds = 120;    //倒计时时间
+
+    var boolObj = {
+        mobile: false,
+        password: false,
+        repassword: false
+    }
+
+    valid.settings = {
+        initTip: function(input, defaultTip) {
+
+        },
+        validTip: function(input, errorInfo, defaultTip) {
+            if (errorInfo) {
+                $(input).removeClass('inputSucc').addClass('inputError').next('.errorTip').html(errorInfo).show();
+            }
+        }
+    };
+    valid.render({
+        '#mobile': {
+            type: 'mobile',
+            option: 'blur',
+            requiredTip: '请输入手机号码',
+            errorTip: '您输入的手机号码有误',
+            success: function(input) {
+                var mobile = $(input).val();
+                $.ajax({
+                    url: '/user/checkMobile',
+                    type: 'get',
+                    data: {
+                        mobile: mobile
+                    },
+                    dataType: 'json',
+                    success: function(res) {
+                        if ('00' != res.code) {
+                            $(input).next('.errorTip').html('此手机号码已被使用，若您是该会员，<a class="go_login" href="/login.html">请登录</a>').show();
+                        } else {
+                            $(input).removeClass('inputError').addClass('inputSucc').next('.errorTip').hide();
+                            boolObj['mobile'] = true;
+                        }
+                    }
+                });
+            },
+            failed: function(input) {
+                boolObj['mobile'] = false;
+            }
+        },
+        '#password': {
+            option: 'blur',
+            requiredTip: '请输入密码',
+            minlen: 6,
+            maxlen: 20,
+            lenTip: '6-20位字符，建议使用字母，数字组合',
+            success: function(input) {
+                $(input).removeClass('inputError').addClass('inputSucc').next('.errorTip').hide();
+                var pwd = $(input).val();
+                var modes = 0;
+                if (/\d/.test(pwd)) modes++;
+                if (/[a-z]/.test(pwd)) modes++;
+                if (/[A-Z]/.test(pwd)) modes++;
+                if (/\W/.test(pwd)) modes++;
+                var obj = {
+                    week: {
+                        _class: 'rank-text1',
+                        rank: 'rank1',
+                        text: '弱'
+                    },
+                    middle: {
+                        _class: 'rank-text2',
+                        rank: 'rank2',
+                        text: '中'
+                    },
+                    strong: {
+                        _class: 'rank-text3',
+                        rank: 'rank3',
+                        text: '强'
+                    }
+                }
+                var key = '';
+                if (modes <= 1) {
+                    key = 'week';
+                } else if (modes == 2) {
+                    key = 'middle';
+                } else {
+                    key = 'strong';
+                }
+                var str = '<span class="' + obj[key]['_class'] + '">' + obj[key]['text'] + '</span><i class="' + obj[key]['rank'] + '"></i>';
+                $('#strength_pwd').show().find('.acco-safe').html(str);
+                if(obj[key]['_class'] == 'rank-text1'){
+                    $('#strength_pwd').find('.red').removeClass('dn');
+                }else{
+                    $('#strength_pwd').find('.red').addClass('dn');
+                };
+                var repwd = $('#repassword').val();
+                if (repwd) {
+                    pwdValid('#repassword', pwd);
+                }
+                boolObj['password'] = true;
+            },
+            failed: function() {
+                $('#strength_pwd').hide();
+                boolObj['password'] = false;
+            }
+        },
+        '#repassword': {
+            option: 'blur',
+            requiredTip: '请再次输入密码',
+            success: function(input) {
+                var pwd = $('#password').val();
+                var repwd = $('#repassword').val();
+                if (repwd) {
+                    pwdValid('#repassword', pwd);
+                }
+                if (pwd != repwd) {
+                    boolObj['repassword'] = false;
+                } else {
+                    boolObj['repassword'] = true;
+                }
+            },
+            failed: function() {
+                boolObj['repassword'] = false;
+            }
+        }
+    }, {
+        required: true,
+        success: function(input) {
+            $('#js_err').html('');
+        }
+    });
+
+    function pwdValid(input, pwd) {
+        var repwd = $(input).val();
+        if (pwd != repwd) {
+            $(input).removeClass('inputSucc').addClass('inputError').next('.errorTip').html('两次密码输入不一致，请重新填写').show();
+        } else {
+            $(input).removeClass('inputError').addClass('inputSucc').next('.errorTip').hide();
+        }
+    }
+
+    $('#mobile, #password, #repassword').on('focus', function() {
+        var ph = $(this).attr('placeholder');
+        $(this).removeClass('inputSucc').addClass('inputError').next('.errorTip').html(ph).show();
+    });
+
+    $('#sendMobileCode').on('click', function() {
+        if ($(this).hasClass('dis')) return;
+        if(!boolObj['mobile']){
+            return ;
+        }
+        var len = $('.inputError:not(#mobileCode)').length;
+        if (!len) {
+            $('#change_rand').trigger('click');
+            $('.code_dialog').show();
+        }
+    });
+
+    $('#change_rand').on('click', function() {
+        $('#img_rand').attr('src', '/user/authCode?_t=' + new Date().getTime());
+    });
+
+    $('#close_code').on('click', function() {
+        $('.code_dialog').hide();
+        $('#js_txt').val('');
+        $('#tip').html('<span>*</span>请输入图形验证码！').css('color', '#909090');
+    });
+
+    $('#js_senMes').on('click', function() {
+        if ($(this).hasClass('disabled')) return;
+        var val = $('#js_txt').val();
+        if (!val) return;
+        if (val.length != 4) {
+            $('#change_rand').trigger('click');
+            $('#tip').html('验证码错误,请重试！').css('color', '#e64346');
+            return;
+        }
+        var _this = this;
+        $(this).addClass('disabled');
+        $.ajax({
+            url: '/user/checkAuthCode',
+            type: 'get',
+            data: {
+                mobile: $('#mobile').val(),
+                code: $('#js_txt').val()
+            },
+            dataType: 'json',
+            success: function(res) {
+                if ('00' == res.code) {
+                    $('#sendMobileCode').addClass('dis').find('span').html('<i id="min_setInter">120</i>&nbsp;秒后重新获取');
+                    $('#close_code').trigger('click');
+                    $('#mobileCode_error').html('验证码已发送，请查收短信。').show();
+                    smsTime();
+                    countSeconds = 120;
+                } else if ('04' == res.code) {
+                    $('#change_rand').trigger('click');
+                    $('#tip').html('发送过于频繁，稍后再试！').css('color', '#e64346');
+                } else {
+                    $('#change_rand').trigger('click');
+                    $('#tip').html('验证码错误,请重试！').css('color', '#e64346');
+                }
+                $(_this).removeClass('disabled');
+            }
+        });
+    });
+
+    function smsTime() {
+        var timer = setInterval(function() {
+            $('#min_setInter').text(countSeconds--);
+            if (countSeconds == 0) {
+                $('#sendMobileCode').removeClass('dis').find('span').html('获取短信验证码');
+                clearInterval(timer);
+            }
+        }, 1000);
+    }
+
+    $("#protocol").on("change", function() {
+        $(this).is(':checked') ? $('#btnRegister').removeClass('sub_gray') : $('#btnRegister').addClass('sub_gray');
+        $(this).is(':checked') ? $('#checTemp').addClass('dn') : $('#checTemp').removeClass('dn');
+    });
+
+    $('#btnRegister').on('click', function() {
+        if ($(this).hasClass('sub_gray')) return;
+        for (var key in boolObj) {
+            if (!boolObj[key]) {
+                $('#' + key).trigger('blur');
+                return;
+            }
+        }
+        var code_val = $('#mobileCode').val();
+        if (!code_val) {
+            $('#mobileCode').addClass('inputError');
+            $('#mobileCode_error').html('请输入短信验证码').show();
+            return;
+        }
+        var serVal = $('#reg_form').serializeArray();
+        var data = {};
+        for (var i = 0; i < serVal.length; i++) {
+            var key = serVal[i]['name'],
+                val = serVal[i]['value'];
+            data[key] = val;
+        }
+        $(this).addClass('sub_gray');
+        var _this = this;
+        $.ajax({
+            url: '/user/addUser',
+            type: 'post',
+            data: data,
+            dataType: 'json',
+            success: function(res) {
+                if ('00' == res.code) {
+                    $(_this).removeClass('sub_gray');
+                    window.location = '/regist_success.html';
+                } else if ('02' == res.code) {
+                    $('#mobile').removeClass('inputSucc').addClass('inputError').next('.errorTip').html('此手机号码已被使用').show();
+                    $(_this).removeClass('sub_gray');
+                } else if ('03' == res.code) {
+                    $('#mobileCode').removeClass('inputSucc').addClass('inputError');
+                    if(countSeconds == 120 || countSeconds == 0){
+                        $('#mobileCode_error').html('验证码错误，请重新获取！').show();
+                    }else{
+                        $('#mobileCode_error').html('验证码错误，请重新输入！').show();
+                    }
+                    $(_this).removeClass('sub_gray');
+                } else {
+                    dialog({ title: '系统提示', content: '网络繁忙，请您稍后重试' });
+                    $(_this).removeClass('sub_gray');
+                }
+            },
+            error: function() {
+                dialog({ title: '系统提示', content: '网络繁忙，请您稍后重试' });
+                $(_this).removeClass('sub_gray');
+            }
+        });
+    });
+
+});

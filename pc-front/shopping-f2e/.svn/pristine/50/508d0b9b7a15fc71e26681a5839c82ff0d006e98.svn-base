@@ -1,0 +1,20 @@
+<div id="bind_box" style="display: none;">
+    <div>
+        <label>账户姓名：</label>
+        <span id="js_fundAcc"></span>
+        <a id="clientUser" href="javascript:void(0);">基本账户管理</a>
+    </div>
+    <div class="clear_fix">
+        <label>交易账号：</label>
+        <span id="js_bindAcc"></span>
+    </div>
+    <div class="clear_fix">
+        <label>已绑定银行卡：</label>
+        <span>您尚未为您的交易账户绑定银行卡     
+            <a href="/doing/virtual_account.html#card_why" style="color:#1900d9;margin-left:20px;">为什么要绑定银行卡</a>
+        </span>
+    </div>
+    <div class="sum">
+        <a href="javascript:void(0);" id="js_bk" class="cz">去绑卡</a>
+    </div>
+</div>

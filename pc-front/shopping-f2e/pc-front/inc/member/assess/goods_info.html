@@ -1,0 +1,10 @@
+<script id="goods-template" type="text/x-handlebars-template">
+    <dl>
+        <dt><a href="http://itemdev.ecgci.com/product_detail_{{goodsId}}.html"><img src="{{imgConf goodsMiddleImg goodsId}}" title="{{goodsName}}"></a></dt>
+        <dd class="zx_l_tit">
+            <a href="http://itemdev.ecgci.com/product_detail_{{goodsId}}.html">{{goodsName}}</a></dd>
+        <dd class="zx_pirce">￥{{formatPrice shopPrice}}</dd>
+        <dd class="zx_pingf">商品评分：<span class="sa{{starComment star}}"></span>({{starComment star}}分)</dd>
+        <dd class="zx_yyr"><a href="/goods_comment.html?goodsId={{goodsId}}">已有{{goodsCommnetCount}}人评价</a></dd>
+    </dl>
+</script>

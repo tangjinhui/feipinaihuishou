@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>中国金币网上商城虚拟交易账户介绍</title>
+<meta name="Keywords" content="协议、开户、虚拟交易账户" />
+<meta name="description" content="中国金币网上商城虚拟交易账户介绍" />
+<meta content=IE=EmulateIE7 http-equiv=X-UA-Compatible>
+<link type="text/css" rel="stylesheet" href="/doing/hel/css/common1.css">
+</head>
+<body>
+	<div class="main">
+		<h3>中国金币网上商城虚拟交易账户介绍</h3>
+		<div class="mainTxt1">
+			<div id="what" name="what">
+				<h4>1、什么是虚拟交易账户？</h4>
+				<p class="praBlock">
+					<span class="fw">概述：</span>商城虚拟交易账户是商城为管理商城会员参与商城各种保证金销售活动而建立的保证金管理系统。
+				</p>
+				<p class="praBlock">
+					<span class="fw">详述：</span>商城虚拟交易账户是商城与民生银行合作，使用其提供的“市场通”产品，为管理商城会员参与商城各种保证金销售活动而建立的保证金管理系统，实质上是商城会员通过商城平台开具的民生银行虚拟账户。商城通过系统接口的形式对接民生银行系统，商城负责业务规则与业务流程，民生银行负责资金的转移与账户安全。商城通过虚拟交易账户，实现商城保证金业务的保证金锁定、保证金解锁，以及在资金使用过程中可能产生的手续费扣减等资金结算功能。
+				</p>
+			</div>
+			<div id="why" name="why">
+				<h4>2、为什么要开通虚拟交易账户？</h4>
+				<p class="praBlock">
+					<span class="fw">概述：</span>开通虚拟交易账户才能参与商城相关保证金销售活动。
+				</p>
+				<p class="praBlock">
+					<span class="fw">详述：</span>为了保证商城纪念币销售的公平、公正，规范商城会员参与相关销售活动的行为，保障商城与商城会员的共同利益，商城在开展抽签、竞价等保证金销售活动时，会设定相应额度保证金，会员须缴纳保证金后方可获取相应参与资格。商城和银行合作，在银行为用户开设虚拟交易账户。商城会员将资金预存于民生银行开设的虚拟交易账户，而并非由商城管理，这样就有效保障了会员的资金安全。
+				</p>
+			</div>
+			<div id="how" name="how">
+				<h4>3、如何开通商城虚拟交易账户？</h4>
+				<p class="praBlock">
+					<span class="fw">概述：</span>实名会员才能开通，非实名会员不能开通。
+				</p>
+				<p class="praBlock">
+					<span class="fw">详述：</span>只有商城实名会员才能开通虚拟交易账户，如果会员没有通过实名认证则不能开通。会员的实名权益被锁定或处于动态认证状态的情况下不能开通。
+				</p>
+				<p class="praBlock">
+					具体开通方式如下：
+				</p>
+				<div class="mainTxt2">
+					<p class="praBlock">
+						1）未开通虚拟交易账户的实名会员登录后，会在会员中心首页看到“立即开户”按钮。
+					</p>
+					<p class="praBlock">
+						2）点击“立即开户”按钮，跳转到民生银行开户注册界面，按相关要求进行操作即可。
+					</p>
+					<p class="praBlock">
+						3) 实名会员在商城参与保证金销售活动时（如保证金抽签），如会员尚未开通虚拟交易账户，商城系统会引导会员进行开户、绑卡、充值，会员按系统引导操作即可。
+					</p>
+				</div>
+			</div>
+			<div id="card why" name="card why">
+				<h4>4、虚拟交易账户为什么要绑定银行卡？</h4>
+				<p class="praBlock">
+					<span class="fw">概述：</span>不绑卡无法实现充值、提现等功能，无法参与商城相关销售活动。
+				</p>
+				<p class="praBlock">
+					<span class="fw">详述：</span>
+					开通虚拟交易账户后，如果不绑定银行卡，则无法进行充值、提现等操作，从而无法参与商城相关销售活动。
+				</p>
+				<p class="praBlock">
+					<span class="red">虚拟交易账户可以绑定任意银联标识的借记卡；信用卡不能绑定。</span>
+				</p>
+			</div>
+			<div id="name" name="name">
+				<h4>5、虚拟交易账户绑定银行卡如何核实会员身份的真实性？</h4>
+				<p class="praBlock">
+					<span class="fw">概述：</span>商城要求商城系统和银行系统中的会员姓名和身份证号必须一致。
+				</p>
+				<p class="praBlock">
+					<span class="fw">详述：</span>
+					根据民生银行规定，用户必须使用本人真实姓名及身份证号开通虚拟交易账户，而且开户后必须要绑定本人名下银行卡才能使用该虚拟交易账户的相关服务。
+				</p>
+				<p class="praBlock">
+					<span class="red">虚拟交易账户必须实名绑卡，绑定银行卡关联的姓名、身份证号必须和商城实名认证的姓名、身份证号完全一致，否则绑卡不成功。</span>
+				</p>
+			</div>
+			<div id="money how" name="money how">
+				<h4>6、虚拟交易账户如何充值？</h4>
+				<p class="praBlock">
+					<span class="fw">概述：</span>
+					线上充值、转账充值两种方式。
+				</p>
+				<p class="praBlock">
+					<span class="fw">详述：</span>虚拟交易账户充值支持线上充值（推荐使用）和转账充值两种方式：
+				</p>
+				<div class="mainTxt2">
+					<p class="praBlock">
+						1）线上充值：会员通过商城进入虚拟交易账户，点击充值，通过绑定银行卡的所属的网上银行进行在线充值即可。<span class="red">
+							（在绑定银联账号已开通网银业务时方可使用）
+						</span>
+					</p>
+					<p class="praBlock">
+						2）转账充值：会员通过其他渠道向自己的虚拟交易账户进行离线转账,<span class="red">
+							只能通过虚拟交易账户绑定的银行卡账户，向虚拟交易账户进行转账
+						</span>。进入“会员中心-交易账户”离线转账说明页面，可以查看具体的
+						<a href="
+/doing/transfer_explain.html" target="_black">转账注意事项>>
+						</a>
+					</p>
+					<p class="praBlock">
+						充值到虚拟交易账户的余额只能用于交纳保证金，参与相关的销售活动（抽签、竞价），余额不能直接用于商城消费，也不能抵扣相关活动（抽签、竞价）的商品金额。
+					</p>
+				</div>
+			</div>
+			<div id="withdraw" name="withdraw">
+				<h4>7、虚拟交易账户如何进行余额提现？</h4>
+				<p class="praBlock">
+					<span class="fw">概述：</span>
+						进入商城“会员中心-交易账户”即可提现，提现按民生银行标准收取相应手续费。
+				</p>
+				<p class="praBlock">
+					<span class="fw">详述：</span>会员预存在虚拟交易账户中的资金，如果短期不使用可以提现到绑定的银行卡中。从虚拟交易账户提现，需支付提现手续费，该费用由民生银行收取，由用户自行承担。
+				</p>
+				<p class="praBlock">
+					根据民生银行收费标准，提现手续费规则如下：
+				</p>
+				<p class="praBlock">
+					<span class="red">当用户提现金额小于等于50000元/笔时，手续费5元/每笔；</span>
+				</p>
+				<p class="praBlock">
+					<span class="red">当用户提现金额大于50000元/笔时，手续费10元/每笔；</span>
+				</p>
+				<p class="praBlock">
+					手续费从虚拟交易账户的余额中扣除（外扣）。
+				</p>
+				<p class="praBlock">
+					如果会员参与保证金销售活动交纳了保证金，该部分资金会先冻结，冻结资金依然能够在虚拟交易账户中查询到，但不能进行提现。
+				</p>
+				<p class="praBlock">
+					会员进入商城“会员中心-交易账户”可以随时查询虚拟交易账户的余额和交易明细。
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

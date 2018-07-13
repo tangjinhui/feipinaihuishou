@@ -1,0 +1,61 @@
+<script id="list-template" type="text/x-handlebars-template">
+    {{#dataLen list}} {{#each list}}
+    <tr>
+        <td align="center">
+            {{{view can orderId}}}
+        </td>
+        <td class="text_l">
+            <div class="cg_titp">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:0">
+                    <tbody>
+                        {{#each goodsInfo}}
+                        <tr>
+                            <td valign="middle" style="padding:0;width:60px;border:none; text-align:left;">
+                                <a href="http://itemdev.ecgci.com/product_detail_{{goodsId}}.html ">
+                                        <img src="{{imgConf goodsImg goodsId}}">
+                                    </a>
+                            </td>
+                            <td valign="middle" style="padding:0;border:none; text-align:left;">
+                                <a style="display:block;line-height:20px;" href="http://itemdev.ecgci.com/product_detail_{{goodsId}}.html">
+                                        {{goodsName}}
+                                    </a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </td>
+        <td align="center" id="consignee" style=" word-break:break-all;">
+            {{name}}
+        </td>
+        <td align="center">
+            ￥{{formatPrice actualPay}}
+            <br> {{payType}}
+        </td>
+        <td align="center">
+            {{accessDate}}
+        </td>
+        <td align="center">
+            {{orderStatus}}
+        </td>
+        <td align="center">
+            {{{deliveryInfo deliveryType deliveryNo}}}
+        </td>
+        <td align="center">
+            {{orderType}}
+        </td>
+        <td align="center">
+            <div class="hy_ck">
+                {{{power  pay can modifyAddress modifyInvoice confirmGoods returnGoods cancel afterService comment orderId}}}
+            </div>
+        </td>
+    </tr>
+    {{/each}} {{else}}
+    <tr class="noGoods">
+        <td colspan="9" style="text-align: center;">
+            <p class="crumbs text_c">没有符合条件的订单，马上去挑选商品：<a href="/index.html" class="anniu">商城首页</a><a href="/member/favor.html" class="anniu marl10">我的关注</a></p>
+        </td>
+    </tr>
+    {{/dataLen}}
+</script>

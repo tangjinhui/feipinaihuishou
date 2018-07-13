@@ -1,0 +1,436 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+@import url('http://static.ecgci.com/css/libs/dialog.css');
+
+
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+.mart12 {
+    margin-top: 10px;
+}
+.text_r {
+    text-align: right;
+}
+.text_l {
+    text-align: left;
+}
+table, table th, table td {
+    border: #e1e1e1 1px solid;
+    line-height: 24px;
+    border-collapse: collapse
+}
+table th {
+    background: #f3f3f3;
+    text-align: center;
+}
+table th, table td {
+    padding: 5px 10px;
+}
+.bord {
+    border: #e1e1e1 1px solid;
+}
+h2 {
+    height: 28px;
+    line-height: 28px;
+    color: #58595b;
+    border: none;
+    padding: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.wrap {
+    margin: 0 auto;
+    width: 1240px;
+}
+.posa {
+    position: absolute;
+}
+th {
+    border: none;
+}
+
+.arrow {
+    display: block;
+    height: 9px;
+    width: 13px;
+    background: url(http://static.ecgci.com/images/arrow.png) 0 0 no-repeat;
+}
+h1, h2, h3 {
+    font-weight: normal;
+}
+input[type="checkbox"] {
+    width: 14px;
+    margin-right: 5px;
+}
+.flow_chart3 {
+    height: 35px;
+    line-height: 35px;
+    color: #58595b;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    overflow: hidden;
+    margin: 20px auto 0;
+}
+.flow_chart3 .cur {
+    color: #fff;
+    font-weight: bold;
+}
+.flow_chart3 {
+    background: url(http://static.ecgci.com/images/cart_bg.png) 0 0 no-repeat;
+    width: 697px;
+}
+.flow_chart3 li {
+    float: left;
+    width: 207px;
+    padding: 0 0 0 30px;
+}
+.flow_chart3 .last {
+    padding: 0 10px 0 25px;
+    width: 185px;
+}
+.red {
+    color: #e43a3d;
+}
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+h6 {
+    padding: 0 10px;
+    background: #f3f3f3;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: #e1e1e1 1px solid;
+    margin: 0;
+}
+
+em {
+    font-style: normal;
+}
+
+a.ljjs {
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    height: 36px;
+    line-height: 36px;
+    padding: 0;
+    text-align: center;
+    width: 150px;
+    font-family: 'Microsoft YaHei';
+}
+a.sc_xz, a.cd_sp {
+    padding: 0 0 0 28px;
+    display: inline-block;
+    line-height: 25px;
+    cursor: pointer;
+    color: #666;
+    text-align: left;
+    position: relative;
+}
+a.sc_xz {
+    width: 92px;
+}
+a:hover.sc_xz, a:hover.cd_sp {
+    text-decoration: none;
+}
+a.sc_xz b {
+    position: absolute;
+    left: 10px;
+    top: 9px;
+    width: 9px;
+    height: 9px;
+    background: url(http://static.ecgci.com/images/icon.png) 0 -183px no-repeat;
+}
+a.cd_sp {
+    width: 62px;
+}
+a.cd_sp b {
+    position: absolute;
+    left: 8px;
+    top: 7px;
+    width: 14px;
+    height: 12px;
+    background: url(http://static.ecgci.com/images/icon.png) -15px -182px no-repeat;
+}
+.cart-empty .message {
+    background: url(http://static.ecgci.com/images/cart_icon.jpg) no-repeat 313px 51px #f7f7f7;
+    height: 278px;
+    padding-left: 509px;
+}
+.cart-empty .message ul {
+    padding-top: 50px;
+}
+.cart-empty .message li {
+    line-height: 26px;
+}
+.cart-empty .message .gwl1 {
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    color: #e43a3d;
+    font-family: Microsoft YaHei;
+    margin-bottom: 5px;
+}
+.cart-empty .message .last {
+    font-weight: normal;
+    margin-top: 18px;
+    height: 30px;
+    line-height: 30px;
+    width: 190px;
+    font-size: 14px;
+}
+
+td, td {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+#toAcciunt {
+    color: #e43a3d;
+    font-size: 16px;
+}
+.cart-empty .message a.red {
+    display: inline-block;
+    width: 45px;
+    line-height: 25px;
+    border-radius: 3px;
+    color: #fff!important;
+    text-align: center;
+    background-color: #e43a3d;
+    margin-right: 4px;
+}
+body {
+    color: #666666;
+    background: #ffffff;
+}
+a {
+    color: #666666;
+}
+a:hover {
+    color: #e43a3d;
+}
+.cur {
+    color: #666666;
+}
+a.ljjs:hover {
+    color: #ffffff;
+}
+a.ljjs {
+    background-color: #e43a3d;
+    color: #ffffff;
+}
+a:link.ljjs, a:hover.ljjs, a:visited.ljjs {
+    color: #ffffff;
+}
+.cg_dg {
+    height: 40px;
+    padding: 34px 0 15px;
+    line-height: 40px;
+    font-size: 28px;
+    color: #e43a3d;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+}
+.cg_left {
+    width: 428px;
+    height: 40px;
+    margin: 0 0 0 310px;
+    padding: 0 0 0 46px;
+    background: url(http://static.ecgci.com/images/gwc_bg.png) -742px 0 no-repeat;
+    overflow: hidden;
+}
+.cg_r {
+    width: 440px;
+    height: 36px;
+    overflow: hidden;
+}
+.cg_r a {
+    display: inline-block;
+    height: 36px;
+    margin-right: 10px;
+}
+.cg_r a.buy_go {
+    width: 95px;
+    background: url(http://static.ecgci.com/images/gwc_bg.png) -34px -6px no-repeat;
+}
+.cg_r a.buy_go:hover {
+    background-position: -34px -54px
+}
+input.num_gwc {
+    width: 68px;
+    height: 26px;
+    border-top: 1px solid #f3f3f3;
+    border-top: 1px solid #c5c5c5;
+    border-bottom: 1px solid #c5c5c5;
+    text-align: center;
+    line-height: 26px;
+}
+.gwt_tit {
+    color: #191919;
+    font-size: 20px;
+    font-family: "Microsoft YaHei";
+    line-height: 54px;
+}
+.gwt_tit2 {
+    height: 54px;
+    background: url(http://static.ecgci.com/images/mine_gwc.png) no-repeat top left;
+}
+.font12 {
+    font-size: 12px;
+}
+table a {
+    color: #000;
+}
+.table_tit {
+    background-color: #d0d0d0;
+    border-color: #d0d0d0;
+}
+.table_tit, .table_tit th {
+    background-color: #d0d0d0;
+    border-color: #d0d0d0;
+    font-size: 12px;
+    color: #000;
+    font-weight: normal;
+}
+.border_all {
+    border: 1px solid #d0d0d0;
+    border-top: 0px;
+}
+.table_dan {
+    width: 100%;
+}
+.table_dan, .table_dan tr, .table_dan td {
+    border: 0px;
+    font-size: 12px;
+    vertical-align: top;
+    color: #000;
+}
+.table_dan td {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.table_dan td.txt_left {
+    text-align: left;
+}
+.trcheck {
+    background: none repeat scroll 0 0 #fffaf3;
+}
+.table_dan .trcheck {
+    background: none repeat scroll 0 0 #fffaf3;
+}
+.global_img img {
+    border: 1px solid #ececeb;
+}
+input.num_gwc {
+    height: 26px;
+}
+.table_dan td.zp_ts .global_img {
+    float: left;
+    padding-left: 15px;
+}
+.table_dan td.zp_ts .span_bl {
+    display: inline-block;
+    width: 280px;
+    line-height: 25px;
+    min-height: 75px;
+    padding-left: 10px;
+}
+input[type="checkbox"] {
+    margin-right: 0px;
+}
+.red {
+    color: #e43a3d;
+}
+.gwc_b {
+    border: 1px solid #d0d0d0;
+    border-top: 0px;
+}
+.gwc_b .text_l {
+    float: left;
+}
+.gwc_b .text_r {
+    float: right;
+    line-height: 30px;
+    padding: 5px 14px 5px 0;
+}
+.zp_ts {
+    z-index: 0;
+}
+
+div.js_gwc {
+    border-left: 1px solid #d0d0d0;
+}
+.js_gwc {
+    position: relative;
+    height: 47px;
+    padding-right: 175px;
+    background: #f7f7f7;
+    border: #e1e1e1 1px solid;
+    border-top: none;
+    border-left: none;
+    color: #666;
+    font-size: 14px;
+    line-height: 47px;
+    text-align: right;
+}
+
+.js_gwc span {
+    color: #e43a3d;
+    font-size: 16px;
+    margin: 0 4px;
+}
+
+.js_gwc a {
+    position: absolute;
+    display: block;
+    width: 155px;
+    height: 50px;
+    right: -1px;
+    top: -1px;
+    background: url(http://static.ecgci.com/images/gwc_bg.png) -393px 0 no-repeat;
+    overflow: hidden;
+}
+.table_dan .tr_tao .pd_t {
+    padding-right: 0px;
+    padding-left: 24px;
+    padding-right: 80px;
+}
+.table_dan .tr_tao td {
+    padding-top: 0px;
+}
+.tr_tao .table_tit, .tr_tao .table_tit th {
+    background-color: rgb(235, 235, 235);
+    font-size: 12px;
+    font-family: 宋体;
+    color: rgb(0, 0, 0);
+    font-weight: normal;
+    border-color: rgb(235, 235, 235);
+}
+.tr_tao .table_tit .sp_tit {
+    text-align: left;
+    padding-left: 30px;
+}
+.tr_tao .table_tit td {
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.tr_tao .table_tit tr {
+    border-bottom: 1px solid #ebebeb;
+}

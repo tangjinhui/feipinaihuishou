@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/mini_login.css">
+</head>
+
+<body>
+    <div id="logForm_s">
+        <div id="" class="thickdiv"></div>
+        <div id="thickbox" class="thickbox">
+            <div class="mini_login">
+                <div class="tit_close">您尚未登录
+                    <div id="jsClose" class="minclose"></div>
+                </div>
+                <div id="" class="">
+                    <!--登陆开始-->
+                    <div class="pos">
+                        <div class="new_logs">
+                            <div class="new_from">
+                                <ul>
+                                    <li class="zindex1">
+                                        <dl>
+                                            <dt>用户名：</dt>
+                                            <dd>
+                                                <input tabindex="1" type="text" name="loginName" id="loginName" class="ipt_txt" value="" maxlength="30">
+                                                <p class="cw_tips" id="infoText" style="display:none;color: #EF6041"></p>
+                                            </dd>
+                                            <p class="c"></p>
+                                        </dl>
+                                    </li>
+                                    <li class="zindex2">
+                                        <dl>
+                                            <dt>密　码：</dt>
+                                            <dd>
+                                                <input tabindex="2" type="password" value="" name="password" maxlength="20" id="password" class="ipt_txt" style="font-size:10px;" onpaste="return false" oncontextmenu="return false" oncopy="return false" oncut="return false">
+                                                <a id="js_nopass" href="http://pfdev.ecgci.com/find_password.html" class="wj">忘记密码？</a>
+                                                <p class="cw_tips" id="errorTemp" style="display:none;color: #EF6041;font-size:13px;"></p>
+                                            </dd>
+                                            <p class="c"></p>
+                                        </dl>
+                                    </li>
+                                    <li class="zindex3" id="loginFailedRand" style="display: none;">
+                                        <dl>
+                                            <dt>验证码：</dt>
+                                            <dd class="checkimg">
+                                                <input tabindex="3" type="text" value="" class="ipt_txt" name="rand" id="rand" maxlength="4">&nbsp;
+                                                <img id="change_code" border="0" src="/user/authCode?t=new Date().getTime()">&nbsp;
+                                                <a id="jsChangeCode" class="red" href="javascript:void(0)" style="float: right;position: relative;left: 16px;top: -26px;">换一张</a>
+                                                <p class="cw_tips" id="randTemp" style="display:none;color: #EF6041;font-size:13px;"></p>
+                                            </dd>
+                                            <p class="c"></p>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <div class="padd pos" style="position: relative;">
+                                                <input tabindex="4" id="login_user" value2="true" value="登录" type="button">
+                                                <a id="js_nouser" href="https://passportdev.ecgci.com/regist.html">立即注册</a>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                    <p class="c"></p>
+                                </ul>
+                            </div>
+                            <p class="c"></p>
+                        </div>
+                        <input type="hidden" name="lua_token">
+                    </div>
+                    <!--登陆结束-->
+                    <div class="had_lhy">
+                        <div class="lhy_tit">中国金币网上商城</div>
+                        <div class="lhy_detail">
+                            <ul>
+                                <li><a href="http://itemdev.ecgci.com/product_detail_126.html" target="_blank">2017版熊猫普制封装金币15克</a></li>
+                                <li><a href="http://itemdev.ecgci.com/product_detail_118.html" target="_blank">2017版熊猫普制封装金币5枚套装</a></li>
+                                <li><a href="http://itemdev.ecgci.com/product_detail_69.html" target="_blank">2016版熊猫普制封装金币5枚套装</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="c"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/mini_login.js"></script>
+</body>
+
+</html>

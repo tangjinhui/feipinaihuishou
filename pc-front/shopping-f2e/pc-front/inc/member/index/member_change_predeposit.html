@@ -1,0 +1,46 @@
+<script id="detail-list-template" type="text/x-handlebars-template">
+    <!-- 预存款变更明细 -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="wbordt text_c">
+        <tbody>
+            <tr>
+                <th width="20%">
+                    <select id="operationDate" name="operationDate">
+                        <option value="">全部时间</option>
+                        <option value="1">最近一周</option>
+                        <option value="2">最近一月</option>
+                        <option value="3">最近一年</option>
+                    </select>
+                </th>
+                <th width="15%">订单编号</th>
+                <th width="15%">变更金额(元)</th>
+                <th width="10%">操作类型</th>
+                <th width="40%">备注</th>
+            </tr>
+            <tr>
+                <td colspan="5" style="display: none;" class="none">
+                    暂无符合条件的记录
+                </td>
+            </tr>
+        </tbody>
+        <tbody id="detail_box">
+            {{#each list}}
+            <tr>
+                <td width="20%">{{createTime}}</td>
+                <td width="15%">{{orderId}}</td>
+                <td width="15%" class="{{predepositStyle detailType}}">
+                    <span><i></i>{{formatPrice payMoney}}</span>
+                </td>
+                <td width="10%">{{detailTypeName}}</td>
+                <td width="40%">{{remark}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+        <tfoot>
+            <tr class="pageLimit" style="display: none;">
+                <td colspan="5" style="text-align: right;">
+                    <!--#include file="/inc/plugin/limitPage.html"-->
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</script>

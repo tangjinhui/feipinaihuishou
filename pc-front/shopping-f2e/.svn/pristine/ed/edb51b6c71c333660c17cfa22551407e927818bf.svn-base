@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>账户中心 - 会员中心 - 中国金币官方网上商城</title>
+    <meta name="Keywords" content="">
+    <meta name="description" content="">
+    <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" type="text/css" href="/css/member/level.css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div class="w crumbs">当前位置：
+        <a href="/index.html">首页</a>
+        <span>&gt;</span>
+        <a href="/member/index.html">会员中心</a>
+        <span>&gt;</span>我的级别
+    </div>
+    <div class="w clearfix">
+        <!--#include file="/inc/member/menu.html"-->
+        <div class="fr">
+            <div class="right_a m_right">
+                <div class="order_info bordlrt">
+                    <h2>我的级别</h2>
+                    <ul class="bordb" id="bordb">
+                        <li class="dj_icon">
+                            您的会员级别是：
+                            <span class="hyjb" id="levelName">
+                                </span>
+                            <img id="levelImg" src="">
+                            <a href="/doing/helpCenter.html#mgrMgtMeasure" class="anniu marl10" target="_blank" id="huiyuan_web">
+                                    查看商城会员介绍
+                                </a>
+                        </li>
+                        <li class="mart5">
+                            成长值：<span id="markValue"></span>
+                        </li>
+                        <p class="c">
+                        </p>
+                    </ul>
+                    <h2>
+                            会员M值变动记录
+                        </h2>
+                    <ul class="" id="list_box">
+                    </ul>
+                    <div class="page" id="page">
+                        <div class="pageLimit" style="display: none;">
+                            <div style="text-align: right;">
+                                <!--#include file="/inc/plugin/limitPage.html"-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/inc/member/level/list.html"-->
+    <!--#include file="/data/channel/img_domain_data.html"-->
+    <!--#include file="/common/footer.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/member/level.js"></script>
+</body>
+
+</html>

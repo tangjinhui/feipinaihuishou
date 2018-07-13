@@ -1,0 +1,116 @@
+#layer_ck, #charge_box, #withdrawal_box {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: rgba(221, 221, 221, .3);
+    z-index: 199;
+}
+#cz_tx, #tx_tx {
+    width: 478px;
+    height: 350px;
+    background: #fff;
+    z-index: 100000;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    margin-left: -194px;
+}
+#bd_tx {
+    width: 388px;
+    height: 200px;
+    background: #fff;
+    z-index: 100000;
+    position: fixed;
+    top: 36%;
+    left: 50%;
+    margin-left: -194px;
+}
+#closeCmbc {
+    position: absolute;
+    right: 10px;
+    color: #fff;
+    background: url(http://static.ecgci.com/images/xx.png) no-repeat;
+    width: 22px;
+    height: 22px;
+    z-index: 10000;
+    top: 5px;
+    cursor: pointer;
+}
+.ck_title {
+    background: #e64346;
+    text-align: center;
+    color: #fff;
+    padding: 6px 0;
+    font-size: 14px;
+    position: relative;
+}
+.ck_title a {
+    position: absolute;
+    right: 10px;
+    color: #fff;
+    background: url(http://static.ecgci.com/images/xx.png) no-repeat;
+    width: 22px;
+    height: 22px;
+}
+.ck_input {
+    text-align: center;
+    margin-top: 32px;
+}
+.ck_input input {
+    border: 1px solid #ddd;
+    width: 60px;
+    padding: 2px 2px;
+}
+.tx_shuoming {
+    text-align: center;
+    margin-top: 12px;
+}
+.tx_shuoming span {
+    color: #666;
+}
+.tx_shuoming a {
+    color: #0009c4;
+}
+.ck_sub {
+    position: relative;
+    text-align: center;
+    margin-top: 32px;
+}
+.ck_sub a {
+    padding: 10px 24px;
+    background: #e64346;
+    color: #fff;
+    border-radius: 2px;
+    display: inline-block;
+}
+.ck_sub a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.ck_sub a.ydwt {
+    position: absolute;
+    top: 10px;
+    left: 268px;
+    color: blue;
+    padding: 0;
+    background: #fff;
+}
+.ck_msg {
+    margin-top: 12px;
+}
+.ck_msg p.intrT {
+    text-indent: 26px;
+    line-height: 30px;
+}
+.ck_msg p.intr {
+    text-indent: 26px;
+    line-height: 30px;
+}
+.ck_msg p.intrLink {
+    line-height: 30px;
+    text-indent: 45px;
+}
+.ck_msg p.intrLink a {
+    color: #30f;
+}

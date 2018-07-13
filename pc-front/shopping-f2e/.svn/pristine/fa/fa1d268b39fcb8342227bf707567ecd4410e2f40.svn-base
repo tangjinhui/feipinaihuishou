@@ -1,0 +1,148 @@
+<div class="address_box address_layer">
+</div>
+<div class="address_box cj_sjccont1" style="height:400px;">
+    <div class="cj_sjctop1">
+        修改收货人信息
+    </div>
+    <!--填写地址完成前开始 -->
+    <div class="cj_sjcmidsh">
+        <form id="addressForm">
+            <table width="98%" border="0" cellspacing="0" cellpadding="0" style="margin-top:20px;" id="content-box">
+                <script id="content-template" type="text/x-handlebars-template">
+                    <tbody id="list_box">
+                        <tr>
+                            <td class="cj_sjcm_alisj" width="20%" align="right">
+                                收货人：
+                            </td>
+                            <td class="cj_sjcm_padding" width="80%">
+                                <div>
+                                    <div class="cj_sjcm_inputleft cj_sjcm_inputleft">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <input name="name" id="name" type="text" style="font-size:14px;padding:0 0 0 5px;" class="cj_sjcm_input cj_sjcm_inputw1" maxlength="8" value="{{name}}"><span class="cj_sjcred">*</span>
+                                    </div>
+                                    <span class="cj_sjcm_inputright cj_sjcm_inputright2" id="consigneeError" style="display:none;">
+                                    收货人不能为空
+                                </span>
+                                    <p class="clear">
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cj_sjcm_alisj ">
+                                地区：
+                            </td>
+                            <td class="cj_sjcm_padding">
+                                <div id="selectbox" class="selectbox">
+                                    <select id="city0" name="city0"></select>
+                                    <select id="city1" name="city1" class="dn"></select>
+                                    <select id="city2" name="city2" class="dn"></select>
+                                </div>
+                                <div class="cj_sjcm_inputright cj_sjcm_inputright2" id="cityError" style="display:none;padding-top: 5px">请选择</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cj_sjcm_alisj ">
+                                详细地址：
+                            </td>
+                            <td class="cj_sjcm_padding">
+                                <div>
+                                    <div class="cj_sjcm_inputleft" style="">
+                                        &nbsp;&nbsp;&nbsp;<span id="citySpan" style="font-size:14px;padding:0 0 0 5px;"></span>
+                                    </div>
+                                    <div class="cj_sjcm_inputleft" style="width:285px;">
+                                        <input name="address" id="address" type="text" style="font-size:14px;padding:0 0 0 5px;" class="cj_sjcm_input cj_sjcm_inputw3" maxlength="60" value="{{address}}">
+                                    </div>
+                                    <div class="cj_sjcm_inputright cj_sjcm_inputright2" id="addressError" style="display:none;">
+                                        请输入有效的收货地址
+                                    </div>
+                                    <p class="clear">
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cj_sjcm_alisj">
+                                手机号码：
+                            </td>
+                            <td class="cj_sjcm_padding">
+                                <div>
+                                    <div class="cj_sjcm_inputleft cj_sjcm_inputleft">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <input name="mobile" id="mobile" type="text" class="cj_sjcm_input cj_sjcm_inputw1" maxlength="11/" value="{{mobile}}"><span class="cj_sjcred">*</span>
+                                    </div>
+                                    <div class="cj_sjcm_inputright cj_sjcm_inputright2" id="mobileError" style="display:none;">
+                                        手机号码有误
+                                    </div>
+                                    <div class="cj_sjcm_inputright cj_sjcm_inputright2" id="mobileNull" style="display:none;">
+                                        手机号码为空
+                                    </div>
+                                    <p class="clear">
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cj_sjcm_alisj">
+                                电子邮件：
+                            </td>
+                            <td class="cj_sjcm_padding">
+                                <div>
+                                    <div class="cj_sjcm_inputleft cj_sjcm_inputleft">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <input name="email" id="email" type="text" class="cj_sjcm_input cj_sjcm_inputw1" maxlength="40" value="{{email}}">
+                                    </div>
+                                    <div class="cj_sjcm_inputright cj_sjcm_inputright2" id="emailError" style="display:none;">
+                                        email填写有误
+                                    </div>
+                                    <p class="clear">
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cj_sjcm_alisj">
+                                固定电话：
+                            </td>
+                            <td class="cj_sjcm_padding">
+                                <div>
+                                    <div class="cj_sjcm_inputleft cj_sjcm_inputleft">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <input name="tel" id="tel" type="text" class="cj_sjcm_input cj_sjcm_inputw1" maxlength="20" value="{{tel}}">
+                                    </div>
+                                    <div class="cj_sjcm_inputright cj_sjcm_inputright2" id="telError" style="display:none;">
+                                        你输入的号码有误
+                                    </div>
+                                    <p class="clear">
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cj_sjcm_alisj ">
+                                邮政编码：
+                            </td>
+                            <td class="cj_sjcm_padding">
+                                <div>
+                                    <div class="cj_sjcm_inputleft">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <input name="postcode" id="zipcode" type="text" maxlength="6" class="cj_sjcm_input cj_sjcm_inputw1" value="{{postcode}}">
+                                    </div>
+                                    <div class="cj_sjcm_inputright cj_sjcm_inputright2" id="zipcodeError" style="display:none;">
+                                        请输入正确的邮政编码
+                                    </div>
+                                    <p class="clear">
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </script>
+            </table>
+        </form>
+        <p class="cj_sjcmidts_fh ">
+            <a href="javaScript:void(0);" class="anniu submitAddress">确认</a>
+            <a href="javaScript:void(0);" class="anniu" id="closeAddressLayer">取消</a>
+        </p>
+    </div>
+</div>

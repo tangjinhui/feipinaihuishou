@@ -1,0 +1,42 @@
+<script id="online-pay-type-template" type="text/x-handlebars-template">
+    <tr>
+        <td align="left">
+            <div class="TB3" id="onlinePay" style="display: block;">
+                <strong>
+                  银行支付：
+              </strong>
+                <ul style="overflow:hidden; ">
+                    {{#each onlineBankPayList}}
+                    <li>
+                        <span>
+                            <input type="radio" name="payType" class="payRadio" value="{{payId}}"/>
+                            <img src="http://static.ecgci.com/{{payImg}}" alt="{{name}}" title="{{name}}"/>
+                        </span>
+                    </li>
+                    {{/each}}
+                </ul>
+                <div class="clear">
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td align="left">
+            <div id="payment" class="TB3" style="display: block;">
+                <strong style="padding-top:10px;">
+                  平台支付：
+              </strong>
+                <ul>
+                    {{#each platformPayList}}
+                    <li>
+                        <span>
+                          <input type="radio" name="payType" class="payRadio" value="{{payId}}">
+                          <img src="http://static.ecgci.com/{{payImg}}" alt="{{name}}" title="{{name}}" >
+                      </span>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </td>
+    </tr>
+</script>

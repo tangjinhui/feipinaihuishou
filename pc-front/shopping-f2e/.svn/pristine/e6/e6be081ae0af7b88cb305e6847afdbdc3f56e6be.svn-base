@@ -1,0 +1,176 @@
+<script id="baseInfo-template" type="text/x-handlebars-template">
+    <table border="0px" class="formtable">
+        <tbody>
+            <tr>
+                <td align="right" width="130">会员名称：</td>
+                <td>
+                    {{accountInformation.account}}
+                    <input name="account" type="hidden" maxlength="20" readonly="readonly" class="ipt_txt" value="item">
+                    <div class="pos">
+                        <div class="toux">
+                            <div>
+                                <p class="head_show">
+                                    <img src="{{imgConf accountInformation.levelImg 1234}}">
+                                </p>
+                                <p class="head_name">
+                                    <span style="float:left;display:inline-block;">
+                                        会员名称：
+                                    </span>
+                                    <span style="float: right; display:inline-block;width:138px;overflow:hidden;">
+                                        {{accountInformation.account}}
+                                    </span>
+                                </p>
+                                <p>
+                                    会员等级：
+                                    <a href="/member/level.html">
+                                        {{accountInformation.levelName}}
+                                    </a>
+                                    <br> 修改安全认证请到
+                                    <a href="/member/security.html">
+                                        安全中心
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="130">会员类型：</td>
+                <td>个人用户</td>
+            </tr>
+            <tr>
+                <td align="right" width="130">昵称：</td>
+                <td class="pos">
+                    <input id="nc" name="accountName" type="text" maxlength="20" value="{{accountInformation.accountName}}">
+                    <div class="formError">
+                        <div class="formErrorContent">该选项必填</div>
+                    </div>
+                    <div class="formSuc">
+                        <div class="formSucContent"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">你的性别：</td>
+                <td>
+                    {{#if_sex accountInformation.sex 0}}
+                    <input type="radio" id="sex" value="0" name="sex" checked> 男&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="sex" value="1" name="sex">女 {{else}}
+                    <input type="radio" id="sex" value="0" name="sex"> 男&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="sex" value="1" name="sex" checked>女 {{/if_sex}}
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="130">手机号码：</td>
+                <td>
+                    {{accountInformation.mobile}}
+                    <a href="/member/security/modify_mobile.html" class="anniu">
+                        修改
+                    </a>
+                    <span class="red">
+                        已验证
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="130">真实姓名：</td>
+                <td>
+                    {{accountInformation.name}}
+                </td>
+            </tr>
+            <tr>
+                <td align="right">身份证：</td>
+                <td>
+                    {{accountInformation.psCode}}
+                </td>
+            </tr>
+            <tr>
+                <td align="right">所在地：</td>
+                <td>
+                    <div id="selectbox" class="selectbox">
+                        <select id="city0" name="city0"></select>
+                        <select id="city1" name="city1"></select>
+                        <select id="city2" name="city2"></select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td class="pos">
+                    <span id="citySpan">
+                        {{addressSpan addressMap.province addressMap.city addressMap.county}}
+                    </span>
+                    <input id="address" name="address" type="text" maxlength="60" style="width: 300px" value="{{accountInformation.address}}">
+                    <div class="formError">
+                        <div class="formErrorContent">该选项必填</div>
+                    </div>
+                    <div class="formSuc">
+                        <div class="formSucContent"></div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="padl bordb marb40" style="background-color:#f3f3f3; margin-top:10px;">
+        选填信息
+    </h3>
+    <table border="0px" class="formtable">
+        <tbody>
+            <tr>
+                <td align="right" width="130">会员生日：</td>
+                <td>
+                    <select name="birthdayYear" id="birthdayYear"></select>&nbsp;年
+                    <select name="birthdayMonth" id="birthdayMonth"></select>&nbsp;月
+                    <select name="birthdayDay" id="birthdayDay"></select>&nbsp;日
+                </td>
+                <tr>
+                    <td align="right">婚姻状况：</td>
+                    <td id="maritalStatus">
+                        <input type="radio" class="radio marl5" name="maritalStatus" value="0"> 未婚
+                        <input type="radio" class="radio marl5" name="maritalStatus" value="1"> 已婚
+                        <input type="radio" class="radio marl5" name="maritalStatus" value="2"> 保密
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        月收入：
+                    </td>
+                    <td>
+                        <select name="monthlyIncome">
+                            <option value="0">
+                                0~2000元
+                            </option>
+                            <option value="1">
+                                2001~5000元
+                            </option>
+                            <option value="2">
+                                5001~8000元
+                            </option>
+                            <option value="3">
+                                8001~10000元
+                            </option>
+                            <option value="4">
+                                10000元以上
+                            </option>
+                            <option value="5">
+                                保密
+                            </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">爱好：
+                    </td>
+                    <td id="interests">
+                        <input type="checkbox" name="interest" value="1" class="checkbox"> 听音乐
+                        <input type="checkbox" name="interest" value="2" class="checkbox"> 上网聊天
+                        <input type="checkbox" name="interest" value="3" class="checkbox"> 玩游戏
+                        <input type="checkbox" name="interest" value="4" class="checkbox"> 看动漫
+                        <input type="checkbox" name="interest" value="5" class="checkbox"> 打球
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+</script>

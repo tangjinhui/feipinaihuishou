@@ -1,0 +1,65 @@
+<!-- 绑卡 -->
+<div id="layer_ck" class="dn">
+    <div id="bd_tx" class="layer_ck_other">
+        <span id="closeCmbc" src="/views/contents/member/trans_member/imgs/xx.png"></span>
+        <div class="ck_title">
+        </div>
+        <div class="ck_input">
+        </div>
+        <div class="ck_sub">
+            <a href="javascript:void(0);" class="js_resh">已完成</a>
+            <a target="_blank" class="ydwt" href="/doing/vir_acc_trouble.html" style="display: inline;">遇到问题?</a>
+        </div>
+    </div>
+</div>
+<!-- 充值 -->
+<div id="charge_box" class="dn">
+    <div id="cz_tx" class="layer_ck">
+        <div class="ck_title">充值
+            <a class="closeLayer" href="javascript:void(0);"></a>
+        </div>
+        <div class="ck_input">请输入充值金额：&nbsp;
+            <input id="js_czje" type="text">&nbsp;&nbsp;最低充值金额5元
+        </div>
+        <div class="ck_sub">
+            <a href="javascript:void(0);" id="js_gocz" class="js_gocz">去充值</a>
+        </div>
+        <div class="ck_msg">
+            <p class="intrT">充值说明：</p>
+            <p class="intr">1、虚拟交易账户的余额只能用户交纳保证金，不能用于消费和抵扣货款。</p>
+            <p class="intr">2、在线充值：通过虚拟交易账户绑定银行卡所属的网上银行，进行在线充值。</p>
+            <p class="intr">3、转账充值：通过虚拟交易账户绑定的银行卡账户，向虚拟交易账户进行转账。</p>
+            <p class="intrLink">
+                <a href="/doing/transfer_explain.html" target="_blank">转账充值注意事项&gt;&gt;</a>
+            </p>
+        </div>
+    </div>
+</div>
+<!-- 提现 -->
+<div id="withdrawal_box" class="dn">
+    <div id="tx_tx" class="layer_tx">
+        <div class="ck_title">提现
+            <a class="closeLayer" href="javascript:void(0);"></a>
+        </div>
+        <div class="ck_input">请输入提现金额：&nbsp;
+            <input id="js_txje" type="text">
+        </div>
+        <!-- <div class="tx_shuoming">
+            <span>《提现说明》</span> 
+            <a target="_blank" href="/doing/virtual_account.html#withdraw">点击查看>></a>
+        </div> -->
+        <div class="ck_sub">
+            <a id="js_gotx" href="javascript:void(0);">去提现</a>
+        </div>
+        <div class="ck_msg">
+            <p class="intrT">提现说明 根据民生银行收费标准，提现手续费规则如下：</p>
+            <p class="intr">1、当用户提现金额小于等于50000元/笔时，手续费5元/每笔；</p>
+            <p class="intr">2、当用户提现金额大于50000元/笔时，手续费10元/每笔；</p>
+            <p class="intr">3、手续费从虚拟交易账户的余额中扣除（外扣）；</p>
+            <p class="intr">4、线上充值的资金T+1日才可以提现。</p>
+            <p class="intrLink">
+                <a href="/doing/virtual_account.html#withdraw" target="_blank">详细说明&gt;&gt;</a>
+            </p>
+        </div>
+    </div>
+</div>

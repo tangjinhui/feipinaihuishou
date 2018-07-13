@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>帮助中心-购物指南-抽签预订流程</title>
+<meta name="Keywords" content="帮助中心-自助服务中心-帮助文章详情" />
+<meta name="description" content="帮助中心-自助服务中心-帮助文章详情" />
+<meta content=IE=EmulateIE7 http-equiv=X-UA-Compatible>
+<link type="text/css" rel="stylesheet" href="/doing/hel/css/common1.css">
+</head>
+<body>
+    <div class="main">
+        <h3>抽签预订流程</h3>
+        <h4>第一步、进入商城首页，点击“抽签购”图标</h4>
+        <img alt="抽签预订1.png" src="../../images/drawReserveProcess/drawReserveProcess1.png" title="抽签预订1.png" border="0" vspace="0" width="860"/>
+        <h4>第二步、进入抽签频道页面，点击某个感兴趣的抽签活动</h4>
+        <img alt="抽签预订2.png" src="../../images/drawReserveProcess/drawReserveProcess2.png" title="抽签预订2.png" border="0" vspace="0" width="860"/>
+        <h4>第三步、进入抽签预订详情页面</h4>
+        <img alt="抽签预订3.png" src="../../images/drawReserveProcess/drawReserveProcess3.png" title="抽签预订3.png" border="0" vspace="0" width="860"/>
+        <h4>第四步、如果本抽签活动需要交纳保证金，用户需要先交纳保证金，交纳保证金需要用户的交易账户余额有足够的可用余额。</h4>
+        <div class="mainTxt1">
+        	<h4>保证金交纳前用户需要先同意《保证金签约协议》，如下图所示：</h4>
+        </div>
+        <img alt="抽签预订4.png" src="../../images/drawReserveProcess/drawReserveProcess4.png" title="抽签预订4.png" border="0" vspace="0" width="860"/>
+        <div class="mainTxt1">
+        	<h4>保证金交纳成功后，用户就可以点击立即报名按钮进行报名了。</h4>
+        </div>
+        <h4>第五步、如果抽签活动报名已经开始，点击“立即报名”按钮，弹出报名信息页面。</h4>
+        <img alt="抽签预订5.png" src="../../images/drawReserveProcess/drawReserveProcess5.png" title="抽签预订5.png" border="0" vspace="0" width="860"/>
+        <h4>第六步、正确填写报名信息，点击报名，报名成功后弹出成功提示，给出您的预订号。</h4>
+        <img alt="抽签预订6.png" src="../../images/drawReserveProcess/drawReserveProcess6.png" title="抽签预订6.png" border="0" vspace="0" width="860"/>
+        <h4>第七步、抽签报名成功，记住预订号码，您可以到“我的抽签”，关注中签情况。</h4>
+        <img alt="抽签预订7.png" src="../../images/drawReserveProcess/drawReserveProcess7.png" title="抽签预订7.png" border="0" vspace="0" width="860"/>
+        <h4>第八步、如果中签，您可以查看抽签订单并支付，也可以进入我的订单进行支付，支付成功后等待发货即可。</h4>
+    </div>
+</body>
+</html>

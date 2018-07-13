@@ -1,0 +1,313 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+@import url('http://static.ecgci.com/css/libs/dialog.css');
+a {
+    color: #666666;
+}
+.cur {
+    color: #666666;
+}
+.flow_chart3 {
+    height: 35px;
+    line-height: 35px;
+    color: #58595b;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    overflow: hidden;
+    margin: 20px auto 0;
+}
+.flow_chart3 .cur {
+    color: #fff;
+    font-weight: bold;
+}
+.flow_chart3 {
+    background: url(http://static.ecgci.com/images/cart_bg.png) 0 0 no-repeat;
+    width: 697px;
+}
+.flow_chart3 li {
+    float: left;
+    width: 207px;
+    padding: 0 0 0 30px;
+}
+.flow_chart3 .last {
+    padding: 0 10px 0 25px;
+    width: 185px;
+}
+.step3 {
+    background-position: 0 -70px;
+}
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+a:hover {
+    text-decoration: underline
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+.zf_cg2 {
+    margin: 0px auto;
+    background-color: #f3f3f3;
+    padding: 30px 0px;
+    padding-bottom: 60px;
+}
+.zf_in {
+    width: 995px;
+    background-color: #fff;
+    border-top: 3px solid #e43a3d;
+    padding-top: 17px;
+    margin: 0px auto;
+    padding-bottom: 36px;
+}
+.zf_in .div1 {
+    margin: 0px 23px 0px 23px;
+    background-color: #f3f3f3;
+    padding: 33px 0px 27px 0px;
+}
+.zf_in .div1 .p1 {
+    font-family: Microsoft YaHei;
+    font-size: 26px;
+    color: #e43a3d;
+    line-height: 40px;
+    padding-left: 275px;
+    margin: 0px;
+    background: url(http://static.ecgci.com/images/tuddd.png) no-repeat 220px 10px;
+}
+.zf_in .div1 .p2 {
+    font-family: Microsoft YaHei;
+    font-size: 15px;
+    color: #666;
+    line-height: 32px;
+    padding-left: 275px;
+    margin: 0px;
+}
+.zf_in dl {
+    height: 140px;
+    padding: 30px 0px 65px 0px;
+}
+.zf_in dl dt {
+    float: left;
+    border-right: 1px dashed #ccc;
+    padding-left: 290px;
+    min-width: 193px;
+    max-width: 220px;
+}
+.zf_in dl dt p {
+    line-height: 28px;
+    height: 56px;
+    overflow: hidden;
+    font-family: Microsoft YaHei;
+    font-size: 15px;
+    color: #666;
+    margin: 0px;
+}
+.zf_in dl dt .a2 {
+    display: block;
+    width: 120px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    border: 1px solid #c8c8c8;
+    font-size: 15px;
+    color: #666;
+    background-color: #f3f3f3;
+    text-decoration: none;
+}
+.zf_in dl dd {
+    width: 125px;
+    height: 140px;
+    margin-left: 50px;
+    background: url(http://static.ecgci.com/images/tuddd.png) no-repeat 0px -33px;
+    float: left;
+    margin-top: 15px;
+}
+.zf_in .wx_ts {
+    width: 510px;
+    height: 42px;
+    line-height: 42px;
+    overflow: hidden;
+    font-size: 13px;
+    color: #666;
+    margin: 0px auto;
+    border: 1px dashed #e96062;
+    text-align: center;
+}
+.zf_in dl dt p span {
+    color: #e43a3d;
+}
+.zf_in .wx_ts span {
+    color: #e43a3d;
+    font-size: 15px;
+}
+
+.c, .clearfix {
+    clear: both;
+}
+
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+.mart12 {
+    margin-top: 10px;
+}
+
+.posr {
+    position: relative;
+}
+.wrap {
+    margin: 0 auto;
+    width: 1240px;
+}
+#toolbar {
+    background: #f5f5f5;
+    height: 34px;
+    line-height: 34px;
+    border-bottom: #eee 1px solid;
+    font-size: 13px;
+    color: #666;
+}
+#toolbar .wrap {
+    background: #f5f5f5;
+}
+#toolbar li {
+    float: left;
+    position: relative;
+    zoom: 1;
+    z-index: 40;
+    padding: 0 12px;
+}
+#toolbar .toolbar_fl .item {
+    height: 34px;
+    padding-right: 14px;
+}
+#toolbar li.line {
+    padding: 0;
+    z-index: 2;
+}
+#toolbar li.service_center {
+    padding: 0 14px 0 12px
+}
+#toolbar li.first {
+    padding: 0;
+}
+#toolbar .item .arrowB {
+    right: -2px;
+    top: 12px;
+    border-top-color: #666;
+}
+#toolbar .link_top_login {
+    margin-left: 14px;
+}
+#toolbar .toolbar_fl a, .link_top_reg a {
+    cursor: pointer;
+    padding-left: 2px;
+}
+#toolbar .toolbar_fl a {
+    padding-left: 14px;
+    cursor: pointer;
+}
+#toolbar div {
+    font-family: "Microsoft YaHei";
+}
+#toolbar .drop_list {
+    display: none;
+    width: 282px;
+    height: 239px;
+    background: #fff;
+    top: 34px;
+    right: -13px;
+    border: #d5d4d4 1px solid;
+    background: #fff;
+    z-index: 40;
+}
+#toolbar .drop_panel {
+    padding: 20px 0 0;
+    overflow: hidden;
+}
+#toolbar .drop_panel .padding_rl {
+    padding: 0 20px;
+}
+#toolbar .drop_panel .menu_list .item {
+    width: 60px;
+    line-height: 30px;
+    padding: 0;
+}
+#toolbar .service_center .drop_list {
+    width: 94px;
+}
+#toolbar .service_center .drop_list {
+    width: 94px;
+}
+#toolbar .service_center .drop_list {
+    height: auto;
+}
+#toolbar .service_center .drop_panel {
+    padding: 0;
+}
+#toolbar .toolbar_fr {
+    margin-right: 2px;
+}
+.clearfix {
+    *zoom: 1;
+}
+.wrap {
+    margin: 0 auto;
+    width: 1240px;
+}
+.posr {
+    position: relative;
+}
+.posa {
+    position: absolute;
+}
+.posr .icon {
+    position: absolute;
+    background: url(http://static.ecgci.com/images/icon_bg.png) no-repeat;
+}
+.pad30 {
+    padding: 30px 0 0;
+}
+.bor-bot {
+    border-top: #eee 1px solid;
+    padding: 30px 0;
+    margin: 30px auto 0;
+}
+.footer_sm .txt {
+    line-height: 18px;
+    color: #666;
+    text-align: center;
+}
+.footer_sm .img {
+    margin: 15px 0 0;
+    height: 41px;
+}
+.footer_sm .img a {
+    width: 112px;
+    height: 41px;
+}
+.posr .icon_f5 {
+    background-position: -155px -455px;
+    left: 412px;
+}
+.posr .icon_f6 {
+    background-position: -155px -545px;
+    left: 560px;
+}
+.posr .icon_f7 {
+    background-position: -155px -635px;
+    left: 712px;
+}
+.posr .icon_f8 {
+    background-position: -155px -725px;
+    left: 754px;
+    display: none;
+}
+.a1 {
+    display: block;
+    padding: 10px 0px;
+    font-size: 15px;
+    color: #015ba7;
+    font-family: Microsoft YaHei;
+    line-height: 30px;
+}

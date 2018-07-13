@@ -1,0 +1,69 @@
+<script id="list-template" type="text/x-handlebars-template">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="wbordt text_c">
+        <thead>
+            <tr>
+                <th width="5%">
+                    序号
+                </th>
+                <th width="8%">
+                    预订号
+                </th>
+                <th width="15%">
+                    预订名称
+                </th>
+                <th width="15%">
+                    预约时间
+                </th>
+                <th width="10%" align="center">
+                    预约类型
+                </th>
+                <th width="12%">
+                    预约状态
+                </th>
+                <th width="15%" class="caoz">
+                    操作
+                </th>
+            </tr>
+        </thead>
+        <tbody id="list_box">
+            {{#each list}}
+            <tr>
+                <td>
+                    {{addIndex @index}}
+                </td>
+                <td>
+                    {{reserveNumber}}
+                </td>
+                <td>
+                    <a href="http://ydingdev.ecgci.com/detail/{{reserveId}}.html">
+                            {{reserveName}}
+                        </a>
+                </td>
+                <td>
+                    {{reserveDate}}
+                </td>
+                <td>
+                    抽签预约单
+                </td>
+                <td>
+                    {{status}}
+                </td>
+                <td>
+                    {{{power orderId}}}
+                    <br>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+        <tfoot>
+            <tr class="pageLimit" style="display: none;">
+                <td colspan="9" style="text-align: right;">
+                    <!--#include file="/inc/plugin/limitPage.html"-->
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    <div class="None_record" style="border-top: 0;display: none; margin-top: 0;">
+        没有符合条件的记录
+    </div>
+</script>

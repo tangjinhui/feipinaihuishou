@@ -1,0 +1,64 @@
+<div id="identity">
+    <table border="0px" class="formtable" id="mobileDivValid">
+        <tbody>
+            <tr>
+                <td align="right" width="130" valign="top">
+                    验证身份方式:
+                </td>
+                <td width="488" colspan="3">
+                    手机验证
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="130">已验证手机：</td>
+                <td width="488" colspan="3">
+                    <span id="validMobile"></span>
+                    <input type="button" id="sendMobileCode" value="获取短信验证码" class="button_anniu_w">
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td width="130" align="right">
+                    短信验证码：
+                </td>
+                <td width="488" colspan="3">
+                    <input type="text" name="mobileCode" id="mobileCode" maxlength="6" style="width:120px;">
+                    <span id="mobileCode_error" class="msg-error" style="display: none">
+                    </span>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="130">
+                    验证码：
+                </td>
+                <td width="488" colspan="3" class="re">
+                    <input type="text" name="rand" id="rand" style="width:80px" maxlength="4">
+                    <span id="rand_error" class="msg-error" style="display: none">
+                    </span>
+                    <div class="codeBox">
+                        <img border="0" id="identity_code_img" src="/front/authCode"> 看不清?
+                        <a href="javascript:void(0);" id="identity_code_btn">
+                            换一张
+                        </a>
+                    </div>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td colspan="2">
+                    <input type="button" class="btn" id="identityNextBtn" value="下一步">
+                </td>
+                <td>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

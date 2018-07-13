@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>账户中心 - 会员中心 - 中国金币官方网上商城</title>
+    <meta name="Keywords" content="">
+    <meta name="description" content="">
+    <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" type="text/css" href="/css/member/after_sale/refund.css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div class="w crumbs">当前位置：
+        <a href="/index.html">首页</a>
+        <span>&gt;</span>
+        <a href="/member/index.html">会员中心</a>
+        <span>&gt;</span>我的退款
+    </div>
+    <div class="w clearfix">
+        <!--#include file="/inc/member/menu.html"-->
+        <div class="fr">
+            <div class="fr">
+                <div class="right_a">
+                    <div class="top mar_bottom">
+                        <h2 class="tit">
+                                我的退款
+                            </h2>
+                    </div>
+                    <div id="page_list" style="padding:10px; margin-top: -15px;" class="bor3">
+                        <table class="fz_12" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <thead>
+                                <tr>
+                                    <th width="8%" align="center">
+                                        退款单号
+                                    </th>
+                                    <th width="8%" align="center">
+                                        服务单号
+                                    </th>
+                                    <th width="10%" align="center">
+                                        原订单号
+                                    </th>
+                                    <th width="25%" align="center">
+                                        商品名称
+                                    </th>
+                                    <th width="15%" align="center">
+                                        退款金额
+                                    </th>
+                                    <th width="8%" align="center">
+                                        退回账户
+                                    </th>
+                                    <th width="18%" align="center">
+                                        退款申请时间
+                                    </th>
+                                    <th width="8%" align="center">
+                                        退款状态
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="list_box">
+                                <tr>
+                                    <td colspan="9" style="text-align: center;">正在加载...</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="pageLimit" style="display: none;">
+                                    <td colspan="9" style="text-align: right;">
+                                        <!--#include file="/inc/plugin/limitPage.html"-->
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/inc/member/refund/list.html"-->
+    <!--#include file="/common/footer.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/member/after_sale/refund.js"></script>
+</body>
+
+</html>

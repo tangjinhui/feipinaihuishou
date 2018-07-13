@@ -1,0 +1,41 @@
+<script id="reply-template" type="text/x-handlebars-template">
+    <!-- replies begin-->
+    {{#each list}}
+    <div class="item-reply">
+        <strong>{{addIndex @index}}</strong>
+        <div class="reply-list">
+            <div class="reply-con">
+                <span class="u-name">{{replyAccount}}</span>&nbsp;回复
+                <span class="u-name">{{commentAccount}}</span>&nbsp;:
+                <span class="u-con">{{replyContent}}</span>
+            </div>
+            <div class="reply-meta">
+                <span class="reply-left fl">{{replyDate}}</span>
+                <a href="javascript:void(0);" class="p-bfc">回复</a>
+            </div>
+        </div>
+    </div>
+    <div class="item-reply reply-lz" style="display: none;">
+        <div class="reply-list">
+            <!-- 弹出回复层 -->
+            <div class="replay-form">
+                <div class="arrow"> <em>◆</em><span>◆</span> </div>
+                <div class="reply-wrap">
+                    <p><em>回复</em> <span class="u-name">{{replyAccount}}</span></p>
+                    <div class="reply-input">
+                        <div class="fl">
+                            <input type="text" name="firstLevelReply" class="firstLevelReply" maxlength="100">
+                        </div>
+                        <a href="javascript:void(0);" class="reply-btn btn-gray" data-account="{{replyAccount}}">回复</a>
+                        <div class="c"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 弹出回复层 -->
+        </div>
+    </div>
+    {{/each}}
+    <div class="page">
+        <!--#include file="/inc/plugin/limitPage.html"-->
+    </div>
+</script>

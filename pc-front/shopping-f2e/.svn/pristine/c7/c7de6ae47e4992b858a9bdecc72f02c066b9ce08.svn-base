@@ -1,0 +1,30 @@
+<div class="fixed_dialog dn" id="logisticsInfo">
+    <div class="window">
+        <div class="tit">填写快递信息
+            <div class="close logistics">x</div>
+        </div>
+        <div class="content">
+            <div class="line">服务单号：
+                <label id="deliveryAfterSaleId"></label>
+            </div>
+            <div class="line">原订单号：
+                <label id="deliveryOrderId"></label>
+            </div>
+            <div class="line mar_bottom clearfix">
+                <div class="fl w90">快递公司名称：</div>
+                <div class="fl inp_wrap">
+                    <input type="text" id="deliveryCompanyName" />
+                </div>
+            </div>
+            <div class="line mar_bottom clearfix">
+                <div class="fl w90">快递单号：</div>
+                <div class="fl inp_wrap">
+                    <input type="text" id="deliveryNumber" />
+                </div>
+            </div>
+            <div class="line red mar_bottom line_normal">特别提醒：快递信息关系到您返回商品的接收查验，请仔细填写。提交后不可修改。
+            </div>
+            <a class="btn_enter" id="saveTrackingNumber">确定</a>
+        </div>
+    </div>
+</div>

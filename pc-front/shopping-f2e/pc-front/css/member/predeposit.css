@@ -1,0 +1,517 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/dialog.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+@import url('http://static.ecgci.com/css/libs/limitPage.css');
+@import url('../plugin/menu.css');
+
+body {
+    margin: 0;
+    padding: 0px;
+    font-size: 12px;
+    text-align: left;
+    font-family: Arial, Lucida, Verdana, Helvetica, sans-serif;
+}
+div, span, input, form, p, h1, h2, h4, ul, li, dl, dt, dd, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+ul, li {
+    list-style: none;
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+del {
+    text-decoration: none;
+    padding: 0 5px;
+}
+input, img, label, select {
+    vertical-align: middle;
+}
+button {
+    -webkit-appearance: none;
+}
+undefined**/.c,
+/**.clear,**/
+
+.clearfix {
+    clear: both;
+}
+
+.fr {
+    float: right;
+}
+
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.right_a {
+    width: 1003px;
+}
+
+.mart12 {
+    margin-top: 10px;
+}
+
+.padb10 {
+    padding-bottom: 10px;
+}
+
+.text_c {
+    text-align: center;
+}
+
+table, table th, table td {
+    border: #e1e1e1 1px solid;
+    line-height: 24px;
+    border-collapse: collapse
+}
+table th {
+    background: #f3f3f3;
+    text-align: center;
+}
+table th, table td {
+    padding: 5px 10px;
+}
+h2 {
+    height: 28px;
+    line-height: 28px;
+    color: #58595b;
+    border: none;
+    padding: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.clearfix:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix {}
+.wrap {
+    margin: 0 auto;
+    width: 1240px;
+}
+html {
+    background-image: url(about:blank);
+    background-attachment: fixed;
+}
+
+.page {
+    position: relative;
+    color: #58595b;
+    font: 14px/27px simsun;
+    height: 28px;
+    line-height: 28px;
+    margin: 10px 0;
+    text-align: right;
+    width: 100%;
+}
+.page a {
+    border: 1px solid #e5e5e5;
+    color: #58595b;
+    padding: 5px 10px;
+    margin: 0 2px;
+}
+.page a:hover, .page a.selected {
+    background: #e43a3d;
+    border: 1px solid #e43a3d;
+    color: #fff;
+    text-decoration: none;
+}
+.page a b {
+    font-size: 12px;
+    font-weight: normal
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix {
+    *zoom: 1;
+}
+.wrap {
+    margin: 0 auto;
+    width: 1240px;
+}
+.posr {
+    position: relative;
+}
+.posa {
+    position: absolute;
+}
+
+.posr .icon {
+    position: absolute;
+    background: url(/themes/20150514http://static.ecgci.com/images/icon_bg.png) no-repeat;
+}
+.pad30 {
+    padding: 30px 0 0;
+}
+.bor-bot {
+    border-top: #eee 1px solid;
+    padding: 30px 0;
+    margin: 30px auto 0;
+}
+.footer_sm .txt {
+    line-height: 18px;
+    color: #666;
+    text-align: center;
+}
+.footer_sm .img {
+    margin: 15px 0 0;
+    height: 41px;
+}
+.footer_sm .img a {
+    width: 112px;
+    height: 41px;
+}
+.posr .icon_f5 {
+    background-position: -155px -455px;
+    left: 412px;
+}
+.posr .icon_f6 {
+    background-position: -155px -545px;
+    left: 560px;
+}
+.posr .icon_f7 {
+    background-position: -155px -635px;
+    left: 712px;
+}
+
+.posr .icon_f8 {
+    background-position: -155px -725px;
+    left: 754px;
+    display: none;
+}
+h1, h2, h3 {
+    font-weight: normal;
+}
+.bordlrt {
+    border-left: #e1e1e1 1px solid;
+    border-right: #e1e1e1 1px solid;
+    border-top: #e1e1e1 1px solid;
+}
+.bordb {
+    border-bottom: #e1e1e1 1px solid;
+}
+
+.crumbs {
+    height: 52px;
+    line-height: 52px;
+    color: #58595b;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+}
+.crumbs span {
+    padding: 0 6px;
+}
+.m_right h2 {
+    height: 30px;
+    font-weight: bold;
+    padding: 2px 10px;
+    border-bottom: #e1e1e1 0px solid;
+    font-size: 14px;
+    line-height: 30px;
+    color: #58595b;
+    font-family: "SimSun";
+    text-align: left;
+    background-color: #f7f7f7;
+}
+
+.in_btn {
+    width: 100px;
+    margin-left: 10px;
+    height: 24px;
+    padding: 0;
+    font-weight: bold;
+    color: #fff;
+    line-height: 18px;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    font-size: 12px;
+}
+.tabqh table.text_c, .tabqh table.text_c th {
+    border: none;
+}
+
+.recom_tab {
+    background: url(..http://static.ecgci.com/images/all_bge.png) 0 -889px repeat-x;
+    height: 33px;
+}
+.recom_tab li {
+    flaot: left;
+    width: 120px;
+    height: 32px;
+    background: #f3f3f3;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+    overflow: hidden;
+    border-right: #e1e1e1 1px solid;
+    border-bottom: #e1e1e1 1px solid;
+}
+.recom_tab li.select {
+    background: #fff;
+    font-weight: bold;
+    font-family: "Microsoft YaHei";
+    color: #333;
+}
+.recom_tab li.select {
+    border-bottom: #fff 1px solid;
+}
+
+.order_info {
+    color: #666;
+}
+.order_info h2 {
+    height: 34px;
+    line-height: 34px;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.order_info ul {
+    padding: 10px 20px 10px;
+    height: auto;
+    clear: both;
+}
+.order_info li {
+    width: 99.9%;
+    line-height: 24px;
+    height: 24px;
+    display: block;
+}
+.order_info p {
+    line-height: 24px;
+    padding-left: 20px;
+}
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+.hyjb {
+    font-weight: bold;
+    color: #e43a3d;
+}
+.tab-tit ul li {
+    float: left;
+    cursor: pointer;
+    height: 31px;
+}
+h6 {
+    padding: 0 10px;
+    background: #f3f3f3;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: #e1e1e1 1px solid;
+    margin: 0;
+}
+
+em {
+    font-style: normal;
+}
+table.wbordt {
+    border-top: none;
+}
+*html #tool {
+    position: absolute;
+    top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop, 10)||0)-(parseInt(this.currentStyle.marginBottom, 10)||0)));
+    zoom: 1;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline
+}
+.right_a .page {
+    margin-top: 20px;
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+
+@charset "utf-8";
+body {
+    color: #666666;
+    background: #ffffff;
+}
+a {
+    color: #666666;
+}
+a:hover {
+    color: #e43a3d;
+}
+a:hover {
+    text-decoration: none
+}
+
+.hyjb {
+    font-size: 14px;
+}
+
+.recharge {
+    color: #008000;
+}
+
+.recharge:before {
+    content: "+"
+}
+
+
+.pay {
+    color: #ff0000;
+}
+
+.pay:before {
+    content: "-"
+}
+
+
+.deduct {
+    color: #ff0000;
+}
+
+.deduct:before {
+    content: "-"
+}
+
+.frozen {
+    color: #996600;
+}
+
+.frozen span {
+    position: relative;
+}
+
+td.frozen span i {
+    position: absolute;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    top: 1px;
+    left: -17px;
+    background: #fff url(http://static.ecgci.com/images/lock.jpg) 0 0 no-repeat;
+}
+
+.unfrozen span {
+    position: relative;
+}
+
+td.unfrozen span i {
+    position: absolute;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    top: 1px;
+    left: -17px;
+    background: #fff url(http://static.ecgci.com/images/unlock.jpg) 0 0 no-repeat;
+}
+
+.unfrozen {
+    color: #996600;
+}
+
+
+.mask {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.15;
+    filter: alpha(opacity=15);
+    z-index: 500;
+}
+.login_tips {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    width: 430px;
+    height: 300px;
+    padding-top: 0;
+    padding-bottom: 0;
+    top: 50%;
+    left: 50%;
+    margin-left: -215px;
+    margin-top: -150px;
+    background-color: #fff;
+    z-index: 501;
+}
+.login_tips h2 {
+    height: 46px;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 413px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 46px;
+    padding-left: 17px;
+    background-color: #e64346;
+    color: #fff;
+}
+.close_btn {
+    z-index: 10000;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+.login_tips p {
+    font-size: 12px;
+    color: #666666;
+    line-height: 20px;
+    margin-left: 62px;
+    width: 306px;
+    margin-top: 50px;
+}
+.go_login {
+    display: block;
+    background-color: #e64346;
+    color: #fff;
+    text-decoration: none;
+    line-height: 34px;
+    font-size: 20px;
+    width: 306px;
+    margin-left: 62px;
+    margin-top: 30px;
+    text-align: center;
+}
+.no_login {
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    color: #666;
+    width: 430px;
+    text-decoration: none;
+    margin-top: 30px;
+}
+.no_login:hover {
+    color: #e64346;
+}
+.go_login:hover {
+    color: #fff;
+}

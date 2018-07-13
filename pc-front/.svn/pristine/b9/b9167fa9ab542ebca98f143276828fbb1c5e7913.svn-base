@@ -1,0 +1,80 @@
+<div id="i_assessall" class="pl_list i_assessall i_good i_middle i_bad i_image">
+    
+</div>
+<script class="h_assessall h_good h_middle h_bad h_image" type="text/x-handlebars-template">
+{{#each data}}
+    <div data-commentId={{commentId}} class="item marb10 commentId">
+        <div class="i-item">
+            <div class="comment-content clearfix">
+                <dl class="xinde">
+                    <dd>
+                    {{content}}{{{img_list image_list image_num commentId}}}
+                </dd>
+                    <span class="date-comment">{{add_time}}</span>
+                </dl>
+                <div class="o-topic">
+                    <strong style="{{essenceHan essence}}" class="topic topic-best"></strong>
+                    <span class="{{star average_points}}"></span>
+                </div>
+                <div class="dl-extra">
+                    <dl class="gmrq">
+                        <dd><span class="level_bg level_{{levelId}}"></span> 
+                            {{accountHan account}}</dd>
+                        <dd>
+                            <span class="u-level listred">
+                                {{level levelId}}</span>&nbsp;&nbsp;
+                        </dd>
+                        <dd>
+                            {{access_date}}&nbsp;&nbsp;<span class="address">购买</span>
+                        </dd>
+                    </dl>
+
+                    
+                    <p class="c"></p>
+                </div>
+                </div>
+            <div class="btns">
+                <a title="回复" target="_blank" href="javascript:void(0);" class="btn-reply to_reply">回复(<span>{{reply_num}}</span>)</a>
+                <div class="useful">
+                    <a href="javascript:void(0);" target="_blank" class="btn-agree to_reply addComm" name="agree">赞(<font class="comm_{{commentId}}" data-commentId={{commentId}}>...</font>)</a>
+                        </div>
+            <div class="ac text_r" style="padding-right: 20px;">
+                <a href="javascript:void(0);" target="_blank" title="查看全部回复" class="to_reply listred">查看全部回复</a>
+            </div>
+            {{#each esCommentReplys}}
+            <div class="item-reply none">
+             <strong>{{replyCount}}</strong>
+                <div class="reply-list">
+                    <div class="reply-con">
+                        <span class="u-name">
+                            <a class="listred" target="_blank" href="#">{{accountHan replyAccount}}</a>
+                        </span>
+                        回复
+                        <span class="u-name">
+                            <a target="_blank" class="listred"
+                                                          href="#">{{accountHan commentAccount}}</a>
+                            ：
+                        </span>
+                        <span
+                                class="u-con">{{replyContent}}</span>
+                    </div>
+                    <div class="reply-meta">
+                        <span class="reply-left fl">{{parData replyDate}}</span>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+            </div>
+            
+    </div>
+{{/each}}
+<!-- 分页开始 -->
+<div class="pagetycp" id="pagetycpComment">
+    <div class="page">
+     {{#each sizeArr}}
+        <a href="javascript:void(0);" data-module={{module}} data-startRow={{startRow}} data-pageSize={{pageSize}} class={{selected startRow}}>{{size}}</a>
+    {{/each}}
+        <a style="{{sizeDis}}" target="_blank" href="{{serverUrl}}/goods_comment.html?goodsId={{goodsId}}">查看更多</a>
+    </div>
+</div>
+</script>

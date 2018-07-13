@@ -1,0 +1,56 @@
+<div class="invoice_layer" id="invoiceLayer"></div>
+<div id="showInvoice" class="invoice_layer cj_sjccont1">
+    <div class="cj_sjctop1">
+        修改发票信息
+    </div>
+    <!--填写地址完成前开始 -->
+    <div class="cj_sjcmidsh">
+        <form id="invoiceForm">
+            <table border="0" cellspacing="0" cellpadding="0" class="invo_table" width="680">
+                <tbody>
+                    <tr>
+                        <td width="85px">
+                            是否开发票：
+                        </td>
+                        <td style=" *width: 600px;">
+                            <input type="radio" checked name="isSendTax" value="1">否&nbsp;&nbsp;
+                            <input type="radio" name="isSendTax" value="0">是
+                        </td>
+                    </tr>
+                    <tr class="invoice_content" id="invoiceTitle">
+                        <td width="70px">
+                            发票抬头：
+                        </td>
+                        <td width="600px" style="text-align:left">
+                            <input type="radio" name="chktitle" value="20" checked="checked" align="left"><span class="fp_span">个人</span>
+                            <input type="radio" name="chktitle" value="21" align="left"><span class="fp_span">公司</span>
+                            <span id="company_span" style="">
+					<input type="text" name="comPanyName" id="comPanyName" maxlength="40" size="45">（请填写公司名称）
+					<input type="text" name="taxCode" id="taxCode" maxlength="18" size="45">（请填写纳税人识别号）
+					</span>
+                        </td>
+                    </tr>
+                    <tr class="invoice_content" id="content">
+                        <td width="70px">
+                            发票内容：
+                        </td>
+                        <td width="600px" style="text-align:left">
+                            <input autocomplete="off" type="radio" name="chkcontent" value="10" id="radio_10" checked="checked" align="left"><span class="fp_span">商品明细</span>
+                            <input autocomplete="off" type="radio" name="chkcontent" value="11" id="radio_11" align="left"><span class="fp_span">纪念币</span>
+                        </td>
+                    </tr>
+                    <tr class="invoice_tishi_content">
+                        <td colspan="2" class="fp_tishi">
+                            温馨提示：依据中国金币总公司金币产品售后规则，当您购买金币产品时，发票内容须选择商品明细，才能享受到<span>完整的售后服务。</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <p class="cj_sjcmidts_fh">
+            <a href="javaScript:void(0);" class="anniu submitInvoice">确认</a>
+            <a href="javaScript:void(0);" class="anniu" id="closeInvoice">取消</a>
+        </p>
+    </div>
+    <!--填写地址完成前结束-->
+</div>

@@ -1,0 +1,34 @@
+<div class="zh_wc" id="account" style="display:block;">
+    <table border="0px" class="formtable">
+        <tbody>
+            <tr>
+                <td align="right" width="130" valign="top">账户名：</td>
+                <td width="488" colspan="3">
+                    <input type="text" class="" value="" autocomplete="off" name="username" id="username" placeholder="注册手机号/会员账号">
+                    <div id="username_error" class="msg-error" style="display:none;">
+                    </div>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="right" width="130" valign="top">验证码：</td>
+                <td width="488" colspan="3" class="re">
+                    <input type="text" value="" class="ipt_txt" name="accountRand" id="accountRand" autocomplete="off" maxlength="4">
+                    <div id="accountRand_error" class="msg-error" style="display:none;"></div>
+                    <div class="codeBox">
+                        <img border="0" id="accountRandImg" src="/front/authCode?t=" +new Date().getTime() ">
+                    看不清楚<a id="accountCodeBtn">换一张</a>
+                    <div class="clr "></div>
+                </div>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2 ">
+                <input id="accountNextBtn" name="accountNextBtn" value="下一步" type="button" class="btn ">
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>

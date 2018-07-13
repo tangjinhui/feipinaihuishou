@@ -1,0 +1,36 @@
+<script id="view-complain-template" type="text/x-handlebars-template">
+    <tr>
+        <td colspan="5">
+            <p class="crumbs marl20">
+                如果您对我们的商品或者服务有不满之处，请在此提交投诉，我们会尽快给予答复或处理！谢谢！
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td class="text_r">
+            投诉主题：
+        </td>
+        <td colspan="3">
+            {{complaintTitle}}
+        </td>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <td width="12%" class="text_r">
+            投诉类型：
+        </td>
+        <td width="12%">
+            {{complaintTypeName}}
+        </td>
+        <td width="16%" class="text_r">
+            状态：
+        </td>
+        <td width="17%">
+            {{statusName status}}
+        </td>
+        <td width="43%">
+            {{statusDesc status}}
+        </td>
+    </tr>
+</script>

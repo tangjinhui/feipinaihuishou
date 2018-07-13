@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        服务中心 - 会员中心 - 中国金币官方网上商城
+    </title>
+    <meta name="Keywords" content="">
+    <meta name="description" content="">
+    <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" type="text/css" href="/css/member/consult.css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div id="navi" class="w crumbs">
+        当前位置：
+        <a href="/index.html">
+                首页
+            </a>
+        <span>
+                &gt;
+            </span>
+        <a href="/member/index.html">
+                会员中心
+            </a>
+        <span>
+                &gt;
+            </span> 商品咨询
+    </div>
+    <div class="w clearfix">
+        <!--#include file="/inc/member/menu.html"-->
+        <div class="fr">
+            <form id="esOrderMemberForm" name="esOrderMemberForm" action="#">
+                <input type="hidden" name="flag" value="1">
+            </form>
+            <div class="right_a m_right">
+                <table width="100%" border="0" class="text_c" cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <td colspan="4" style="padding:0 0 10px;">
+                                <h2 class="wdbord" style="padding:5px 10px;">
+                                        商品咨询记录
+                                    </h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="19%">
+                                商品名称
+                            </th>
+                            <th width="9%">
+                                分类
+                            </th>
+                            <th width="36%">
+                                咨询内容
+                            </th>
+                            <th width="36%">
+                                回复内容
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="list_box">
+                    </tbody>
+                    <tfoot>
+                        <tr class="pageLimit" style="display: none;">
+                            <td colspan="9" style="text-align: right;">
+                                <!--#include file="/inc/plugin/limitPage.html"-->
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div class="None_record" style="border-top: 0;display: none; margin-top: 0;">
+                    没有符合条件的记录
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/inc/member/consult/list.html"-->
+    <!--#include file="/common/footer.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/member/consult.js"></script>
+</body>
+
+</html>

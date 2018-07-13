@@ -1,0 +1,139 @@
+<script id="content-template" type="text/x-handlebars-template">
+    <div class="right_a">
+        <div class="top">
+            <h2 class="tit">填写售后服务申请</h2></div>
+        <div class="dd_th">
+            <div class="{{pic}}"></div>
+        </div>
+        <div class="service_type glo clearfix">
+            <b class="tit l fl">服务类型：</b>
+            <div class="ico_goback fl m_l">退货
+                <img class="gro" src="http://static.ecgci.com/images/gro.png" alt="" /></div>
+        </div>
+        <div class="glo clearfix">
+            <b class="tit l fl">选择商品：</b>
+            <div class="fl m_l">关联订单号：{{orderId}}</div>
+        </div>
+        <table class="fz_12" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <th width="10%" align="center">序号</th>
+                    <th width="30%" align="center">商品名称</th>
+                    <th width="15%" align="center">退换政策</th>
+                    <th width="15%" align="center">购买数量</th>
+                    <th width="15%" align="center">申请数量</th>
+                    <th width="15%" align="center">实付单价</th>
+                </tr>
+                {{#each returnGoodsList}}
+                <tr>
+                    <td align="center">{{addIndex @index}}</td>
+                    <td class="text_l">
+                        <div class="cg_titp">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border: 0 none;" class="fz_12">
+                                <tbody>
+                                    <tr>
+                                        <td valign="middle" style="padding:0;border:none; text-align:left;">{{sourceName}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                    <td align="center">{{returnRolicy isReturnAble isChangeAble}}</td>
+                    <input type="hidden" id="refundableQuantity" value="{{refundableQuantity}}">
+                    <td align="center">{{quantity}}</td>
+                    <td align="center">
+                        {{#applyNum quantity quantityReturn isReturnAble}}
+                        <div class="num_change">
+                            <div class="num_less fl return_num_down">-</div>
+                            <input type="text" class="num fl returnNum" id="returnNum" value="" name="returnNum" />
+                            <input id="orderLineId" value="{{orderLineId}}" type="hidden" />
+                            <div class="num_more fr return_num_add">+</div>
+                        </div>
+                        {{else}}
+                        <div class="num_change no_change">
+                            <div class="num_less fl ">-</div>
+                            <input type="text" class="num fl returnNum " id="returnNum" value="" name="returnNum" />
+                            <div class="num_more fr ">+</div>
+                        </div>
+                        {{/applyNum}}
+                    </td>
+                    <td align="center">{{formatUnitPrice unitPrice}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <!-- 提交内容 -->
+        <div class="info_wrap">
+            <div class="line clearfix">
+                <div class="tit fl">
+                    <span class="red">*</span>申请理由：
+                </div>
+                <select class="fl" name="returnOrderReason" id="returnOrderReason">
+                    <option value="">请选择</option>
+                    {{#each applyReason}}
+                    <option value="{{propertyKey}}">{{propertyValue}}</option>
+                    {{/each}}
+                </select>
+                <span class="red" id="returnOrderReasonMsg" style="display: none;">请选择申请理由</span></div>
+            <div class="line clearfix">
+                <div class="tit fl">
+                    <span class="red">*</span>问题描述：
+                </div>
+                <div class="txt_wrap">
+                    <textarea class="fl" name="returnOrderDescription" id="returnOrderDescription" cols="30" rows="10"></textarea>
+                    <p class="fl">
+                        <span class="fr clearfix">
+                        <span>10-500字</span></span>
+                    </p>
+                </div>
+            </div>
+            <div class="line clearfix">
+                <div class="tit fl">
+                    <span>&nbsp;&nbsp;</span>图片信息：
+                </div>
+                <div class="fl w100" style="position: relative;">
+                    <button class="img_btn" id="returnOrderPictures" style="position: relative; z-index: 1;">上传图片
+                    </button>
+                    <span id="console" class="red"></span>
+                    <ul id="file-list">
+                    </ul>
+                    <p class="red">为了帮助我们更好的为您解决问题，请上传问题商品的图片</p>
+                    <p>最多可上传10张图片，每张图片大小不超过5M，支持bmp,gif,jpg,png,jpeg格式文件</p>
+                    <div id="html5_1c8brkpdqqi58414r11c992fv3_container" class="moxie-shim moxie-shim-html5" style="position: absolute; top: 0px; left: 0px; width: 198px; height: 38px; overflow: hidden; z-index: 0;">
+                        <input id="html5_1c8brkpdqqi58414r11c992fv3" type="file" style="font-size: 999px; opacity: 0; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" multiple="" accept="image/bmp,image/gif,image/jpeg,image/png" />
+                    </div>
+                </div>
+            </div>
+            <div class="line clearfix">
+                <div class="tit fl">
+                    <span>&nbsp;&nbsp;</span>退款方式：
+                </div>
+                <div class="fl">
+                    <input id="js_goback" type="radio" checked="" />
+                    <label for="js_goback">原路返回</label>
+                </div>
+            </div>
+            <div class="line clearfix">
+                <div class="tit fl">
+                    <span>&nbsp;&nbsp;</span>退款总额：
+                </div>
+                <div class="fl">￥
+                    <span id="returnTotalPrice" value=""></span></div>
+            </div>
+            <div class="line clearfix">
+                <div class="tit fl">
+                    <span>&nbsp;&nbsp;</span>退货商品寄回地址：
+                </div>
+                <!-- <div class="fl">{{address}}&nbsp;&nbsp;{{name}}&nbsp;&nbsp;{{tel}}</div> -->
+                <div class="fl">{{consigneeAddress}}</div>
+            </div>
+        </div>
+        <div class="bottom clearfix">
+            <input type="checkbox" id="cheK_active" name="cheK" class="fl checkAgreement" value="0" />
+            <div class="fl">我已阅读并同意《
+                <a class="xy" href="{{protocolUrl orderoAdscription}}" target="blank">中国金币网上商城退换货协议</a>》
+            </div>
+        </div>
+        <button class="sub_btn returnGoodsSubmit" id="returnGoodsSubmit">确认提交</button>
+    </div>
+</script>

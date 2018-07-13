@@ -1,0 +1,52 @@
+<div class="zh_wc" id="verify" style="display:none;">
+    <table border="0px" class="formtable">
+        <tbody>
+            <tr>
+                <td align="right" width="130" valign="top">验证身份方式:</td>
+                <td width="488" colspan="3">手机验证</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td align="right" width="130" valign="top">昵称：</td>
+                <td width="488" colspan="3" id="nickName"></td>
+            </tr>
+            <tr>
+                <td align="right" width="130" valign="top">已验证手机：</td>
+                <td width="488" colspan="3">
+                    <span id="mobile"></span>
+                    <input type="button" id="sendMobileCode_h" value="获取短信验证码" class="button_anniu_w">
+                </td>
+            </tr>
+            <tr>
+                <td width="130" align="right" valign="top">
+                    短信验证码：
+                </td>
+                <td width="488" colspan="3">
+                    <input type="text" name="mobileCode" id="mobileCode" tabindex="6" maxlength="6" autocomplete="off" style="width:120px">
+                    <span id="mobileCode_error" class="msg-error" style="display: none">
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="130" valign="top">
+                    验证码：
+                </td>
+                <td width="488" colspan="3" class="re">
+                    <input type="text" name="rand" id="verifyRand" style="width:80px" autocomplete="off" maxlength="4">&nbsp;
+                    <span id="verifyRand_error" class="msg-error" style="display: none">
+                    </span>
+                    <div class="codeBox">
+                        <img border="0" id="verifyRandImg"> 看不清楚<a id="verifyCodeBtn">换一张</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                    <input type="button" id="verifyNextBtn" class="btn" value="下一步">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

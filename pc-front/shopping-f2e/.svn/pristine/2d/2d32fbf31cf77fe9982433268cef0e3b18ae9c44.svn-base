@@ -1,0 +1,56 @@
+<div id="modify" style="display:none;">
+    <table border="0px" class="formtable" style="margin-left:125px">
+        <tbody>
+            <tr>
+                <td align="right" width="130" valign="top">
+                    我的手机号：
+                </td>
+                <td width="488" colspan="3" class="re">
+                    <input type="text" value="" name="mobile" id="mobile" style="width:120px" maxlength="11">
+                    <div class="msg-error" id="mobile_error" style="display: none;">
+                    </div>
+                    <input type="button" id="sendMobileCode_s" value="获取短信验证码" class="button_anniu_w">
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td width="130" align="right" valign="top">
+                    请填写短信校验码：
+                </td>
+                <td width="488" colspan="3">
+                    <input type="text" name="mobileCode_s" id="mobileCode_s" class="required" style="width:120px" tabindex="6" maxlength="6">
+                    <div id="mobileCode_error" class="msg-error" style="display: none">
+                    </div>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="130" valign="top">
+                    验证码：
+                </td>
+                <td width="488" colspan="3" class="re">
+                    <input type="text" class="required" name="rand_s" id="rand_s" style="width:80px" maxlength="4">
+                    <span id="rand_error" class="msg-error" style="display: none">
+                    </span>
+                    <div class="codeBox">
+                        <img border="0" id="modify_code_img" src="/front/authCode"> 看不清楚
+                        <a href="javascript:void(0);" id="modify_code_btn">
+                            换一张
+                        </a>
+                    </div>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td colspan="2">
+                    <input id="submitCode" name="submitCode" value="确认修改" type="button" class="btn">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

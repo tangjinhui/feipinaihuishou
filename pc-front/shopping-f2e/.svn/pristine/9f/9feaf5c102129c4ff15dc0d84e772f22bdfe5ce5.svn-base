@@ -1,0 +1,32 @@
+<script id="buy-record-template" type="text/x-handlebars-template">
+    <li class="clearfix first">
+        <span class="span1">会员昵称</span>
+        <span class="span2">城市</span>
+        <span class="span3">订单号</span>
+        <span class="span4">数量</span>
+        <span class="span5">购买时间</span>
+        <span class="span6">订单状态</span>
+    </li>
+    {{#each list}}
+    <li {{{rowClass handleStatus @index}}}>
+        <span class="span1">{{account}}</span>
+        <span class="span2">{{address}}</span>
+        <span class="span3">{{orderId}}</span>
+        <span class="span4">{{quantity}}</span>
+        <span class="span5">{{accessDate}}</span>
+        <span class="span6">{{status handleStatus}}
+            <i class="ico_i {{dis orderType}}">
+                <img class="js_move_pic" src="http://static.ecgci.com/images/ico_i.png" alt="">
+                <i class="border_red">{{handleNoteC}}
+                    <i class="border_san">
+                        <img src="http://static.ecgci.com/images/san.png" alt="">
+                    </i>
+                </i>
+            </i>
+        </span>
+    </li>
+    {{/each}}
+    <div class="pagetycp">
+        <!--#include file="/inc/plugin/limitPage.html"-->
+    </div>
+</script>

@@ -1,0 +1,228 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/limitPage.css');
+@import url('http://static.ecgci.com/css/libs/dialog.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+@import url('../../plugin/menu.css');
+.c, .clearfix {
+    clear: both;
+}
+.bor3 {
+    border-right: 1px solid #e1e1e1;
+    border-left: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+}
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+.right_a {
+    width: 1003px;
+}
+.text_l {
+    text-align: left;
+}
+table, table th, table td {
+    border: #e1e1e1 1px solid;
+    line-height: 24px;
+    border-collapse: collapse;
+    color: #000;
+    font-size: 12px;
+}
+table th {
+    background: #f3f3f3;
+    text-align: center;
+}
+table th, table td {
+    padding: 5px 10px;
+}
+h2 {
+    height: 28px;
+    line-height: 28px;
+    color: #58595b;
+    border: none;
+    padding: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+*html {
+    background-image: url(about:blank);
+    background-attachment: fixed;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix {
+    *zoom: 1;
+}
+th {
+    border: none;
+}
+.crumbs {
+    height: 52px;
+    line-height: 52px;
+    color: #58595b;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+}
+.crumbs span {
+    padding: 0 6px;
+}
+.red {
+    color: #e43a3d;
+}
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+table .cg_titp {
+    line-height: 20px;
+    clear: both
+}
+h6 {
+    padding: 0 10px;
+    background: #f3f3f3;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: #e1e1e1 1px solid;
+    margin: 0;
+}
+em {
+    font-style: normal;
+}
+td, td {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline
+}
+.hy_ck a {
+    color: #000
+}
+.hy_ck a:hover {
+    color: #e43a3d
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+.crumbs a:hover {
+    color: #c42605;
+}
+body {
+    color: #666666;
+    background: #ffffff;
+}
+a {
+    color: #666666;
+}
+a:hover {
+    color: #e43a3d;
+}
+.close {
+    background: #e43a3d
+}
+
+.right_a .top {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    padding: 5px 0 0px 10px;
+    overflow: hidden;
+}
+
+.mar_bottom {
+    margin-bottom: 15px;
+}
+
+/*弹层*/
+
+.w90 {
+    width: 90px;
+    overflow: hidden;
+}
+.fixed_dialog {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    background: url(http://static.ecgci.com/images/bg.png) repeat;
+    left: 0;
+    top: 0;
+}
+.fixed_dialog .inp_wrap {
+    width: 200px;
+    height: 25px;
+}
+.fixed_dialog .inp_wrap input {
+    width: 170px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 25px;
+    height: 25px;
+}
+.fixed_dialog .mar_bottom {
+    margin-bottom: 8px;
+}
+.fixed_dialog .window {
+    width: 356px;
+    height: 250px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -178px;
+    margin-top: -125px;
+    background: #eee;
+}
+.fixed_dialog .window .tit {
+    position: relative;
+}
+.window .tit .close {
+    position: absolute;
+    right: 6px;
+    top: 0;
+    font-size: 22px;
+    color: #FFF;
+    cursor: pointer;
+    line-height: 1;
+}
+.fixed_dialog .window .tit {
+    background: #e43a3d;
+    color: #FFF;
+    text-align: center;
+    line-height: 28px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+.window .content {
+    padding-left: 18px;
+    padding-right: 14px;
+    padding-top: 18px;
+    line-height: 25px;
+}
+.window .content input {
+    border: 1px solid #abadb3;
+}
+.window .content .line_normal {
+    line-height: 1.4;
+}
+.window .content .btn_enter {
+    border: 0 none;
+    margin-top: 10px;
+    color: #FFF;
+    background: #e43a3d;
+    font-family: "微软雅黑";
+    text-align: center;
+    width: 148px;
+    line-height: 28px;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+}

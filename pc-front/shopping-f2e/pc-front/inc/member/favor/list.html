@@ -1,0 +1,38 @@
+<script id="list-template" type="text/x-handlebars-template">
+    {{#each list}}
+    <tr>
+        <td>
+            <input type="checkbox" name="fid_goodsId" value="{{fid}}_{{goodsId}}">
+            <a href="http://itemdev.ecgci.com/product_detail_{{goodsId}}.html">
+                    <img src="{{imgConf goodsMiddleImg goodsId}}" title="{{goodsName}}">
+                </a>
+        </td>
+        <td class="text_l">
+            <a href="http://itemdev.ecgci.com/product_detail_{{goodsId}}.html">
+                    {{goodsName}}
+                </a>
+            <p class="sp_pj">
+                {{{commentStar star}}}
+                <a href="/goods_comment.html?goodsId={{goodsId}}" target="_blank">
+                        {{commNum}}人评价
+                    </a>
+            </p>
+            加关注时间： {{fdate}}
+        </td>
+        <td>
+            ￥{{formatPrice shopPrice}}
+        </td>
+        <td>
+            {{#if specialgood}}
+            <a href="javascript:void(0);" data-goodsId='{{goodsId}}' class='addCart'>
+                    加入购物车
+                </a>
+            <br>
+             {{/if}}
+            <a href="javascript:void(0);" data-fid='{{fid}}' class='cancelFavor'>
+                    取消关注
+            </a>
+        </td>
+    </tr>
+    {{/each}}
+</script>

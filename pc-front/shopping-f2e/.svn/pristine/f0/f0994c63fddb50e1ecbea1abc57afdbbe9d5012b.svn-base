@@ -1,0 +1,30 @@
+{
+  "name": "wx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "rimraf ./dist && rimraf ./rev && gulp build-all --dev --progress --colors",
+    "test": "rimraf ./dist && rimraf ./rev && gulp build-all --test --progress --colors",
+    "prod": "rimraf ./dist && rimraf ./rev && gulp build-all --prod --progress --colors"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-clean-css": "^3.9.0",
+    "gulp-cssimport": "^6.0.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-requirejs-optimize": "^1.2.0",
+    "gulp-rev": "^8.1.1",
+    "gulp-rev-collector": "^1.2.3",
+    "gulp-uglify": "^3.0.0",
+    "run-sequence": "^2.2.0",
+    "del": "^2.2.1"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
+}

@@ -1,0 +1,86 @@
+require(['jquery', 'handlebars', 'limitPage', 'getUrlParam', 'dialog', 'header', 'modules/menu'], function($, Handlebars, limitPage, getUrlParam, dialog) {
+
+    var afterSaleId = getUrlParam('afterSaleId');
+
+    Handlebars.registerHelper("isBr", function(index) {
+        if (index != 0) {
+            return '<br/>';
+        } else {
+            return '';
+        }
+    });
+
+    Handlebars.registerHelper("dataLen", function(list, options) {
+        if (list.length > 0) {
+            return options.fn(this);
+        } else {
+            return options.inverse(this);
+        }
+    });
+
+    Handlebars.registerHelper("formatPrice", function(price) {
+        if (!price) {
+            return '';
+        }
+        return parseFloat(price).toFixed(2);
+    });
+    init();
+
+    //初始化数据
+    function init(pageNum) {
+        $.ajax({
+            url: '/front/member/afterSale/refundList',
+            type: 'GET',
+            dataType: 'json',
+            data: {
+                pageNum: pageNum || 1,
+                afterSaleId: afterSaleId
+            },
+            success: function(res) {
+                if (res && res.code == '00') {
+                    var listTemplate = Handlebars.compile($('#list-template').html());
+                    $('#list_box').html(listTemplate(res.data.page));
+                    if (res.data.page.pages >= 1) {
+                        initLimitPage(res.data.page.pages, res.data.page.pageNum);
+                    } else {
+                        $('.pageLimit').hide();
+                    }
+                } else if (res && res.code == '99') {
+                    window.location.href = 'https://passportdev.ecgci.com/login.html';
+                } else {
+                    dialog({
+                        content: '网络繁忙，请您稍后重试'
+                    });
+                    return false;
+                }
+            },
+            error: function() {
+                dialog({
+                    content: '网络繁忙，请您稍后重试'
+                });
+                return false;
+            }
+        });
+    }
+
+    function initLimitPage(pages, currentPage) {
+        $('.pageLimit').show();
+        $('#light-pagination').pagination({
+            pages: pages,
+            cssStyle: 'light-theme',
+            displayedPages: 3,
+            edges: 3,
+            currentPage: currentPage,
+            prevText: '上一页',
+            nextText: '下一页',
+            onPageClick: function(page) {
+                init(page);
+                var top = $('#navi').height();
+                $('html,body').animate({
+                    scrollTop: top
+                }, 300);
+                return false;
+            }
+        });
+    }
+});

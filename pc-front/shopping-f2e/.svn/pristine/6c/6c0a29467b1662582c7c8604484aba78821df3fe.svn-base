@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>支付方式-订单中心-中国金币官方网上商城</title>
+    <meta name="Keywords" content="" />
+    <meta name="description" content="" />
+    <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible" />
+    <link href="/css/member/pay/type.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <div class="w mart12" style="margin-top:20px;">
+        <div class="fl">
+            <a href="/index.html">
+                    <img src="http://static.ecgci.com/images/logo.png">
+                </a>
+        </div>
+        <div class="flow_chart3 fr step3">
+            <ul>
+                <li>
+                    1.我的购物车
+                </li>
+                <li>
+                    2.填写核对订单信息
+                </li>
+                <li class="cur last">
+                    3.成功提交订单
+                </li>
+                <p class="c">
+                </p>
+            </ul>
+        </div>
+        <p class="c">
+        </p>
+    </div>
+    <div class="Main_c">
+        <h2 class="back backv">
+                <b>
+                </b>
+                订单已提交成功，请您选择支付方式！
+            </h2>
+        <div class="dingd_tit">
+            您的订单号：
+            <span class="red marg-r40 orderId">
+                    
+                </span> 应付金额：
+            <span class="tag_tishir actualPay">
+                    
+                </span> &nbsp;
+        </div>
+        <div class="cj_sjcmidsh">
+            <div class="TB3" id="onlinePays">
+                <div style="width:800px;margin-bottom:7px;font-weight:bold;">
+                    <input type="radio" class="delTypeCost" checked="checked" name="delTypeCost">
+                    <span>
+                            在线支付
+                        </span>
+                </div>
+                <div id="zaixian" style="display: block;">
+                    <p class="TB3" style="background:#f7f7f7 ;margin-left:20px;">
+                        <span style="color:grey;line-height:32px;">
+                                即时到账，支持绝大数银行借记卡，还可以选择支付宝支付、银联在线支付
+                            </span>
+                        <br>
+                        <span style="color:red;line-height:22px;" class="payRemind">
+                                温馨提示：您所选购商品的总金额较大，建议您使用如下方式进行支付，以免受到银行单笔支付限额的限制。
+                                <br>
+                                1、先将钱存入支付宝余额，通过在线支付-支付宝支付。
+                                <br>
+                                2、通过银联网上银行（U盾）大额支付。
+                                <br>
+                                3、先将钱充入微信钱包，通过微信商城支付。
+                            </span>
+                    </p>
+                </div>
+                <div id="mobiles" class="TB3" style="display: block;">
+                    <table border="0" cellspacing="0" cellpadding="0" class="invo_table" width="100%" style="margin-left:20px">
+                        <tbody id="onlinePayType">
+                        </tbody>
+                    </table>
+                    <div style="margin-top:8px;font-weight:bold;" class="bankRemittancePays">
+                        <input id="bankId" type="radio" value="10004" class="delTypeCost" name="delTypeCost">
+                        <span>
+                                银行汇款
+                            </span>
+                    </div>
+                    <br>
+                    <div id="bankbodyId" class="bankRemittance" style="background: rgb(247, 247, 247); margin-left: 20px; border: 1px; display: block;">
+                        <br>
+                        <br>
+                        <div class="hidd" style="margin-left:30px;">
+                            <div class="select">
+                                <input type="radio" name="payType" class="payRadio" value="10004">
+                                <img src="http://static.ecgci.com/images/bank_img/bank_12.gif" width="112" height="32"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span style="color:grey">
+                                        通过银行转账汇款，转账后1-5个工作日内到账
+                                    </span>
+                            </div>
+                            <br>
+                            <div class="text" style="margin-left:20px;line-height:24px;">
+                                <p>
+                                    <span>
+                                            账户名称：
+                                        </span> 北京新文时代金币文化传播有限公司
+                                </p>
+                                <p>
+                                    <span>
+                                            开户银行：
+                                        </span> 中国民生银行北京西直门支行
+                                </p>
+                                <p>
+                                    <span>
+                                            银行账号：
+                                        </span>
+                                    <span class="colorfe6500" style="color:red">
+                                            692628425
+                                        </span>
+                                </p>
+                                <p>
+                                    <span>
+                                            <span style="color:red">
+                                                *
+                                            </span> 汇款人（或单位）名称：
+                                    </span>
+                                    <input type="text" maxlength="50" id="returnmoney" name="returnmoney" class="userRequired inputTxt" oncopy="return true;">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tishi" style="margin-left:50px;">
+                            <p>
+                                <span style="color:red">
+                                        温馨提示：
+                                    </span> 请在汇款单的附言处注明订单号和收货人姓名，以便加快货款确认速度。
+                                <br>
+                                <span class="huikuan">
+                                        在确认收到汇款之后才能为您发货，请您耐心等待
+                                    </span>
+                            </p>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                    <!--限额说明-->
+                    <div class="xe_sm dn" id="xian" style="display: none;">
+                        <h3>
+                                储蓄卡支付限额说明
+                            </h3>
+                        <table border="1">
+                            <tbody>
+                                <tr class="tr_1">
+                                    <td class="w115 td_leftno">
+                                        单笔限额（元）
+                                    </td>
+                                    <td class="w115">
+                                        每日限额（元）
+                                    </td>
+                                    <td class="w115 td_rightno">
+                                        需要满足的条件
+                                    </td>
+                                </tr>
+                                <tr class="disno1" style="display: table-row;">
+                                    <td class="td_leftno">
+                                        <span id="xe1">
+                                                500
+                                            </span>
+                                    </td>
+                                    <td>
+                                        <span id="xe2">
+                                                1000
+                                            </span>
+                                    </td>
+                                    <td class="td_rightno">
+                                        <span id="xe3">
+                                                电子银行口令卡客户-未开通短信认证
+                                            </span>
+                                    </td>
+                                </tr>
+                                <tr class="disno2" style="display: table-row;">
+                                    <td class="td_leftno">
+                                        <span id="xe4">
+                                                2000
+                                            </span>
+                                    </td>
+                                    <td>
+                                        <span id="xe5">
+                                                5000
+                                            </span>
+                                    </td>
+                                    <td class="td_rightno">
+                                        <span id="xe6">
+                                                电子银行口令卡客户-开通短信认证
+                                            </span>
+                                    </td>
+                                </tr>
+                                <tr class="disno3" style="display: table-row;">
+                                    <td class="td_leftno">
+                                        <span id="xe7">
+                                                50万
+                                            </span>
+                                    </td>
+                                    <td>
+                                        <span id="xe8">
+                                                100万
+                                            </span>
+                                    </td>
+                                    <td class="td_rightno">
+                                        <span id="xe9">
+                                                U盾客户
+                                            </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            <span class="span1">
+                                    备注：
+                                </span>
+                            <span id="xe10">
+                                    实际支付限额以在银行柜台设置为准，工行热线：95588
+                                </span>
+                        </p>
+                        <h3 class="bor_top">
+                                信用卡支付限额说明
+                            </h3>
+                        <table border="1">
+                            <tbody>
+                                <tr class="tr_1">
+                                    <td class="w115 td_leftno">
+                                        单笔限额（元）
+                                    </td>
+                                    <td class="w115">
+                                        每日限额（元）
+                                    </td>
+                                    <td class="w115 td_rightno">
+                                        需要满足的条件
+                                    </td>
+                                </tr>
+                                <tr class="disno4" style="display: table-row;">
+                                    <td class="td_leftno">
+                                        <span id="xe11">
+                                                无
+                                            </span>
+                                    </td>
+                                    <td>
+                                        <span id="xe12">
+                                                无
+                                            </span>
+                                    </td>
+                                    <td class="td_rightno">
+                                        <span id="xe13">
+                                                无
+                                            </span>
+                                    </td>
+                                </tr>
+                                <tr class="disno5">
+                                    <td class="td_leftno">
+                                        <span id="xe14">
+                                                无
+                                            </span>
+                                    </td>
+                                    <td>
+                                        <span id="xe15">
+                                                无
+                                            </span>
+                                    </td>
+                                    <td class="td_rightno">
+                                        <span id="xe16">
+                                                无
+                                            </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            <span class="span1">
+                                    备注：
+                                </span>
+                            <span id="xe17">
+                                    实际支付限额以在银行柜台设置为准，工行热线：95588
+                                </span>
+                        </p>
+                    </div>
+                    <!--限额说明结束-->
+                </div>
+            </div>
+            <div class="anniu_zf">
+                <input type="button" value="确定支付" class="in_btn anniu toPays">
+            </div>
+        </div>
+    </div>
+    <div id="jsPrompt1" class="dn">
+        <div class="prompt1">
+            <div class="top">支付</div>
+            <div class="content">
+                <div class="txt">请您在新打开的页面进行支付，支付完成前请不要关闭该窗口。</div>
+            </div>
+            <div class="pormp_set_box1">
+                <a href="javascript:void(0);" class="confirm close completePay">已完成支付</a>
+                <a href="javascript:void(0);" class="close renewPay">返回重新支付</a>
+            </div>
+        </div>
+    </div>
+    <a href="javascript:void(0);" class="dn" id="toPayplatform" target="_blank">
+        <p></p>
+    </a>
+    <div class="footer_sm">
+        <div class="wrap bor-bot clearfix">
+            <p class="txt">
+                COPYRIGHT © 2015-2017 CHINAGOLDCOIN.NET ALL RIGHTS RESERVED.
+            </p>
+            <p class="txt">
+                京ICP证080121号 | 全国服务热线4008-188-666
+            </p>
+            <!-- <p class="txt">北京市西城区月坛南街6号  北京新文时代金币文化传播有限公司</p> -->
+            <p class="posr img">
+                <a href="javascript:void(0);" class="posa icon icon_f5" style="cursor:default">
+                    </a>
+                <a href="javascript:void(0);" class="posa icon icon_f6" style="cursor:default">
+                    </a>
+                <a href="javascript:void(0);" class="posa icon icon_f7" style="cursor:default">
+                    </a>
+                <a href="javascript:void(0);" class="posa icon icon_f8" style="cursor:default">
+                    </a>
+            </p>
+        </div>
+    </div>
+    <!--#include file="/data/channel/img_domain_data.html"-->
+    <!--#include file="/inc/member/order/pay_type.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/member/pay/type.js"></script>
+</body>
+
+</html>

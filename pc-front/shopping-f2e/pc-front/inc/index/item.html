@@ -1,0 +1,32 @@
+<script id="item-template" type="text/x-handlebars-template">
+    <div class="fl fot_pic">
+        <a class="imga" href="{{bigImg.asLink}}" target="{{bigImg.target}}">
+            <img class="img_loading" src="http://static.ecgci.com/images/git.png" data-original="{{imgConf bigImg.adImg bigImg.adId}}" title="{{bigImg.adName}}" width="268" height="320">
+        </a>
+    </div>
+    {{#each goods}}
+    <dl>
+        <span class="static {{stockStatus stock}}">
+            {{{stockStatusMsg stock}}}
+        </span>
+        <dt class="goodsList">
+            <a href="http://itemdev.ecgci.com/product_detail_{{goodsId}}.html" target="_blank">
+                    <img class="img_loading" src="http://static.ecgci.com/images/git.png" data-original="{{imgConf goodsMiddleImg goodsId}}" title="{{goodsName}}" width="216" height="216">
+                </a>
+        </dt>
+        <dd>
+            <p class="tit">
+                <a href="http://itemdev.ecgci.com/product_detail_{{goodsId}}.html" target="_blank" title="{{goodsName}}">
+                        {{goodsName}}
+                    </a>
+            </p>
+            <p class="price">
+                ¥
+                <span>
+                        {{formatPrice shopPrice}}
+                    </span>
+            </p>
+        </dd>
+    </dl>
+    {{/each}}
+</script>

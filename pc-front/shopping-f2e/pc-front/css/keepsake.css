@@ -1,0 +1,372 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/swiper.css');
+@import url('http://static.ecgci.com/css/libs/common.css');
+@import url('http://static.ecgci.com/css/libs/header.css');
+
+.c {
+    clear: both;
+}
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+.mart20 {
+    margin-top: 20px;
+}
+table {
+    border: #e1e1e1 1px solid;
+    line-height: 24px;
+    border-collapse: collapse
+}
+h2 {
+    height: 28px;
+    line-height: 28px;
+    color: #58595b;
+    border: none;
+    padding: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+th {
+    border: none;
+}
+h1, h2, h3 {
+    font-weight: normal;
+}
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+h6 {
+    padding: 0 10px;
+    background: #f3f3f3;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: #e1e1e1 1px solid;
+    margin: 0;
+}
+em {
+    font-style: normal;
+}
+td, td {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+body {
+    color: #666666;
+    background: #ffffff;
+}
+a {
+    color: #666666;
+}
+a:hover {
+    color: #e43a3d;
+}
+.jnb_focus {
+    width: 1240px;
+    height: 360px;
+    position: relative;
+    overflow: hidden;
+}
+.jnb_focus img.load_img{
+    width: 1240px;
+    height: 100%;
+}
+.rslides {
+    width: 100%;
+    position: relative;
+    list-style: none;
+    padding: 0
+}
+.rslides_tabs {
+    position: absolute;
+    width: 100px;
+    bottom: 20px;
+    margin-left: 570px;
+    clear: both;
+    text-align: center
+}
+.rslides_tabs li {
+    display: inline;
+    float: left;
+    margin-right: 10px
+}
+.rslides_tabs a {
+    text-indent: -9999px;
+    overflow: hidden;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, .2);
+    background: #888;
+    display: inline-block;
+    _display: block;
+    *display: block;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    z-index: 1;
+}
+.rslides_tabs .rslides_here a {
+    background: rgba(0, 0, 0, .6);
+    background: #b61d1d
+}
+.mart20 {
+    margin-top: 20px;
+}
+.jnb_left {
+    float: left;
+    width: 980px;
+}
+.jnb_right {
+    float: right;
+    width: 250px;
+}
+.jnb_left h2, .jnb_right h2 {
+    height: 28px;
+    background: #fff;
+    border-bottom: #b61e1d 2px solid;
+    color: #b61e1d;
+    padding: 0;
+    font-family: "Microsoft YaHei";
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: normal;
+}
+.jnb_list {
+    margin-top: 5px;
+}
+.jnb_list div {
+    position: relative;
+    width: 980px;
+    height: 310px;
+    padding: 6px 0 0;
+}
+.jnb_list a {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 980px;
+    margin-bottom: 10px;
+    height: 300px;
+    overflow: hidden;
+}
+.jnb_list a:hover {
+    margin: -5px 0 0 -5px;
+    width: 985px;
+    height: 305px;
+    margin-bottom: 0px;
+    background: #fff url(http://static.ecgci.com/images/kp_list_bg.png) right bottom no-repeat;
+}
+.jnb_caga {
+    border: #d2d2d2 1px solid;
+}
+.leftsidebar_box dl {
+    position: relative;
+    border-bottom: #d2d2d2 1px solid;
+    padding: 10px 5px 10px 17px;
+    height: auto;
+    min-height: 22px;
+}
+.leftsidebar_box dt {
+    height: 22px;
+    color: #666;
+    line-height: 22px;
+    cursor: pointer;
+}
+.leftsidebar_box dt span {
+    display: block;
+    width: 50px;
+    height: 22px;
+    font-weight: bold;
+}
+.leftsidebar_box dt span.img {
+    background: url(http://static.ecgci.com/images/kp_add.png) 0 3px no-repeat;
+    padding: 0 10px 0 25px;
+    font-size: 15px;
+}
+.leftsidebar_box dd {
+    line-height: 22px;
+}
+.leftsidebar_box dd.first_dd {
+    position: absolute;
+    width: 150px;
+    height: 22px;
+    top: 10px;
+    right: 0;
+    overflow: hidden;
+}
+.leftsidebar_box dd.sec_dd {
+    margin: 5px 5px 0 14px;
+}
+.leftsidebar_box dd a {
+    display: inline-block;
+    margin-left: 12px;
+    color: #666;
+    line-height: 20px;
+}
+.leftsidebar_box dd a.point {
+    margin-left: 4px;
+    font-size: 16px;
+    font-weight: bold
+}
+.toggle_p {
+    background: url(http://static.ecgci.com/images/keepsake_icon.png) 135px -40px no-repeat;
+    line-height: 26px;
+    text-align: center;
+}
+.toggle_on {
+    background: url(http://static.ecgci.com/images/keepsake_icon.png) 135px -107px no-repeat;
+    line-height: 26px;
+    text-align: center;
+}
+#change_content {
+    display: block;
+    width: 233px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    padding-right: 15px;
+}
+.toggle_p:hover {
+    background: #e43a3d url(http://static.ecgci.com/images/keepsake_icon.png) 134px -168px no-repeat;
+    color: #fff;
+    text-decoration: none;
+}
+.toggle_on:hover {
+    background: #e43a3d url(http://static.ecgci.com/images/keepsake_icon.png) 134px -138px no-repeat;
+    color: #fff;
+    text-decoration: none;
+}
+.fr_menuv {
+    height: 150px;
+    left: 50%;
+    margin-left: 623px;
+    position: fixed;
+    bottom: 20px;
+    width: 40px;
+    z-index: 21;
+}
+.fr_menuv a {
+    display: block;
+    width: 40px;
+    height: 32px;
+    margin-bottom: 3px;
+    padding: 4px 0;
+    font-size: 14px;
+    background: #f1f1f1;
+    line-height: 16px;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+}
+.fr_menuv a:hover, .fr_menuv a.select {
+    background: #e43a3d;
+    color: #fff;
+}
+
+/*#featured, #hots {
+    display: none;
+}*/
+
+.jnb_cp dl {
+    float: left;
+    width: 319px;
+    border: #d2d2d2 1px solid;
+    margin: 9px 8px 0 0;
+}
+
+.jnb_cp dt {
+    height: 274px;
+    padding: 10px;
+    border-bottom: #d2d2d2 1px solid;
+    text-align: center;
+}
+
+.jnb_cp dd {
+    padding: 0 12px 8px 15px;
+}
+
+.jnb_cp .tit {
+    height: 32px;
+    font-size: 12px;
+    line-height: 32px;
+    overflow: hidden;
+}
+
+.jnb_cp .price {
+    position: relative;
+}
+
+.jnb_cp .tit a {
+    color: #666;
+    text-decoration: none;
+}
+
+.jnb_cp .price span {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Microsoft YaHei";
+    color: #b1191a;
+}
+
+.jnb_cp .price a {
+    position: absolute;
+    display: block;
+    width: 85px;
+    height: 28px;
+    padding: 0 0 0 15px;
+    background: #b1191a url(..http://static.ecgci.com/images/icon.png) 82px -65px no-repeat;
+    right: 6px;
+    bottom: 0;
+    line-height: 28px;
+    font-size: 14px;
+    color: #fff;
+    text-align: left;
+    text-decoration: none;
+}
+
+#hotsGoods {
+    width: 990px;
+}
+
+#fr_menuv {
+    display: none;
+}
+
+.leftsidebar_box dt span.on {
+    background: url(http://static.ecgci.com/images/kp_on.png) 0 3px no-repeat;
+}
+
+.jnb_rlist {
+    margin-top: 5px;
+    border: #d2d2d2 1px solid;
+    border-bottom: none;
+}
+
+.jnb_rlist div {
+    position: relative;
+    width: 248px;
+    height: 269px;
+}
+
+.jnb_rlist div a {
+    position: absolute;
+    display: block;
+    width: 248px;
+    height: 268px;
+    border-bottom: #d2d2d2 1px solid;
+    left: 0;
+    top: 0;
+}

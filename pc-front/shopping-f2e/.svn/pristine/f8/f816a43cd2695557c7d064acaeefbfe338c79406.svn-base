@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>
+        订单提交成功 - 中国金币网上商城
+    </title>
+    <meta name="description" content="" />
+    <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible" />
+    <link href="/css/member/order/submit_result.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <div class="w mart12" style="margin-top:20px;">
+        <div class="fl">
+            <a href="/index.html">
+				<img src="http://static.ecgci.com/images/logo.png" alt="中国金币网上商城" title="中国金币网上商城">
+			</a>
+        </div>
+        <div class="flow_chart3 fr step3">
+            <ul>
+                <li>1.我的购物车</li>
+                <li>2.填写核对订单信息</li>
+                <li class="cur last">3.成功提交订单</li>
+                <p class="c"></p>
+            </ul>
+        </div>
+        <p class="c"></p>
+    </div>
+    <div class="tj_cg2">
+        <h3 id="error" class="error" style="display: none"><span class="span2"></span>订单提交失败！</h3>
+        <h3 id="success" style="display: none">
+				<span class="sp_txt"></span>感谢您，订单已提交！
+				<!-- 进行中 -->
+				<p class="ms_detail_time" id="showTime">
+					请您尽快支付，订单为您保留<span id="timeOut"></span>，过期将自动失效。
+					<label id="auctionFlag0" class="hasCountdown">
+                        <span class="jp_cpword_timeD" id="jp_cpword_timeD"></span> 
+						<span class="jp_cpword_timeH" id="jp_cpword_timeH"></span>
+						<span class="jp_cpword_timeM" id="jp_cpword_timeM"></span>
+						<span class="jp_cpword_timeS" id="jp_cpword_timeS"></span>
+					</label>
+				</p>
+			</h3>
+        <div id="content_box">
+            <!--#include file="/inc/member/order/member_submit_order.html"-->
+        </div>
+        <p class="p2">
+            温馨提示： 请注意查收，如需及时了解订单详情，您可访问
+            <a href="/member/order.html">我的订单</a>查询您的订单状态。
+            <br>完成支付后，您还可以：
+            <a href="/index.html">继续购物</a>
+        </p>
+    </div>
+     <div class="footer_sm">
+        <div class="wrap bor-bot clearfix">
+            <p class="txt">COPYRIGHT © 2015-2017 CHINAGOLDCOIN.NET ALL RIGHTS RESERVED.</p>
+            <p class="txt">京ICP证080121号 | 全国服务热线4008-188-666</p>
+            <p class="posr img">
+                <a target="_blank" class="posa icon icon_f5"></a>
+                <a target="_blank" class="posa icon icon_f6"></a>
+                <a target="_blank" class="posa icon icon_f7"></a>
+                <a target="_blank" class="posa icon icon_f8"></a>
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/member/order/submit_result.js"></script>
+</body>
+
+</html>

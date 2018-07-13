@@ -1,0 +1,19 @@
+<script id="pay-return-template" type="text/x-handlebars-template">
+    <div class="zf_in">
+        <div class="div1">
+            <p class="p1">{{payReturnMsg tradeResult}}</p>
+            <p class="p2">订单号：{{orderId}}&nbsp; |&nbsp; {{payName}}</p>
+            <p class="p2">如果您对此结果有疑问可以致电4008-188-666进行咨询！</p>
+        </div>
+        <dl>
+            <dt>
+                <p>支付金额：
+                    <span>{{payFee}} 元</span>
+                    <br/>订单总金额：{{actualPay}}元</p>
+                <a href="/member/order/detail.html?orderId={{orderId}}" class="a1">查看订单详情</a>
+                <a href="/index.html" class="a2">继续购物</a></dt>
+            <dd></dd>
+        </dl>
+        <p class="wx_ts"><span>温馨提示：</span>请注意查收，如需要及时了解订单详情，您可访问我的订单查询订单状态。</p>
+    </div>
+</script>

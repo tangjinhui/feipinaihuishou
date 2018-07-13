@@ -1,0 +1,307 @@
+@import url('http://static.ecgci.com/css/libs/reset.css');
+@import url('http://static.ecgci.com/css/libs/mini_login.css');
+@import url('http://static.ecgci.com/css/libs/dialog.css');
+
+del {
+    text-decoration: none;
+    padding: 0 5px;
+}
+
+button {
+    -webkit-appearance: none;
+}
+
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+.marl10 {
+    margin-left: 10px;
+}
+a.anniu {
+    display: inline-block;
+    font-family: "Microsoft YaHei";
+    padding: 2px 10px;
+    line-height: 24px;
+    cursor: pointer;
+    font-weight: noraml
+}
+a.anniu:hover {
+    color: #fff;
+    text-decoration: none
+}
+table {
+    border: #e1e1e1 1px solid;
+    line-height: 24px;
+    border-collapse: collapse
+}
+h2 {
+    height: 28px;
+    line-height: 28px;
+    color: #58595b;
+    border: none;
+    padding: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+th {
+    border: none;
+}
+
+.ui-helper-clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.ui-helper-clearfix {
+    display: inline-block;
+}
+* html .ui-helper-clearfix {
+    height: 1%;
+}
+.ui-helper-clearfix {
+    display: block;
+}
+.ui-widget-content {
+    background: #EEE;
+    color: #58595B;
+}
+.ui-datepicker {
+    width: 17em;
+    padding: .2em .2em 0;
+    z-index: 9999;
+    display: none;
+}
+.ui-widget {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+.ui-helper-hidden-accessible {
+    position: absolute;
+    left: -99999999px;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+a {
+    color: #666666;
+}
+a:hover {
+    color: #e43a3d;
+}
+a.anniu {
+    color: #ffffff;
+    background: #e43a3d;
+}
+
+a.anniu:hover {
+    color: #ffffff;
+}
+
+a.anniu {
+    background: #e43a3d;
+    color: #ffffff;
+}
+a.shouye {
+    color: #666666;
+}
+
+.item-reply .reply-list .reply-meta .p-bfc .tbwid {
+    margin: 0 auto;
+}
+
+h6 {
+    padding: 0 10px;
+    background: #f3f3f3;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: #e1e1e1 1px solid;
+    margin: 0;
+}
+
+em {
+    font-style: normal;
+}
+td, td {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+*html #tool {
+    position: absolute;
+    top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop, 10)||0)-(parseInt(this.currentStyle.marginBottom, 10)||0)));
+    zoom: 1;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline
+}
+table.formtable tr.#viewAddress1 td {
+    vertical-align: top
+}
+a.anniu {
+    color: #fff;
+    background: #ef6041;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    padding: 2px 10px;
+}
+a.anniu:hover {
+    color: #fff;
+}
+img {
+    border: 0
+}
+.fl {
+    float: left;
+}
+.marl10 {
+    margin-left: 10px;
+}
+* html .clearfix {
+    height: 1%;
+}
+.clearfix {
+    display: block;
+}
+.w {
+    width: 1180px;
+    margin: 0 auto;
+}
+.Main_cd {
+    width: 1180;
+    margin: 10px auto 0 auto;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+}
+.P_viewborder {
+    border: 1px solid #ccc;
+    padding: 10px 0 10px 0;
+    margin: 0 0 10px 0;
+    position: relative;
+}
+ul.fengyep {
+    overflow: hidden;
+    zoom: 1;
+    padding: 0 75px 10px 85px;
+    margin: 0 0 0 250px;
+}
+ul.fengyep li {
+    float: left;
+    width: 170px;
+    margin: 20px 0 0 0px;
+    text-align: center;
+    height: 25px;
+    cursor: pointer;
+    background: url(http://static.ecgci.com/images/arro_3.gif) no-repeat 12px -2px;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+ul.fengyep .allye {
+    background: none;
+    cursor: auto;
+}
+ul.fengyep .downpre {
+    background-position: 130px -30px;
+    text-indent: 0px;
+}
+.Pro_BigImage {
+    width: 630px;
+    height: 630px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+}
+.Pro_BigImage img {
+    width: 630px;
+    height: 630px
+}
+.pro_hiden {
+    height: 113px;
+    overflow: hidden;
+}
+.pro_hiden img {
+    width: 113px;
+    height: 113px;
+}
+.P_view {
+    position: relative;
+    zoom: 1;
+    width: 96%;
+    margin: 0 auto;
+}
+ul.fengyix {
+    left: 0;
+    width: 100%;
+    padding: 0 0%;
+    bottom: 40px;
+    position: absolute;
+}
+ul.fengyix li, ul.fengyid li {
+    float: left;
+    height: 25px;
+    width: 30px;
+    line-height: 300;
+    overflow: hidden;
+    cursor: pointer;
+    background: url(http://static.ecgci.com/images/arro_3.gif) no-repeat 0px 0px;
+}
+ul.fengyix li.downpre {
+    float: right;
+    background-position: 16px -25px;
+}
+ul.fengyid li {
+    width: 64px;
+    height: 78px;
+    background-position: 0 -56px;
+}
+ul.fengyid {
+    position: absolute;
+    width: 790px;
+    left: 0;
+    margin-left: 195px;
+    top: 280px;
+}
+ul.fengyid li.downpre {
+    float: right;
+    background-position: 0 -132px;
+}
+
+.Pro_Images {
+    margin: 10px 0 0 40px
+}
+.Pi_title {
+    padding: 0 5px 10px;
+    overflow: hidden;
+    zoom: 1;
+    line-height: 24px;
+}
+.tit {
+    font: bold 16px/36px simsun, sans-serif;
+}
+.Pi_title a {
+    margin: 0 0 0 1em;
+    text-decoration: none;
+}
+.Pi_title .btngouwu {
+    float: right;
+    overflow: hidden;
+}
+.Pi_title .btngouwu a {
+    float: left;
+}
+a.shouye {
+    background: url(http://static.ecgci.com/images/all_bge.png) no-repeat -726px -719px;
+    color: #ef6041;
+    padding: 2px 0 2px 20px;
+    margin-left: 20px;
+}

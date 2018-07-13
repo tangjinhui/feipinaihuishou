@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>注册成功 - 中国金币云商平台</title>
+    <meta name="Keywords" content="中国金币云商平台" />
+    <meta name="description" content="中国金币云商平台" />
+    <meta content=IE=edge http-equiv=X-UA-Compatible />
+    <link rel="icon" href="http://static.ecgci.com/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/regist_success.css">
+</head>
+
+<body>
+    <div class="w">
+        <div class="new_logo">
+            <a href="http://pfdev.ecgci.com/index.html">
+                <img src="http://static.ecgci.com/images/logo.png">
+            </a>
+        </div>
+        <div class="new_mune">
+            <a href="http://pfdev.ecgci.com/member/index.html">
+                我的商城
+            </a>
+            <span>
+            </span> |
+            <a href="http://pfdev.ecgci.com/index.html">
+                返回首页
+            </a>
+        </div>
+        <p class="c">
+        </p>
+    </div>
+    <div class="Main_c ">
+        <div class="Recharge_Box w">
+            <div class="R_querydd">
+                <div class="reg_Success">
+                    <div class="zh_wc">
+                        <p class="wc_mm">
+                            <span class="tubiao">
+                            </span>
+                            <span class="zc_suff nickname">
+                                
+                            </span> 会员！恭喜您，您已注册成功。
+                        </p>
+                        <ul>
+                            <li>
+                                请牢记您的账号：
+                                <span class="zc_suff nickname">
+                                    
+                                </span> （该账号为您的用户名）
+                                <br>
+                            </li>
+                            <li>
+                                您可以在会员中心完善您的个人信息！
+                            </li>
+                            <li>
+                                如您在注册时遇到任何问题，请拨打我们的客服热线：
+                                <span class="zc_suff">
+                                    4008-188-666
+                                </span>
+                            </li>
+                        </ul>
+                        <span id="ShowSpan2" style="color:#e43a3d">
+                            10
+                        </span> 秒后自动跳转到
+                        <a href="http://pfdev.ecgci.com/index.html">
+                            商城首页
+                        </a>
+                        <div class="BtnBox toIndex">
+                            <input type="button" class="btnF_03" value="进入商城首页">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/inc/bottom_weblink.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/regist_success.js"></script>
+</body>
+
+</html>

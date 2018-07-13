@@ -1,0 +1,33 @@
+<script id="lock-template" type="text/x-handlebars-template">
+    <!-- 锁定预存款变更明细 -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="wbordt text_c" id="lockTable">
+        <tbody>
+            <tr>
+                <th width="30%">操作时间</th>
+                <th width="40%">锁定预存款项目</th>
+                <th width="30%">锁定预存款金额(元)</th>
+            </tr>
+            <tr>
+                <td colspan="3" style="display: none;" class="none">
+                    暂无符合条件的记录
+                </td>
+            </tr>
+        </tbody>
+        <tbody id="lock_box">
+            {{#each list}}
+            <tr>
+                <td width="30%">{{createTime}}</td>
+                <td width="40%">{{bizTitle}}</td>
+                <td width="30%">{{formatPrice frozenPredeposit}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+        <tfoot>
+            <tr class="pageLimit" style="display: none;">
+                <td colspan="3" style="text-align: right;">
+                    <!--#include file="/inc/plugin/limitPage.html"-->
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</script>

@@ -1,0 +1,315 @@
+<script id="content-template" type="text/x-handlebars-template">
+    <div class="right_a m_right">
+        <div class="bd_lr" id="ckts">
+            <table width="100%" border="0" cellspacing="0" class="text_l" cellpadding="0" style="border-right:#f3f3f3 1px solid;">
+                <tbody>
+                    <tr class="bgf7">
+                        <td width="22%">
+                            <span>
+                  订单号：{{orderId}}
+					</span>
+                        </td>
+                        <td width="36%">
+                            <span>
+                  状态：{{orderStatus}}
+					</span>
+                        </td>
+                        <td width="22%" align="right">
+                            应支付总金额：
+                            <span class="red">
+					<span>
+                    ￥{{formatPrice actualPay}}
+					</span>
+                            </span>
+                        </td>
+                        <td width="23%" align="right">
+                            {{{formatPayCancle orderInfoPay cancelButton orderId}}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <p class="tishi">
+                                {{{formatPrompt prompt address}}}
+                                <br/>
+                            </p>
+                            <p class="dd_lc {{picture}} ">
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="order_info ui-tabs-panel">
+            <table width="100%" border="0" class="text_l sh_detail" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <th width="30%">
+                            处理时间
+                        </th>
+                        <th width="70%">
+                            处理信息
+                        </th>
+                    </tr>
+                    {{#each handleDetail}}
+                    <tr align="center">
+                        <td>
+                            {{acceptTime}}
+                        </td>
+                        <td>
+                            {{remark}}
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+        <div class="tabqh mart12">
+            {{#comparePayType payType}}
+            <div class="tabqh mart12 ">
+                <table width="100%" border="0" cellspacing="0" class="text_c" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <th width="12%" align="left">付款信息</th>
+                            <th width="38%" align="right"><span>订单应支付总金额：</span>
+                                <span class="red">￥{{formatPrice actualPay}}</span></th>
+                            <th width="38%" align="right"><span>已冻结预存款金额：</span>
+                                <span class="red">￥{{formatPrice frozenMoney}}</span>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+                <table width="100%" border="0" class="text_c" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <th width="5%" align="center">序号</th>
+                            <th width="20%" align="left">支付流水号</th>
+                            <th width="20%">支付方式</th>
+                            <th width="20%">支付金额</th>
+                            <th width="15%">支付时间</th>
+                            <th width="10%">状态</th>
+                        </tr>
+                        {{#each esOrderPay}}
+                        <tr>
+                            <td>{{addIndex @index}}</td>
+                            <td>{{orderPayNo}}</td>
+                            <td>{{payName}}</td>
+                            <td>￥{{formatPrice payMoney}}</td>
+                            <td>{{payDate}}</td>
+                            <td>{{payStatusName}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+                <p class="c"></p>
+            </div>
+            {{else}}
+            <div class="tabqh mart12 bord">
+                <h2>
+				<span class="fl">
+	            付款信息
+				</span>
+			</h2>
+                <div class="order_info">
+                    <ul>
+                        <li>
+                            付款方式：{{payTypeName}}
+                        </li>
+                        <li>
+                            商品总价格：
+                            <span class="font_01">
+                		￥{{formatPrice shopSumPrice}}
+					</span>
+                        </li>
+                        {{#realDelivery realDeliveryPay}}
+                        <li>
+                            实际运费：￥{{formatPrice realDeliveryPay}}
+                        </li>
+                        {{/realDelivery}}
+                        <li>
+                            应支付金额：￥{{formatPrice actualPay}}
+                        </li>
+                    </ul>
+                    <p class="c">
+                    </p>
+                </div>
+            </div>
+            {{/comparePayType}}
+            <p class="c">
+            </p>
+        </div>
+        <div class="bordlrb order_info padb10 mart12" style="border:1px solid #f3f3f3;">
+            <h2>
+          订单信息
+			</h2>
+            <ul class="code_box">
+                <li>
+                    订单编号：{{orderId}}
+                </li>
+                <li>
+                    付款方式：{{payTypeName}}
+                </li>
+                <li>
+                    配送方式： {{deliveryType}}
+                </li>
+                <li>
+                    发货仓库：{{storeName}}
+                </li>
+                <li>
+                    下单时间：{{accessDate}}
+                </li>
+                {{{invalidOrder postDate orderId}}}
+                
+                <div class="code_pos">
+                    <div id="jsCode1" class="code1 barcode2 fl"></div>
+                    <div id="jsCode2" class="code2 fl"></div>
+                </div>
+
+            </ul>
+            <p class="c">
+            </p>
+            <h2>
+          收货人信息
+			</h2>
+            <ul>
+                <li>
+                    收货人姓名：{{esOrderAddress.name}}
+                </li>
+                <li style="word-wrap:break-word;height: auto; ">
+                    地址：{{esOrderAddress.address}}
+                </li>
+                <li>
+                    邮编：{{esOrderAddress.postcode}}
+                </li>
+                <li>
+                    固定电话：{{esOrderAddress.tel}}
+                </li>
+                <li>
+                    手机号码：{{esOrderAddress.mobile}}
+                </li>
+                <li>
+                    电子邮件：{{esOrderAddress.email}}
+                </li>
+            </ul>
+            <p class="c">
+            </p>
+            <h2>
+          		发票信息
+			</h2>
+            <ul>
+                {{#isInvoice isSendTax}}
+                <li>不开发票</li>
+                {{else}} {{#invoice invoiceTitle}}
+                <li>发票抬头：{{invoiceTitleName}}</li>
+                <li>发票内容：{{invoiceTypeName}}</li>
+                <li>公司名称：{{provinceName}}</li>
+                <li>纳税人识别号：{{packetType}}</li>
+                {{else}}
+                <li>发票抬头：{{invoiceTitleName}}</li>
+                <li>发票内容：{{invoiceTypeName}}</li>
+                {{/invoice}} {{/isInvoice}}
+            </ul>
+            <p class="c">
+            </p>
+            <h2>
+          		订单备注
+			</h2>
+            <ul>
+                <li>
+                    备注内容：{{handleNoteC}}
+                </li>
+            </ul>
+            <p class="c">
+            </p>
+            <h2 class="wdbord">
+          结算信息
+			</h2>
+            <p>
+                商品总价格：￥{{formatPrice shopSumPrice}} - 优惠金额：￥{{formatPrice aderDiscount}} =
+                <span>
+            应支付金额：
+				</span>
+                <span class="red">
+            ￥{{formatPrice actualPay}}
+				</span>
+            </p>
+        </div>
+        <p class="c">
+        </p>
+        <div class="bd_lr">
+            <p class="crumbs">
+                <span class="tit marl10">
+            商品信息
+				</span>
+            </p>
+        </div>
+        <div class="tbwid">
+            {{#each goodsDetailList}}
+            <table width="100%" border="0" cellspacing="0" class="text_c dd_contdetail" id="cartTable" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <th width="32%" colspan="2">商品</th>
+                        <th width="12%">商品编号</th>
+                        <th width="15%">商城价</th>
+                        <th width="10%">商品数量</th>
+                        <th width="10%">金豆</th>
+                        <th width="11%" class="bor_r">操作</th>
+                    </tr>
+                    <tr style="border-bottom: 0px;">
+                        <td style="border-bottom: 0px;">
+                            <div class="pos">
+                                {{{sms_detail goodsMaterDetail}}} &nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="http://itemdev.ecgci.com/product_detail_{{goodsId}}.html"><img src="{{imgConf goodsThumb goodsId}}" width="50" height="50"></a></div>
+                        </td>
+                        <td class="text_l pro_name" style="border-bottom: 0px;">
+                            <a href="http://itemdev.ecgci.com/product_detail_{{goodsId}}.html" target="_blank">{{goodsName}}</a></td>
+                        <td style="border-bottom: 0px;">{{goodsId}}</td>
+                        <td style="border-bottom: 0px;">￥{{formatPrice unitPrice}}</td>
+                        <td style="border-bottom: 0px;">{{quantity}}</td>
+                        <td style="border-bottom: 0px;">{{giveIntegral}}</td>
+                        <td class="bor_r" style="border-bottom: 0px;">
+                            <a href="javascript:void(0);" class="anniu addFavor" data-goodsId='{{goodsId}}'>加关注</a>
+                        </td>
+                    </tr>
+                    <tr class="tr_gift">
+                        <td colspan="7" align="left" style="padding-left:45px; color:#666; line-height:25px; color:#666;">
+                        </td>
+                    </tr>
+                    {{#show_detail goodsMaterDetail}}
+                    <tr class="detail_show">
+                        <td colspan="7">
+                            <div class="detail_cont pos">
+                                <div class="top_tz"></div>
+                                <table width="100%" border="0" id="cartTable" cellspacing="0" cellpadding="0" class="detail_conttd ">
+                                    <tbody>
+                                        <tr>
+                                            <th colspan="2" width="">商品</th>
+                                            <th width="12%">规格</th>
+                                            <th width="12%">成色</th>
+                                            <th width="12%">面值</th>
+                                            <th width="12%">直径</th>
+                                            <th width="12%">数量</th>
+                                        </tr>
+                                        {{#each goodsMaterDetail}}
+                                        <tr>
+                                            <td class="text_r" width="120">
+                                                <img src="{{imgConf materialImg materialId}}" width="50" height="50"></td>
+                                            <td class="text_l" style="vertical-align:middle;">{{materialName}}</td>
+                                            <td style="vertical-align:middle;">{{standard}}</td>
+                                            <td style="vertical-align:middle;">{{quality}}</td>
+                                            <td style="vertical-align:middle;">{{faceValue}}</td>
+                                            <td style="vertical-align:middle;">{{diameter}}</td>
+                                            <td style="vertical-align:middle;">{{quantity}}</td>
+                                        </tr>
+                                        {{/each}}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                    {{/show_detail}}
+                </tbody>
+            </table>
+            {{/each}}
+        </div>
+    </div>
+</script>

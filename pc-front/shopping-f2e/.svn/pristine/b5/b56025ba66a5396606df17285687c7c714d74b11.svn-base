@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        订单中心 - 会员中心 - 中国金币官方网上商城
+    </title>
+    <meta name="Keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="/css/member/favor.css">
+</head>
+
+<body>
+    <!--#include file="/common/bar.html"-->
+    <!--#include file="/common/header.html"-->
+    <div id="navi" class="w crumbs">
+        当前位置：
+        <a href="/index.html">
+                首页
+            </a>
+        <span>
+                &gt;
+            </span>
+        <a href="/member/index.html">
+                会员中心
+            </a>
+        <span>
+                &gt;
+            </span> 我的关注
+    </div>
+    <div class="w clearfix">
+        <!--#include file="/inc/member/menu.html"-->
+        <div class="fr">
+            <div class="right_a  m_right">
+                <div class="bordlrt">
+                    <h2 class="wdbord">
+                                我的关注
+                            </h2>
+                </div>
+                <div class="bor3" style="padding:10px;">
+                    <div class="bord" style="display: none">
+                        <p class="crumbs text_c">暂无关注，马上去挑选商品加入关注：<a href="/index.html" class="anniu">商城首页</a></p>
+                    </div>
+                    <table border="0" class="text_c favor-table" cellspacing="0" cellpadding="0" width="100%">
+                        <thead>
+                            <tr>
+                                <td colspan="4" class="hei36 text_l">
+                                    <input type="checkbox" class="allbox" name="allbox">
+                                    <label>
+                                        全部
+                                    </label>
+                                    <a id="joinCartUp" href="javascript:void(0);" class="anniu marl20 marr10 batchAddCart">
+                                                加入购物车
+                                            </a>
+                                    <a href="javascript:void(0);" class="anniu marr20 batchCancelFavor">
+                                                取消关注
+                                            </a> 共有<span class='favorCount'>0</span>条记录
+                                </td>
+                            </tr>
+                            <tr>
+                                <th width="20%">
+                                    商品图片
+                                </th>
+                                <th width="40%">
+                                    商品信息
+                                </th>
+                                <th width="20%">
+                                    商品价格
+                                </th>
+                                <th width="20%">
+                                    操作
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="list_box">
+                            <tr>
+                                <td colspan="4" style="text-align: center;">正在加载...</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="pageLimit" style="display: none;">
+                                <td colspan="4" style="text-align: right;">
+                                    <!--#include file="/inc/plugin/limitPage.html"-->
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/common/footer.html"-->
+    <!--#include file="/data/channel/img_domain_data.html"-->
+    <!--#include file="/inc/member/favor/list.html"-->
+    <script type="text/javascript" src="/script/libs/require.js"></script>
+    <script type="text/javascript" src="/script/libs/require-config.js"></script>
+    <script type="text/javascript" src="/script/member/favor.js"></script>
+</body>
+
+</html>

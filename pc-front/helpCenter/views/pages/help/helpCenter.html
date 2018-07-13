@@ -1,0 +1,868 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>帮助中心-自助服务中心-帮助文章详情</title>
+<meta name="Keywords" content="帮助中心-自助服务中心-帮助文章详情" />
+<meta name="description" content="帮助中心-自助服务中心-帮助文章详情" />
+<meta content=IE=EmulateIE7 http-equiv=X-UA-Compatible>
+
+<link rel="stylesheet" href="/themes/default/css/validate.css" type="text/css"/>
+<script language="JavaScript" src="/scripts/validate.js" type="text/javascript"></script>
+<link rel="icon" href="/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+<link href="/themes/20131011/css/global.css?67" rel="stylesheet" type="text/css"/>
+<link href="/themes/20131011/css/member.css?67" rel="stylesheet" type="text/css"/>
+<link href="/themes/201381/css/skin.css?67" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" language="javascript">var __thmes_root = '/themes/default/';var __contextRoot__='';var __isMemberHasLogin__=0;var startstamp = (new Date()).getTime();var _bdhm_top = 0;var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");var _bdhm_tim = new Image(1,1);_bdhm_tim.id = "bdhmPerimg";_bdhm_tim.src = _bdhmProtocol + "hm.baidu.com/_tt.gif?si=3fde6f6d13469d614f29fcdb7a8cd722&rnd=" + Math.round(Math.random()*2147483647);_bdhm_tim.onload=function(){_bdhm_top = 1;}</script>
+<script language="JavaScript" src="/scripts/jquery.js" type="text/javascript"></script>
+<script type="text/javascript" src="/scripts/jquery.ui.js"></script>
+<script language="JavaScript" src="/scripts/jquery.bgiframe.js" type="text/javascript"></script>
+<script type="text/javascript" src="/themes/20131011/js/jquery.validation-engine.js"></script>
+<script type="text/javascript" src="/scripts/jquery.common.js"></script>
+<script type="text/javascript" src="/scripts/jquery.form.js"></script>
+<script language="JavaScript" src="/scripts/jquery.blockUI.js" type="text/javascript"></script>
+<script language="JavaScript" src="/themes/20131011/js/global.js?67" type="text/javascript"></script>
+</head>
+<body>
+    <!--头开始-->
+  
+        
+        <!-- 灰色顶头条开始 -->
+<div id="toolbar">
+    <div class="wrap clearfix">
+        <ul class="fl toolbar_fl">
+            <li class="item"><a href="http://www.chngc.net" target="_blank">本网站由中国金币总公司主办</a></li>
+        </ul>
+        <ul class="fr toolbar_fr">
+            <li id="ls_ul1" class="item first"><span class="text">您好，<a href="" class="userName" target="_blank"></a>欢迎来到中国金币网上商城！</span><a href="/login.html"><span class="item link_top_login">请登录 </span></a></li>
+            <li id="ls_dv1" class="item link_top_reg"><a href="/views/pages/regist.jsp">注册</a></li>
+            <li class="line">|</li>
+            <li id="esSysMessage" class="item"><a href="/views/pages/member/index.jsp" target="_blank">会员中心</a></li>
+            <li class="line">|</li>
+            <li class="item"><a href="/views/pages/member/my_order.jsp" target="_blank">我的订单</a></li>
+            <li class="line">|</li>
+            <li class="j_drop item service_center" onmouseover="drop_listShow()" onmouseout="drop_listHide()"><a href="#">服务中心</a><i class="arrow arrowB posa"></i>
+                <span class="posa outer"></span><span class="posa bk_line"></span>
+                <div class="posa drop_list">
+                    <div class="drop_panel">
+                        <ul class="padding_rl menu_list clearfix">
+                            <li class="item"><a href="/help/index.html">帮助中心</a></li>
+                            <li class="item">
+                                <a href="javascript:toKefu();">在线客服</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<style type="text/css">
+    .mask{display:none; width:100%; height: 100%; position: fixed; top:0; left:0; background-color: #000; opacity:0.15; filter:alpha(opacity=15);  z-index: 500;}
+    .login_tips{display:none; position: fixed; z-index: 1000; width: 430px; height: 300px; padding-top:0; padding-bottom: 0; top:50%; left: 50%; margin-left: -215px; margin-top: -150px; background-color: #fff;z-index: 501; }
+    .login_tips h2{ height:46px; margin-top: 0; margin-bottom: 0; width: 413px; font-size: 16px; font-weight: normal; line-height: 46px; padding-left: 17px; background-color: #e64346; color: #fff;}
+    .close_btn{z-index: 10000; position: absolute; top: 10px; right:20px; cursor: pointer;}
+    .login_tips p{ font-size: 12px; color: #666666; line-height: 20px; margin-left: 62px; width: 306px; margin-top: 50px;}
+    .go_login{ display: block; background-color: #e64346; color: #fff; text-decoration: none; line-height: 34px; font-size: 20px; width: 306px; margin-left: 62px; margin-top: 30px; text-align: center;}
+    .no_login{ display: block; font-size: 12px; text-align: center; color: #666; width: 430px; text-decoration: none; margin-top: 30px;}
+    .no_login:hover{ color: #e64346;}
+    .go_login:hover{ color: #fff;}
+</style>
+
+<div class="main">
+    <div class="mask" style="display:none;"></div>
+    <div class="login_tips" id="login_tips" style="display:none;">
+        <div class="close_btn"><img src="/views/contents/home201381/images/close_kf.png"></div>
+        <h2>您尚未登录</h2>
+        <p>您尚未登录中国金币网上商城，如果您已是商城会员，请登录后进行咨询，以便我们为您提供更加优质的服务。</p>
+        <a href="/login.html" class="go_login">去    登    录</a>
+        <a href="http://www.sobot.com/chat/pc/index.html?sysNum=cb163f1d67d348a891ba4979a2440858&partnerId=" 
+            class="no_login" target="_blank">暂不登录，以访客身份咨询 >></a>
+    </div>
+</div>
+<script type="text/javascript">
+$(function(){
+    $(".close_btn,.no_login").click(function(){
+        $(".mask").hide();
+        $(".login_tips").hide();
+    });
+    $(".no_login").click(function(){
+        $(".mask").hide();
+        $(".login_tips").hide();
+    });
+})
+</script>
+<!-- 灰色顶头条结束 -->
+<script>
+function drop_listShow(){
+        $(".drop_list").show(); 
+}
+function drop_listHide(){
+    $(".drop_list").hide();
+}
+//打开客服系统
+function toKefu(){
+    $.get(__contextRoot__+"/actions/common/is_member_online_returnid.bsh?t="+(new Date()).getTime(),function(data){
+        if (data!=0){
+            window.open('http://www.sobot.com/chat/pc/index.html?sysNum=cb163f1d67d348a891ba4979a2440858&partnerId='+data, "_blank");
+        }else{
+            $(".mask").show();
+            $(".login_tips").show();
+            //document.getElementById("login_tips").style.top=$(document).scrollTop()+document.getElementById("login_tips").offsetHeight+'px';
+        }
+    });
+}
+</script><script src="/scripts/search2013_autocomplete.js" type="text/javascript"></script><script type="text/javascript">
+var keyval = "";
+var keyvalDefault = "熊猫币";
+function setKeyvalFont()
+{
+    $("#keyval").css("color",((keyval==null || keyval=="")?($("#keyval").val()==keyvalDefault?"#c1c1c1":"#000000"):"#000000"));
+}
+
+$(function(){
+    $("#keyval").val((keyval==null || keyval=="")?keyvalDefault:keyval);
+    setKeyvalFont();
+});
+</script>
+<!--header -->
+<div class="wrap clearfix" id="header_section">
+    <div class="bd clearfix">
+        <div role="search" id="search" class="fl search_box">
+            <div class="posr search_wrap"> 
+            <div class="posa popup_menu dn" id="j_search-popupmenu">
+                            <ul class="popup_list">  
+                                <li class="item clearfix"></li>
+                            </ul>
+                    </div>
+                <div class="posr search_from">
+                        <form id="j_searchForm" action="/views/pages/search_new/keywords/search.jsp"method="get" onSubmit="return checkSearch();">
+                            <div class="search_inputBox"><input name="keyval" class="ele_text" id="keyval" type="text" value=""
+                                onblur="javascript: this.isSelected=false; if(this.value==''){this.value='熊猫币';} setKeyvalFont();" 
+                                onchange="javascript: setKeyvalFont();"
+                                onfocus="javascript:  setKeyvalFont();"
+                                onclick="javascript: if(this.value=='熊猫币'){this.value='';} setKeyvalFont();" onmouseover="this.select();" onkeyup="suggest()" maxlength="50"/></div>
+                            <button id="j_searchBtn" class="posa ui_btn btn_search" type="submit"   >搜索</button>
+                        </form>
+                </div>
+                
+                
+                <div id="search_words">
+                <div class="search_hot clearfix"  id="sousou">
+                    <a href="/views/pages/search_new/keywords/search.jsp?keyval=熊猫币">熊猫币</a>
+                                    <a href="/views/pages/search_new/keywords/search.jsp?keyval=2017">2017</a>
+                                    </div>
+            </div>
+        </div>
+    </div>  
+        
+        <div id="logo_box" class="fl">
+            <h1 class="fl"><a href="/index.html" target="_blank"><img src="http://172.168.100.50/upload/logo/mainImg/20151214/1450064768142.png" alt="中国金币网上商城" title="中国金币网上商城"/></a></h1>
+            <h2 class="fl" id="slogo">
+            <a href="#" target="_blank">
+                    <img  alt="slogan"  width="120" height="46" src="http://172.168.100.50/upload/default/20151117/xd_20151214154524852.png" style="display: inline;"/>
+                    </a>
+            </h2>           
+        </div>  
+        <div id="header_r" class="fl ">
+            <div class=" header_min_cart posr" id="header_cart">
+                <div style="border-bottom:1px solid #C2C1C1">
+                    <!-- <var class="sp_js_k">0</var> -->
+                    <a href="/views/pages/cart.jsp" class="cart_link" target="_blank" >我的购物车<b class="red arrow arrowPos"></b> <!-- <i class="posa icon04"></i> --></a>
+                </div>
+                <!--mini 购物车-->
+                <!--<div class="header_cartList posa dn">
+                 <div class="buy_block"></div>
+                    <div class="cart_list_panel">
+                        <div class="tc no_goods clearfix dn ">
+                            <h3 class="hd_tit">您的购物车中有<b class="red"> 0 </b>件商品。</h3>
+                            <a href="" class=" link_txt" target="_blank"></a>
+                        </div>
+                        <div class="posr header_cart_panel dn" >
+                            <h4 class="hd_tit header_cart_panel_hd">最新加入的商品</h4>
+                            <div class="posr mini_cart_bd">
+                            </div>
+                            <div class="tr mini_cart_count">
+                            <p class="text">共 <b class="red">0</b>件商品    共计<b class="red">￥0</b></p>
+                            <a class="tc ui_btn link_txt" href="/views/pages/cart.jsp">去购物车结算 <i class="arrow arrowR posa"></i></a>
+                        </div>
+                        </div>
+                    </div> 
+                </div>-->
+            </div>  
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    //getVal();
+    $.get(__contextRoot__+"/actions/common/is_member_online.bsh?t="+(new Date()).getTime(),function(data){
+        if (data!=0){
+            __isMemberHasLogin__=1;
+        //  $("#ls_ul1").html(data+'您好，欢迎来到中国金币网上商城!　');
+            $("#ls_ul1").html('<a href="/views/pages/member/index.jsp"  target="_blank" ><span style="color: red">'+data+'</span></a>&nbsp;您好，欢迎来到中国金币网上商城！');
+            $("#ls_dv1").html('<a href="/views/contents/member/login/logout.jsp">退出</a>');
+            
+            $.get(__contextRoot__+"/actions/common/member_msg.bsh?t="+(new Date()).getTime(),function(data){
+            if(data!=0){
+                $("#esSysMessage").html('<a href="/views/pages/member/index.jsp">会员中心</a> '
+                /*<a href="/views/pages/member/my_message.jsp">/*（消息 <span style="color: red">'+data+'</span>）</a>'*/);
+                }else{
+                $("#esSysMessage").html('<a href="/views/pages/member/index.jsp">会员中心</a> '
+                /*<a href="/views/pages/member/my_message.jsp">（消息 '+data+'）/</a>'*/);
+                }
+            });
+        }
+        
+    });
+    function checkSearch(){ 
+        if($.trim($('#keyval').val()) == ''){
+            //$.alert("请输入检索商品");
+            return false;
+        }
+       return true;
+    
+    }
+
+function trim(obj){
+    // 用正则表达式将前后空格 
+    // 用空字符串替代。 
+    return obj.replace(/(^\s*)|(\s*$)/g, ""); 
+}
+function enterKeyClick(){
+    var theEvent = window.event || arguments.callee.caller.arguments[0];
+    var code = theEvent.keyCode || theEvent.which;
+    if (code == 13){
+        theEvent.returnValue=false;
+        theEvent.cancel = true;
+        $("#searchFrm").submit();
+    }
+    theEvent.returnValue = true;
+}
+function findValue(li) {
+    $("#keyval").focus();
+}
+
+function selectItem(li) {
+    findValue(li);
+}
+
+function formatItem(row) {
+    var inv = $("#keyval").val();
+    return "<span class=lef>"+row[0].replace(inv,inv) + "</span>";
+}
+
+$(function() {
+suggest();
+  });
+  
+function searchFrmSubmit(){ 
+
+    if($.trim($('#keyval').val()) == ''){
+        $.alert("请输入检索商品"); 
+    }else{
+        $("#j_searchForm").submit();
+    }   
+}
+  
+    //自动补齐
+function suggest() {
+    $("#keyval").autocomplete("/views/contents/search_new/keywords/get_keywords_list.jsp",{
+            scrollHeight: 300,
+            width: 363,
+            delay:10,
+            minChars:1,
+            matchSubset:1,
+            matchContains:1,
+            cacheLength:1,
+            selectFirst:false,
+            autoFill:false,
+            dataType: 'json',
+            parse: function(data) { 
+            var rows = [];
+            for(var i=0; i<data.length; i++){ 
+            rows[rows.length] = { 
+                    data:data[i],
+                    value:data[i].name,
+                    result:data[i].name
+                };
+            } 
+            return rows;
+            },
+            formatItem: function(row,i,n) {
+                var temp = row.name;
+                if(temp.length > 25){
+                    temp = temp.substring(0,25)+"...";
+                }
+                return temp + "<span>约" + row.count + "个商品</span>" 
+            } 
+        }
+    ).result(function(event, data, formatted) {
+        searchFrmSubmit();
+    });
+}
+
+    $(document).ready(function(){
+            var keyValue = document.getElementById("keyval").value;
+            if(keyValue == ""){
+                document.getElementById("keyval").value = "熊猫币";        
+            }
+        }
+    );
+    $("#header_cart").hover(function(){
+        $(this).find(".header_cartList").show();
+     },function(){
+        $(this).find(".header_cartList").hide();
+     });
+    /*  $("#toolbar .j_drop").hover(function(){
+        $(this).addClass("drop_hover");
+     },function(){
+         $(this).removeClass("drop_hover");
+     });  */
+    
+     $("#j_cats .cats_list").hover(function(){
+        $(this).addClass("hover").siblings().removeClass("hover").parent().addClass("hover");
+     },function(){
+         $(this).removeClass("hover").parent().removeClass("hover");
+     });
+</script>
+<script src="/views/contents/home201381/js/cart.js" type="text/javascript"></script><!--logo/search end--><!--nav begin-->
+<!-- 导航条 --> 
+<div id="nav" class="clearfix">
+    <div class="wrap clearfix">
+        <div class="categorys fl posr">
+            <h1>所有商品分类</h1>
+            <ul class="cate_left">
+                <li class="fly">
+                    <h2><a  href="javascript:void(0);">发行年份</a></h2><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta22%23220">2017年</a><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta22%2387">2016年</a><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta22%23198">2015年...</a>
+                    <div class="cate_cont fly_cont ui-tabs-hide" style="display: none;">
+                        <div class="cate_blank"></div> 
+                        <dl>
+                            <dt>发行年份  ></dt>
+                            <dd>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta22%23220">2017</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta22%2387">2016</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta22%23198">2015</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta22%23113">2014</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta22%2389">2013</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta22%2388">2012</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta22%2390">2011</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta22%2391">2010</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </li>
+                <li class="fly">
+                <h2><a  href="javascript:void(0);">题材</a></h2><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta18%2352">熊猫</a><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta18%2353">生肖</a><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta18%2354">重大事件...</a>
+                <div class="cate_cont fly_cont ui-tabs-hide" style="display: none;">
+                        <div class="cate_blank cate_blank2"></div> 
+                        <dl class="last">
+                            <dt><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta18%2352">大熊猫  ></a></dt>
+                            <dd>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23222">2017版熊猫</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23221">2016版熊猫</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23156">2015版熊猫</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23167">2014版熊猫</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta18%2353">十二生肖  ></a></dt>
+                            <dd>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23223">2017中国丁酉（鸡）年</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23147">2016中国丙申（猴）年</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23157">2015中国乙未（羊）年</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23168">2014中国甲午（马）年</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23172">2013中国癸巳（蛇）年</a>
+                                <a target="_blank" href="">2012中国壬辰（龙）年</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta18%2354">重大事件  ></a></dt>
+                            <dd>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23225">长征胜利80周年</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23231">2016国际钱币博览会</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23162"> 中法建交50周年</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23160">新疆生产建设兵团成立60周年</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23165">中国探月首次落月成功</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta18%2355">杰出人物  ></a></dt>
+                            <dd>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23226">孙中山诞辰150周年</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23152"> 近代国画大师（徐悲鸿）</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta18%2356">文学艺术  ></a></dt>
+                            <dd>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23178">石窟艺术（云冈）</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta18%2357">传统文化  ></a></dt>
+                            <dd>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23154">2015吉祥文化</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23155">2015贺岁</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta18%2358">宗教文化  ></a></dt>
+                            <dd>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23153">佛教圣地（九华山）</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23171">佛教圣地（普陀山）</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23163">佛教圣地（峨眉山）</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23173">佛教圣地（五台山）</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta18%2365">体育运动  ></a></dt>
+                            <dd>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23164">第二届夏青奥运动会</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta18%2360">世界遗产  ></a></dt>
+                            <dd>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23161">杭州西湖文化景观</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23169">黄山文化景观</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23175">登封“天地之中”历史建筑</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta18%2361">科技环保  ></a></dt>
+                            <dd></dd>
+                        </dl>
+                    </div>
+                </li>
+                <li class="fly">
+                <h2><a  href="javascript:void(0);">系列</a></h2><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta48%23185">吉祥文化</a><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta48%23180">贺岁</a><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta48%23181">加字币…</a>
+                <div class="cate_cont fly_cont ui-tabs-hide" style="display: none;">
+                        <div class="cate_blank cate_blank3"></div> 
+                        <dl>
+                            <dt><a href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta48%23185">吉祥文化  ></a></dt>
+                            <dd>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23235">2017吉祥文化</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23227">2016吉祥文化</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23154">2015吉祥文化</a>
+                            </dd>
+                        </dl>
+                        <dl class="last">
+                            <dt>&nbsp;&nbsp;&nbsp; <a href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta48%23180">贺岁  ></a></dt>
+                            <dd>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23228"> 2016贺岁</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23155"> 2015贺岁</a>
+                            </dd>
+                        </dl>
+                        <dl class="last">
+                            <dt><a href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta48%23181">加字币  ></a></dt>
+                            <dd>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23230">青岛银行成立20周年</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23229">侨联成立60周年</a>
+                            </dd>
+                        </dl>
+                        <dl class="last">
+                            <dt><a href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta48%23182">青铜器  ></a></dt>
+                            <dd>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23159">青铜器第三组</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta47%23170">青铜器第二组</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </li>
+                <li class="fly"> 
+                <h2><a  href="javascript:void(0);">分类</a></h2><a target="_blank" href="/views/pages/search_new/category/cat_base_search.jsp?category1Id=10001&category2Id=10024&category3Id=10002&category4Id=10006&category5Id=0&filter1=00&filter2=00&filter3=00&filter4=00&filter5=00&filter6=00&filter7=00&filter8=00&filter9=00&filter10=00&style=1&sort=0&pageNo=1">熊猫币</a><a target="_blank" href="/views/pages/search_new/category/cat_base_search.jsp?category1Id=10001&category2Id=10024&category3Id=10002&category4Id=10005&category5Id=0&filter1=00&filter2=00&filter3=00&filter4=00&filter5=00&filter6=00&filter7=00&filter8=00&filter9=00&filter10=00&style=1&sort=0&pageNo=1">纪念币</a><a target="_blank" href="/deriveshop.html">衍生品</a><a target="_blank" href="/views/pages/search_new/category/cat_base_search.jsp?category1Id=10001&category2Id=10024&category3Id=10002&category4Id=10007&category5Id=0&filter1=00&filter2=00&filter3=00&filter4=00&filter5=00&filter6=00&filter7=00&filter8=00&filter9=00&filter10=00&style=1&sort=0&pageNo=1">外国币</a>
+                </li>
+                <li class="fly">
+                <h2><a  href="javascript:void(0);">形状</a></h2><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta16%2341">圆形</a><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta16%2345">心形</a><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta16%2344">扇形</a><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta16%2342">长方形</a> <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta16%2346">其他</a>
+                </li>
+                <li class="fly">
+                <h2><a  href="javascript:void(0);">材质</a></h2><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta17%2347">金</a><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta17%2348">银</a><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta17%23183">金+银</a><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta17%23184">其他</a>
+                </li>
+                <li class="fly lastw">
+                <h2><a  href="javascript:void(0);">价格</a></h2><a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=shopprice%230-1000">1000以下</a>
+                                                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=shopprice%231000-5000">1000-5000…</a>
+                <div class="cate_cont fly_cont ui-tabs-hide" style="display: none;">
+                        <div class="cate_blank cate_blank7"></div> 
+                        <dl>
+                            <dt><a href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=cta51%23178">价格  ></a></dt>
+                            <dd>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=shopprice%230-1000">1000以下</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=shopprice%231000-5000">1000-5000</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=shopprice%235000-10000">5000-10000</a>
+                                <a target="_blank" href="/views/pages/search_new/keywords/search.jsp?keyval=%E5%85%A8%E9%83%A8&sort=0&attr=shopprice%2310000-">10000以上</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <ul class="fl nav_mune">
+        <li><a href="/index.html">首页</a></li>
+                        <li><a href="/pandacoins.html">熊猫币</a></li>
+                                <li><a href="/views/pages/commemorative/index.jsp">纪念币</a></li>
+                                <li><a href="/deriveshop.html">衍生品</a></li>
+                                <li><a href="/abroad.html">外国币</a></li>
+                                <li><a href="/hotshop.html">热销商品</a></li>
+                                </ul>
+        <!-- zk新增商品在线验证 -->
+        <ul class="fl nav_mune">
+            <li><a href="/views/contents/home201381/go_validate.jsp">商品验证</a></ul>
+    <!-- 推荐项目 -->
+             <div id="loadRecommendedItem"></div>
+    </div>
+</div>
+<p class="c"></p>
+<script>
+$(function(){
+        
+        // 滑上显示购物车列表
+        $(".cart_link").hover(function(){
+        
+
+        },function(){});
+
+
+        // 滑离时隐藏购物车列表
+        $("#header_cart").hover(function(){
+            //          滑上隐藏下边框
+            $(".cart_link").css("border-bottom","1px solid #fff");
+            $(".cart_link").css("background-image","url(/themes/20150514/images/gwc_icon.png)");
+            // 没有商品时显示
+            $(".header_cartList ").show();
+            // $(".no_goods ").show();
+
+            // 如果有商品时 显示商品列表
+            $(".header_cartList ").show();
+            $(".header_cart_panel ").show();
+        },function(){
+        //          滑上隐藏下边框
+            $(".cart_link").css("border-bottom","1px solid #c2c1c1");
+            $(".cart_link").css("background-image","url(/themes/20150514/images/gwc_icon.png)");
+            $(".header_cartList ").hide();
+        });
+
+
+        $(".fot_pro dl").hover(function(){
+            $(this).children("dt").stop(true,true).animate({"margin-right":"11px"},300,"linear");
+            //$(this).children("dd").children("p").stop(true,true).animate({"margin-left":"-10px"},300,"linear");
+        },function(){
+            $(this).children("dt").stop(true,true).animate({"margin-right":"-1px"},300,"linear");
+            //$(this).children("dd").children("p").stop(true,true).animate({"margin-left":"0px"},300,"linear");
+        });
+
+
+        // 显示隐藏具体分类
+        $(".cate_left li").hover(function(){
+            $(this).css("background-color","#b61d1d");
+            $(this).children("a").css("color","#fff");
+            $(this).children("h2").children("a").css({"color":"#fff","text-decoration":"none","cursor":"default"});
+            $(this).children('div').show();
+        },function(){
+            $(this).css("background-color","#fff");
+            $(this).children("a").css("color","#5e5e5e");
+            $(this).children("h2").children("a").css({"color":"#b61d1d","text-decoration":"none","cursor":"default"});
+            $(this).children('div').hide();
+        });
+
+        
+    })
+</script>
+<!--头结束-->
+    <!--内容区开始-->
+    <div class="w">
+        <!--左侧开始-->
+        <div class="fl">
+            
+            <div class="four-nav">
+    <div class="four-tit"></div>
+    <!-- 帮助详情开始 -->
+    <div class="four-nav1">
+      <h2>帮助中心</h2> <!-- 1 -->
+      <ul class="disb">
+      <li>
+            购物指南<!-- 2 -->
+            <ul class="disb">
+               <li>
+               <a href="/views/pages/help/help_center_index.jsp?columnId=10" target="_self">会员注册流程</a><!-- 3 -->
+                <a href="/views/pages/help/help_center_index.jsp?columnId=11" target="_self">普通购物流程</a><!-- 3 -->
+                <a href="/views/pages/help/help_center_index.jsp?columnId=12" target="_self">实名认证流程</a><!-- 3 -->
+                <a href="/views/pages/help/help_center_index.jsp?columnId=13" target="_self">熊猫币购物流程</a><!-- 3 -->
+                <a href="/views/pages/help/help_center_index.jsp?columnId=14" target="_self">抽签预订流程</a><!-- 3 -->
+                <a href="/views/pages/help/help_center_index.jsp?columnId=202767" target="_self">商城交易条款</a><!-- 3 -->
+                <a href="/views/pages/help/help_center_index.jsp?columnId=202768" target="_self">会员管理办法</a><!-- 3 -->
+                <a href="/views/pages/help/help_center_index.jsp?columnId=202769" target="_self">金豆说明</a><!-- 3 -->
+                </li>
+            </ul>
+        </li>
+      <li>
+            支付方式<!-- 2 -->
+            <ul class="">
+               <li>
+               <a href="/views/pages/help/help_center_index.jsp?columnId=200585" target="_self">在线支付</a><!-- 3 -->
+                <a href="/views/pages/help/help_center_index.jsp?columnId=200586" target="_self">银行汇款</a><!-- 3 -->
+                <a href="/views/pages/help/help_center_index.jsp?columnId=200587" target="_self">预存款支付</a><!-- 3 -->
+                <a href="/views/pages/help/help_center_index.jsp?columnId=202766" target="_self">混合支付</a><!-- 3 -->
+                </li>
+            </ul>
+        </li>
+      <li>
+            配送方式<!-- 2 -->
+            <ul class="">
+               <li>
+               <a href="/views/pages/help/help_center_index.jsp?columnId=200589" target="_self">快递配送</a><!-- 3 -->
+                <a href="/views/pages/help/help_center_index.jsp?columnId=200590" target="_self">配送范围</a><!-- 3 -->
+                </li>
+            </ul>
+        </li>
+      <li>
+            售后服务<!-- 2 -->
+            <ul class="">
+               <li>
+               <a href="/views/pages/help/help_center_index.jsp?columnId=200592" target="_self">售后政策</a><!-- 3 -->
+                <a href="/views/pages/help/help_center_index.jsp?columnId=202770" target="_self">常见问题</a><!-- 3 -->
+                <a href="/views/pages/help/help_center_index.jsp?columnId=202771" target="_self">在线客服</a><!-- 3 -->
+                </li>
+            </ul>
+        </li>
+      <li>
+            售后政策<!-- 2 -->
+            <ul class="">
+               <li>
+               <a href="/views/pages/help/help_center_index.jsp?columnId=202776" target="_self">售后政策北京</a><!-- 3 -->
+                <a href="/views/pages/help/help_center_index.jsp?columnId=202777" target="_self">售后政策深圳</a><!-- 3 -->
+                <a href="/views/pages/help/help_center_index.jsp?columnId=202778" target="_self">售后政策现场</a><!-- 3 -->
+                </li>
+            </ul>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- 帮助详情结束 -->
+    <!-- 商城新闻开始 -->
+    <!-- 商城新闻结束 -->
+    <!-- 商城测评开始
+    
+    <div class="four-nav1">
+      <h2>商城测评</h2>
+      <ul class="disb">
+        <p class="c"></p>
+      </ul>
+    </div>    -->
+    <!-- 商城测评结束 -->
+  </div>
+
+  </div>
+        <!--左侧结束-->
+        <!--右侧开始-->
+        <div class="fr">
+            
+            <!--文章内容开始-->
+<div class="right_b bord m_right">
+    <h2>
+        商城交易条款</h2>
+    <div class="text_info">
+    
+        <p style="text-align: center; line-height: 2em;"><span style="font-size: 20px;"><strong><span style="font-family: 微软雅黑,Microsoft YaHei;">中国金币官方网上商城交易条款 </span></strong></span><span style="font-family: 微软雅黑,Microsoft YaHei;font-size: 12px"></span></p><p style="line-height: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei;font-size: 12px"><br/></span></p><p style="line-height: 2em;"><span style="font-size: 16px;"><strong><span style="font-family: 微软雅黑,Microsoft YaHei;">一、金币商城新会员注册协议</span></strong></span></p><p style="text-align: left; text-indent: 32px; line-height: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;"><span style="font-size: 16px; font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51);">本协议为中国金币官方网上商城（以下简称“金币商城”）与中国金币官方网上商城用户（下称“用户”）。金币商城用户即在中国金币官方网上商城注册成为会员，并在金币商城有购买产品、修改个人资料等行为的用户。就金币商城网站（</span><span style="font-size: 16px; font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;;">网址：www.ecgci.com）服务等相<span style="font-size: 16px; font-family: 微软雅黑,Microsoft YaHei; color: rgb(51, 51, 51);">关 事宜所签订的契约。本服务协议内容包括协议正文及所有金币商城已经发布的或将来可能发布的各类规则。所有金币商城已经发布的或将来可能发布的各类规则均为 本协议的附件，是协议不可分割的一部分，与协议正文具有同等法律效力。用户在使用金币商城提供的各项服务的同时，承诺接受并遵守金币商城各项相关规则的规 定。金币商城有权根据需要不定时地制定、修改本协议或金币商城各类规则，如本协议有任何变更，金币商城将在金币商城网站公告栏上以刊登公告的方式通知用 户。在法律允许的最大限度范围内，金币商城对本协议及金币商城的各类规则拥有最终解释权。</span></span></span></p><p style="text-align: left; text-indent: 32px; line-height: 2em;"><span style="color: rgb(51, 51, 51); font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">用 户确认接受本协议后，本协议即在用户和金币商城之间产生法律效力。请用户务必在注册之前认真阅读全部服务协议内容如有任何疑问，可向金币商城咨询。用户同 意所有注册协议条款并完成注册程序，即成为金币商城的正式用户。用户确认在注册之前已经认真阅读了本服务协议并充分理解了协议中的内容。用户点击协议正文 下方的“确认”按钮并按照金币商城注册程序成功注册为用户，即表示其已同意并签署了本服务协议。</span></p><h1 style="line-height: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">第1条 本站服务条款的确认和接纳</span></h1><p style="text-align: left; line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">1.1本站的各项电子服务的所有权和运作权归中国金币官方网上金币商城所有。用户同意所有注册协议条款并完成注册程序，才能成为本站的正式用户。用户确认：本协议条款是处理双方权利义务的契约，始终有效，法律另有强制性规定或双方另有特别约定的，依其规定。</span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">1.2用户点击同意本协议的，即视为用户确认自己具有享受本站服务、下单购物等相应的权利能力和行为能力，能够独立承担法律责任。</span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">1.3如果您在18周岁以下，您只能在父母或监护人的监护参与下才能使用本站。</span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">1.4中国金币官方网上商城保留在中华人民共和国大陆地区法施行之法律允许的范围内独自决定拒绝服务、关闭用户账户、清除或编辑内容或取消订单的权利。</span></p><h1 style="line-height: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">第2条 本站服务条款</span></h1><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">2.1中国金币官方网上商城通过互联网依法为用户提供服务，用户在完全同意本协议及本站规定的情况下，方有权使用本站的相关服务。</span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">2.2用户必须自行准备如下设备和承担如下开支：（1）上网设备，包括并不限于电脑或者其他上网终端、调制解调器及其他必备的上网装置；（2）上网开支，包括并不限于网络接入费、上网设备租用费、手机流量费等。</span></p><h1 style="line-height: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">第3条 用户信息</span></h1><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">3.1 用户应自行诚信向本站提供注册资料，用户同意其提供的注册资料真实、准确、完整、合法有效，用户注册资料如有变动的，应及时更新其注册资料。用户有义务在 注册时提供自己的真实身份信息和联系方式资料，保证诸如姓名、身份证号、联系电话、联系地址等内容的真实性、有效性及安全性，保证金币商城可以通过上述联 系方式与自己进行联系。如果用户提供的注册资料不合法、不真实、不准确、不详尽的，用户需承担因此引起的相应责任及后果，并且中国金币官方网上商城保留终 止用户使用金币商城各项服务的权利。 </span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">3.2用户在本站进行浏览、下单购物等活动时，涉及用户真实姓名/名称、通信地址、联系电话、电子邮箱等隐私信息的，本站将予以严格保密，除非得到用户的授权或法律另有规定，本站不会向外界披露用户隐私信息。 </span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">3.3用户注册成功后，将产生用户名和密码等账户信息，您可以根据本站规定改变您的密码。用户应谨慎合理的保存、使用其用户名和密码。用户若发现任何非法使用用户账号或存在安全漏洞的情况，请立即通知本站并向公安机关报案。 </span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">3.4用户同意金币商城拥有通过邮件、短信电话等形式，向在本站注册、购物用户、收货人发送订单信息、促销活动等告知信息的权利。</span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">3.5用户不得将在本站注册获得的账户借给他人使用，否则用户应承担由此产生的全部责任，并与实际使用人承担连带责任。</span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">3.6用户同意，金币商城有权使用用户的注册信息、用户名、密码等信息，登录进入用户的注册账户，进行证据保全，包括但不限于公证、见证等。</span></p><h1 style="line-height: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">第4条 用户依法言行义务</span></h1><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">&nbsp;&nbsp;&nbsp; 本协议依据国家相关法律法规规章制定，用户同意严格遵守以下义务：</span></p><p style="line-height: 2em;"><span style="color: rgb(51, 51, 51); font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">（1）不得传输或发表：煽动抗拒、破坏宪法和法律、行政法规实施的言论，煽动颠覆国家政权，推翻社会主义制度的言论，煽动分裂国家、破坏国家统一的的言论，煽动民族仇恨、民族歧视、破坏民族团结的言论； </span></p><p style="line-height: 2em;"><span style="color: rgb(51, 51, 51); font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">（2）从中国大陆向境外传输资料信息时必须符合中国有关法规；</span></p><p style="line-height: 2em;"><span style="color: rgb(51, 51, 51); font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">（3）不得利用本站从事洗钱、窃取商业秘密、窃取个人信息等违法犯罪活动； </span></p><p style="line-height: 2em;"><span style="color: rgb(51, 51, 51); font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">（4）不得干扰本站的正常运转，不得侵入本站及国家计算机信息系统；</span></p><p style="line-height: 2em;"><span style="color: rgb(51, 51, 51); font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">（5）不得传输或发表任何违法犯罪的、骚扰性的、中伤他人的、辱骂性的、恐吓性的、伤害性的、庸俗的，淫秽的、不文明的等信息资料；</span></p><p style="line-height: 2em;"><span style="color: rgb(51, 51, 51); font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">（6）不得传输或发表损害国家社会公共利益和涉及国家安全的信息资料或言论；</span></p><p style="line-height: 2em;"><span style="color: rgb(51, 51, 51); font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">（7）不得教唆他人从事本条所禁止的行为；</span></p><p style="line-height: 2em;"><span style="color: rgb(51, 51, 51); font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">（8）不得利用在本站注册的账户进行牟利性经营活动；</span></p><p style="line-height: 2em;"><span style="color: rgb(51, 51, 51); font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">（9）不得发布任何侵犯他人著作权、商标权等知识产权或合法权利的内容；</span></p><p style="margin-left: 28px; line-height: 2em;"><span style="font-size: 16px;">i</span><span style="font-size: 16px;"><span style="color: rgb(51, 51, 51); font: 16px 微软雅黑,Microsoft YaHei;">&nbsp; </span><span style="font-family: 微软雅黑,Microsoft YaHei; color: rgb(51, 51, 51); font-size: 16px;">用户应不时关注并遵守本站不时公布或修改的各类合法规则规定。</span></span></p><p style="margin-left: 28px; line-height: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; color: rgb(51, 51, 51); font-size: 16px;">ii 本站保有删除站内各类不符合法律政策或不真实的信息内容而无须通知用户的权利。</span></p><p style="margin-left: 28px; line-height: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; color: rgb(51, 51, 51); font-size: 16px;">iii 若用户未遵守以上规定的，本站有权作出独立判断并采取暂停或关闭用户帐号等措施。用户须对自己在网上的言论和行为承担法律责任。</span></p><h1 style="line-height: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">第5条 商品信息</span></h1><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 本网站公布的价目表和声明或类似文件并不构成本网站发出的要约，而是本网站发出的要约邀请。商品的价格和可获性都在本网站上指明，这类信息将随时更改，请 您在浏览购物中给予充分关注，公布商品价格不包括送货费用。您所订购的商品，如果因发生缺货、报价错误或其他原因，用户可以取消订单，同时本网站也有权拒 绝接受您的订单，即使您已付款。希望您能及时通过电子邮件或电话通知金币商城客户服务部，本网站也会及时以电子邮件或其他方式通知您。</span></p><h1 style="line-height: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">第6条 订单</span></h1><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">6.1在您下订单时，请您仔细确认所购商品的名称、价格、数量、型号、规格、尺寸、联系地址、电话、收货人等信息。收货人与用户本人不一致的，收货人的行为和意思表示视为用户的行为和意思表示，用户应对收货人的行为及意思表示的法律后果承担连带责任。 </span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">6.2 除法律另有强制性规定外，双方约定如下：本站上金币商城展示的商品和价格等信息仅仅是要约邀请，您下单时须填写您希望购买的商品数量、价款及支付方式、收 货人、联系方式、收货地址（合同履行地点）、合同履行方式等内容；系统生成的订单信息是计算机信息系统根据您填写的内容自动生成的数据，仅是您向金币商城 发出的合同要约；金币商城收到您的订单信息后，只有在金币商城将您在订单中订购的商品从仓库实际直接向您发出时（ &nbsp;以商品出库为标志），方视为您与金币商城之间就实际直接向您发出的商品建立了合同关系；如果您在一份订单里订购了多种商品并且金币商城只给您发出了部分商 品时，您与金币商城之间仅就实际直接向您发出的商品建立了合同关系；只有在金币商城实际直接向您发出了订单中订购的其他商品时，您和金币商城之间就订单中 该其他已实际直接向您发出的商品才成立合同关系。您可以随时登录您在本站注册的账户，查询您的订单状态。 </span></p><h1 style="line-height: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">第7条 配送</span></h1><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">7.1 本网站将会把商品送到您在订单中指定的收货地址或订单中指定的收货人。请清楚准确地填写您的真实姓名、收货地址及联系方式。本公司将按订单载明的收货地 址、收货人、联系电话进行送货。本网站所递送的商品应由收货人本人签收，如需他人代收的，请与本网站客服中心联系并提出申请。为了您的交易安全，对于贵重 商品，本网站有权要求收货人出具身份证以核实身份。</span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">7.2 在每次提交订单前，请您仔细确认送货地址是否正确，如因您提交的送货地址错误导致送货迟延或无法送货的，本网站不承担送货迟延或无法送货的责任；如果造成 重复送货的，您将按实际送货次数承担相应的送货费用及风险。由于不可抗力或其他突发事件造成迟延送货的，本网站不承担送货迟延或无法送货的责任。不可抗力 或其他突发事件包括但不限于自然灾害、交通管制、突发战争、罢工、动乱等。</span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">7.3 送货范围在本网站公示，请您在每次下订单前仔细阅读并确认提交的送货地址在本网站公示的送货范围之内。如果您订单中提交的送货地址不在公示的可送货地址范 围内，请您不要提交订单并付款，即使您提交了订单或付款，我们也有权拒绝接受您的订单，对您的付款，我们将退还到您的支付账户。</span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">7.4所有在本网站上列出的送货时间为参考时间，参考时间的计算是在库存状况、正常的处理过程和送货时间、送货地点的基础上估计得出的。参考时间不代表等同于到货时间。送货费用根据您选择的配送方式的不同而不同。</span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">7.5如果您多次（两次以上）无正当理由拒绝收货，本网站则会将您的账户列入重点关注的名单，并视情况有权不再接受您的订单或注销您的账户或永久禁止您注册等措施，并有权追究您应承担的法律责任。</span></p><h1 style="line-height: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">第8条 所有权及知识产权条款</span></h1><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">8.1 用户一旦接受本协议，即表明该用户主动将其在任何时间段在本站发表的任何形式的信息内容（包括但不限于收货评价、客户咨询等信息内容）的财产性权利等任何 可转让的权利，如著作权财产权（包括并不限于：复制权、发行权、出租权、展览权、表演权、放映权、广播权、信息网络传播权、摄制权、改编权、翻译权、汇编 权以及应当由著作权人享有的其他可转让权利），全部独家且不可撤销地转让给金币商城所有，用户同意金币商城有权就任何主体侵权而单独提起诉讼。 </span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">8.2 本协议已经构成《中华人民共和国著作权法》第二十五条（条文序号依照2011年版著作权法确定）及相关法律规定的著作财产权等权利转让书面协议，其效力及 于用户在金币商城网站上发布的任何受著作权法保护的作品内容，无论该等内容形成于本协议订立前还是本协议订立后。 </span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">8.3用户同意并已充分了解本协议的条款，承诺不将已发表于本站的信息，以任何形式发布或授权其它主体以任何方式使用（包括但限于在各类网站、媒体上使用）。</span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">8.4金币商城是本站的制作者,拥有此网站内容及资源的著作权等合法权利,受国家法律保护,有权不时地对本协议及本站的内容进行修改，并在本站张贴，无须另行通知用户。在法律允许的最大限度范围内，金币商城对本协议及本站内容拥有解释权。 </span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">8.5除法律另有强制性规定外，未经金币商城明确的特别书面许可,任何单位或个人不得以任何方式非法地全部或部分复制、转载、引用、链接、抓取或以其他方式使用本站的信息内容，否则，金币商城有权追究其法律责任。 </span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">8.6 本站所刊登的资料信息（诸如文字、图表、标识、按钮图标、图像、声音文件片段、数字下载、数据编辑和软件），均是金币商城或其内容提供者的财产，受中国和 国际版权法的保护。本站上所有内容的汇编是金币商城的排他财产，受中国和国际版权法的保护。本站上所有软件都是金币商城或其关联公司或其软件供应商的财 产，受中国和国际版权法的保护。 </span></p><h1 style="line-height: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">第9条 责任限制及不承诺担保</span></h1><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">&nbsp;9.1除非另有明确的书面说明,本站及其所包含的或以其它方式通过本站提供给您的全部信息、内容、材料、产品和服务，均是在&quot;按现状&quot;和&quot;按现有&quot;的基础上提供的。</span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">9.2除非另有明确的书面说明, 金币商城不对本站的运营及其包含在本网站上的信息、内容、材料、产品或服务作任何形式的、明示或默示的声明或担保（根据中华人民共和国法律另有规定的以外）。 </span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">9.3金币商城不担保本站所包含的或以其它方式通过本站提供给您的全部信息、内容、材料、产品（包括软件）和服务、其服务器或从本站发出的电子信件、信息没有病毒或其他有害成分。</span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">9.4如因不可抗力或其它本站无法控制的原因使本站销售系统崩溃或无法正常使用导致网上交易无法完成或丢失有关的信息、记录等，金币商城会合理地尽力协助处理善后事宜。</span></p><h1 style="line-height: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">第10条 协议更新及用户关注义务</span></h1><p style="text-indent: 32px; line-height: 2em;"><span style="color: rgb(51, 51, 51); font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">根 据国家法律法规变化及网站运营需要，金币商城有权对本协议条款不时地进行修改，修改后的协议一旦被张贴在本站上即生效，并代替原来的协议。用户可随时登录 查阅最新协议；用户有义务不时关注并阅读最新版的协议及网站公告。如用户不同意更新后的协议，可以且应立即停止接受金币商城网站依据本协议提供的服务；如 用户继续使用本网站提供的服务的，即视为同意更新后的协议。金币商城建议您在使用本站之前阅读本协议及本站的公告。 &nbsp;如果本协议中任何一条被视为废止、无效或因任何理由不可执行，该条应视为可分的且并不影响任何其余条款的有效性和可执行性。</span></p><h1 style="line-height: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">第11条 法律管辖和适用</span></h1><p style="text-indent: 32px; line-height: 2em;"><span style="color: rgb(51, 51, 51); font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">本 协议的订立、执行和解释及争议的解决均应适用在中华人民共和国大陆地区适用之有效法律（但不包括其冲突法规则）。 &nbsp;如发生本协议与适用之法律相抵触时，则这些条款将完全按法律规定重新解释，而其它有效条款继续有效。 &nbsp;如缔约方就本协议内容或其执行发生任何争议，双方应尽力友好协商解决；协商不成时，任何一方均可向有管辖权的中华人民共和国大陆地区法院提起诉讼。 </span></p><h1 style="line-height: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">第12条 其他 </span></h1><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">12.1金币商城网站所有者是指在政府部门依法许可或备案的金币商城网站经营主体。</span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">12.2金币商城尊重用户和消费者的合法权利，本协议及本网站上发布的各类规则、声明等其他内容，均是为了更好的、更加便利的为用户和消费者提供服务。本站欢迎用户和社会各界提出意见和建议，金币商城将虚心接受并适时修改本协议及本站上的各类规则。 </span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">12.3本协议内容中以黑体、加粗、下划线、斜体等方式显著标识的条款，请用户着重阅读。</span></p><p style="line-height: 2em;"><span style="font-family: &quot;微软雅黑&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 51); font-size: 16px;">12.4如果您勾选新会员注册下方的&quot;我已阅读并同意 《金币商城交易条款》&quot;即视为您完全接受本协议，在选择之前请您再次确认已知悉并完全理解本协议的全部内容。</span></p><p><br/></p></div>
+<!--文章内容结束-->
+
+<!--版权与申明开始-->
+    <p class="clear"></p>
+<!--版权与申明结束-->
+</div></div>
+        <!--右侧结束-->
+    </div>
+    <!--内容区结束-->
+    <p class="c"></p>
+    <!--尾开始-->
+    
+        <!-- 页脚链接 -->
+ <p class="c"></p> 
+<div class="footer">
+    <div class="footer_bar">
+        <div class="wrap">
+            <ul class="clearfix ">
+                <li class="posr"><i class="posa icon icon_f1"></i>官方权威</li>
+                <li class="posr"><i class="posa icon icon_f2"></i>专业封装</li>
+                <li class="posr"><i class="posa icon icon_f3"></i>公平公开</li>
+                <li class="posr"><i class="posa icon icon_f4"></i>安全快捷</li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrap pad30 clearfix">
+        <dl class="footer_left">
+            <dt class="tit">购物指南</dt>
+            <dd><a target="_blank" href="/views/pages/help/help_center_detail.jsp?newsId=202039">商城交易条款</a></dd>
+            <dd><a target="_blank" href="/views/pages/help/help_center_detail.jsp?newsId=202040">会员管理办法</a></dd>
+            <dd><a target="_blank" href="/views/pages/help/help_center_detail.jsp?newsId=3">购物流程</a></dd>
+            <dd><a target="_blank" href="/views/pages/help/help_center_detail.jsp?newsId=202041">金豆说明</a></dd>
+        </dl>
+        <dl>
+            <dt class="tit">支付方式</dt>
+            <dd><a target="_blank" href="/views/pages/help/help_center_detail.jsp?newsId=202031">在线支付</a></dd>
+            <dd><a target="_blank" href="/views/pages/help/help_center_detail.jsp?newsId=202032">银行汇款</a></dd>
+            <dd><a target="_blank" href="/views/pages/help/help_center_detail.jsp?newsId=202033">预存款支付</a></dd>
+            <dd><a target="_blank" href="/views/pages/help/help_center_detail.jsp?newsId=202038">混合支付</a></dd>
+        </dl>
+        <dl>
+            <dt class="tit">配送方式</dt>
+            <dd><a target="_blank" href="/views/pages/help/help_center_detail.jsp?newsId=202034">快递配送</a></dd>
+            <dd><a target="_blank" href="/views/pages/help/help_center_detail.jsp?newsId=202035">配送范围</a></dd>
+        </dl>
+        <dl>
+            <dt class="tit">售后服务</dt>
+            <dd><a target="_blank" href="/views/pages/help/help_center_detail.jsp?newsId=202036">售后政策</a></dd>
+            <dd><a target="_blank" href="/views/pages/help/help_center_detail.jsp?newsId=202076">发票管理</a></dd>
+            <dd><a target="_blank" href="/views/pages/help/help_center_detail.jsp?newsId=202042">常见问题</a></dd>
+            <dd><a href="javascript:toKefu();">在线客服</a></dd>
+            
+            
+        </dl>
+        <dl>
+            <dt class="tit">友情链接</dt>
+            <dd><a target="_blank" href="http://www.pbc.gov.cn/">中国人民银行</a></dd>
+            <dd><a target="_blank" href="http://www.chngc.net/">中国金币网</a></dd>
+            <dd><a target="_blank" href="http://www.szse.cn/main/marketdata/hqcx/zshq_history/">深圳证券交易所历史指数行情页</a></dd>
+        </dl>
+     </div>
+</div>
+<a class="" href="javascript:toKefu();"><div class="xm_nav">
+        <div class="xm_navt">
+        </div>
+    </div>
+</a>
+<div class="footer_sm">
+    <div class="wrap bor-bot clearfix"> 
+        <p class="txt">COPYRIGHT © 2015-2017 CHINAGOLDCOIN.NET ALL RIGHTS RESERVED.</p>
+        <p class="txt">京ICP证080121号 | 全国服务热线4008-188-666</p>
+<!--        <p class="txt">北京市西城区月坛南街6号  北京新文时代金币文化传播有限公司</p> -->
+        <p class="posr img">
+            <a target="_blank" class="posa icon icon_f5"></a>
+            <a target="_blank" class="posa icon icon_f6"></a>
+            <a target="_blank" class="posa icon icon_f7"></a>
+            <a target="_blank" class="posa icon icon_f8"></a>
+        </p>
+    </div>
+</div>
+<!--图片延迟加载 -->
+<script type="text/javascript"> 
+        function lazyload(option){
+        var settings={defObj:null,defHeight:0};settings=$.extend(settings,option||{});
+        var defHeight=settings.defHeight,defObj = (typeof settings.defObj == "object") ? settings.defObj.find("img[src2]") : $(settings.defObj).find("img[src2]");
+        var pageTop=function(){
+        var d=document,y=(navigator.userAgent.toLowerCase().match(/iPad/i)=="ipad")?window.pageYOffset:Math.max(d.documentElement.scrollTop,d.body.scrollTop);return d.documentElement.clientHeight+y-settings.defHeight};
+        var imgLoad=function(){defObj.each(function(){if($(this).offset().top<=pageTop()){var src2=$(this).attr("src2");if(src2){$(this).attr("src",src2).removeAttr("src2")}}})};imgLoad();
+        $(window).bind("scroll",function(){imgLoad()})}
+        lazyload({defObj:"body"});
+</script> 
+
+
+<!-- 加入统计代码 -->
+<script type="text/javascript" src="/scripts/statistics.js" ></script>
+<!--图片延迟加载 -->
+<script type="text/javascript"> 
+function lazyload(option){
+var settings={defObj:null,defHeight:0};settings=$.extend(settings,option||{});
+var defHeight=settings.defHeight,defObj = (typeof settings.defObj == "object") ? settings.defObj.find("img[src2]") : $(settings.defObj).find("img[src2]");
+var pageTop=function(){
+var d=document,y=(navigator.userAgent.toLowerCase().match(/iPad/i)=="ipad")?window.pageYOffset:Math.max(d.documentElement.scrollTop,d.body.scrollTop);return d.documentElement.clientHeight+y-settings.defHeight};
+var imgLoad=function(){defObj.each(function(){if($(this).offset().top<=pageTop()){var src2=$(this).attr("src2");if(src2){$(this).attr("src",src2).removeAttr("src2")}}})};imgLoad();
+$(window).bind("scroll",function(){imgLoad()})}
+lazyload({defObj:"body"})
+</script>
+<script type="text/javascript">
+var pageInterval = (new Date()).getTime()-startstamp;
+
+var pageLoadScope;
+if(pageInterval<50) {
+pageLoadScope = "0~50 ms";
+}
+else if(pageInterval < 100) {
+pageLoadScope = "50~100 ms";
+}
+else if(pageInterval < 200) {
+pageLoadScope = "100~200 ms";
+}
+else if(pageInterval < 500) {
+pageLoadScope = "200~500 ms";
+}
+else if(pageInterval < 1000) {
+pageLoadScope = "500~1000 ms";
+}
+else if(pageInterval < 2000) {
+pageLoadScope = "1000~2000 ms";
+}
+else {
+pageLoadScope = "2000+ms";
+}
+</script>
+<script type="text/javascript">
+//live 800
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-18198410-18']);
+_gaq.push(['_addOrganic', 'sogou', 'query']);
+_gaq.push(['_addOrganic', 'yodao', 'q']);
+_gaq.push(['_addOrganic', '3721', 'name']);
+_gaq.push(['_addOrganic', 'soso', 'w']);
+_gaq.push(['_addOrganic', 'sina', 'q']);
+_gaq.push(['_trackPageview']);
+</script>
+<script language="JavaScript" src="/scripts/ga.js" type="text/javascript"></script><script language="JavaScript" src="/common/js/gkw.js" type="text/javascript"></script><script type="text/javascript">
+_ugifpath2="/common/js/__utm.gif";
+_uacct="ctces";
+_umemberid=($.cookie("member_id")==null?'0':$.cookie("member_id"));
+
+var pageTracker = _gat._getTracker("UA-16873594-2");
+pageTracker._addOrganic("baidu","wd");
+pageTracker._addOrganic("soso","q");
+pageTracker._addOrganic("vnet","kw");
+pageTracker._addOrganic("yodao","q");
+pageTracker._addOrganic("soso","w");
+pageTracker._addOrganic("sogou","query");
+pageTracker._addOrganic("youdao","q");
+pageTracker._addOrganic("baidu","word");
+pageTracker._addOrganic("baidu","q1");
+pageTracker._addOrganic("baidu","w");
+pageTracker._addOrganic("ucweb","keyword");
+pageTracker._addOrganic("ucweb","word");
+pageTracker._addOrganic("114so","kw");
+pageTracker._addOrganic("bing", "q");
+pageTracker._addOrganic("gougou", "search");
+
+pageTracker._setVar(_umemberid);
+if (__isMemberHasLogin__){
+    pageTracker._setCustomVar(2, "member_id", _umemberid, 3);
+    pageTracker._setCustomVar(3, "member_level", ($.cookie("member_level")==null?'0':$.cookie("member_level")), 3);
+    pageTracker._setCustomVar(5, "is_login", "YES", 3);
+}else{
+    pageTracker._setCustomVar(5, "is_login", "NO", 3);
+}
+pageTracker._setCustomVar(4, "pageLoadScope", pageLoadScope, 3);
+pageTracker._setDomainName(".ecgci.com");
+pageTracker._setAllowHash(false);
+pageTracker._trackPageview();
+
+
+document.onclick = function(e) {
+    e = e || event;
+    var el = e.target || e.srcElement;
+        if ( el.tagName=='A' ) {
+            if (el.href!='#'&&el.href.indexOf('javascript')==-1){
+                pageTracker._trackEvent('用户行为', '点击', window.location.pathname + el.href.replace("http:\/\/", "\/"));
+            }
+    }
+}
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+//document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3fde6f6d13469d614f29fcdb7a8cd722' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+if ((typeof(_tag)!='undefined')&&($.cookie("member_id")!=null)){_tag.WT.mobile=$.cookie("member_id");}
+</script><!--尾结束-->
+    <!--浮动层开始-->
+        
+    <!--浮动层结束-->
+</body>
+</html>

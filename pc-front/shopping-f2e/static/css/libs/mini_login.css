@@ -1,0 +1,49 @@
+#logForm_s {
+    display: none;
+    width: 639px;
+    height: 352px;
+    text-align: left;
+    overflow: hidden;
+    background: #fff;
+    position: fixed;
+    left: 50%;
+    margin-left: -320px;
+    top: 50%;
+    margin-top: -176px;
+    z-index: 300
+}
+.mini_login .tit_close {
+    position: relative;
+    height: 35px;
+    background: #e43a3d;
+    line-height: 35px;
+    padding: 0 0 0 20px;
+    color: #fff;
+    font-size: 16px;
+    font-family: "Microsoft YaHei"
+}
+.mini_login .minclose {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 10px;
+    top: 6px;
+    background: url(http://static.ecgci.com/images/icon.png) -107px -270px no-repeat;
+    cursor: pointer
+}
+#infoText {
+    font-size: 12px
+}
+.thickdiv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border: 0;
+    filter: alpha(opacity=15);
+    opacity: .15;
+    display: none
+}

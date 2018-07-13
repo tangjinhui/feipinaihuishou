@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>$!{result.GOODS_NAME}</title>
+    <meta name="Keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta content=IE=EmulateIE7 http-equiv=X-UA-Compatible>
+    <link rel="icon" href="${result.imgServer}/favicon.ico" type="image/x-icon">
+    #set($detail-css = '<!--#include file="/detail-static/inc/detail-css.html"-->')
+    $detail-css
+</head>
+<body>
+#set($bar = '<!--#include file="/detail-static/common/bar.html"-->')
+$bar
+#set($header = '<!--#include file="/detail-static/common/header.html"-->')
+$header
+<p class="c"></p>
+<form name="buyForm" id="buyForm" action="" method="post">
+    <div class="w" id="spxx1">
+        <div class="cur-pos">
+            当前位置：
+            <a href="${result.serverUrl}/index.html">首页</a>
+       		$!{result.breadcrumbInfo}
+            <p class="c"></p>
+        </div>
+        <div class="pro-con clearfix">
+            <div class="nc_xh">
+                <h4>猜你喜欢</h4>
+            <!--新添加猜你喜欢 start-->
+             #foreach($res in${result.otherGoods})
+					 	#if($velocityCount==1 )
+					 		#set ($size="/product_detail_" )
+							#set ($name=$res.goodsId)
+							#set ($goodsId="$size$name"+".html")
+						       <dl>
+								<dt>
+									<a href="${goodsId}">
+										<img width="140px" height="140px" src="${result.imgServer}/$!{res.goodsThumb}" alt="$!{res.goodsName}" title="$!{result.goodsName}"/>
+									</a>
+								</dt>
+								<dd>
+									<p class="p1">
+										<a title="$!{res.goodsName}" href="${goodsId}">$!{res.goodsName}</a>
+									</p>
+									<p class="p2">
+										<span color="listred">￥$!{res.shopPrice}</span>
+									</p>
+								</dd>
+							</dl>
+							#end
+							
+							#if($velocityCount==2 )
+							#set ($size="/product_detail_" )
+							#set ($name=$res.goodsId)
+							#set ($goodsId="$size$name"+".html")
+						       <dl>
+								<dt>
+									<a href="${goodsId}">
+										<img width="140px" height="140px" src="${result.imgServer}/$!{res.goodsThumb}" alt="$!{res.goodsName}" title="$!{res.goodsName}"/>
+									</a>
+								</dt>
+								<dd>
+									<p class="p1">
+										<a title="$!{res.goodsName}" href="${goodsId}">$!{res.goodsName}</a>
+									</p>
+									<p class="p2">
+										<span color="listred">￥$!{res.shopPrice}</span>
+									</p>
+								</dd>
+							</dl>
+							#end
+				         
+				        #end
+		    	</div>
+            </div>
+            <p class="c"></p>
+            <!--新添加猜你喜欢 end-->
+            <div class="pro-left">
+                <!--图片展示开始 -->
+                <div id="preview">
+                    <div class="jqzoom" id="spec-n1" onclick="window.open('${result.serverUrl}/image_view.html?goodsId=${result.goodsId}')">
+                       	#foreach($img in${result.imgUrls})
+						    #if($velocityCount == 1)
+							 <img id="dpic" jqimg="${result.imgServer}/${img.url}" src="${result.imgServer}/${img.url}" width="400px" height="400px" />
+						    #end  
+						#end
+                    </div>
+                    <div class="sand"></div>
+                </div>
+                <div id="spec-n5">
+                    <div class="control" id="spec-left"></div>
+                    <div id="spec-list">
+                        <ul id="photoGallery" class="list-h" >
+							#foreach($img in${result.imgUrls})
+    							<li>
+    						        <img src="${result.imgServer}/${img.url}" title="${img.des}" alt="${img.des}" class="cha_cate" />
+    							</li>
+							#end
+						</ul>
+                    </div>
+                    <div class="control" id="spec-right"></div>
+                </div>
+                <!--图片展示结束 -->
+            </div>
+            <div class="pro-right">
+                <input type="hidden" id="detailId" value="${result.goodsId}">
+                <div class="summary">
+                    <div id="goodsNameLong" class="pro-tit">
+                    </div>
+                    <div id="goodsName" class="short_title"></div>
+                    <dl style="display:none;padding: 2px 0 0 0;" id="isLive"><span style="font-size:12px;color:#ff3000">此商品已下架</span></dl>
+                    <div style="position: relative;background: #f7f7f7; padding: 8px 0 15px 15px; margin-top: 10px;">
+                        <!-- 退换政策 是特殊商品时不显示退换政策 -->
+                        #if(${result.special_goods_flag} != 1)
+                        <div id="thh_box">
+                        <a id="thhzc" href="javascript:void(0);">${result.returnPolicy}</a>
+                        <div id="thh_content">
+                            <span>该商品执行${result.returnPolicy}的<a target="_blank" href="http://www.chinagoldcoin.net/doing/helpCenter.html#aftersalePolicy">售后政策</a></span>
+                        </div>
+                    </div>
+                        #end
+                    <div id="timeBuyInfo">
+                        <dl>
+                            <dt class="padt5">金币网价：</dt>
+                            <dd class="cx_jiage">
+                                <span id="shopPrice" class="cx_fuh"></span>
+                                <span class="cx-price pos"></span>
+                            </dd>
+                            <p class="clear"></p>
+                        </dl>
+                    </div>
+
+                    <div id="silverIntegeralIds"></div>
+
+                    <dl class="dl_2">
+                        <dt>运&#12288;&#12288;费：</dt>
+                        <dd class="dd1">已享受包邮服务</dd>
+                    </dl>
+
+                    <dl class="dl_2">
+                        <dt>物流配送：</dt>
+                        <dd class="dd1">快递配送</dd>
+                    </dl>
+                    #if(${result.memberTypeRestriction} == 2)
+                    <dl class="dl_2">
+                        <dt>会员类别：</dt>
+                        <dd class="dd1 red">
+                            <a style="    text-decoration: none;" class="red">仅限实名会员购买</a>
+                        </dd>
+                    </dl>
+                    #end
+                </div>
+                </div>
+                   <div id="luobi" class="clearfix">
+                       #foreach($goodsRelated in ${result.goodsRelatedList})
+                       <a #if(${goodsRelated.goodsId} == ${result.goodsId})class="active" #end href="/product_detail_${goodsRelated.goodsId}.html">
+                           <img src="${result.imgServer}/${goodsRelated.goodsImg}">
+                           <span>${goodsRelated.goodsName}</span>
+
+                       </a>
+                       #end
+                   </div>
+                <!-- 裸币非裸币样式结束位置 -->
+                <div class="choose">
+                    <div id="buyCartInfo">
+                        <dl class="isXIngou" style="padding-top: 0; display: none;" id="sel-sl">
+                            <dt>限&#12288;&#12288;购：</dt>
+                            <dd id="xiangou">
+                                
+                            </dd>
+                        </dl>
+                        <dl style="padding-top: 4px;" id="sel-sl">
+                        <dl style="padding-top: 0px;" id="sel-sl">
+                            <dt>数量选择：</dt>
+                            <dd class="sel-num">
+                                <a href="javascript:;" class="btn-reduce"></a>
+                                <input name="goodsNumber" id="goodsNumber" class="required validate-number number" type="text" value="1" maxlength="3"/>
+                                <a href="javascript:;" class="btn-add"></a>
+                            </dd>
+                            <dd>
+                                <span clsss="ddsp" style="padding:0px 20px 0px 10px; margin:0px;"></span>
+                                <span id="storage" class="red"></span>
+                            </dd>
+                        </dl>
+                        <div id="wrap" class="wrap_reserve" style="margin-top: 25px;">
+                            <dl class="dl_2">
+                                <p style="margin-left: 5px">此商品正在参与抽签购 <a style="color: red;" href="">去参加&gt;&gt;</a></p>
+                            </dl>
+                        </div>
+                        <dl id="gwc5">
+                            <input type="hidden" id="goodsStockState" name="goodsStockState" value="2" />
+                            <!-- 禁止购买class   no-car--> 
+                            <dt class="join-car fl lj_gm no-car">
+                                <a href="javascript:void(0);" id="detailBuy" title="立即购买">立即购买</a>
+                            </dt>
+                            #if(${result.special_goods_flag} != 1)
+                            <dt id="joincart" class="join-car fl jr_c no-car">
+                                <a target="_blank" href="javascript:;" title="加入购物车" id="gwc">加入购物车</a>
+                            </dt>
+                            #end
+                            <p class="clear"></p>
+                        </dl>
+
+                    </div>
+                </div>
+                <!--多少小时配置成参数内请付款-->
+                <div id="db_49" class="sc_jb clearfix">
+                    <a href="javascript:void(0);" class="sc1 concern">
+                        <span></span>
+                        关注商品
+                    </a>
+                </div>
+                <div class="share">
+                    <!-- JiaThis Button BEGIN -->
+                <div class="jiathis_style">
+                    <span class="jiathis_txt">分享到：</span>
+                    <a class="jiathis_button_tools_2" target="_blank" href="http://v.t.sina.com.cn/share/share.php?title=我在中国金币网上商城找到一款商品，$!{result.GOODS_NAME}，推荐一下，库存不多&url=http://item.chinagoldcoin.net/product_detail_$!{result.goodsId}.html&content=utf-8&sourceUrl=http://www.chinagoldcoin.net&pic=http://static.ecgci.com/$!{result.imgUrls.get(0).url}" style=" width: 64px;margin: 0px 8px 0 0;"></a>
+                </div>
+                </div>
+                <p class="c"></p>
+            </div>
+        </div>
+
+    </div>
+</form>
+<p class="c"></p>
+
+<div class="w w1" id="yhtz"></div>
+
+<div class="w w1 clearfix" id="main">
+    <div class="lf23">
+
+        <div id="recentBuyName">
+            <div class="lf_1">
+                <h3>热销排行</h3>
+	              <div class="list">
+					 #foreach($hot in${result.hotSaleRange})
+					<dl class="dl_11 clearfix">
+						<dt>
+							<a href="/product_detail_$!{hot.goodsId}.html" title="$!{hot.goodsName}">
+								<img src="$!{result.imgServer}/$!{hot.goodsThumb}" alt="$!{hot.goodsName}  中国金币网上商城" title="$!{hot.goodsName}"/>
+							</a>
+						</dt>
+						<dd>
+							<a href="/product_detail_$!{hot.goodsId}.html" title="$!{goodsName} ">
+								<span></span>
+								$!{hot.goodsName}
+							</a>
+						</dd>
+					</dl>
+					#end
+				</div>
+                
+            </div>
+
+            <div class="lf_1 rel">
+                <h3>
+                    最近浏览商品
+                    <a id="clearRecet" href="javascript:void(0);">清空</a>
+                </h3>
+                <!--  -->
+                <div id="recentgoods" class="sp_mc">
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!--右边的块-->
+    <div class="rt99 scrollb rel">
+
+        <!--菜单-->
+        <div id="jsMenu" class="menu4">
+            <div>
+                <ul class="clearfix">
+                    <li class="li1 active scrollSource">商品属性</li>
+                    <li class="li1 scrollSource">商品详情</li>
+                    <li id="menu_record" class="li2 scrollSource menu_record">购买记录</li>
+                    <li id="menu_assessall" class="li3 scrollSource menu_assessall menu_good menu_middle menu_bad menu_image">收货评价</li>
+                    <li id="menu_advisory" class="li4 scrollSource menu_advisory menu_productadvisory  menu_inventory menu_payment menu_after menu_otherissues">购买咨询</li>
+                </ul>
+                <span class=""></span>
+
+				#if(${result.special_goods_flag} != 1)
+                <div class="main-tit">
+                    <a target="_blank" href="javascript:;" id="jsAddCart" class="tab_anniu">加入购物车</a>
+                </div>
+                #end
+                <!-- 移入显示 -->
+                <div id="jsCart" class="minicart dn">
+                    <div class="p-img">
+                        <img src="" width="100" height="100"/>
+                    </div>
+                    <div class="p-name"></div>
+                    <div class="p-price">
+                        <span class="bold listred font14"></span>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+        <div class="tab-cent" id="spjsss">
+            <!-- 产品介绍 -->
+            <div class="cp_sx" id="spsx">
+                <h3 class="jianttr">商品属性</h3>
+                <table class="tab">
+	
+				    #foreach($param in ${result.properties.keySet()})  
+						 	#if(($velocityCount)%3 == 1)
+							<tr>
+						 	#end
+								<td>
+									$param:	
+									<span>${result.properties.get($param)}</span>
+								</td>
+						 	#if($($velocityCount)%3 == 0) 
+							</tr>
+							#end
+							
+					#end
+	</table>
+            </div>
+
+            <div class="cp_jz" id="goodsRecommend">
+
+                <h3 class="jianttr">商品详情</h3>
+
+                <div class="cp_mt">
+                    	<div class="goods-detail-desc" style="border: 1px solid #dcdcdc">
+								#foreach($param in ${result.detailList})  
+								${param.get("data")}
+								#end
+						</div>
+                </div>
+
+            </div>
+            
+            <div class="gm_xqcent cle-padd"></div>
+            <div class="gm_xqcent" id='bzqd'></div>
+            <div class="gm_xqcent" id="shfw"></div>
+
+
+            
+            <div class="gm_jl">
+                <form id="shoppingRecordForm" name="shoppingRecordForm" action="" method="post">
+                    <div class="gm_in nor_b" style="position:relative;">
+                        <h3 id="record" class="jianttr">购买记录</h3>
+ 						<span style="position: absolute;color: listred;left: 140px;border: none;top: 8px;">说明：以下记录包含"已成交"以及"成交后退货/退订"的订单</span>
+                        <div id="record_assess_list">
+                            #set($buy-list = '<!--#include file="/detail-static/inc/buy-list.html"-->')
+                            $buy-list
+                        </div>
+                        <p class="c"></p>
+                    </div>
+                    <p class="c"></p>
+                </form>
+
+
+                <p class="c"></p>
+
+
+                <form id="goodsCommentForm" name="goodsCommentForm" action="" method="post">
+                    <!--商品评价0626导航开始-->
+                    <div class="mart12 sh_pt" id="p_j">
+                        <h3 id="assessall" class="jianttr">收货评价</h3>
+
+                        <div class="bord gm_cpbfb top_0" id="sppj">
+                            <!--测评百分比0626开始-->
+                            <div id="logForm_a"></div>
+                            <div class="gm_bfb">
+                                <span class="fm-yh zb">$!{result.goodPerValue}</span>
+                                <span>%</span>
+
+                                <p>好评度</p>
+                            </div>
+                            <div class="fl cpzxt">
+                                <div>
+                                    <div class="gm_cpzxt">
+                                        <dl>
+                                            <dt>好评($!{result.goodPerValue}%)</dt>
+                                            <dd class="dd1">
+                                                <div style="width: $!{result.goodPerValue}%;"></div>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>中评($!{result.middlePerValue}%)</dt>
+                                            <dd class="dd1">
+                                                <div style="width: $!{result.middlePerValue}%;"></div>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>差评($!{result.badPerValue}%)</dt>
+                                            <dd class="dd1">
+                                                <div style="width: $!{result.badPerValue}%;"></div>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <p class="c"></p>
+                                </div>
+                            </div>
+                            <div class="gm_cppf">
+                                <p>对已购商品进行评价</p>
+                                <a id="wantReply" class="pj_w" href="${result.serverUrl}/member/assess.html">我要评价</a>
+                            </div>
+
+                            <p class="c"></p>
+
+                            <!--测评百分比0626开始-->
+                        </div>
+
+                        <div class="jp_xinxtb jp_xinxtb2" id="changeContent">
+                            <ul class="clearfix com_modu" id="pingjia">
+                                <li class="select" data-module="assessall" data-startrow="0" data-pagesize="3" >全部评价（<span>$!{result.goodsAllCommentNumber}</span>）</li>
+                                <li data-module="good" data-startrow="0" data-pagesize="3" >好评（<span>$!{result.goodsGoodCommentNumber}</span>）</li>
+                                <li data-module="middle" data-startrow="0" data-pagesize="3" >中评（<span>$!{result.goodsMiddleCommentNumber}</span>）</li>
+                                <li data-module="bad" data-startrow="0" data-pagesize="3" >差评（<span>$!{result.goodsBadCommentNumber}</span>）</li>
+                                <li data-module="image" data-startrow="0" data-pagesize="3" >有晒单（<span>$!{result.goodsImageCommentNumber}</span>）</li>
+                            </ul>
+                            <a href="${result.serverUrl}/member/assess/goods.html?goodsId=${result.goodsId}" class="fr allzx padr10">查看所有评价</a>
+
+                            <p class="c"></p>
+                        </div>
+
+
+                        <div id="nthing"></div>
+                        <div id="info_title" class="clearfix">
+                            <div class="t1">评价心得</div>
+                            <div class="t2">顾客满意度</div>
+                            <div class="t4">评论者</div>
+                        </div>
+                        <!--商品评价信息 end-->
+                        #set($buy-pj = '<!--#include file="/detail-static/inc/buy-pj.html"-->')
+                        $buy-pj
+
+                        <p class="c"></p>
+                    </div>
+                </form>
+
+                <p class="c"></p>
+
+                <form id="newgoodsConsultForm" name="newgoodsConsultForm" action="" method="post">
+                    <p class="c"></p>
+                    <div class="gm_zt">
+                        <h3 id="advisory" class="jianttr">购买咨询</h3>
+                        <div class="jp_xinxtb jp_xinxtb3 padr10" id="changeContent">
+                            <ul class="fl com_modu">
+                                <li class="select" data-module="advisory" data-startrow="0" data-pagesize="2" >全部购买咨询</li>
+                                <li data-module="productadvisory" data-startrow="0" data-pagesize="2" >产品咨询</li>
+                                <li data-module="inventory" data-startrow="0" data-pagesize="2" >库存及配送</li>
+                                <li data-module="payment" data-startrow="0" data-pagesize="2" >支付及发票</li>
+                                <li data-module="after" data-startrow="0" data-pagesize="2" >售后服务</li>
+                                <li class="last" data-module="otherissues" data-startrow="0" data-pagesize="2" >其他问题</li>
+                            </ul>
+                            <p class="c"></p>
+                        </div>
+                        <!--商城咨询0626导航结束-->
+                        <div id="goods_consult_list4" class="gm_cpmargin">
+                            #set($buy-zx ='<!--#include file="/detail-static/inc/buy-zx.html"-->')
+                            $buy-zx
+                        </div>
+                        <p class="c"></p>
+                    </div>
+                    <p class="c"></p>
+                </form>
+
+
+                <div class="allpc">
+                    <p class="ckhf ckzx">
+                        购买之前，如有问题，请向客服咨询。
+                        <a href="#" class="zxall">[发表咨询]</a>
+                    </p>
+
+                    <p class="c"></p>
+
+                    <div id="esGoodsConsultingFormDiv" class="bord mart12 right_b m_right">
+                        <form id="esGoodsConsultingForm" method="GET" name="esGoodsConsultingForm" action="">
+                            <table border="0px" class="formtable">
+                                <tr>
+                                    <td colspan="3">
+                                        <span class="listred pl20">声明：您可在购买前对产品包装、颜色、运输、库存等方面进行咨询，我们有专人进行回复！</span>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td align="right" width="80">咨询类型：</td>
+                                    <td colspan="2">
+                                        <input name="test" type="radio" value="zixun_type1" checked/>
+                                        <label>产品咨询</label>
+                                        <input name="test" type="radio" value="zixun_type2"/>
+                                        <label>库存及配送</label>
+                                        <input name="test" type="radio" value="zixun_type3"/>
+                                        <label>支付及发票</label>
+                                        <input name="test" type="radio" value="zixun_type4"/>
+                                        <label>售后服务</label>
+                                        <input name="test" type="radio" value="zixun_type5"/>
+                                        <label>其他</label>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td align="right">产品咨询：</td>
+                                    <td colspan="2">咨询产品信息，请您拨打中国金币总公司客服热线：4008-188-666，以便获得更准确的信息。</td>
+                                </tr>
+                                <tr>
+                                    <td align="right" valign="top">咨询内容：</td>
+                                    <td width="368">
+                                        <textarea name="content" id="content" cols="1" rows="10"
+                                                  class="requilistred cp_cent_pfborderc requilistred"></textarea>
+										<label for="content" generated="true" class="error dn"><font color="listred">*必填项</font></label>
+                                        <p id="contentTips">最多可输入200字。</p>
+                                    </td>
+                                    <td> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td colspan="2">
+                                        <input value="提交咨询" type="button" class="btn"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+                <p class="c"></p>
+                <div class="cn_xz">
+                    <h4>猜你喜欢</h4>
+
+                    <div class="clearfix">
+						#foreach($res in ${result.otherGoods})
+							#if(5>$velocityCount)
+							<dl>
+							<dt>
+							#set ($size="/product_detail_" )
+							#set ($name=$res.goodsId)
+							#set ($goodsId="$size$name"+".html")
+							<a href="${goodsId}">
+								<img width="140px" height="140px" src="${result.imgServer}/${res.goodsThumb}" />
+							</a>
+							</dt>
+							<dd>
+							<p class="p1">
+								<a title="$!{res.goodsName}" href="${goodsId}">$!{res.goodsName}</a>
+							</p>
+							<p class="p2">
+								<span color="listred">￥$!{res.shopPrice}</span>
+							</p>
+								#set ($special_goods_flag = 0)
+								#foreach($gid in ${result.specialGoodsIds})
+									#if($res.goodsId == $gid)
+										#set ($special_goods_flag = 1)
+									#end
+	                            #end
+								#if($special_goods_flag == 0)
+	  								<p class="p3">
+	                            		<a target="_blank" class="likeCart" data-cartId="${res.goodsId}" href="javascript:void(0);">加入购物车
+                                        </a>
+	                            	</p>
+	                            #end
+							</dd>
+							</dl>
+							#end
+						#end
+						</div>
+                </div>
+                <p class="c"></p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="fr_menu">
+    <a id="jsScrollTop" href="javascript:;" class="top" title="返回顶部"></a>
+</div>
+<!-- 寻宝活动开始 -->
+<script type="text/javascript"> var isIE = false; </script>
+<!--[if lt IE 9]><script type="text/javascript"> var isIE = true;</script><![endif]-->
+<div class="cimelia" id="cimelia_layer"></div>
+<div class="cimelia cimeliaActive" id="cimelia_box">
+    <div class="cimelia_ylq">
+        <img src="http://img2.ecgci.com/upload/topic/detail_img/xunbao_ylq.png">
+        <a class="close_layer" href="javascript:void(0);"></a>
+    </div>
+     <div class="cimelia_no">
+        <img src="http://img2.ecgci.com/upload/topic/detail_img/xunbao_no.png">
+        <a class="close_layer" href="javascript:void(0);"></a>
+    </div>
+   <div class="cimelia_address">
+        <img src="http://img2.ecgci.com/upload/topic/detail_img/xunbao_address.png">
+        <a class="cimelia_set_address" href="javascript:void(0);"></a>
+        <div class="address_content">
+            <p id="cim_address_name"></p>
+            <p id="cim_address_mobile"></p>
+            <p id="cim_address_text"></p>
+            <a id="cim_set_addr" target="_self" href="http://www.chinagoldcoin.net/views/pages/member/my_address.jsp">编辑默认地址</a>
+        </div>
+    </div>
+    <div class="cimelia_start">
+        <img src="http://img2.ecgci.com/upload/topic/detail_img/xunbao.png">
+        <a class="get_present" href="javascript:void(0);"></a>
+        <a class="rule" target="_blank" href="http://www.chinagoldcoin.net/doing/treasure2.html"></a>
+    </div>  
+    <a id="close_all_cim" href="javascript:void(0);">
+        <img src="http://img2.ecgci.com/upload/topic/detail_img/close_xb_x.png">
+    </a>
+</div>
+<img id="IamGold" src="http://img2.ecgci.com/upload/topic/detail_img/iamgold.gif">
+<!-- 寻宝活动结束 -->
+#set($footer = '<!--#include file="/detail-static/common/footer.html"-->')
+$footer
+
+#set($deail-js = '<!--#include file="/detail-static/inc/detail-js.html"-->')
+$deail-js
+</body>
+</html>
