@@ -1,12 +1,13 @@
 package com.interceptor;
 
-import com.chngc.core.common.ResponseResult;
+/*import com.chngc.core.common.ResponseResult;
 import com.chngc.core.util.JsonUtils;
 import com.chngc.front.common.Constants;
 import com.chngc.front.service.EsMemberService;
 import com.google.common.collect.Maps;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.StringUtils;*/
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
@@ -17,9 +18,9 @@ import javax.servlet.http.HttpServletResponse;
 @Slf4j
 public class LoginInterceptor extends HandlerInterceptorAdapter {
     @Autowired
-    private EsMemberService esMemberService;
+   // private EsMemberService esMemberService;
 
-    @Override
+   /* @Override
     public boolean preHandle(HttpServletRequest request,
                              HttpServletResponse response, Object handler) throws Exception {
         String memberId = esMemberService.getOnlineMemberId(request, response);
@@ -42,7 +43,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
             request.setAttribute(Constants.ONLINE_MEMBERID, memberId);
             return true;
         }
-    }
+    }*/
 
     @Override
     public void postHandle(HttpServletRequest request,
