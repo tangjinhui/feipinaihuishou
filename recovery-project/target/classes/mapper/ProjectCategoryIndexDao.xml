@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.river.ms.project.mapper.ProjectCategoryIndexDao">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap"
+		type="com.river.ms.project.entity.ProjectCategoryIndex">
+		<id column="entityId" property="entityId" />
+		<result column="indicatorId" property="indicatorId" />
+		<result column="categoryId" property="categoryId" />
+		<result column="order" property="order" />
+		<result column="memo" property="memo" />
+		<result column="createTime" property="createTime" />
+		<result column="feasibility" property="feasibility" />
+		<result column="actual" property="actual" />
+		<result column="keyType" property="keyType" />
+		<association property="projectIndicator" column="indicatorId"
+			select="com.river.ms.project.mapper.ProjectIndicatorDao.selectById"></association>
+	</resultMap>
+
+
+	<select id="getProjectCategoryIndex" resultMap="BaseResultMap">
+		select t.* from
+		project_category_index t where t.categoryId = #{entity.categoryId} 
+		<if test="entity.feasibility != null">
+			and t.feasibility = #{entity.feasibility}
+		</if>
+		<if test="entity.actual != null">
+			and t.actual = #{entity.actual}
+		</if>
+		<if test="entity.keyType != null">
+			and t.keyType = #{entity.keyType}
+		</if>
+	</select>
+
+</mapper>

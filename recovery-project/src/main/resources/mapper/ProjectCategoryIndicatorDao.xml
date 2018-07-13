@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.river.ms.project.mapper.ProjectCategoryIndicatorDao">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap"
+		type="com.river.ms.project.entity.ProjectCategoryIndicator">
+		<id column="entityId" property="entityId" />
+		<result column="indicatorId" property="indicatorId" />
+		<result column="categoryId" property="categoryId" />
+		<result column="order" property="order" />
+		<result column="year" property="year" />
+		<result column="quarter" property="quarter" />
+		<result column="memo" property="memo" />
+		<result column="createTime" property="createTime" />
+		<result column="feasibility" property="feasibility" />
+		<result column="plan" property="plan" />
+		<result column="actual" property="actual" />
+		<result column="month" property="month" />
+		<result column="keyType" property="keyType" />
+		<association property="projectIndicator" column="indicatorId"
+			select="com.river.ms.project.mapper.ProjectIndicatorDao.selectById"></association>
+	</resultMap>
+
+	<select id="getProjectCategoryIndicator" resultMap="BaseResultMap">
+		select t.*
+		from project_category_indicator t where
+		t.categoryId = #{entity.categoryId}
+		<if test="entity.year != null">
+			and t.year = #{entity.year}
+		</if>
+		<if test="entity.quarter != null">
+			and t.quarter =#{entity.quarter}
+		</if>
+		<if test="entity.month != null">
+			and t.month =#{entity.month}
+		</if>
+		<if test="entity.feasibility != null">
+			and t.feasibility = #{entity.feasibility}
+		</if>
+		<if test="entity.plan != null">
+			and t.plan = #{entity.plan}
+		</if>
+		<if test="entity.actual != null">
+			and t.actual = #{entity.actual}
+		</if>
+		<if test="entity.keyType != null">
+			and t.keyType = #{entity.keyType}
+		</if>
+		<if test="entity.categoryId != null">
+			and t.categoryId = #{entity.categoryId}
+		</if>
+	</select>
+</mapper>

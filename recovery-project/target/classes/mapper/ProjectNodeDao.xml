@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.river.ms.project.mapper.ProjectNodeDao">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.river.ms.project.entity.ProjectNode">
+		<id column="entityId" property="entityId" />
+		<result column="entityCode" property="entityCode" />
+		<result column="entityTitle" property="entityTitle" />
+		<result column="entityDesc" property="entityDesc" />
+				<result column="nodeIcon" property="nodeIcon" />
+		<result column="flowUrl" property="flowUrl" />
+	</resultMap>
+
+	<select id="getProjectNodeByRoles" resultMap="BaseResultMap">
+		select * from project_node where entityId in(
+		SELECT nodeId FROM
+		project_node_role WHERE 1=1
+		AND roleId IN
+		<foreach collection="roles" item="item" open="(" separator=","
+			close=")">
+			#{item.roleId}
+		</foreach>
+		)
+	</select>
+
+	<select id="getProjectNodeByRole" resultMap="BaseResultMap">
+		select * from
+		project_node where entityId in(
+		SELECT nodeId FROM
+		project_node_role
+		WHERE 1=1
+		AND roleId = #{role}
+		)
+	</select>
+	<select id="exist" resultType="long">
+		select count(*) from
+		project_node t where t.entityId!=#{id} and t.entityCode=#{entityCode}
+	</select>
+</mapper>

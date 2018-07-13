@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/rayoo
+  profiles:
+     active: native
+  application:
+    name: config
+server:
+  port: 8888
+
+security:
+  basic:
+    enabled: true               #  开启基于HTTP basic的认证 
+  user:
+    name: river                  # 配置登录的账号
+    password: River123456       # 配置登录的密码

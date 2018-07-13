@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.river.ms.project.mapper.ResRefRoleOrgDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.river.ms.project.entity.ResRefRoleOrg">
+        <id column="entityId" property="entityId" />
+        <result column="resourceId" property="resourceId" />
+        <result column="itcode" property="itcode" />
+        <result column="roleId" property="roleId" />
+        <result column="groupCode" property="groupCode" />
+        <result column="isIncludeSubordinate" property="isIncludeSubordinate" />
+        <result column="isOneselfOrg" property="isOneselfOrg" />
+        <result column="isAll" property="isAll" />
+    </resultMap>
+    
+    <select id="getResRefRoleOrgByResIdAndRole" resultMap="BaseResultMap">
+    	select t.* from res_ref_role_org t 
+    	<where>
+    		(
+    			t.resourceId = #{resId} and t.itcode = #{itcode} and t.roleId in 
+    			<foreach collection="roleIds" open="(" close=")" item="roleId" separator=",">
+					#{roleId}
+				</foreach>
+    		) 
+    		<if test="organizationCode != null">
+    			or 
+    			(
+	    			t.groupCode = #{organizationCode} and t.roleId in 
+	    			<foreach collection="roleIds" open="(" close=")" item="roleId" separator=",">
+						#{roleId}
+					</foreach>
+					and t.resourceId is null and t.itcode is null
+    			) 
+    		</if>
+    		or 
+    		(
+    			t.roleId in 
+    			<foreach collection="roleIds" open="(" close=")" item="roleId" separator=",">
+					#{roleId}
+				</foreach>
+				and t.resourceId is null and t.itcode is null
+    		)
+    	</where>
+    </select>
+
+</mapper>

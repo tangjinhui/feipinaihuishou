@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.river.ms.project.mapper.ProjectListDao">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.river.ms.project.entity.ProjectList">
+		<id column="entityId" property="entityId" />
+		<result column="entityTitle" property="entityTitle" />
+		<result column="entityAb" property="entityAb" />
+		<result column="entityCode" property="entityCode" />
+		<result column="categoryId" property="categoryId" />
+		<result column="categoryId2" property="categoryId2" />
+		<result column="country" property="country" />
+		<result column="province" property="province" />
+		<result column="city" property="city" />
+		<result column="entityDesc" property="entityDesc" />
+		
+		<result column="state" property="state" />
+		<result column="src" property="src" />
+		<result column="leader" property="leader" />
+		<result column="leader_itcode" property="leaderItcode" />
+		<result column="initiative_group" property="initiativeGroup" />
+		<result column="owner_group" property="ownerGroup" />
+		<result column="invest_subject" property="investSubject" />
+		<result column="invest_listed" property="investListed" />
+		<result column="invest_target" property="investTarget" />
+		<result column="target_listed" property="targetListed" />
+		
+		<result column="start_date" property="startDate" />
+		<result column="partner" property="partner" />
+		<result column="securities_market" property="securitiesMarket" />
+		<result column="createTime" property="createTime" />
+		<result column="risk" property="risk" />
+		<result column="risk_itcode" property="riskItcode" />
+		<result column="group_leader" property="groupLeader" />
+		<result column="ownerGroupName" property="ownerGroupName" />
+		<result column="riskResId" property="riskResId" />
+		<result column="groupLeaderId" property="groupLeaderId" />
+		
+		<result column="stageCode" property="stageCode" />
+		<result column="parentProjectId" property="parentProjectId" />
+		<result column="parentProject" property="parentProject" />
+		<result column="entityMark" property="entityMark" />
+		<result column="industryId" property="industryId" />
+		<result column="stageName" property="stageName" />
+		<result column="liuchengshiliId" property="liuchengshiliId" />
+		<result column="intro" property="intro" />
+
+		<result column="f1" property="f1" />
+		<result column="s1" property="s1" />
+		<result column="f2" property="f2" />
+		<result column="f3" property="f3" />
+		<result column="f4" property="f4" />
+		<result column="s2" property="s2" />
+		<result column="p1" property="p1" />
+
+		<result column="countryId" property="countryId" />
+		<result column="provinceId" property="provinceId" />
+		<result column="cityId" property="cityId" />
+		<result column="industry" property="industry" />
+		<result column="score" property="score" />
+	</resultMap>
+
+	<resultMap id="ResultMap" type="com.river.ms.project.entity.ProjectList" extends="BaseResultMap">
+		<result column="categoryTitle" property="categoryTitle" />
+		<result column="categoryTitle1" property="categoryTitle1" />
+		
+		<result column="f6" property="f6" />
+		<result column="f7" property="f7" />
+		<result column="f9" property="f9" />
+		<result column="f10" property="f10" />
+		<result column="f15" property="f15" />
+		<result column="f21" property="f21" />
+		<result column="f22" property="f22" />
+		<result column="type" property="type" />
+	</resultMap>
+	<resultMap id="ResultMap2" type="com.river.ms.project.entity.ProjectList"  extends="ResultMap">
+		<result column="stageCode2" property="stageCode2" />
+	</resultMap>
+	<resultMap id="deviationMap" type="com.river.ms.project.entity.ProjectList"  extends="ResultMap">
+		<result column="milestone" property="milestone" />
+		<result column="deg1" property="deg1" />
+		<result column="deg2" property="deg2" />
+		<result column="cost_degree" property="cost_degree" />
+		<result column="history_degree" property="history_degree" />
+			<result column="cost_level" property="cost_level" />
+		<result column="history_level" property="history_level" />	
+	</resultMap>
+	<parameterMap type="map" id="queryParameterMap">
+		<parameter property="keyword" jdbcType="VARCHAR" mode="IN" />
+		<parameter property="itcode" jdbcType="VARCHAR" mode="IN" />
+		<parameter property="projectState" jdbcType="INTEGER" mode="IN" />
+		<parameter property="projectState2" jdbcType="INTEGER" mode="IN" />
+		<parameter property="bPage" jdbcType="INTEGER" mode="IN" />
+		<parameter property="page" jdbcType="INTEGER" mode="IN" />
+		<parameter property="pageSize" jdbcType="INTEGER" mode="IN" />
+		<parameter property="total" jdbcType="INTEGER" mode="OUT" />
+	</parameterMap>
+	<parameterMap type="map" id="investParameterMap">
+		<parameter property="itcode" jdbcType="INTEGER" mode="IN" />
+		<parameter property="cost" jdbcType="DECIMAL" mode="OUT" />
+		<parameter property="total" jdbcType="INTEGER" mode="OUT" />
+		<parameter property="totalIng" jdbcType="INTEGER" mode="OUT" />
+		<parameter property="totalFinish" jdbcType="INTEGER" mode="OUT" />
+		<parameter property="IRR" jdbcType="DECIMAL" mode="OUT" />
+	</parameterMap>
+	<sql id="querySqlResult">
+		SELECT
+			DISTINCT 
+			project_list.*,
+			project_category.entityTitle AS categoryTitle,
+			project_category_group.entityTitle AS categoryTitle1,
+			project_keypoint.f6 AS f6,
+			project_keypoint.f7 AS f7,
+			project_keypoint.f9 AS f9,
+			project_keypoint.f10 AS f10,
+			project_keypoint.f15 AS f15,
+			project_keypoint.f21 AS f21,
+			project_keypoint.f22 AS f22
+	</sql>
+	<sql id="querySqlTable">
+		FROM project_list
+			LEFT JOIN project_category ON project_category.entityId = project_list.categoryId
+			LEFT JOIN project_category_group ON project_category_group.entityId = project_list.categoryId2
+			LEFT JOIN project_keypoint ON project_list.entityId = project_keypoint.projectId
+	</sql>
+	<select id="getProjectList" resultMap="ResultMap">
+		<include refid="querySqlResult"></include>
+		<include refid="querySqlTable"></include>
+		<where>
+			1=1
+			<if test="keyWord != null">
+				and ( project_list.entityTitle like '%${keyWord}%'
+				or
+				project_list.entityCode like '%${keyWord}%'
+				or
+				project_list.entityAb like '%${keyWord}%')
+			</if>
+			<if test="ids != null and ids.size()>0">
+				and project_list.entityId in 
+				<foreach collection="ids" open="(" close=")" item="id" separator=",">
+					#{id}
+				</foreach>
+			</if>
+			<if test="projectState != null">
+				and project_list.state >= #{projectState}
+			</if>
+			<if test="projectState2 != null">
+				and project_list.state <![CDATA[<=]]> #{projectState2}
+			</if>
+		</where>
+		order by
+		project_list.createTime DESC
+	</select>
+	<select id="getFocusOnProjects" resultMap="ResultMap">
+		<include refid="querySqlResult"></include>
+		<include refid="querySqlTable"></include>
+			inner join project_focuson on
+			project_focuson.projectId=project_list.entityId
+		where
+			project_focuson.resourceId='${resId}'
+			<if test="keyword != null">
+				and ( project_list.entityTitle like '%${keyword}%'
+				or
+				project_list.entityCode like '%${keyword}%' 
+				or
+				project_list.entityAb like '%${keyword}%')
+			</if>
+		order by
+			project_list.createTime DESC
+	</select>
+	<select id="getEntityIdByOwnerGroup" resultType="Long">
+		SELECT entityId
+		FROM project_list
+		WHERE owner_group = #{ownerGroup}
+	</select>
+
+	<select id="getProjectListById" resultMap="ResultMap2">
+		SELECT project_list.*,
+		project_category.entityTitle AS categoryTitle,
+		project_category_group.entityTitle AS categoryTitle1,
+		project_stage.entityCode AS stageCode2,
+		project_keypoint.f6 AS f6,
+		project_keypoint.f7 AS f7,
+		project_keypoint.f9 AS f9,
+		project_keypoint.f10 AS f10,
+		project_keypoint.f15 AS f15,
+		project_keypoint.f21 AS f21,
+		project_keypoint.f22 AS f22
+		FROM project_list
+		LEFT JOIN
+		project_category ON project_category.entityId =
+		project_list.categoryId
+		LEFT JOIN project_category_group ON
+		project_category_group.entityId = project_list.categoryId2
+		LEFT JOIN
+		project_stage ON
+		project_list.stageCode = project_stage.entityId
+		LEFT JOIN project_keypoint ON project_list.entityId = project_keypoint.projectId
+		WHERE
+		project_list.entityId = #{id}
+		order by
+		project_list.createTime
+		DESC
+	</select>
+
+	<select id="getProjectListByIdsAndStageIds" resultMap="BaseResultMap">
+		SELECT t.* FROM project_list t
+		<where>
+			<foreach collection="projectList.keys" item="k" separator="or"
+				open="(" close=")">
+				t.entityId = ${k}
+				<if test="${projectList[k]} != null">
+					and t.stageCode = ${projectList[k]}
+				</if>
+			</foreach>
+		</where>
+	</select>
+	<select id="getProjectListByState" resultMap="ResultMap">
+		<include refid="querySqlResult"></include>
+		<include refid="querySqlTable"></include>
+		WHERE 
+		<choose>  
+         <when test="projectState2!=null and projectState2!=0">
+		project_list.state >= #{projectState} and project_list.state &lt; #{projectState2}
+		</when>
+		<otherwise>
+		project_list.state = #{projectState} 
+		</otherwise>
+		</choose>
+		and project_list.leader_itcode = #{leaderItcode}
+		order by project_list.createTime desc
+	</select>
+	<!-- 缺少行业公司的限制 -->
+	<select id="getProjectListByStateScope" resultMap="ResultMap">
+	<![CDATA[
+		SELECT t.*,t1.entityTitle AS categoryTitle,
+		t2.entityTitle AS categoryTitle1 ,
+		project_keypoint.f6 AS f6,
+		project_keypoint.f7 AS f7,
+		project_keypoint.f9 AS f9,
+		project_keypoint.f10 AS f10,
+		project_keypoint.f15 AS f15,
+		project_keypoint.f21 AS f21,
+		project_keypoint.f22 AS f22
+		FROM project_list t 
+		LEFT JOIN project_category t1 ON t1.entityId =t.categoryId
+		LEFT JOIN project_category_group t2 ON t2.entityId = t.categoryId2
+		LEFT JOIN project_keypoint ON t.entityId = project_keypoint.projectId
+		where t.state>=#{projectState} and t.state<#{projectState2}
+		order by
+		t.createTime DESC
+		]]>
+	</select>
+	<select id="getMyProjectListByStateScope" statementType="CALLABLE" parameterMap="queryParameterMap"
+		resultMap="ResultMap">
+		CALL proc_project_team(#{keyword},#{itcode},#{projectState},#{projectState2},#{bPage},#{page},#{pageSize},#{total,jdbcType=INTEGER,mode=OUT})
+	</select>
+     <select id="getProjectRoleByItcode" statementType="CALLABLE" resultType="java.util.Map">
+        CALL proc_project_itcode(#{projectId},#{itcode})
+    </select>
+	<select id="getProjectTodoList" parameterMap="queryParameterMap" statementType="CALLABLE" resultMap="ResultMap">
+		CALL proc_project_todo(#{keyword},#{itcode},#{bPage},#{page},#{pageSize},#{total,jdbcType=INTEGER,mode=OUT})
+	</select>
+
+	<select id="getProjectTodoListPC" parameterMap="queryParameterMap" statementType="CALLABLE" resultMap="ResultMap">
+		CALL proc_project_todo_pc(#{keyword},#{itcode},#{bPage},#{page},#{pageSize},#{total,jdbcType=INTEGER,mode=OUT})
+	</select>
+	
+	<select id="getLeaderProjects" resultMap="ResultMap">
+		<include refid="querySqlResult"></include>
+		<include refid="querySqlTable"></include>
+		WHERE project_list.leader_itcode=#{itcode}
+		ORDER BY project_list.createTime desc
+	</select>
+	<select id="getExpertProjectList" resultMap="BaseResultMap">
+		<include refid="querySqlResult"></include>
+		<include refid="querySqlTable"></include>
+		WHERE 
+			project_list.entityId IN 
+			(
+				SELECT 
+					pe.projectId 
+				FROM
+					project_expert pe
+				WHERE
+					pe.state = 1 and
+					pe.resourceId = #{resId} AND
+					pe.stage = ( 
+						SELECT 
+							ps.parentId 
+						FROM 
+							project_stage ps
+						WHERE 
+							ps.entityId = project_list.stageCode
+					)
+					<if test="isAll == false">
+						and EXISTS (
+							select 
+								* 
+							from 
+								project_todo todo
+							where 
+								todo.projectId = project_list.entityId 
+								and todo.resourceId = #{resId}
+								and todo.type = 1
+						)
+					</if>
+			)
+		order by 
+			project_list.createTime desc
+	</select>
+	<select id="getProjectByStatefunengqun" resultMap="ResultMap">
+		<include refid="querySqlResult"></include>
+		<include refid="querySqlTable"></include>
+		WHERE
+		project_list.state = #{projectState} and project_list.owner_group
+		= #{entityCode}
+		order by project_list.createTime desc
+	</select>
+
+	<select id="getProjectListByCouncilType" resultType="long">
+		select t.projectId from project_council t where t.projectId in
+		<foreach collection="ids" open="(" close=")" item="id"
+			separator=",">
+			#{id}
+		</foreach>
+		and t.online = #{online} and t.entityType = #{entityType}
+	</select>
+	
+	<select id="queryListBy" statementType="CALLABLE" resultMap="BaseResultMap">
+		CALL proc_project_list(#{keyword},#{bPage},#{page},#{pageSize},#{bState},#{state},#{endState},#{bInvest},#{minInvest},#{maxInvest},#{groupCode},#{investType},#{projectType},#{myear},#{total,mode=OUT,jdbcType=BIGINT});
+	</select>
+	<select id="existTitle" resultType="long">
+		select count(*) from project_list t where t.entityId!=#{projectId}
+			and ( t.entityTitle=#{entityTitle}
+			or t.entityAb=#{entityTitle}
+			or t.entityTitle=#{entityAb}
+			or t.entityAb=#{entityAb})
+	</select>
+	<select id="getMyProjectCount" statementType="CALLABLE" parameterMap="investParameterMap">
+		CALL proc_myproject_count(?,?,?,?,?,?)
+	</select>
+<select id="getDeviation" statementType="CALLABLE" resultMap="deviationMap">
+		CALL proc_compute_deviation(#{itcode})
+	</select>
+	<select id="getProjectNode" resultType="java.lang.String">
+		select 
+			n.entityCode 
+		from 
+			project_node n 
+		<where>
+			n.entityId = (
+			select s.src from project_stage s where 
+			s.entityId = (
+			select p.stageCode from project_list p 
+			where p.entityId = #{projectId}
+			)
+			)
+		</where>
+	</select>
+	<select id="getNoReplyProjects" resultMap="ResultMap">
+			<include refid="querySqlResult"></include>
+			<include refid="querySqlTable"></include>
+			INNER JOIN project_bbs on project_list.entityId=project_bbs.projectId and project_bbs.isReply=0
+			<where>
+			project_list.leader_itcode=#{itcode}
+			<if test="keyword != null">
+				and ( project_list.entityTitle like '%${keyword}%'
+				or
+				project_list.entityCode like '%${keyword}%' 
+				or
+				project_list.entityAb like '%${keyword}%')
+			</if>
+			</where>
+			order by
+			project_list.createTime DESC
+	</select>
+	<select id="getProjectListByQZTJLSFKSH" resultMap="ResultMap">
+		<![CDATA[
+		SELECT t.*,t1.entityTitle AS categoryTitle,
+		t2.entityTitle AS categoryTitle1 ,
+		project_keypoint.f6 AS f6,
+		project_keypoint.f7 AS f7,
+		project_keypoint.f9 AS f9,
+		project_keypoint.f10 AS f10,
+		project_keypoint.f15 AS f15,
+		project_keypoint.f21 AS f21,
+		project_keypoint.f22 AS f22
+		FROM project_list t 
+		LEFT JOIN project_category t1 ON t1.entityId =t.categoryId
+		LEFT JOIN project_category_group t2 ON t2.entityId = t.categoryId2
+		LEFT JOIN project_keypoint ON t.entityId = project_keypoint.projectId
+		where t.state>='20' and t.state<'40' and t.owner_group = #{groupCode}
+		]]>
+	</select>
+	
+	<select id="getMyProjectList" resultMap="ResultMap">
+		SELECT
+			t.*,project_category.entityTitle AS categoryTitle,
+			project_category_group.entityTitle AS categoryTitle1 ,
+			project_keypoint.f6 AS f6,
+			project_keypoint.f7 AS f7,
+			project_keypoint.f9 AS f9,
+			project_keypoint.f10 AS f10,
+			project_keypoint.f15 AS f15,
+			project_keypoint.f21 AS f21,
+			project_keypoint.f22 AS f22
+		FROM
+			(
+				<if test="isAll">
+					SELECT 
+						t1.entityId AS projectId,t1.leader_itcode AS itcode,t1.*  
+					FROM 
+						project_list t1
+				</if>
+				<if test="!isAll">
+					SELECT 
+						t1.entityId AS projectId,t1.leader_itcode AS itcode,t1.*  
+					FROM 
+						project_list t1
+					WHERE 
+						t1.leader_itcode = #{itcode}
+					UNION
+					SELECT 
+						t1.entityId AS projectId,t2.memberitcode AS itcode,t1.* 
+					FROM 
+						project_list t1
+					INNER JOIN 
+						project_member t2 ON t1.entityId=t2.projectId 
+					WHERE t2.memberitcode = #{itcode}
+					UNION
+					SELECT 
+						t1.entityId AS projectId,t2.itcode,t1.* 
+					FROM 
+						project_list t1
+					INNER JOIN 
+						project_expert t2 ON t1.entityId=t2.projectId AND t2.state=1
+					WHERE 
+						t2.itcode=#{itcode}
+					UNION
+					SELECT 
+						t1.entityId AS projectId,t2.itcode,t1.* 
+					FROM 
+						project_list t1
+					INNER JOIN 
+						project_approval t2 ON t1.entityId=t2.projectId
+					WHERE 
+						t2.itcode=#{itcode}
+					<if test="isIncludeOther == true and (includeSubordinateGroupCode.size > 0 or notIncludeSubordinateGroupCode.size > 0)">
+						UNION 
+						SELECT 
+							t1.entityId AS projectId,t1.leader_itcode AS itcode,t1.*  
+						FROM 
+							project_list t1
+						<where>
+							<if test="includeSubordinateGroupCode.size > 0">
+								<foreach collection="includeSubordinateGroupCode" item="inGroupCode" separator="or">
+									t1.owner_group = #{inGroupCode}
+								</foreach>
+							</if>
+							<if test="notIncludeSubordinateGroupCode.size > 0">
+								or
+								<foreach collection="notIncludeSubordinateGroupCode" item="notInGroupCode" separator="or">
+									t1.initiative_group = #{notInGroupCode}
+								</foreach>
+							</if>
+						</where>
+					</if>
+				</if>
+			) t 
+			LEFT JOIN 
+				project_category ON project_category.entityId = t.categoryId
+			LEFT JOIN 
+				project_category_group ON project_category_group.entityId = t.categoryId2 
+			LEFT JOIN 
+				project_keypoint ON project_keypoint.projectId = t.projectId
+		<where>
+			1 = 1 
+			<if test="isFocusOn == true">
+				and t.projectId in (
+					select foc.projectId from project_focuson foc 
+					<where>
+						foc.resourceId = #{resId}
+					</where>
+				)
+			</if>
+			<if test="keyword != null">
+				and (t.entityTitle like '%${keyword}%'
+				or
+				t.entityCode like '%${keyword}%' 
+				or
+				t.entityAb like '%${keyword}%')
+			</if>
+			<if test="projectStateStart != null">
+				and t.state >= #{projectStateStart}
+			</if>
+			<if test="projectStateEnd != null">
+				and t.state <![CDATA[<]]> #{projectStateEnd}
+			</if>
+			<if test="createTimeStart != null">
+				and t.createTime >= #{createTimeStart}
+			</if>
+			<if test="createTimeEnd != null">
+				and t.createTime <![CDATA[<=]]> #{createTimeEnd}
+			</if>
+			<if test="ownerGroup != null and ownerGroup.size > 0">
+				and t.owner_group in 
+				<foreach collection="ownerGroup" item="og" separator="," open="(" close=")">
+					#{og}
+				</foreach>
+			</if>
+			<if test="moneyStart != null">
+				and t.f3 >= #{moneyStart}
+			</if>
+			<if test="moneyEnd != null">
+				and t.f3 <![CDATA[<=]]> #{moneyEnd}
+			</if>
+		</where>
+		<if test="orderStr != null">
+			ORDER BY ${orderStr} 
+		</if>
+	</select>
+	
+	<select id="verifyProjectAuthority" resultMap="ResultMap">
+		SELECT
+			t.*,project_category.entityTitle AS categoryTitle,
+			project_category_group.entityTitle AS categoryTitle1 ,
+			project_keypoint.f6 AS f6,
+			project_keypoint.f7 AS f7,
+			project_keypoint.f9 AS f9,
+			project_keypoint.f10 AS f10,
+			project_keypoint.f15 AS f15,
+			project_keypoint.f21 AS f21,
+			project_keypoint.f22 AS f22
+		FROM
+			(
+				<if test="isAll">
+					SELECT 
+						t1.entityId AS projectId,t1.leader_itcode AS itcode,t1.*  
+					FROM 
+						project_list t1
+				</if>
+				<if test="!isAll">
+					SELECT 
+						t1.entityId AS projectId,t1.leader_itcode AS itcode,t1.*  
+					FROM 
+						project_list t1
+					WHERE 
+						t1.leader_itcode = #{itcode}
+					UNION
+					SELECT 
+						t1.entityId AS projectId,t2.memberitcode AS itcode,t1.* 
+					FROM 
+						project_list t1
+					INNER JOIN 
+						project_member t2 ON t1.entityId=t2.projectId 
+					WHERE t2.memberitcode = #{itcode}
+					UNION
+					SELECT 
+						t1.entityId AS projectId,t2.itcode,t1.* 
+					FROM 
+						project_list t1
+					INNER JOIN 
+						project_expert t2 ON t1.entityId=t2.projectId AND t2.state=1
+					WHERE 
+						t2.itcode=#{itcode}
+					UNION
+					SELECT 
+						t1.entityId AS projectId,t2.itcode,t1.* 
+					FROM 
+						project_list t1
+					INNER JOIN 
+						project_approval t2 ON t1.entityId=t2.projectId
+					WHERE 
+						t2.itcode=#{itcode}
+					<if test="isIncludeOther == true">
+						UNION 
+						SELECT 
+							t1.entityId AS projectId,t1.leader_itcode AS itcode,t1.*  
+						FROM 
+							project_list t1
+						<where>
+							<if test="includeSubordinateGroupCode.size > 0">
+								<foreach collection="includeSubordinateGroupCode" item="inGroupCode" separator="or">
+									t1.owner_group = #{inGroupCode}
+								</foreach>
+							</if>
+							<if test="notIncludeSubordinateGroupCode.size > 0">
+								or
+								<foreach collection="notIncludeSubordinateGroupCode" item="notInGroupCode" separator="or">
+									t1.initiative_group = #{notInGroupCode}
+								</foreach>
+							</if>
+						</where>
+					</if>
+				</if>
+			) t 
+			LEFT JOIN 
+				project_category ON project_category.entityId = t.categoryId
+			LEFT JOIN 
+				project_category_group ON project_category_group.entityId = t.categoryId2 
+			LEFT JOIN 
+				project_keypoint ON project_keypoint.projectId = t.projectId
+		<where>
+			1 = 1 
+			<if test="projectId != null">
+				and t.projectId = #{projectId}
+			</if>
+		</where>
+	</select>
+	
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.river.ms.project.mapper.ProjectTagDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.river.ms.project.entity.ProjectTag">
+        <id column="entityId" property="entityId" />
+        <result column="projectId" property="projectId" />
+        <result column="entityCode" property="entityCode" />
+        <result column="entityTitle" property="entityTitle" />
+        <result column="entityDesc" property="entityDesc" />
+        <result column="createTime" property="createTime" />
+    </resultMap>
+
+</mapper>

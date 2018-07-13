@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.river.ms.project.mapper.ProjectStageDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.river.ms.project.entity.ProjectStage">
+        <id column="entityId" property="entityId" />
+        <result column="entityCode" property="entityCode" />
+        <result column="entityTitle" property="entityTitle" />
+        <result column="entityDesc" property="entityDesc" />
+        <result column="level" property="level" />
+        <result column="parentId" property="parentId" />
+        <result column="order" property="order" />
+        <result column="src" property="src" />
+        <result column="groupCode" property="groupCode" />
+        <result column="flowId" property="flowId" />
+        <result column="remind" property="remind" />
+    </resultMap>
+    
+    <select id="getProjectStageByRoles" resultMap="BaseResultMap">
+		SELECT * FROM project_stage WHERE src IN(
+		SELECT nodeId FROM project_node_role WHERE roleId IN
+		<foreach collection="roles" item="item" open="(" separator=","
+			close=")">
+			#{item.roleId}
+		</foreach>
+		)
+	</select>
+	<select id="exist" resultType="long">
+		select count(*) from
+		project_stage t where t.entityId!=#{id} and t.entityCode=#{entityCode}
+	</select>
+	<select id="getNextStage" resultMap="BaseResultMap">
+		select * from project_stage where parentId=(
+		select t2.entityId from project_stage t1 
+		LEFT JOIN project_stage t2 on t1.parentId=t2.entityId
+		where t1.entityId=#{stage} or t1.entityCode=#{stage}) where 
+	</select>
+	<select id="getParentStage" resultMap="BaseResultMap">
+		select * from project_stage where entityId=(
+		select if(t2.entityId is null,t1.entityId,t2.entityId) as entityId from project_stage t1 
+		LEFT JOIN project_stage t2 on t1.parentId=t2.entityId
+		where t1.entityId=#{stage} or t1.entityCode=#{stage})
+	</select>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.river.ms.project.mapper.ProjectStageDocDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.river.ms.project.entity.ProjectStageDoc">
+        <id column="entityId" property="entityId" />
+        <result column="categoryId" property="categoryId" />
+        <result column="stageCode" property="stageCode" />
+        <result column="node" property="node" />
+        <result column="document" property="document" />
+        <result column="type" property="type" />
+        <result column="content" property="content" />
+        <result column="createTime" property="createTime" />
+        <result column="required" property="required" />
+    </resultMap>
+
+</mapper>

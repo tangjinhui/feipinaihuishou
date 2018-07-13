@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.river.ms.project.mapper.ProjectCategoryGroupDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.river.ms.project.entity.ProjectCategoryGroup">
+        <id column="entityId" property="entityId" />
+        <result column="entityCode" property="entityCode" />
+        <result column="entityTitle" property="entityTitle" />
+        <result column="entityGUID" property="entityGUID" />
+        <result column="entityDesc" property="entityDesc" />
+        <result column="categoryId" property="categoryId" />
+        <result column="parentId" property="parentId" />
+        <result column="src_categoryId" property="srcCategoryId" />
+        <result column="isDelete" property="isDelete" />
+        <result column="deleteTime" property="deleteTime" />
+        <result column="createTime" property="createTime" />
+        <result column="updateTime" property="updateTime" />
+        <result column="isDisable" property="isDisable" />
+        <result column="disableTime" property="disableTime" />
+        <result column="groupCode" property="groupCode" />
+    </resultMap>
+
+</mapper>
