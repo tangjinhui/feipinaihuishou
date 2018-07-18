@@ -15,7 +15,6 @@ import java.util.Date;
  * @author  guolw
  */
 @Data
-@ToString
 @Api(value="用户登陆传入的对象")
 public class LoginDto {
 	

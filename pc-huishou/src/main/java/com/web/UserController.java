@@ -2,13 +2,17 @@ package com.web;
 
 import com.common.result.PageDto;
 import com.common.result.ResultDto;
+import com.dto.UserDto;
 import com.model.User;
 import com.model.validate.Save;
 import com.model.validate.Update;
 import com.service.UserService;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
@@ -29,14 +33,16 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
-	@PostMapping("/user/save")
-    @ApiOperation(value = "保存用户,使用@Validated分组{save}校验数据", notes="保存用户,使用@Validated分组{save}校验数据")
-	public ResultDto<Integer> saveUser(@RequestBody @Validated(value={Save.class})User user, BindingResult bindingResult){
-		ResultDto<Integer> resultDto = new ResultDto<>();
-		//分组数据校验校验处理，返回的处理
-		hasErrors(bindingResult);
-		resultDto.setData(userService.saveUser(user));
-		return resultDto;
+	@RequestMapping(value = "/user/save",method = RequestMethod.GET)
+    @ApiOperation(value = "保存用户")
+	@ApiImplicitParams({
+			@ApiImplicitParam(paramType = "query", name = "name", value = "用户名字"),
+			@ApiImplicitParam(paramType = "query", name = "phone", value = "用户手机号"),
+			@ApiImplicitParam(paramType = "query", name = "token", value = "登录token"),
+	})
+	public void saveUser(HttpServletRequest request, String name, String phone, String token){
+		UserDto userDto = UserDto.builder().name(name).phone(phone).token(token).build();
+		userService.saveUser(userDto);
 	}
 	
 	

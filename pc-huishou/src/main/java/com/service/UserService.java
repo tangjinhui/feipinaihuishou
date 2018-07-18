@@ -2,6 +2,7 @@ package com.service;
 
 
 import com.dao.UserDao;
+import com.dto.UserDto;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.common.result.PageDto;
@@ -21,7 +22,6 @@ import static com.common.check.CheckUtil.notNull;
 
 
 /**   
- * @Package com.biqi.service 
  * @author  guolw
  */
 @Service
@@ -38,12 +38,8 @@ public class UserService {
 		return user;
 	}
 
-	public Integer saveUser(User user) {
-		user.setId(null);
-		user.setCreateby(SUPER_USER_ID);
-		user.setCreated(new Date());
-		userDao.insertUseGeneratedKeys(user);
-		return user.getId();
+	public void saveUser(UserDto user) {
+		userDao.insertUser(user);
 	}
 
 	public Boolean deleteUser(Integer id) {

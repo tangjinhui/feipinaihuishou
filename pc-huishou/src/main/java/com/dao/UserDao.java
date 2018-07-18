@@ -1,6 +1,7 @@
 package com.dao;
 
 import com.common.mybatis.MyMapper;
+import com.dto.UserDto;
 import com.model.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -24,6 +25,7 @@ public interface UserDao extends MyMapper<User> {
      * @return
      */
     int countUser2();
-    
+
+    void insertUser(UserDto userDto);
 
 }

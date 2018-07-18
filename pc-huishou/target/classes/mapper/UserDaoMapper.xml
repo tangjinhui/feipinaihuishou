@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.biqi.dao.UserDao">
-
+<mapper namespace="com.dao.UserDao">
+	<resultMap id="BaseResultMap" type="com.dto.UserDto">
+		<id column="ID" property="id" jdbcType="INTEGER" />
+		<result column="NAME" property="name" jdbcType="VARCHAR"/>
+		<result column="PHONE" property="phone" jdbcType="VARCHAR"/>
+		<result column="TOKEN" property="token" jdbcType="VARCHAR"/>
+	</resultMap>
 	<select id="countUser2" resultType="java.lang.Integer">
 		SELECT count(*) FROM User 
 	</select>
+	<insert id="insertUser" parameterType="com.dto.UserDto">
+		INSERT  INTO  USER (name,phone,token) VALUES (#{name},#{phone},#{token})
+	</insert>
 </mapper>
