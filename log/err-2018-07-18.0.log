@@ -1,0 +1,33 @@
+2018-07-18 15:00:47.481 [http-nio-8081-exec-3] ERROR-  com.config.CommonExceptionAdvice - 接口调用服务异常，请求的Json格式异常:JSON parse error: Unrecognized token 'name': was expecting 'null', 'true', 'false' or NaN; nested exception is com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'name': was expecting 'null', 'true', 'false' or NaN
+ at [Source: (PushbackInputStream); line: 1, column: 6],uri:/user/save,query params:null
+2018-07-18 15:01:24.017 [http-nio-8081-exec-4] ERROR-  com.config.CommonExceptionAdvice - 接口调用服务异常，请求的Json格式异常:JSON parse error: Unrecognized token 'name': was expecting 'null', 'true', 'false' or NaN; nested exception is com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'name': was expecting 'null', 'true', 'false' or NaN
+ at [Source: (PushbackInputStream); line: 1, column: 6],uri:/user/save,query params:null
+2018-07-18 15:33:41.282 [http-nio-8081-exec-10] ERROR-  com.config.CommonExceptionAdvice - 接口调用服务异常，未知异常:Invalid bound statement (not found): com.dao.UserDao.insertUser,uri:/user/save,query params:name=1111&phone=13211111111&token=11111111
+2018-07-18 16:13:28.020 [http-nio-8081-exec-10] ERROR-  com.config.CommonExceptionAdvice - 接口调用服务异常，未知异常:
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'id' cannot be null
+### The error may involve com.dao.UserDao.insertUser-Inline
+### The error occurred while setting parameters
+### SQL: INSERT  INTO  USER (id,name,phone,token) VALUES (?,?,?,?)
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'id' cannot be null
+; ]; Column 'id' cannot be null; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'id' cannot be null,uri:/user/save,query params:name=11111&phone=13211111111&token=111111
+2018-07-18 16:17:57.351 [http-nio-8081-exec-10] ERROR-  com.config.CommonExceptionAdvice - 接口调用服务异常，未知异常:
+### Error updating database.  Cause: java.sql.SQLException: Field 'id' doesn't have a default value
+### The error may involve com.dao.UserDao.insertUser-Inline
+### The error occurred while setting parameters
+### SQL: INSERT  INTO  USER (name,phone,token) VALUES (?,?,?)
+### Cause: java.sql.SQLException: Field 'id' doesn't have a default value
+; ]; Field 'id' doesn't have a default value; nested exception is java.sql.SQLException: Field 'id' doesn't have a default value,uri:/user/save,query params:name=sds%3B&phone=13211111111&token=11111111
+2018-07-18 16:45:48.444 [http-nio-8081-exec-10] ERROR-  com.config.CommonExceptionAdvice - 接口调用服务异常，未知异常:
+### Error updating database.  Cause: java.sql.SQLException: Incorrect string value: '\xE5\x95\x8A1' for column 'name' at row 1
+### The error may involve com.dao.UserDao.insertUser-Inline
+### The error occurred while setting parameters
+### SQL: INSERT  INTO  USER (name,phone,token) VALUES (?,?,?)
+### Cause: java.sql.SQLException: Incorrect string value: '\xE5\x95\x8A1' for column 'name' at row 1
+; uncategorized SQLException; SQL state [HY000]; error code [1366]; Incorrect string value: '\xE5\x95\x8A1' for column 'name' at row 1; nested exception is java.sql.SQLException: Incorrect string value: '\xE5\x95\x8A1' for column 'name' at row 1,uri:/user/save,query params:name=qW%E5%95%8A1&phone=13122222222&token=22222222
+2018-07-18 16:46:59.030 [http-nio-8081-exec-10] ERROR-  com.config.CommonExceptionAdvice - 接口调用服务异常，未知异常:
+### Error updating database.  Cause: java.sql.SQLException: Incorrect string value: '\xE5\xA4\x9A\xE5\xB0\x91' for column 'name' at row 1
+### The error may involve com.dao.UserDao.insertUser-Inline
+### The error occurred while setting parameters
+### SQL: INSERT  INTO  USER (name,phone,token) VALUES (?,?,?)
+### Cause: java.sql.SQLException: Incorrect string value: '\xE5\xA4\x9A\xE5\xB0\x91' for column 'name' at row 1
+; uncategorized SQLException; SQL state [HY000]; error code [1366]; Incorrect string value: '\xE5\xA4\x9A\xE5\xB0\x91' for column 'name' at row 1; nested exception is java.sql.SQLException: Incorrect string value: '\xE5\xA4\x9A\xE5\xB0\x91' for column 'name' at row 1,uri:/user/save,query params:name=%E5%A4%9A%E5%B0%91&phone=13122222222&token=22222222222222

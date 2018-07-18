@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author xiebq
+ * @author guolw
  *
  */
 @SpringBootApplication
@@ -15,6 +15,6 @@ public class CodeApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CodeApplication.class, args);
-		log.info("***哟哟切克闹 项目启动啦  哟哟切克闹***");
+		log.info("项目启动成功！");
 	}
 }

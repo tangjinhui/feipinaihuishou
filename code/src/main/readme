@@ -1,0 +1,58 @@
+参考文档：https://blog.csdn.net/sunsfan/article/details/53542374
+lombok注解介绍(实体类上的注解)
+1、@NonNull
+    可以用在成员方法或者构造方法的参数前面，表示对参数的非空检查，如果为空则报出空指针异常
+    //成员方法参数加上@NonNull注解
+    public String getName(@NonNull Person p){
+        return p.getName();
+    }
+2、@CleanUp
+    这个注解用在变量前面，表示这个资源使用完会自动关闭，默认调用资源的close()方法
+    @Cleanup InputStream in = new FileInputStream(args[0]);
+    @Cleanup OutputStream out = new FileOutputStream(args[1]);
+3、@Getter/@Setter
+    用在成员变量前面的，对属性提供getter和setter方法
+4、@ToString/@EqualsAndHashCode
+    生成toString方法，equals和hashCode方法
+    例如：用@ToString(exclude={“param1”，“param2”})来排除param1和param2两个成员变量，
+    或者用@ToString(of={“param1”，“param2”})来指定使用param1和param2两个成员变量，@EqualsAndHashCode注解也有同样的用法。
+5、@NoArgsConstructor/@RequiredArgsConstructor /@AllArgsConstructor
+    这三个注解都是用在类上的，
+    @NoArgsConstructor：表示为该方法创建无参构造方法，
+    @AllArgsConstructor：表示为该方法创建包含所有参数的构造方法
+    @RequiredArgsConstructor：表示带有@NonNull注解的或者带有final修饰的成员变量创建的构造方法
+    @RequiredArgsConstructor(staticName = "sunsfan")
+    @AllArgsConstructor(access = AccessLevel.PROTECTED)
+    @NoArgsConstructor
+    public class Shape {
+        private int x;
+        @NonNull
+        private double y;
+        @NonNull
+        private String name;
+    }
+6、@Data/@Value：可以给方法的成员变量默认定义为private，final修饰的
+7、@SneakyThrows
+    这个注解用在方法上，可以将方法中的代码用try-catch语句包裹起来
+8、@Synchronized
+    这个注解用在类方法上或者实例方法上，@Synchronized得锁对象分别是私有静态final对象LOCK和私有final对象lock
+    public class Synchronized {
+        private final Object readLock = new Object();
+
+        @Synchronized
+        public static void hello() {
+            System.out.println("world");
+        }
+
+        @Synchronized
+        public int answerToLife() {
+            return 42;
+        }
+
+        @Synchronized("readLock")
+        public void foo() {
+            System.out.println("bar");
+        }
+    }
+9、@Log
+    这个注解用在类上，用于记录日志
