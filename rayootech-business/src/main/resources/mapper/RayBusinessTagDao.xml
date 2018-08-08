@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rayootech.business.mapper.RayBusinessTagDao">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.rayootech.business.entity.RayBusinessTag">
+		<id column="id" property="id" />
+		<result column="tag_name" property="tagName" />
+		<result column="tag_code" property="tagCode" />
+		<result column="description" property="description" />
+		<result column="is_use" property="isUse" />
+		<result column="is_deleted" property="isDeleted" />
+		<result column="create_time" property="createTime" />
+		<result column="modify_time" property="modifyTime" />
+	</resultMap>
+	<sql id="queryColumns">
+		<if test="id != null">
+			and id=#{id}
+		</if>
+		<if test="tagName != null">
+			and tag_name=#{tagName}
+		</if>
+		<if test="tagCode != null">
+			and tag_code=#{tagCode}
+		</if>
+		<if test="description != null">
+			and description=#{description}
+		</if>
+		<if test="isUse != null">
+			and is_use=#{isUse}
+		</if>
+		<if test="isDeleted != null">
+			and is_deleted=#{isDeleted}
+		</if>
+		<!-- <if test="createTime != null"> -->
+		<!-- and create_time=#{createTime} -->
+		<!-- </if> -->
+		<!-- <if test="createTime != null"> -->
+		<!-- and create_time=#{createTime} -->
+		<!-- </if> -->
+	</sql>
+	<sql id="Base_columns">
+		id,tag_name,tag_code,description,is_use,is_deleted,create_time,modify_time
+	</sql>
+	<insert id="insertTag" parameterType="com.rayootech.business.param.TagParam"
+		useGeneratedKeys="true" keyProperty="id">
+		insert into
+		ray_business_tag(tag_name,tag_code,description,is_use,is_deleted,create_time,modify_time)
+		values(#{tagName},#{tagCode},#{description},#{isUse},#{isDeleted},#{createTime},#{modifyTime});
+	</insert>
+	<update id="updateTag" parameterType="com.rayootech.business.param.TagParam">
+		update ray_business_tag
+		set
+		<if test="tagName != null">
+			tag_name=#{tagName}
+		</if>
+		<if test="tagCode != null">
+			, tag_code=#{tagCode}
+		</if>
+		<if test="description != null">
+			, description=#{description}
+		</if>
+		<if test="isUse != null">
+			, is_use=#{isUse}
+		</if>
+		<if test="isDeleted != null">
+			, is_deleted=#{isDeleted}
+		</if>
+		<if test="modifyTime != null">
+			, modify_time=#{modifyTime}
+		</if>
+		where id = #{id}
+	</update>
+	<select id="queryTag" parameterType="com.rayootech.business.param.TagParam"
+		resultMap="BaseResultMap">
+		select
+		<include refid="Base_columns"></include>
+		from ray_business_tag
+		<where>
+			<include refid="queryColumns"></include>
+		</where>
+	</select>
+</mapper>

@@ -1,29 +1,36 @@
 package com.web;
 
+import static com.common.check.CheckUtil.hasErrors;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
 import com.common.result.ResultDto;
 import com.dto.LoginDto;
 import com.dto.UserDto;
 import com.model.validate.Login;
 import com.service.LoginService;
+
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
-
-import javax.servlet.http.HttpSession;
-
-import static com.common.check.CheckUtil.hasErrors;
 
 
 /**   
  * @author  guolw
  */
-@RestController
+@Controller
+@ComponentScan
 @Api(tags = {"用户登陆Api文档"})
+@RequestMapping("/login")
 public class LoginConTroller {
 	
 	@Autowired
@@ -47,6 +54,11 @@ public class LoginConTroller {
 		ResultDto<UserDto> resultDto = new ResultDto<>();
 		resultDto.setData(loginService.login(session,loginDto));
 		return resultDto;
+	}
+	@RequestMapping("/regist")
+	@ApiOperation(value = "登录", notes="登录")
+	public String regist() {
+		return "index";
 	}
 
 

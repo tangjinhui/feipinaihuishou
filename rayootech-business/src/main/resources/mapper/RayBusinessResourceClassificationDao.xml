@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rayootech.business.mapper.RayBusinessResourceClassificationDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.rayootech.business.entity.RayBusinessResourceClassification">
+        <id column="id" property="id" />
+        <result column="resName" property="resName" />
+        <result column="resCode" property="resCode" />
+        <result column="resDecript" property="resDecript" />
+        <result column="isUse" property="isUse" />
+        <result column="pid" property="pid" />
+        <result column="createTime" property="createTime" />
+    </resultMap>
+
+</mapper>
